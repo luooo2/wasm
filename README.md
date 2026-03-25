@@ -55,26 +55,72 @@ python3 src/build_benchmarks.py \
 
 ---
 
-### 2) 批量运行 + 自动打标签
+### 2) 批量运行 + 自动打标签（增强版）
+
+改造后的 `src/run_benchmarks.py` 支持：
+- 默认 `repeats=30`
+- `warmup` 预热轮次
+- 汇总统计：`mean / median / std / min / max`
+- 原始逐次时间记录（raw timings）
+- 按程序名做 focused rerun
+
+#### 2.1 全量 30 次运行
 
 ```bash
 cd /code
 python3 src/run_benchmarks.py \
   --build-dir data/build \
-  --out-csv data/results/labels.csv \
+  --out-csv data/results/labels_30.csv \
+  --raw-csv data/results/labels_raw_30.csv \
   --wasmtime wasmtime \
-  --repeats 5 \
+  --repeats 30 \
+  --warmup 2 \
   --timeout 180 \
   --threshold 0.10
 ```
 
-标签规则（基于 \(r = T_{wasm}/T_{native}\)）：
+#### 2.2 对重点样本做高重复复核（示例：200 次）
+
+```bash
+cd /code
+python3 src/run_benchmarks.py \
+  --build-dir data/build \
+  --out-csv data/results/labels_focus_200.csv \
+  --raw-csv data/results/labels_raw_focus_200.csv \
+  --wasmtime wasmtime \
+  --repeats 200 \
+  --warmup 5 \
+  --timeout 180 \
+  --threshold 0.10 \
+  --programs compute_fp_mix,compute_int_add,memory_stride_write,host_getcwd_loop
+```
+
+#### 2.3 主要参数说明
+
+- `--build-dir`：编译产物目录，需包含 `*.native` 和 `*.wasm`
+- `--out-csv`：汇总统计输出文件
+- `--raw-csv`：逐次原始 timing 输出文件
+- `--wasmtime`：Wasm runtime 命令名
+- `--repeats`：正式计时次数，默认 30
+- `--warmup`：预热次数，默认 2
+- `--timeout`：单次运行超时秒数
+- `--threshold`：标签阈值，默认 0.10
+- `--programs`：可选，逗号分隔，只跑指定 benchmark
+
+#### 2.4 标签规则
+
+基于比值 \(r = T_{wasm,median} / T_{native,median}\)：
+
 - `r > 1 + threshold` → `native-better`
 - `r < 1 - threshold` → `wasm-better`
 - 其他 → `similar`
 
-产物：
-- `data/results/labels.csv`
+#### 2.5 产物
+
+- 汇总结果：`data/results/labels_30.csv`
+- 原始逐次时间：`data/results/labels_raw_30.csv`
+- focused 复核结果：`data/results/labels_focus_200.csv`
+- focused 原始时间：`data/results/labels_raw_focus_200.csv`
 
 ---
 
@@ -100,7 +146,7 @@ python3 src/extract_features.py \
 ```bash
 cd /code
 python3 src/build_benchmarks.py --src-dir data/microbenchmarks --out-dir data/build --native-cc clang --wasi-cc /opt/wasi-sdk/bin/clang --opt=-O2 --wasi-target wasm32-wasip1
-python3 src/run_benchmarks.py --build-dir data/build --out-csv data/results/labels.csv --wasmtime wasmtime --repeats 5 --timeout 180 --threshold 0.10
+python3 src/run_benchmarks.py --build-dir data/build --out-csv data/results/labels_30.csv --raw-csv data/results/labels_raw_30.csv --wasmtime wasmtime --repeats 30 --warmup 2 --timeout 180 --threshold 0.10
 python3 src/extract_features.py --src-dir data/microbenchmarks --ir-dir data/build --out-csv data/results/features.csv
 ```
 
@@ -109,7 +155,10 @@ python3 src/extract_features.py --src-dir data/microbenchmarks --ir-dir data/bui
 ## 输出文件说明
 
 - 编译报告：`data/build/build_report.csv`
-- 标签结果：`data/results/labels.csv`
+- 30 次汇总标签：`data/results/labels_30.csv`
+- 30 次原始 timing：`data/results/labels_raw_30.csv`
+- 200 次 focused 汇总标签：`data/results/labels_focus_200.csv`
+- 200 次 focused 原始 timing：`data/results/labels_raw_focus_200.csv`
 - 特征结果：`data/results/features.csv`
 - 合并后数据集（若执行了合并步骤）：`data/results/dataset_labeled.csv`
 

@@ -1,0 +1,5 @@
+program,native_ok,wasm_ok,native_mean_ms,native_median_ms,native_std_ms,native_min_ms,native_max_ms,wasm_mean_ms,wasm_median_ms,wasm_std_ms,wasm_min_ms,wasm_max_ms,ratio_wasm_over_native,label,native_error,wasm_error
+compute_fp_mix,1,1,59.271155,58.59812,3.791294,54.610218,91.668949,64.213829,63.420543,6.2412,59.271042,139.569096,1.082297,similar,,
+compute_int_add,1,1,91.864921,91.103351,4.662772,86.008567,131.712668,89.196527,88.225609,5.658383,83.359655,144.313906,0.968412,similar,,
+host_getcwd_loop,1,1,450.025205,419.691624,56.600723,395.334246,621.562761,24.705607,24.32075,3.191979,21.026702,56.134169,0.057949,wasm-better,,
+memory_stride_write,1,1,66.028374,64.725301,5.576908,55.583673,93.91733,66.577526,64.283515,8.857241,59.018139,158.622486,0.993174,similar,,
