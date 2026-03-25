@@ -1,183 +1,156 @@
 #!/usr/bin/env python3
+"""
+Batch run native and wasm programs, then label by ratio:
+r = T_wasm / T_native
+- r > 1 + threshold: native-better
+- r < 1 - threshold: wasm-better
+- else: similar
+"""
+
 import argparse
 import csv
 import shlex
 import statistics
 import subprocess
 import time
-from dataclasses import dataclass
 from pathlib import Path
-from typing import List, Optional
+from typing import List
 
 
-@dataclass
-class RunOutcome:
-    ok: bool
-    elapsed_ms: float
-    stdout: str
-    stderr: str
-
-
-def run_once(cmd: List[str], timeout_sec: int) -> RunOutcome:
+def run_once(cmd: List[str], timeout_sec: int) -> tuple[bool, float, str]:
     t0 = time.perf_counter()
     try:
         p = subprocess.run(cmd, capture_output=True, text=True, timeout=timeout_sec)
         t1 = time.perf_counter()
-        return RunOutcome(
-            ok=p.returncode == 0,
-            elapsed_ms=(t1 - t0) * 1000.0,
-            stdout=p.stdout or '',
-            stderr=p.stderr or '',
-        )
-    except subprocess.TimeoutExpired as e:
+        return p.returncode == 0, (t1 - t0) * 1000.0, (p.stderr or "").strip()
+    except subprocess.TimeoutExpired:
         t1 = time.perf_counter()
-        return RunOutcome(
-            ok=False,
-            elapsed_ms=(t1 - t0) * 1000.0,
-            stdout=(e.stdout or '') if isinstance(e.stdout, str) else '',
-            stderr=f'timeout after {timeout_sec}s',
-        )
+        return False, (t1 - t0) * 1000.0, f"timeout after {timeout_sec}s"
 
 
-def median_ms(values: List[float]) -> float:
-    return statistics.median(values) if values else 0.0
-
-
-def judge_label(ratio: float, threshold: float) -> str:
-    upper = 1.0 + threshold
-    lower = 1.0 - threshold
-    if ratio > upper:
-        return 'native-better'
-    if ratio < lower:
-        return 'wasm-better'
-    return 'similar'
-
-
-def run_program_pair(native_exe: Path, wasm_file: Path, wasmtime_cmd: str, repeats: int, timeout_sec: int, verbose: bool) -> dict:
-    native_times: List[float] = []
-    wasm_times: List[float] = []
-    native_ok = True
-    wasm_ok = True
-    native_err = ''
-    wasm_err = ''
-
-    for i in range(repeats):
-        n_cmd = [str(native_exe)]
-        if verbose:
-            print('$', ' '.join(shlex.quote(c) for c in n_cmd))
-        n = run_once(n_cmd, timeout_sec)
-        if n.ok:
-            native_times.append(n.elapsed_ms)
-        else:
-            native_ok = False
-            native_err = n.stderr.strip() or 'native run failed'
-            break
-
-        w_cmd = [wasmtime_cmd, str(wasm_file)]
-        if verbose:
-            print('$', ' '.join(shlex.quote(c) for c in w_cmd))
-        w = run_once(w_cmd, timeout_sec)
-        if w.ok:
-            wasm_times.append(w.elapsed_ms)
-        else:
-            wasm_ok = False
-            wasm_err = w.stderr.strip() or 'wasm run failed'
-            break
-
-    native_median = median_ms(native_times)
-    wasm_median = median_ms(wasm_times)
-    ratio = (wasm_median / native_median) if native_median > 0 else 0.0
-
-    return {
-        'native_ok': native_ok,
-        'wasm_ok': wasm_ok,
-        'native_median_ms': round(native_median, 6),
-        'wasm_median_ms': round(wasm_median, 6),
-        'ratio_wasm_over_native': round(ratio, 6),
-        'native_error': native_err,
-        'wasm_error': wasm_err,
-    }
+def label_by_ratio(ratio: float, threshold: float) -> str:
+    if ratio > 1.0 + threshold:
+        return "native-better"
+    if ratio < 1.0 - threshold:
+        return "wasm-better"
+    return "similar"
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description='Batch run native/wasm benchmarks and assign labels.')
-    parser.add_argument('--build-dir', required=True, help='Directory containing *.native.exe and *.wasm')
-    parser.add_argument('--output', required=True, help='Output CSV for timing + labels')
-    parser.add_argument('--repeats', type=int, default=5, help='Repeat count per program')
-    parser.add_argument('--timeout-sec', type=int, default=60, help='Timeout seconds per single run')
-    parser.add_argument('--threshold', type=float, default=0.10, help='Similarity threshold, default 0.10 (10%)')
-    parser.add_argument('--wasmtime', default='wasmtime', help='wasmtime command path/name')
-    parser.add_argument('--verbose', action='store_true', help='Print run commands')
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--build-dir", default="data/build", help="Directory containing *.native/*.wasm")
+    parser.add_argument("--out-csv", default="data/results/labels.csv", help="Output CSV path")
+    parser.add_argument("--wasmtime", default="wasmtime", help="wasmtime command")
+    parser.add_argument("--repeats", type=int, default=5, help="Run repeats")
+    parser.add_argument("--timeout", type=int, default=120, help="Per-run timeout seconds")
+    parser.add_argument("--threshold", type=float, default=0.10, help="Similarity threshold")
     args = parser.parse_args()
 
     build_dir = Path(args.build_dir)
-    output = Path(args.output)
+    out_csv = Path(args.out_csv)
+    out_csv.parent.mkdir(parents=True, exist_ok=True)
 
-    native_exes = sorted(build_dir.glob('*.native.exe'))
+    native_bins = sorted(build_dir.glob("*.native"))
     rows = []
-    for native_exe in native_exes:
-        stem = native_exe.name.replace('.native.exe', '')
-        wasm_file = build_dir / f'{stem}.wasm'
-        if not wasm_file.exists():
-            rows.append({
-                'program': stem,
-                'native_ok': 0,
-                'wasm_ok': 0,
-                'native_median_ms': 0,
-                'wasm_median_ms': 0,
-                'ratio_wasm_over_native': 0,
-                'label': 'missing-artifact',
-                'native_error': 'missing executable or not run',
-                'wasm_error': 'missing wasm artifact',
-            })
+
+    for nb in native_bins:
+        prog = nb.stem.replace(".native", "") if nb.stem.endswith(".native") else nb.name
+        # because nb is '*.native', stem is program
+        prog = nb.name[:-7] if nb.name.endswith(".native") else nb.stem
+        wb = build_dir / f"{prog}.wasm"
+
+        print(f"\n=== Running {prog} ===")
+
+        if not wb.exists():
+            rows.append(
+                {
+                    "program": prog,
+                    "native_ok": 0,
+                    "wasm_ok": 0,
+                    "native_median_ms": 0,
+                    "wasm_median_ms": 0,
+                    "ratio_wasm_over_native": 0,
+                    "label": "missing-artifact",
+                    "native_error": "",
+                    "wasm_error": f"missing {wb}",
+                }
+            )
             continue
 
-        print(f'\n=== Running {stem} ===')
-        res = run_program_pair(
-            native_exe=native_exe,
-            wasm_file=wasm_file,
-            wasmtime_cmd=args.wasmtime,
-            repeats=args.repeats,
-            timeout_sec=args.timeout_sec,
-            verbose=args.verbose,
+        native_times: List[float] = []
+        wasm_times: List[float] = []
+        native_ok = True
+        wasm_ok = True
+        native_err = ""
+        wasm_err = ""
+
+        for _ in range(args.repeats):
+            n_cmd = [str(nb)]
+            print("$", " ".join(shlex.quote(c) for c in n_cmd))
+            ok_n, t_n, err_n = run_once(n_cmd, args.timeout)
+            if not ok_n:
+                native_ok = False
+                native_err = err_n
+                break
+            native_times.append(t_n)
+
+            w_cmd = [args.wasmtime, str(wb)]
+            print("$", " ".join(shlex.quote(c) for c in w_cmd))
+            ok_w, t_w, err_w = run_once(w_cmd, args.timeout)
+            if not ok_w:
+                wasm_ok = False
+                wasm_err = err_w
+                break
+            wasm_times.append(t_w)
+
+        n_med = statistics.median(native_times) if native_times else 0.0
+        w_med = statistics.median(wasm_times) if wasm_times else 0.0
+        ratio = (w_med / n_med) if n_med > 0 else 0.0
+
+        label = "run-failed"
+        if native_ok and wasm_ok:
+            label = label_by_ratio(ratio, args.threshold)
+
+        rows.append(
+            {
+                "program": prog,
+                "native_ok": int(native_ok),
+                "wasm_ok": int(wasm_ok),
+                "native_median_ms": round(n_med, 6),
+                "wasm_median_ms": round(w_med, 6),
+                "ratio_wasm_over_native": round(ratio, 6),
+                "label": label,
+                "native_error": native_err,
+                "wasm_error": wasm_err,
+            }
         )
 
-        label = 'run-failed'
-        if res['native_ok'] and res['wasm_ok']:
-            label = judge_label(res['ratio_wasm_over_native'], args.threshold)
-
-        rows.append({
-            'program': stem,
-            'native_ok': int(res['native_ok']),
-            'wasm_ok': int(res['wasm_ok']),
-            'native_median_ms': res['native_median_ms'],
-            'wasm_median_ms': res['wasm_median_ms'],
-            'ratio_wasm_over_native': res['ratio_wasm_over_native'],
-            'label': label,
-            'native_error': res['native_error'],
-            'wasm_error': res['wasm_error'],
-        })
-
-    output.parent.mkdir(parents=True, exist_ok=True)
-    fieldnames = [
-        'program', 'native_ok', 'wasm_ok',
-        'native_median_ms', 'wasm_median_ms', 'ratio_wasm_over_native',
-        'label', 'native_error', 'wasm_error'
-    ]
-    with output.open('w', newline='', encoding='utf-8') as f:
-        writer = csv.DictWriter(f, fieldnames=fieldnames)
+    with out_csv.open("w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(
+            f,
+            fieldnames=[
+                "program",
+                "native_ok",
+                "wasm_ok",
+                "native_median_ms",
+                "wasm_median_ms",
+                "ratio_wasm_over_native",
+                "label",
+                "native_error",
+                "wasm_error",
+            ],
+        )
         writer.writeheader()
-        for row in rows:
-            writer.writerow(row)
+        writer.writerows(rows)
 
-    print('\n=== Label Summary ===')
+    print("\n=== Label Summary ===")
     summary = {}
     for r in rows:
-        summary[r['label']] = summary.get(r['label'], 0) + 1
-    for k, v in sorted(summary.items()):
-        print(f'{k}: {v}')
-    print(f'output: {output}')
+        summary[r["label"]] = summary.get(r["label"], 0) + 1
+    for k in sorted(summary):
+        print(f"{k}: {summary[k]}")
+    print(f"output: {out_csv}")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

@@ -1,0 +1,13 @@
+program,ir_instruction_count,function_count,basic_block_count,compute_instr_count,compute_density,memory_instr_count,memory_access_density,load_count,store_count,branch_instr_count,branch_density,call_instr_count,call_density,indirect_call_count,loop_count,max_loop_depth,hostcall_count,hostcall_density,io_call_count,time_call_count,filesystem_call_count,alloc_call_count
+alloc_bulk_buffer,78,1,6,17,0.217949,9,0.115385,8,1,6,0.076923,0,0.0,0,0,1,1,1.0,1,0,0,2
+alloc_small_objects,45,1,2,25,0.555556,1,0.022222,0,1,2,0.044444,0,0.0,0,0,1,1,1.0,1,0,0,2
+branch_predictable,33,1,2,8,0.242424,1,0.030303,0,1,4,0.121212,0,0.0,0,0,1,1,1.0,1,0,0,0
+branch_unpredictable,33,1,2,12,0.363636,1,0.030303,0,1,3,0.090909,0,0.0,0,0,1,1,1.0,1,0,0,0
+call_chain,41,1,2,20,0.487805,1,0.02439,0,1,2,0.04878,0,0.0,0,0,0,1,1.0,1,0,0,0
+call_indirect,35,4,2,8,0.228571,2,0.057143,1,1,2,0.057143,0,0.0,0,0,1,1,1.0,1,0,0,0
+compute_fp_mix,37,1,2,9,0.243243,2,0.054054,1,1,2,0.054054,0,0.0,0,0,2,1,1.0,1,0,0,0
+compute_int_add,31,1,2,15,0.483871,1,0.032258,0,1,2,0.064516,0,0.0,0,0,1,1,1.0,1,0,0,0
+host_getcwd_loop,34,1,4,2,0.058824,2,0.058824,1,1,4,0.117647,4,0.117647,0,0,1,2,0.5,1,0,1,0
+host_time_loop,32,1,2,3,0.09375,2,0.0625,1,1,2,0.0625,4,0.125,0,0,1,2,0.5,1,1,0,0
+memory_seq_read,64,1,4,13,0.203125,7,0.109375,4,3,4,0.0625,0,0.0,0,0,0,1,1.0,1,0,0,2
+memory_stride_write,102,1,6,29,0.284314,17,0.166667,12,5,6,0.058824,0,0.0,0,0,2,1,1.0,1,0,0,2

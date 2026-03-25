@@ -1,238 +1,239 @@
 #!/usr/bin/env python3
+"""
+Extract static features based on assets/feature_design_table.md.
+Input directory should contain:
+- source: *.c
+- LLVM IR: same stem *.ll (optional but recommended)
+
+Output CSV contains exactly the current agreed feature set.
+"""
+
 import argparse
 import csv
-import json
-import os
 import re
 from pathlib import Path
-from typing import Dict, List, Tuple
+from typing import Dict, List
 
 COMPUTE_OPS = {
-    'add', 'sub', 'mul', 'udiv', 'sdiv', 'urem', 'srem',
-    'fadd', 'fsub', 'fmul', 'fdiv', 'frem',
-    'and', 'or', 'xor', 'shl', 'lshr', 'ashr'
+    "add", "sub", "mul", "udiv", "sdiv", "urem", "srem",
+    "fadd", "fsub", "fmul", "fdiv", "frem",
+    "and", "or", "xor", "shl", "lshr", "ashr",
 }
+MEMORY_OPS = {"load", "store", "atomicrmw", "cmpxchg"}
+BRANCH_OPS = {"br", "switch", "indirectbr", "select"}
+CALL_OPS = {"call", "invoke", "callbr"}
 
-MEMORY_OPS = {'load', 'store', 'atomicrmw', 'cmpxchg'}
-BRANCH_OPS = {'br', 'switch', 'indirectbr'}
-CALL_OPS = {'call', 'invoke', 'callbr'}
-HOST_IO_NAMES = {
-    'printf', 'fprintf', 'puts', 'putchar', 'fputs',
-    'read', 'write', 'fread', 'fwrite', 'open', 'close', 'fopen', 'fclose'
+HOST_IO = {
+    "printf", "fprintf", "puts", "putchar", "fputs",
+    "read", "write", "fread", "fwrite", "open", "close", "fopen", "fclose",
 }
-HOST_TIME_NAMES = {'time', 'gettimeofday', 'clock_gettime', 'clock'}
-HOST_FS_NAMES = {'getcwd', 'chdir', 'stat', 'lstat', 'fstat', 'opendir', 'readdir'}
-ALLOC_NAMES = {'malloc', 'calloc', 'realloc', 'free', 'aligned_alloc'}
+HOST_TIME = {"time", "gettimeofday", "clock_gettime", "clock"}
+HOST_FS = {"getcwd", "chdir", "stat", "lstat", "fstat", "opendir", "readdir"}
+ALLOC_API = {"malloc", "calloc", "realloc", "free", "aligned_alloc"}
 
-FUNC_DEF_RE = re.compile(r'^define\s+')
-LABEL_RE = re.compile(r'^[A-Za-z0-9_.-]+:\s*(;.*)?$')
-INST_RE = re.compile(r'^\s*(?:[%@][A-Za-z0-9_.-]+\s*=\s*)?([A-Za-z_][A-Za-z0-9_.]*)\b')
-CALL_TARGET_RE = re.compile(r'@(\w+)')
-LOOP_HINT_RE = re.compile(r'(llvm\.loop|\.lr\.ph|\.preheader|\.backedge)', re.IGNORECASE)
-WASM_IMPORT_RE = re.compile(r'\(import\s+"')
-WASM_EXPORT_RE = re.compile(r'\(export\s+"')
-WASM_DATA_RE = re.compile(r'\(data\b')
-WASM_MEMORY_RE = re.compile(r'\(memory\b')
+RE_FUNC = re.compile(r"^define\s+")
+RE_LABEL = re.compile(r"^[A-Za-z0-9_.-]+:\s*(;.*)?$")
+RE_INST = re.compile(r"^\s*(?:[%@][A-Za-z0-9_.-]+\s*=\s*)?([A-Za-z_][A-Za-z0-9_.]*)\b")
+RE_CALL_SYMBOL = re.compile(r"\b([A-Za-z_][A-Za-z0-9_]*)\s*\(")
+RE_LOOP_HINT = re.compile(r"(llvm\.loop|\.lr\.ph|\.preheader|\.backedge)", re.IGNORECASE)
 
 
 def safe_div(a: float, b: float) -> float:
     return a / b if b else 0.0
 
 
-def extract_source_symbol_features(source_text: str) -> Dict[str, int]:
-    symbols = re.findall(r'\b([A-Za-z_][A-Za-z0-9_]*)\s*\(', source_text)
-    io_count = sum(1 for s in symbols if s in HOST_IO_NAMES)
-    time_count = sum(1 for s in symbols if s in HOST_TIME_NAMES)
-    fs_count = sum(1 for s in symbols if s in HOST_FS_NAMES)
-    alloc_count = sum(1 for s in symbols if s in ALLOC_NAMES)
-    hostcall_count = io_count + time_count + fs_count
+def source_features(c_text: str) -> Dict[str, int]:
+    syms = RE_CALL_SYMBOL.findall(c_text)
+    io_cnt = sum(1 for s in syms if s in HOST_IO)
+    time_cnt = sum(1 for s in syms if s in HOST_TIME)
+    fs_cnt = sum(1 for s in syms if s in HOST_FS)
+    alloc_cnt = sum(1 for s in syms if s in ALLOC_API)
+
+    # naive max loop depth from source text
+    max_depth = 0
+    depth = 0
+    pending_loop = 0
+    tokens = re.findall(r"for|while|do|\{|\}", c_text)
+    for tk in tokens:
+        if tk in {"for", "while", "do"}:
+            pending_loop += 1
+        elif tk == "{":
+            if pending_loop > 0:
+                depth += 1
+                pending_loop -= 1
+                if depth > max_depth:
+                    max_depth = depth
+        elif tk == "}":
+            if depth > 0:
+                depth -= 1
+
     return {
-        'hostcall_count': hostcall_count,
-        'io_call_count': io_count,
-        'time_call_count': time_count,
-        'filesystem_call_count': fs_count,
-        'alloc_call_count': alloc_count,
+        "hostcall_count": io_cnt + time_cnt + fs_cnt,
+        "io_call_count": io_cnt,
+        "time_call_count": time_cnt,
+        "filesystem_call_count": fs_cnt,
+        "alloc_call_count": alloc_cnt,
+        "max_loop_depth": max_depth,
     }
 
 
-def extract_ir_features(ir_text: str) -> Dict[str, float]:
-    function_count = 0
-    basic_block_count = 0
-    total_inst = 0
-    compute_count = 0
-    memory_count = 0
-    load_count = 0
-    store_count = 0
-    branch_count = 0
-    call_count = 0
-    indirect_call_count = 0
-    loop_hints = 0
-    edge_approx = 0
+def ir_features(ll_text: str) -> Dict[str, float]:
+    func_cnt = 0
+    bb_cnt = 0
+    inst_cnt = 0
+    compute_cnt = 0
+    mem_cnt = 0
+    load_cnt = 0
+    store_cnt = 0
+    br_cnt = 0
+    call_cnt = 0
+    indirect_call_cnt = 0
+    loop_cnt = 0
 
-    for raw_line in ir_text.splitlines():
-        line = raw_line.strip()
-        if not line or line.startswith(';'):
-            continue
-        if FUNC_DEF_RE.match(line):
-            function_count += 1
-            continue
-        if LABEL_RE.match(line):
-            basic_block_count += 1
-            if LOOP_HINT_RE.search(line):
-                loop_hints += 1
+    for raw in ll_text.splitlines():
+        line = raw.strip()
+        if not line or line.startswith(";"):
             continue
 
-        m = INST_RE.match(line)
+        if RE_FUNC.match(line):
+            func_cnt += 1
+            continue
+
+        if RE_LABEL.match(line):
+            bb_cnt += 1
+            if RE_LOOP_HINT.search(line):
+                loop_cnt += 1
+            continue
+
+        m = RE_INST.match(line)
         if not m:
             continue
+
         op = m.group(1)
-        total_inst += 1
+        inst_cnt += 1
 
         if op in COMPUTE_OPS:
-            compute_count += 1
+            compute_cnt += 1
         if op in MEMORY_OPS:
-            memory_count += 1
-        if op == 'load':
-            load_count += 1
-        if op == 'store':
-            store_count += 1
-        if op in BRANCH_OPS or op == 'select':
-            branch_count += 1
-            if op == 'switch':
-                edge_approx += 2
-            else:
-                edge_approx += 1
+            mem_cnt += 1
+        if op == "load":
+            load_cnt += 1
+        if op == "store":
+            store_cnt += 1
+        if op in BRANCH_OPS:
+            br_cnt += 1
         if op in CALL_OPS:
-            call_count += 1
-            if 'call ' in line and '*' in line:
-                indirect_call_count += 1
-            elif 'call' in line and ' ptr ' in line and '@' not in line:
-                indirect_call_count += 1
-
-    if basic_block_count == 0 and total_inst > 0:
-        basic_block_count = 1
-
-    cyclomatic_complexity = max(1, edge_approx - basic_block_count + 2 * max(function_count, 1))
-    avg_bb_size = safe_div(total_inst, basic_block_count)
+            call_cnt += 1
+            if ("call" in line and "@" not in line) or "call " in line and "*" in line:
+                indirect_call_cnt += 1
 
     return {
-        'ir_instruction_count': total_inst,
-        'function_count': function_count,
-        'basic_block_count': basic_block_count,
-        'avg_bb_size': round(avg_bb_size, 6),
-        'compute_instr_count': compute_count,
-        'compute_density': round(safe_div(compute_count, total_inst), 6),
-        'memory_instr_count': memory_count,
-        'memory_access_density': round(safe_div(memory_count, total_inst), 6),
-        'load_count': load_count,
-        'store_count': store_count,
-        'branch_instr_count': branch_count,
-        'branch_density': round(safe_div(branch_count, total_inst), 6),
-        'call_instr_count': call_count,
-        'call_density': round(safe_div(call_count, total_inst), 6),
-        'indirect_call_count': indirect_call_count,
-        'loop_count': loop_hints,
-        'max_loop_depth': 0,
-        'cyclomatic_complexity': cyclomatic_complexity,
+        "ir_instruction_count": inst_cnt,
+        "function_count": func_cnt,
+        "basic_block_count": bb_cnt,
+        "compute_instr_count": compute_cnt,
+        "compute_density": round(safe_div(compute_cnt, inst_cnt), 6),
+        "memory_instr_count": mem_cnt,
+        "memory_access_density": round(safe_div(mem_cnt, inst_cnt), 6),
+        "load_count": load_cnt,
+        "store_count": store_cnt,
+        "branch_instr_count": br_cnt,
+        "branch_density": round(safe_div(br_cnt, inst_cnt), 6),
+        "call_instr_count": call_cnt,
+        "call_density": round(safe_div(call_cnt, inst_cnt), 6),
+        "indirect_call_count": indirect_call_cnt,
+        "loop_count": loop_cnt,
     }
 
 
-def extract_wat_features(wat_text: str, wasm_path: Path = None) -> Dict[str, float]:
-    imported_function_count = len(WASM_IMPORT_RE.findall(wat_text))
-    exported_function_count = len(WASM_EXPORT_RE.findall(wat_text))
-    data_section_count = len(WASM_DATA_RE.findall(wat_text))
-    memory_segment_init_total_size = 0
-    data_section_size = 0
-    for line in wat_text.splitlines():
-        if '(data' in line:
-            payload = re.findall(r'"([^"]*)"', line)
-            if payload:
-                sz = sum(len(p.encode('utf-8').decode('unicode_escape').encode('latin1', 'ignore')) for p in payload)
-                data_section_size += sz
-                memory_segment_init_total_size += sz
-    wasm_binary_size = wasm_path.stat().st_size if wasm_path and wasm_path.exists() else 0
-    return {
-        'imported_function_count': imported_function_count,
-        'exported_function_count': exported_function_count,
-        'data_section_count': data_section_count,
-        'data_section_size': data_section_size,
-        'memory_segment_init_total_size': memory_segment_init_total_size,
-        'wasm_binary_size': wasm_binary_size,
-    }
+def extract_one(c_path: Path, ll_path: Path) -> Dict[str, float]:
+    row: Dict[str, float] = {"program": c_path.stem}
 
+    c_text = c_path.read_text(encoding="utf-8", errors="ignore")
+    row.update(source_features(c_text))
 
-def merge_feature_dicts(*dicts: Dict[str, float]) -> Dict[str, float]:
-    merged: Dict[str, float] = {}
-    for d in dicts:
-        merged.update(d)
-    if 'hostcall_count' in merged and 'call_instr_count' in merged:
-        merged['hostcall_density'] = round(safe_div(merged['hostcall_count'], max(merged['call_instr_count'], 1)), 6)
-    return merged
-
-
-def discover_file_set(input_dir: Path) -> List[Tuple[Path, Path, Path]]:
-    c_files = sorted(input_dir.glob('*.c'))
-    result = []
-    for c_file in c_files:
-        stem = c_file.stem
-        ll = input_dir / f'{stem}.ll'
-        wat = input_dir / f'{stem}.wat'
-        result.append((c_file, ll, wat))
-    return result
-
-
-def process_one(c_path: Path, ll_path: Path, wat_path: Path) -> Dict[str, float]:
-    source_text = c_path.read_text(encoding='utf-8')
-    source_features = extract_source_symbol_features(source_text)
-    ir_features = {}
     if ll_path.exists():
-        ir_text = ll_path.read_text(encoding='utf-8', errors='ignore')
-        ir_features = extract_ir_features(ir_text)
-    wat_features = {}
-    if wat_path.exists():
-        wat_text = wat_path.read_text(encoding='utf-8', errors='ignore')
-        wat_features = extract_wat_features(wat_text)
-    row = merge_feature_dicts(source_features, ir_features, wat_features)
-    row['program'] = c_path.stem
-    row['source_file'] = str(c_path)
-    row['ir_file'] = str(ll_path) if ll_path.exists() else ''
-    row['wat_file'] = str(wat_path) if wat_path.exists() else ''
+        ll_text = ll_path.read_text(encoding="utf-8", errors="ignore")
+        row.update(ir_features(ll_text))
+    else:
+        # fill required IR features with 0 when missing
+        row.update(
+            {
+                "ir_instruction_count": 0,
+                "function_count": 0,
+                "basic_block_count": 0,
+                "compute_instr_count": 0,
+                "compute_density": 0,
+                "memory_instr_count": 0,
+                "memory_access_density": 0,
+                "load_count": 0,
+                "store_count": 0,
+                "branch_instr_count": 0,
+                "branch_density": 0,
+                "call_instr_count": 0,
+                "call_density": 0,
+                "indirect_call_count": 0,
+                "loop_count": 0,
+            }
+        )
+
+    row["hostcall_density"] = round(safe_div(row["hostcall_count"], max(row["call_instr_count"], 1)), 6)
+
     return row
 
 
-def write_csv(rows: List[Dict[str, float]], output_path: Path) -> None:
-    all_keys = []
-    seen = set()
-    for row in rows:
-        for key in row.keys():
-            if key not in seen:
-                seen.add(key)
-                all_keys.append(key)
-    with output_path.open('w', newline='', encoding='utf-8') as f:
-        writer = csv.DictWriter(f, fieldnames=all_keys)
-        writer.writeheader()
-        for row in rows:
-            writer.writerow(row)
-
-
 def main() -> None:
-    parser = argparse.ArgumentParser(description='Extract static features from C source, LLVM IR (.ll), and optional WAT (.wat).')
-    parser.add_argument('--input-dir', required=True, help='Directory containing .c files and optional .ll/.wat files with same stem.')
-    parser.add_argument('--output', required=True, help='Output CSV path.')
-    parser.add_argument('--pretty-json', help='Optional JSON output path for inspection.')
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--src-dir", default="data/microbenchmarks", help="Directory of .c files")
+    parser.add_argument("--ir-dir", default="data/build", help="Directory of .ll files")
+    parser.add_argument("--out-csv", default="data/results/features.csv", help="Output feature CSV")
     args = parser.parse_args()
 
-    input_dir = Path(args.input_dir)
-    output = Path(args.output)
-    file_set = discover_file_set(input_dir)
-    rows = [process_one(c_path, ll_path, wat_path) for c_path, ll_path, wat_path in file_set]
-    write_csv(rows, output)
+    src_dir = Path(args.src_dir)
+    ir_dir = Path(args.ir_dir)
+    out_csv = Path(args.out_csv)
+    out_csv.parent.mkdir(parents=True, exist_ok=True)
 
-    if args.pretty_json:
-        Path(args.pretty_json).write_text(json.dumps(rows, ensure_ascii=False, indent=2), encoding='utf-8')
+    c_files = sorted(src_dir.glob("*.c"))
+    rows = []
+    for c_file in c_files:
+        ll_file = ir_dir / f"{c_file.stem}.ll"
+        rows.append(extract_one(c_file, ll_file))
 
-    print(f'Processed {len(rows)} programs -> {output}')
+    fieldnames = [
+        "program",
+        "ir_instruction_count",
+        "function_count",
+        "basic_block_count",
+        "compute_instr_count",
+        "compute_density",
+        "memory_instr_count",
+        "memory_access_density",
+        "load_count",
+        "store_count",
+        "branch_instr_count",
+        "branch_density",
+        "call_instr_count",
+        "call_density",
+        "indirect_call_count",
+        "loop_count",
+        "max_loop_depth",
+        "hostcall_count",
+        "hostcall_density",
+        "io_call_count",
+        "time_call_count",
+        "filesystem_call_count",
+        "alloc_call_count",
+    ]
+
+    with out_csv.open("w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        writer.writeheader()
+        for r in rows:
+            writer.writerow(r)
+
+    print(f"extracted {len(rows)} programs -> {out_csv}")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

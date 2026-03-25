@@ -1,0 +1,13 @@
+program,native_ok,wasm_ok,native_median_ms,wasm_median_ms,ratio_wasm_over_native,label,native_error,wasm_error
+alloc_bulk_buffer,1,1,21.375796,27.392558,1.281475,native-better,,
+alloc_small_objects,1,1,8.394408,16.993401,2.024372,native-better,,
+branch_predictable,1,1,26.873918,34.433424,1.281295,native-better,,
+branch_unpredictable,1,1,120.720879,222.221706,1.840789,native-better,,
+call_chain,1,1,20.023435,34.467803,1.721373,native-better,,
+call_indirect,1,1,46.71878,87.359663,1.869905,native-better,,
+compute_fp_mix,1,1,61.160617,66.179203,1.082056,similar,,
+compute_int_add,1,1,91.734661,90.350316,0.984909,similar,,
+host_getcwd_loop,1,1,546.022019,27.307161,0.050011,wasm-better,,
+host_time_loop,1,1,38.366908,252.267257,6.575126,native-better,,
+memory_seq_read,1,1,17.190808,22.196885,1.291207,native-better,,
+memory_stride_write,1,1,71.954235,79.138994,1.099852,similar,,

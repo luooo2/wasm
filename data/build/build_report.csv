@@ -1,0 +1,13 @@
+program,native_ok,ir_ok,wasm_ok,native_bin,ir_file,wasm_file,native_error,ir_error,wasm_error
+alloc_bulk_buffer,1,1,1,data/build/alloc_bulk_buffer.native,data/build/alloc_bulk_buffer.ll,data/build/alloc_bulk_buffer.wasm,,,
+alloc_small_objects,1,1,1,data/build/alloc_small_objects.native,data/build/alloc_small_objects.ll,data/build/alloc_small_objects.wasm,,,
+branch_predictable,1,1,1,data/build/branch_predictable.native,data/build/branch_predictable.ll,data/build/branch_predictable.wasm,,,
+branch_unpredictable,1,1,1,data/build/branch_unpredictable.native,data/build/branch_unpredictable.ll,data/build/branch_unpredictable.wasm,,,
+call_chain,1,1,1,data/build/call_chain.native,data/build/call_chain.ll,data/build/call_chain.wasm,,,
+call_indirect,1,1,1,data/build/call_indirect.native,data/build/call_indirect.ll,data/build/call_indirect.wasm,,,
+compute_fp_mix,1,1,1,data/build/compute_fp_mix.native,data/build/compute_fp_mix.ll,data/build/compute_fp_mix.wasm,,,
+compute_int_add,1,1,1,data/build/compute_int_add.native,data/build/compute_int_add.ll,data/build/compute_int_add.wasm,,,
+host_getcwd_loop,1,1,1,data/build/host_getcwd_loop.native,data/build/host_getcwd_loop.ll,data/build/host_getcwd_loop.wasm,,,
+host_time_loop,1,1,1,data/build/host_time_loop.native,data/build/host_time_loop.ll,data/build/host_time_loop.wasm,,,
+memory_seq_read,1,1,1,data/build/memory_seq_read.native,data/build/memory_seq_read.ll,data/build/memory_seq_read.wasm,,,
+memory_stride_write,1,1,1,data/build/memory_stride_write.native,data/build/memory_stride_write.ll,data/build/memory_stride_write.wasm,,,
