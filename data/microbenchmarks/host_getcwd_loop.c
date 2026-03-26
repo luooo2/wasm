@@ -3,7 +3,7 @@
 #include <unistd.h>
 
 #ifndef N
-#define N 1500000
+#define N 300000
 #endif
 
 volatile int sink_i32 = 0;

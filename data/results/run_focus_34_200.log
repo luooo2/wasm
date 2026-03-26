@@ -1,0 +1,2016 @@
+
+=== Running compute_fp_muladd ===
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime --dir=. data/build/compute_fp_muladd.wasm
+
+=== Running compute_int_add ===
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime --dir=. data/build/compute_int_add.wasm
+
+=== Running compute_int_divmod ===
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime --dir=. data/build/compute_int_divmod.wasm
+
+=== Running compute_int_mul ===
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime --dir=. data/build/compute_int_mul.wasm
+
+=== Running memory_stride_write ===
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime --dir=. data/build/memory_stride_write.wasm
+
+=== Label Summary ===
+native-better: 1
+similar: 4
+summary output: data/results/labels_focus_34_200.csv
+raw output:     data/results/labels_raw_focus_34_200.csv

@@ -24,7 +24,7 @@ define dso_local noundef i32 @main() local_unnamed_addr #0 {
   %9 = sext i8 %8 to i32
   %10 = add nsw i32 %4, %9
   %11 = add nuw nsw i32 %3, 1
-  %12 = icmp eq i32 %11, 1500000
+  %12 = icmp eq i32 %11, 300000
   br i1 %12, label %13, label %2, !llvm.loop !8
 
 13:                                               ; preds = %7

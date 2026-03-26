@@ -29,7 +29,7 @@ define dso_local noundef i32 @main() local_unnamed_addr #0 {
   %10 = and i64 %9, 1023
   %11 = add nuw nsw i64 %10, %7
   %12 = add nuw nsw i32 %6, 1
-  %13 = icmp eq i32 %12, 2000000
+  %13 = icmp eq i32 %12, 500000
   br i1 %13, label %3, label %5, !llvm.loop !12
 }
 

@@ -132,7 +132,7 @@ def main() -> None:
         wasm_err = ""
 
         n_cmd = [str(nb)]
-        w_cmd = [args.wasmtime, str(wb)]
+        w_cmd = [args.wasmtime, "--dir=.", str(wb)]
 
         # warmup phase (not recorded)
         for _ in range(max(args.warmup, 0)):

@@ -1,0 +1,5 @@
+compute_fp_muladd
+compute_int_add
+compute_int_divmod
+compute_int_mul
+memory_stride_write

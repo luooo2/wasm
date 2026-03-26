@@ -1,0 +1,253 @@
+
+=== Running host_open_close_loop ===
+$ data/build/host_open_close_loop.native
+$ wasmtime --dir=. data/build/host_open_close_loop.wasm
+$ data/build/host_open_close_loop.native
+$ wasmtime --dir=. data/build/host_open_close_loop.wasm
+$ data/build/host_open_close_loop.native
+$ wasmtime --dir=. data/build/host_open_close_loop.wasm
+$ data/build/host_open_close_loop.native
+$ wasmtime --dir=. data/build/host_open_close_loop.wasm
+$ data/build/host_open_close_loop.native
+$ wasmtime --dir=. data/build/host_open_close_loop.wasm
+$ data/build/host_open_close_loop.native
+$ wasmtime --dir=. data/build/host_open_close_loop.wasm
+$ data/build/host_open_close_loop.native
+$ wasmtime --dir=. data/build/host_open_close_loop.wasm
+$ data/build/host_open_close_loop.native
+$ wasmtime --dir=. data/build/host_open_close_loop.wasm
+$ data/build/host_open_close_loop.native
+$ wasmtime --dir=. data/build/host_open_close_loop.wasm
+$ data/build/host_open_close_loop.native
+$ wasmtime --dir=. data/build/host_open_close_loop.wasm
+$ data/build/host_open_close_loop.native
+$ wasmtime --dir=. data/build/host_open_close_loop.wasm
+$ data/build/host_open_close_loop.native
+$ wasmtime --dir=. data/build/host_open_close_loop.wasm
+$ data/build/host_open_close_loop.native
+$ wasmtime --dir=. data/build/host_open_close_loop.wasm
+$ data/build/host_open_close_loop.native
+$ wasmtime --dir=. data/build/host_open_close_loop.wasm
+$ data/build/host_open_close_loop.native
+$ wasmtime --dir=. data/build/host_open_close_loop.wasm
+$ data/build/host_open_close_loop.native
+$ wasmtime --dir=. data/build/host_open_close_loop.wasm
+$ data/build/host_open_close_loop.native
+$ wasmtime --dir=. data/build/host_open_close_loop.wasm
+$ data/build/host_open_close_loop.native
+$ wasmtime --dir=. data/build/host_open_close_loop.wasm
+$ data/build/host_open_close_loop.native
+$ wasmtime --dir=. data/build/host_open_close_loop.wasm
+$ data/build/host_open_close_loop.native
+$ wasmtime --dir=. data/build/host_open_close_loop.wasm
+$ data/build/host_open_close_loop.native
+$ wasmtime --dir=. data/build/host_open_close_loop.wasm
+$ data/build/host_open_close_loop.native
+$ wasmtime --dir=. data/build/host_open_close_loop.wasm
+$ data/build/host_open_close_loop.native
+$ wasmtime --dir=. data/build/host_open_close_loop.wasm
+$ data/build/host_open_close_loop.native
+$ wasmtime --dir=. data/build/host_open_close_loop.wasm
+$ data/build/host_open_close_loop.native
+$ wasmtime --dir=. data/build/host_open_close_loop.wasm
+$ data/build/host_open_close_loop.native
+$ wasmtime --dir=. data/build/host_open_close_loop.wasm
+$ data/build/host_open_close_loop.native
+$ wasmtime --dir=. data/build/host_open_close_loop.wasm
+$ data/build/host_open_close_loop.native
+$ wasmtime --dir=. data/build/host_open_close_loop.wasm
+$ data/build/host_open_close_loop.native
+$ wasmtime --dir=. data/build/host_open_close_loop.wasm
+$ data/build/host_open_close_loop.native
+$ wasmtime --dir=. data/build/host_open_close_loop.wasm
+
+=== Running host_read_small ===
+$ data/build/host_read_small.native
+$ wasmtime --dir=. data/build/host_read_small.wasm
+$ data/build/host_read_small.native
+$ wasmtime --dir=. data/build/host_read_small.wasm
+$ data/build/host_read_small.native
+$ wasmtime --dir=. data/build/host_read_small.wasm
+$ data/build/host_read_small.native
+$ wasmtime --dir=. data/build/host_read_small.wasm
+$ data/build/host_read_small.native
+$ wasmtime --dir=. data/build/host_read_small.wasm
+$ data/build/host_read_small.native
+$ wasmtime --dir=. data/build/host_read_small.wasm
+$ data/build/host_read_small.native
+$ wasmtime --dir=. data/build/host_read_small.wasm
+$ data/build/host_read_small.native
+$ wasmtime --dir=. data/build/host_read_small.wasm
+$ data/build/host_read_small.native
+$ wasmtime --dir=. data/build/host_read_small.wasm
+$ data/build/host_read_small.native
+$ wasmtime --dir=. data/build/host_read_small.wasm
+$ data/build/host_read_small.native
+$ wasmtime --dir=. data/build/host_read_small.wasm
+$ data/build/host_read_small.native
+$ wasmtime --dir=. data/build/host_read_small.wasm
+$ data/build/host_read_small.native
+$ wasmtime --dir=. data/build/host_read_small.wasm
+$ data/build/host_read_small.native
+$ wasmtime --dir=. data/build/host_read_small.wasm
+$ data/build/host_read_small.native
+$ wasmtime --dir=. data/build/host_read_small.wasm
+$ data/build/host_read_small.native
+$ wasmtime --dir=. data/build/host_read_small.wasm
+$ data/build/host_read_small.native
+$ wasmtime --dir=. data/build/host_read_small.wasm
+$ data/build/host_read_small.native
+$ wasmtime --dir=. data/build/host_read_small.wasm
+$ data/build/host_read_small.native
+$ wasmtime --dir=. data/build/host_read_small.wasm
+$ data/build/host_read_small.native
+$ wasmtime --dir=. data/build/host_read_small.wasm
+$ data/build/host_read_small.native
+$ wasmtime --dir=. data/build/host_read_small.wasm
+$ data/build/host_read_small.native
+$ wasmtime --dir=. data/build/host_read_small.wasm
+$ data/build/host_read_small.native
+$ wasmtime --dir=. data/build/host_read_small.wasm
+$ data/build/host_read_small.native
+$ wasmtime --dir=. data/build/host_read_small.wasm
+$ data/build/host_read_small.native
+$ wasmtime --dir=. data/build/host_read_small.wasm
+$ data/build/host_read_small.native
+$ wasmtime --dir=. data/build/host_read_small.wasm
+$ data/build/host_read_small.native
+$ wasmtime --dir=. data/build/host_read_small.wasm
+$ data/build/host_read_small.native
+$ wasmtime --dir=. data/build/host_read_small.wasm
+$ data/build/host_read_small.native
+$ wasmtime --dir=. data/build/host_read_small.wasm
+$ data/build/host_read_small.native
+$ wasmtime --dir=. data/build/host_read_small.wasm
+
+=== Running host_stat_loop ===
+$ data/build/host_stat_loop.native
+$ wasmtime --dir=. data/build/host_stat_loop.wasm
+$ data/build/host_stat_loop.native
+$ wasmtime --dir=. data/build/host_stat_loop.wasm
+$ data/build/host_stat_loop.native
+$ wasmtime --dir=. data/build/host_stat_loop.wasm
+$ data/build/host_stat_loop.native
+$ wasmtime --dir=. data/build/host_stat_loop.wasm
+$ data/build/host_stat_loop.native
+$ wasmtime --dir=. data/build/host_stat_loop.wasm
+$ data/build/host_stat_loop.native
+$ wasmtime --dir=. data/build/host_stat_loop.wasm
+$ data/build/host_stat_loop.native
+$ wasmtime --dir=. data/build/host_stat_loop.wasm
+$ data/build/host_stat_loop.native
+$ wasmtime --dir=. data/build/host_stat_loop.wasm
+$ data/build/host_stat_loop.native
+$ wasmtime --dir=. data/build/host_stat_loop.wasm
+$ data/build/host_stat_loop.native
+$ wasmtime --dir=. data/build/host_stat_loop.wasm
+$ data/build/host_stat_loop.native
+$ wasmtime --dir=. data/build/host_stat_loop.wasm
+$ data/build/host_stat_loop.native
+$ wasmtime --dir=. data/build/host_stat_loop.wasm
+$ data/build/host_stat_loop.native
+$ wasmtime --dir=. data/build/host_stat_loop.wasm
+$ data/build/host_stat_loop.native
+$ wasmtime --dir=. data/build/host_stat_loop.wasm
+$ data/build/host_stat_loop.native
+$ wasmtime --dir=. data/build/host_stat_loop.wasm
+$ data/build/host_stat_loop.native
+$ wasmtime --dir=. data/build/host_stat_loop.wasm
+$ data/build/host_stat_loop.native
+$ wasmtime --dir=. data/build/host_stat_loop.wasm
+$ data/build/host_stat_loop.native
+$ wasmtime --dir=. data/build/host_stat_loop.wasm
+$ data/build/host_stat_loop.native
+$ wasmtime --dir=. data/build/host_stat_loop.wasm
+$ data/build/host_stat_loop.native
+$ wasmtime --dir=. data/build/host_stat_loop.wasm
+$ data/build/host_stat_loop.native
+$ wasmtime --dir=. data/build/host_stat_loop.wasm
+$ data/build/host_stat_loop.native
+$ wasmtime --dir=. data/build/host_stat_loop.wasm
+$ data/build/host_stat_loop.native
+$ wasmtime --dir=. data/build/host_stat_loop.wasm
+$ data/build/host_stat_loop.native
+$ wasmtime --dir=. data/build/host_stat_loop.wasm
+$ data/build/host_stat_loop.native
+$ wasmtime --dir=. data/build/host_stat_loop.wasm
+$ data/build/host_stat_loop.native
+$ wasmtime --dir=. data/build/host_stat_loop.wasm
+$ data/build/host_stat_loop.native
+$ wasmtime --dir=. data/build/host_stat_loop.wasm
+$ data/build/host_stat_loop.native
+$ wasmtime --dir=. data/build/host_stat_loop.wasm
+$ data/build/host_stat_loop.native
+$ wasmtime --dir=. data/build/host_stat_loop.wasm
+$ data/build/host_stat_loop.native
+$ wasmtime --dir=. data/build/host_stat_loop.wasm
+
+=== Running host_write_small ===
+$ data/build/host_write_small.native
+$ wasmtime --dir=. data/build/host_write_small.wasm
+$ data/build/host_write_small.native
+$ wasmtime --dir=. data/build/host_write_small.wasm
+$ data/build/host_write_small.native
+$ wasmtime --dir=. data/build/host_write_small.wasm
+$ data/build/host_write_small.native
+$ wasmtime --dir=. data/build/host_write_small.wasm
+$ data/build/host_write_small.native
+$ wasmtime --dir=. data/build/host_write_small.wasm
+$ data/build/host_write_small.native
+$ wasmtime --dir=. data/build/host_write_small.wasm
+$ data/build/host_write_small.native
+$ wasmtime --dir=. data/build/host_write_small.wasm
+$ data/build/host_write_small.native
+$ wasmtime --dir=. data/build/host_write_small.wasm
+$ data/build/host_write_small.native
+$ wasmtime --dir=. data/build/host_write_small.wasm
+$ data/build/host_write_small.native
+$ wasmtime --dir=. data/build/host_write_small.wasm
+$ data/build/host_write_small.native
+$ wasmtime --dir=. data/build/host_write_small.wasm
+$ data/build/host_write_small.native
+$ wasmtime --dir=. data/build/host_write_small.wasm
+$ data/build/host_write_small.native
+$ wasmtime --dir=. data/build/host_write_small.wasm
+$ data/build/host_write_small.native
+$ wasmtime --dir=. data/build/host_write_small.wasm
+$ data/build/host_write_small.native
+$ wasmtime --dir=. data/build/host_write_small.wasm
+$ data/build/host_write_small.native
+$ wasmtime --dir=. data/build/host_write_small.wasm
+$ data/build/host_write_small.native
+$ wasmtime --dir=. data/build/host_write_small.wasm
+$ data/build/host_write_small.native
+$ wasmtime --dir=. data/build/host_write_small.wasm
+$ data/build/host_write_small.native
+$ wasmtime --dir=. data/build/host_write_small.wasm
+$ data/build/host_write_small.native
+$ wasmtime --dir=. data/build/host_write_small.wasm
+$ data/build/host_write_small.native
+$ wasmtime --dir=. data/build/host_write_small.wasm
+$ data/build/host_write_small.native
+$ wasmtime --dir=. data/build/host_write_small.wasm
+$ data/build/host_write_small.native
+$ wasmtime --dir=. data/build/host_write_small.wasm
+$ data/build/host_write_small.native
+$ wasmtime --dir=. data/build/host_write_small.wasm
+$ data/build/host_write_small.native
+$ wasmtime --dir=. data/build/host_write_small.wasm
+$ data/build/host_write_small.native
+$ wasmtime --dir=. data/build/host_write_small.wasm
+$ data/build/host_write_small.native
+$ wasmtime --dir=. data/build/host_write_small.wasm
+$ data/build/host_write_small.native
+$ wasmtime --dir=. data/build/host_write_small.wasm
+$ data/build/host_write_small.native
+$ wasmtime --dir=. data/build/host_write_small.wasm
+$ data/build/host_write_small.native
+$ wasmtime --dir=. data/build/host_write_small.wasm
+
+=== Label Summary ===
+native-better: 4
+summary output: data/results/labels_failed4_rerun.csv
+raw output:     data/results/labels_raw_failed4_rerun.csv

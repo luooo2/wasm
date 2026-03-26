@@ -1,0 +1,1883 @@
+
+=== Running alloc_bulk_buffer ===
+$ data/build/alloc_bulk_buffer.native
+$ wasmtime data/build/alloc_bulk_buffer.wasm
+$ data/build/alloc_bulk_buffer.native
+$ wasmtime data/build/alloc_bulk_buffer.wasm
+$ data/build/alloc_bulk_buffer.native
+$ wasmtime data/build/alloc_bulk_buffer.wasm
+$ data/build/alloc_bulk_buffer.native
+$ wasmtime data/build/alloc_bulk_buffer.wasm
+$ data/build/alloc_bulk_buffer.native
+$ wasmtime data/build/alloc_bulk_buffer.wasm
+$ data/build/alloc_bulk_buffer.native
+$ wasmtime data/build/alloc_bulk_buffer.wasm
+$ data/build/alloc_bulk_buffer.native
+$ wasmtime data/build/alloc_bulk_buffer.wasm
+$ data/build/alloc_bulk_buffer.native
+$ wasmtime data/build/alloc_bulk_buffer.wasm
+$ data/build/alloc_bulk_buffer.native
+$ wasmtime data/build/alloc_bulk_buffer.wasm
+$ data/build/alloc_bulk_buffer.native
+$ wasmtime data/build/alloc_bulk_buffer.wasm
+$ data/build/alloc_bulk_buffer.native
+$ wasmtime data/build/alloc_bulk_buffer.wasm
+$ data/build/alloc_bulk_buffer.native
+$ wasmtime data/build/alloc_bulk_buffer.wasm
+$ data/build/alloc_bulk_buffer.native
+$ wasmtime data/build/alloc_bulk_buffer.wasm
+$ data/build/alloc_bulk_buffer.native
+$ wasmtime data/build/alloc_bulk_buffer.wasm
+$ data/build/alloc_bulk_buffer.native
+$ wasmtime data/build/alloc_bulk_buffer.wasm
+$ data/build/alloc_bulk_buffer.native
+$ wasmtime data/build/alloc_bulk_buffer.wasm
+$ data/build/alloc_bulk_buffer.native
+$ wasmtime data/build/alloc_bulk_buffer.wasm
+$ data/build/alloc_bulk_buffer.native
+$ wasmtime data/build/alloc_bulk_buffer.wasm
+$ data/build/alloc_bulk_buffer.native
+$ wasmtime data/build/alloc_bulk_buffer.wasm
+$ data/build/alloc_bulk_buffer.native
+$ wasmtime data/build/alloc_bulk_buffer.wasm
+$ data/build/alloc_bulk_buffer.native
+$ wasmtime data/build/alloc_bulk_buffer.wasm
+$ data/build/alloc_bulk_buffer.native
+$ wasmtime data/build/alloc_bulk_buffer.wasm
+$ data/build/alloc_bulk_buffer.native
+$ wasmtime data/build/alloc_bulk_buffer.wasm
+$ data/build/alloc_bulk_buffer.native
+$ wasmtime data/build/alloc_bulk_buffer.wasm
+$ data/build/alloc_bulk_buffer.native
+$ wasmtime data/build/alloc_bulk_buffer.wasm
+$ data/build/alloc_bulk_buffer.native
+$ wasmtime data/build/alloc_bulk_buffer.wasm
+$ data/build/alloc_bulk_buffer.native
+$ wasmtime data/build/alloc_bulk_buffer.wasm
+$ data/build/alloc_bulk_buffer.native
+$ wasmtime data/build/alloc_bulk_buffer.wasm
+$ data/build/alloc_bulk_buffer.native
+$ wasmtime data/build/alloc_bulk_buffer.wasm
+$ data/build/alloc_bulk_buffer.native
+$ wasmtime data/build/alloc_bulk_buffer.wasm
+
+=== Running alloc_fragmented_pattern ===
+$ data/build/alloc_fragmented_pattern.native
+$ wasmtime data/build/alloc_fragmented_pattern.wasm
+$ data/build/alloc_fragmented_pattern.native
+$ wasmtime data/build/alloc_fragmented_pattern.wasm
+$ data/build/alloc_fragmented_pattern.native
+$ wasmtime data/build/alloc_fragmented_pattern.wasm
+$ data/build/alloc_fragmented_pattern.native
+$ wasmtime data/build/alloc_fragmented_pattern.wasm
+$ data/build/alloc_fragmented_pattern.native
+$ wasmtime data/build/alloc_fragmented_pattern.wasm
+$ data/build/alloc_fragmented_pattern.native
+$ wasmtime data/build/alloc_fragmented_pattern.wasm
+$ data/build/alloc_fragmented_pattern.native
+$ wasmtime data/build/alloc_fragmented_pattern.wasm
+$ data/build/alloc_fragmented_pattern.native
+$ wasmtime data/build/alloc_fragmented_pattern.wasm
+$ data/build/alloc_fragmented_pattern.native
+$ wasmtime data/build/alloc_fragmented_pattern.wasm
+$ data/build/alloc_fragmented_pattern.native
+$ wasmtime data/build/alloc_fragmented_pattern.wasm
+$ data/build/alloc_fragmented_pattern.native
+$ wasmtime data/build/alloc_fragmented_pattern.wasm
+$ data/build/alloc_fragmented_pattern.native
+$ wasmtime data/build/alloc_fragmented_pattern.wasm
+$ data/build/alloc_fragmented_pattern.native
+$ wasmtime data/build/alloc_fragmented_pattern.wasm
+$ data/build/alloc_fragmented_pattern.native
+$ wasmtime data/build/alloc_fragmented_pattern.wasm
+$ data/build/alloc_fragmented_pattern.native
+$ wasmtime data/build/alloc_fragmented_pattern.wasm
+$ data/build/alloc_fragmented_pattern.native
+$ wasmtime data/build/alloc_fragmented_pattern.wasm
+$ data/build/alloc_fragmented_pattern.native
+$ wasmtime data/build/alloc_fragmented_pattern.wasm
+$ data/build/alloc_fragmented_pattern.native
+$ wasmtime data/build/alloc_fragmented_pattern.wasm
+$ data/build/alloc_fragmented_pattern.native
+$ wasmtime data/build/alloc_fragmented_pattern.wasm
+$ data/build/alloc_fragmented_pattern.native
+$ wasmtime data/build/alloc_fragmented_pattern.wasm
+$ data/build/alloc_fragmented_pattern.native
+$ wasmtime data/build/alloc_fragmented_pattern.wasm
+$ data/build/alloc_fragmented_pattern.native
+$ wasmtime data/build/alloc_fragmented_pattern.wasm
+$ data/build/alloc_fragmented_pattern.native
+$ wasmtime data/build/alloc_fragmented_pattern.wasm
+$ data/build/alloc_fragmented_pattern.native
+$ wasmtime data/build/alloc_fragmented_pattern.wasm
+$ data/build/alloc_fragmented_pattern.native
+$ wasmtime data/build/alloc_fragmented_pattern.wasm
+$ data/build/alloc_fragmented_pattern.native
+$ wasmtime data/build/alloc_fragmented_pattern.wasm
+$ data/build/alloc_fragmented_pattern.native
+$ wasmtime data/build/alloc_fragmented_pattern.wasm
+$ data/build/alloc_fragmented_pattern.native
+$ wasmtime data/build/alloc_fragmented_pattern.wasm
+$ data/build/alloc_fragmented_pattern.native
+$ wasmtime data/build/alloc_fragmented_pattern.wasm
+$ data/build/alloc_fragmented_pattern.native
+$ wasmtime data/build/alloc_fragmented_pattern.wasm
+
+=== Running alloc_medium_objects ===
+$ data/build/alloc_medium_objects.native
+$ wasmtime data/build/alloc_medium_objects.wasm
+$ data/build/alloc_medium_objects.native
+$ wasmtime data/build/alloc_medium_objects.wasm
+$ data/build/alloc_medium_objects.native
+$ wasmtime data/build/alloc_medium_objects.wasm
+$ data/build/alloc_medium_objects.native
+$ wasmtime data/build/alloc_medium_objects.wasm
+$ data/build/alloc_medium_objects.native
+$ wasmtime data/build/alloc_medium_objects.wasm
+$ data/build/alloc_medium_objects.native
+$ wasmtime data/build/alloc_medium_objects.wasm
+$ data/build/alloc_medium_objects.native
+$ wasmtime data/build/alloc_medium_objects.wasm
+$ data/build/alloc_medium_objects.native
+$ wasmtime data/build/alloc_medium_objects.wasm
+$ data/build/alloc_medium_objects.native
+$ wasmtime data/build/alloc_medium_objects.wasm
+$ data/build/alloc_medium_objects.native
+$ wasmtime data/build/alloc_medium_objects.wasm
+$ data/build/alloc_medium_objects.native
+$ wasmtime data/build/alloc_medium_objects.wasm
+$ data/build/alloc_medium_objects.native
+$ wasmtime data/build/alloc_medium_objects.wasm
+$ data/build/alloc_medium_objects.native
+$ wasmtime data/build/alloc_medium_objects.wasm
+$ data/build/alloc_medium_objects.native
+$ wasmtime data/build/alloc_medium_objects.wasm
+$ data/build/alloc_medium_objects.native
+$ wasmtime data/build/alloc_medium_objects.wasm
+$ data/build/alloc_medium_objects.native
+$ wasmtime data/build/alloc_medium_objects.wasm
+$ data/build/alloc_medium_objects.native
+$ wasmtime data/build/alloc_medium_objects.wasm
+$ data/build/alloc_medium_objects.native
+$ wasmtime data/build/alloc_medium_objects.wasm
+$ data/build/alloc_medium_objects.native
+$ wasmtime data/build/alloc_medium_objects.wasm
+$ data/build/alloc_medium_objects.native
+$ wasmtime data/build/alloc_medium_objects.wasm
+$ data/build/alloc_medium_objects.native
+$ wasmtime data/build/alloc_medium_objects.wasm
+$ data/build/alloc_medium_objects.native
+$ wasmtime data/build/alloc_medium_objects.wasm
+$ data/build/alloc_medium_objects.native
+$ wasmtime data/build/alloc_medium_objects.wasm
+$ data/build/alloc_medium_objects.native
+$ wasmtime data/build/alloc_medium_objects.wasm
+$ data/build/alloc_medium_objects.native
+$ wasmtime data/build/alloc_medium_objects.wasm
+$ data/build/alloc_medium_objects.native
+$ wasmtime data/build/alloc_medium_objects.wasm
+$ data/build/alloc_medium_objects.native
+$ wasmtime data/build/alloc_medium_objects.wasm
+$ data/build/alloc_medium_objects.native
+$ wasmtime data/build/alloc_medium_objects.wasm
+$ data/build/alloc_medium_objects.native
+$ wasmtime data/build/alloc_medium_objects.wasm
+$ data/build/alloc_medium_objects.native
+$ wasmtime data/build/alloc_medium_objects.wasm
+
+=== Running alloc_pool_style ===
+$ data/build/alloc_pool_style.native
+$ wasmtime data/build/alloc_pool_style.wasm
+$ data/build/alloc_pool_style.native
+$ wasmtime data/build/alloc_pool_style.wasm
+$ data/build/alloc_pool_style.native
+$ wasmtime data/build/alloc_pool_style.wasm
+$ data/build/alloc_pool_style.native
+$ wasmtime data/build/alloc_pool_style.wasm
+$ data/build/alloc_pool_style.native
+$ wasmtime data/build/alloc_pool_style.wasm
+$ data/build/alloc_pool_style.native
+$ wasmtime data/build/alloc_pool_style.wasm
+$ data/build/alloc_pool_style.native
+$ wasmtime data/build/alloc_pool_style.wasm
+$ data/build/alloc_pool_style.native
+$ wasmtime data/build/alloc_pool_style.wasm
+$ data/build/alloc_pool_style.native
+$ wasmtime data/build/alloc_pool_style.wasm
+$ data/build/alloc_pool_style.native
+$ wasmtime data/build/alloc_pool_style.wasm
+$ data/build/alloc_pool_style.native
+$ wasmtime data/build/alloc_pool_style.wasm
+$ data/build/alloc_pool_style.native
+$ wasmtime data/build/alloc_pool_style.wasm
+$ data/build/alloc_pool_style.native
+$ wasmtime data/build/alloc_pool_style.wasm
+$ data/build/alloc_pool_style.native
+$ wasmtime data/build/alloc_pool_style.wasm
+$ data/build/alloc_pool_style.native
+$ wasmtime data/build/alloc_pool_style.wasm
+$ data/build/alloc_pool_style.native
+$ wasmtime data/build/alloc_pool_style.wasm
+$ data/build/alloc_pool_style.native
+$ wasmtime data/build/alloc_pool_style.wasm
+$ data/build/alloc_pool_style.native
+$ wasmtime data/build/alloc_pool_style.wasm
+$ data/build/alloc_pool_style.native
+$ wasmtime data/build/alloc_pool_style.wasm
+$ data/build/alloc_pool_style.native
+$ wasmtime data/build/alloc_pool_style.wasm
+$ data/build/alloc_pool_style.native
+$ wasmtime data/build/alloc_pool_style.wasm
+$ data/build/alloc_pool_style.native
+$ wasmtime data/build/alloc_pool_style.wasm
+$ data/build/alloc_pool_style.native
+$ wasmtime data/build/alloc_pool_style.wasm
+$ data/build/alloc_pool_style.native
+$ wasmtime data/build/alloc_pool_style.wasm
+$ data/build/alloc_pool_style.native
+$ wasmtime data/build/alloc_pool_style.wasm
+$ data/build/alloc_pool_style.native
+$ wasmtime data/build/alloc_pool_style.wasm
+$ data/build/alloc_pool_style.native
+$ wasmtime data/build/alloc_pool_style.wasm
+$ data/build/alloc_pool_style.native
+$ wasmtime data/build/alloc_pool_style.wasm
+$ data/build/alloc_pool_style.native
+$ wasmtime data/build/alloc_pool_style.wasm
+$ data/build/alloc_pool_style.native
+$ wasmtime data/build/alloc_pool_style.wasm
+
+=== Running alloc_realloc_loop ===
+$ data/build/alloc_realloc_loop.native
+$ wasmtime data/build/alloc_realloc_loop.wasm
+$ data/build/alloc_realloc_loop.native
+$ wasmtime data/build/alloc_realloc_loop.wasm
+$ data/build/alloc_realloc_loop.native
+$ wasmtime data/build/alloc_realloc_loop.wasm
+$ data/build/alloc_realloc_loop.native
+$ wasmtime data/build/alloc_realloc_loop.wasm
+$ data/build/alloc_realloc_loop.native
+$ wasmtime data/build/alloc_realloc_loop.wasm
+$ data/build/alloc_realloc_loop.native
+$ wasmtime data/build/alloc_realloc_loop.wasm
+$ data/build/alloc_realloc_loop.native
+$ wasmtime data/build/alloc_realloc_loop.wasm
+$ data/build/alloc_realloc_loop.native
+$ wasmtime data/build/alloc_realloc_loop.wasm
+$ data/build/alloc_realloc_loop.native
+$ wasmtime data/build/alloc_realloc_loop.wasm
+$ data/build/alloc_realloc_loop.native
+$ wasmtime data/build/alloc_realloc_loop.wasm
+$ data/build/alloc_realloc_loop.native
+$ wasmtime data/build/alloc_realloc_loop.wasm
+$ data/build/alloc_realloc_loop.native
+$ wasmtime data/build/alloc_realloc_loop.wasm
+$ data/build/alloc_realloc_loop.native
+$ wasmtime data/build/alloc_realloc_loop.wasm
+$ data/build/alloc_realloc_loop.native
+$ wasmtime data/build/alloc_realloc_loop.wasm
+$ data/build/alloc_realloc_loop.native
+$ wasmtime data/build/alloc_realloc_loop.wasm
+$ data/build/alloc_realloc_loop.native
+$ wasmtime data/build/alloc_realloc_loop.wasm
+$ data/build/alloc_realloc_loop.native
+$ wasmtime data/build/alloc_realloc_loop.wasm
+$ data/build/alloc_realloc_loop.native
+$ wasmtime data/build/alloc_realloc_loop.wasm
+$ data/build/alloc_realloc_loop.native
+$ wasmtime data/build/alloc_realloc_loop.wasm
+$ data/build/alloc_realloc_loop.native
+$ wasmtime data/build/alloc_realloc_loop.wasm
+$ data/build/alloc_realloc_loop.native
+$ wasmtime data/build/alloc_realloc_loop.wasm
+$ data/build/alloc_realloc_loop.native
+$ wasmtime data/build/alloc_realloc_loop.wasm
+$ data/build/alloc_realloc_loop.native
+$ wasmtime data/build/alloc_realloc_loop.wasm
+$ data/build/alloc_realloc_loop.native
+$ wasmtime data/build/alloc_realloc_loop.wasm
+$ data/build/alloc_realloc_loop.native
+$ wasmtime data/build/alloc_realloc_loop.wasm
+$ data/build/alloc_realloc_loop.native
+$ wasmtime data/build/alloc_realloc_loop.wasm
+$ data/build/alloc_realloc_loop.native
+$ wasmtime data/build/alloc_realloc_loop.wasm
+$ data/build/alloc_realloc_loop.native
+$ wasmtime data/build/alloc_realloc_loop.wasm
+$ data/build/alloc_realloc_loop.native
+$ wasmtime data/build/alloc_realloc_loop.wasm
+$ data/build/alloc_realloc_loop.native
+$ wasmtime data/build/alloc_realloc_loop.wasm
+
+=== Running alloc_small_objects ===
+$ data/build/alloc_small_objects.native
+$ wasmtime data/build/alloc_small_objects.wasm
+$ data/build/alloc_small_objects.native
+$ wasmtime data/build/alloc_small_objects.wasm
+$ data/build/alloc_small_objects.native
+$ wasmtime data/build/alloc_small_objects.wasm
+$ data/build/alloc_small_objects.native
+$ wasmtime data/build/alloc_small_objects.wasm
+$ data/build/alloc_small_objects.native
+$ wasmtime data/build/alloc_small_objects.wasm
+$ data/build/alloc_small_objects.native
+$ wasmtime data/build/alloc_small_objects.wasm
+$ data/build/alloc_small_objects.native
+$ wasmtime data/build/alloc_small_objects.wasm
+$ data/build/alloc_small_objects.native
+$ wasmtime data/build/alloc_small_objects.wasm
+$ data/build/alloc_small_objects.native
+$ wasmtime data/build/alloc_small_objects.wasm
+$ data/build/alloc_small_objects.native
+$ wasmtime data/build/alloc_small_objects.wasm
+$ data/build/alloc_small_objects.native
+$ wasmtime data/build/alloc_small_objects.wasm
+$ data/build/alloc_small_objects.native
+$ wasmtime data/build/alloc_small_objects.wasm
+$ data/build/alloc_small_objects.native
+$ wasmtime data/build/alloc_small_objects.wasm
+$ data/build/alloc_small_objects.native
+$ wasmtime data/build/alloc_small_objects.wasm
+$ data/build/alloc_small_objects.native
+$ wasmtime data/build/alloc_small_objects.wasm
+$ data/build/alloc_small_objects.native
+$ wasmtime data/build/alloc_small_objects.wasm
+$ data/build/alloc_small_objects.native
+$ wasmtime data/build/alloc_small_objects.wasm
+$ data/build/alloc_small_objects.native
+$ wasmtime data/build/alloc_small_objects.wasm
+$ data/build/alloc_small_objects.native
+$ wasmtime data/build/alloc_small_objects.wasm
+$ data/build/alloc_small_objects.native
+$ wasmtime data/build/alloc_small_objects.wasm
+$ data/build/alloc_small_objects.native
+$ wasmtime data/build/alloc_small_objects.wasm
+$ data/build/alloc_small_objects.native
+$ wasmtime data/build/alloc_small_objects.wasm
+$ data/build/alloc_small_objects.native
+$ wasmtime data/build/alloc_small_objects.wasm
+$ data/build/alloc_small_objects.native
+$ wasmtime data/build/alloc_small_objects.wasm
+$ data/build/alloc_small_objects.native
+$ wasmtime data/build/alloc_small_objects.wasm
+$ data/build/alloc_small_objects.native
+$ wasmtime data/build/alloc_small_objects.wasm
+$ data/build/alloc_small_objects.native
+$ wasmtime data/build/alloc_small_objects.wasm
+$ data/build/alloc_small_objects.native
+$ wasmtime data/build/alloc_small_objects.wasm
+$ data/build/alloc_small_objects.native
+$ wasmtime data/build/alloc_small_objects.wasm
+$ data/build/alloc_small_objects.native
+$ wasmtime data/build/alloc_small_objects.wasm
+
+=== Running branch_nested ===
+$ data/build/branch_nested.native
+$ wasmtime data/build/branch_nested.wasm
+$ data/build/branch_nested.native
+$ wasmtime data/build/branch_nested.wasm
+$ data/build/branch_nested.native
+$ wasmtime data/build/branch_nested.wasm
+$ data/build/branch_nested.native
+$ wasmtime data/build/branch_nested.wasm
+$ data/build/branch_nested.native
+$ wasmtime data/build/branch_nested.wasm
+$ data/build/branch_nested.native
+$ wasmtime data/build/branch_nested.wasm
+$ data/build/branch_nested.native
+$ wasmtime data/build/branch_nested.wasm
+$ data/build/branch_nested.native
+$ wasmtime data/build/branch_nested.wasm
+$ data/build/branch_nested.native
+$ wasmtime data/build/branch_nested.wasm
+$ data/build/branch_nested.native
+$ wasmtime data/build/branch_nested.wasm
+$ data/build/branch_nested.native
+$ wasmtime data/build/branch_nested.wasm
+$ data/build/branch_nested.native
+$ wasmtime data/build/branch_nested.wasm
+$ data/build/branch_nested.native
+$ wasmtime data/build/branch_nested.wasm
+$ data/build/branch_nested.native
+$ wasmtime data/build/branch_nested.wasm
+$ data/build/branch_nested.native
+$ wasmtime data/build/branch_nested.wasm
+$ data/build/branch_nested.native
+$ wasmtime data/build/branch_nested.wasm
+$ data/build/branch_nested.native
+$ wasmtime data/build/branch_nested.wasm
+$ data/build/branch_nested.native
+$ wasmtime data/build/branch_nested.wasm
+$ data/build/branch_nested.native
+$ wasmtime data/build/branch_nested.wasm
+$ data/build/branch_nested.native
+$ wasmtime data/build/branch_nested.wasm
+$ data/build/branch_nested.native
+$ wasmtime data/build/branch_nested.wasm
+$ data/build/branch_nested.native
+$ wasmtime data/build/branch_nested.wasm
+$ data/build/branch_nested.native
+$ wasmtime data/build/branch_nested.wasm
+$ data/build/branch_nested.native
+$ wasmtime data/build/branch_nested.wasm
+$ data/build/branch_nested.native
+$ wasmtime data/build/branch_nested.wasm
+$ data/build/branch_nested.native
+$ wasmtime data/build/branch_nested.wasm
+$ data/build/branch_nested.native
+$ wasmtime data/build/branch_nested.wasm
+$ data/build/branch_nested.native
+$ wasmtime data/build/branch_nested.wasm
+$ data/build/branch_nested.native
+$ wasmtime data/build/branch_nested.wasm
+$ data/build/branch_nested.native
+$ wasmtime data/build/branch_nested.wasm
+
+=== Running branch_predictable ===
+$ data/build/branch_predictable.native
+$ wasmtime data/build/branch_predictable.wasm
+$ data/build/branch_predictable.native
+$ wasmtime data/build/branch_predictable.wasm
+$ data/build/branch_predictable.native
+$ wasmtime data/build/branch_predictable.wasm
+$ data/build/branch_predictable.native
+$ wasmtime data/build/branch_predictable.wasm
+$ data/build/branch_predictable.native
+$ wasmtime data/build/branch_predictable.wasm
+$ data/build/branch_predictable.native
+$ wasmtime data/build/branch_predictable.wasm
+$ data/build/branch_predictable.native
+$ wasmtime data/build/branch_predictable.wasm
+$ data/build/branch_predictable.native
+$ wasmtime data/build/branch_predictable.wasm
+$ data/build/branch_predictable.native
+$ wasmtime data/build/branch_predictable.wasm
+$ data/build/branch_predictable.native
+$ wasmtime data/build/branch_predictable.wasm
+$ data/build/branch_predictable.native
+$ wasmtime data/build/branch_predictable.wasm
+$ data/build/branch_predictable.native
+$ wasmtime data/build/branch_predictable.wasm
+$ data/build/branch_predictable.native
+$ wasmtime data/build/branch_predictable.wasm
+$ data/build/branch_predictable.native
+$ wasmtime data/build/branch_predictable.wasm
+$ data/build/branch_predictable.native
+$ wasmtime data/build/branch_predictable.wasm
+$ data/build/branch_predictable.native
+$ wasmtime data/build/branch_predictable.wasm
+$ data/build/branch_predictable.native
+$ wasmtime data/build/branch_predictable.wasm
+$ data/build/branch_predictable.native
+$ wasmtime data/build/branch_predictable.wasm
+$ data/build/branch_predictable.native
+$ wasmtime data/build/branch_predictable.wasm
+$ data/build/branch_predictable.native
+$ wasmtime data/build/branch_predictable.wasm
+$ data/build/branch_predictable.native
+$ wasmtime data/build/branch_predictable.wasm
+$ data/build/branch_predictable.native
+$ wasmtime data/build/branch_predictable.wasm
+$ data/build/branch_predictable.native
+$ wasmtime data/build/branch_predictable.wasm
+$ data/build/branch_predictable.native
+$ wasmtime data/build/branch_predictable.wasm
+$ data/build/branch_predictable.native
+$ wasmtime data/build/branch_predictable.wasm
+$ data/build/branch_predictable.native
+$ wasmtime data/build/branch_predictable.wasm
+$ data/build/branch_predictable.native
+$ wasmtime data/build/branch_predictable.wasm
+$ data/build/branch_predictable.native
+$ wasmtime data/build/branch_predictable.wasm
+$ data/build/branch_predictable.native
+$ wasmtime data/build/branch_predictable.wasm
+$ data/build/branch_predictable.native
+$ wasmtime data/build/branch_predictable.wasm
+
+=== Running branch_switch_dense ===
+$ data/build/branch_switch_dense.native
+$ wasmtime data/build/branch_switch_dense.wasm
+$ data/build/branch_switch_dense.native
+$ wasmtime data/build/branch_switch_dense.wasm
+$ data/build/branch_switch_dense.native
+$ wasmtime data/build/branch_switch_dense.wasm
+$ data/build/branch_switch_dense.native
+$ wasmtime data/build/branch_switch_dense.wasm
+$ data/build/branch_switch_dense.native
+$ wasmtime data/build/branch_switch_dense.wasm
+$ data/build/branch_switch_dense.native
+$ wasmtime data/build/branch_switch_dense.wasm
+$ data/build/branch_switch_dense.native
+$ wasmtime data/build/branch_switch_dense.wasm
+$ data/build/branch_switch_dense.native
+$ wasmtime data/build/branch_switch_dense.wasm
+$ data/build/branch_switch_dense.native
+$ wasmtime data/build/branch_switch_dense.wasm
+$ data/build/branch_switch_dense.native
+$ wasmtime data/build/branch_switch_dense.wasm
+$ data/build/branch_switch_dense.native
+$ wasmtime data/build/branch_switch_dense.wasm
+$ data/build/branch_switch_dense.native
+$ wasmtime data/build/branch_switch_dense.wasm
+$ data/build/branch_switch_dense.native
+$ wasmtime data/build/branch_switch_dense.wasm
+$ data/build/branch_switch_dense.native
+$ wasmtime data/build/branch_switch_dense.wasm
+$ data/build/branch_switch_dense.native
+$ wasmtime data/build/branch_switch_dense.wasm
+$ data/build/branch_switch_dense.native
+$ wasmtime data/build/branch_switch_dense.wasm
+$ data/build/branch_switch_dense.native
+$ wasmtime data/build/branch_switch_dense.wasm
+$ data/build/branch_switch_dense.native
+$ wasmtime data/build/branch_switch_dense.wasm
+$ data/build/branch_switch_dense.native
+$ wasmtime data/build/branch_switch_dense.wasm
+$ data/build/branch_switch_dense.native
+$ wasmtime data/build/branch_switch_dense.wasm
+$ data/build/branch_switch_dense.native
+$ wasmtime data/build/branch_switch_dense.wasm
+$ data/build/branch_switch_dense.native
+$ wasmtime data/build/branch_switch_dense.wasm
+$ data/build/branch_switch_dense.native
+$ wasmtime data/build/branch_switch_dense.wasm
+$ data/build/branch_switch_dense.native
+$ wasmtime data/build/branch_switch_dense.wasm
+$ data/build/branch_switch_dense.native
+$ wasmtime data/build/branch_switch_dense.wasm
+$ data/build/branch_switch_dense.native
+$ wasmtime data/build/branch_switch_dense.wasm
+$ data/build/branch_switch_dense.native
+$ wasmtime data/build/branch_switch_dense.wasm
+$ data/build/branch_switch_dense.native
+$ wasmtime data/build/branch_switch_dense.wasm
+$ data/build/branch_switch_dense.native
+$ wasmtime data/build/branch_switch_dense.wasm
+$ data/build/branch_switch_dense.native
+$ wasmtime data/build/branch_switch_dense.wasm
+
+=== Running branch_switch_sparse ===
+$ data/build/branch_switch_sparse.native
+$ wasmtime data/build/branch_switch_sparse.wasm
+$ data/build/branch_switch_sparse.native
+$ wasmtime data/build/branch_switch_sparse.wasm
+$ data/build/branch_switch_sparse.native
+$ wasmtime data/build/branch_switch_sparse.wasm
+$ data/build/branch_switch_sparse.native
+$ wasmtime data/build/branch_switch_sparse.wasm
+$ data/build/branch_switch_sparse.native
+$ wasmtime data/build/branch_switch_sparse.wasm
+$ data/build/branch_switch_sparse.native
+$ wasmtime data/build/branch_switch_sparse.wasm
+$ data/build/branch_switch_sparse.native
+$ wasmtime data/build/branch_switch_sparse.wasm
+$ data/build/branch_switch_sparse.native
+$ wasmtime data/build/branch_switch_sparse.wasm
+$ data/build/branch_switch_sparse.native
+$ wasmtime data/build/branch_switch_sparse.wasm
+$ data/build/branch_switch_sparse.native
+$ wasmtime data/build/branch_switch_sparse.wasm
+$ data/build/branch_switch_sparse.native
+$ wasmtime data/build/branch_switch_sparse.wasm
+$ data/build/branch_switch_sparse.native
+$ wasmtime data/build/branch_switch_sparse.wasm
+$ data/build/branch_switch_sparse.native
+$ wasmtime data/build/branch_switch_sparse.wasm
+$ data/build/branch_switch_sparse.native
+$ wasmtime data/build/branch_switch_sparse.wasm
+$ data/build/branch_switch_sparse.native
+$ wasmtime data/build/branch_switch_sparse.wasm
+$ data/build/branch_switch_sparse.native
+$ wasmtime data/build/branch_switch_sparse.wasm
+$ data/build/branch_switch_sparse.native
+$ wasmtime data/build/branch_switch_sparse.wasm
+$ data/build/branch_switch_sparse.native
+$ wasmtime data/build/branch_switch_sparse.wasm
+$ data/build/branch_switch_sparse.native
+$ wasmtime data/build/branch_switch_sparse.wasm
+$ data/build/branch_switch_sparse.native
+$ wasmtime data/build/branch_switch_sparse.wasm
+$ data/build/branch_switch_sparse.native
+$ wasmtime data/build/branch_switch_sparse.wasm
+$ data/build/branch_switch_sparse.native
+$ wasmtime data/build/branch_switch_sparse.wasm
+$ data/build/branch_switch_sparse.native
+$ wasmtime data/build/branch_switch_sparse.wasm
+$ data/build/branch_switch_sparse.native
+$ wasmtime data/build/branch_switch_sparse.wasm
+$ data/build/branch_switch_sparse.native
+$ wasmtime data/build/branch_switch_sparse.wasm
+$ data/build/branch_switch_sparse.native
+$ wasmtime data/build/branch_switch_sparse.wasm
+$ data/build/branch_switch_sparse.native
+$ wasmtime data/build/branch_switch_sparse.wasm
+$ data/build/branch_switch_sparse.native
+$ wasmtime data/build/branch_switch_sparse.wasm
+$ data/build/branch_switch_sparse.native
+$ wasmtime data/build/branch_switch_sparse.wasm
+$ data/build/branch_switch_sparse.native
+$ wasmtime data/build/branch_switch_sparse.wasm
+
+=== Running branch_unpredictable ===
+$ data/build/branch_unpredictable.native
+$ wasmtime data/build/branch_unpredictable.wasm
+$ data/build/branch_unpredictable.native
+$ wasmtime data/build/branch_unpredictable.wasm
+$ data/build/branch_unpredictable.native
+$ wasmtime data/build/branch_unpredictable.wasm
+$ data/build/branch_unpredictable.native
+$ wasmtime data/build/branch_unpredictable.wasm
+$ data/build/branch_unpredictable.native
+$ wasmtime data/build/branch_unpredictable.wasm
+$ data/build/branch_unpredictable.native
+$ wasmtime data/build/branch_unpredictable.wasm
+$ data/build/branch_unpredictable.native
+$ wasmtime data/build/branch_unpredictable.wasm
+$ data/build/branch_unpredictable.native
+$ wasmtime data/build/branch_unpredictable.wasm
+$ data/build/branch_unpredictable.native
+$ wasmtime data/build/branch_unpredictable.wasm
+$ data/build/branch_unpredictable.native
+$ wasmtime data/build/branch_unpredictable.wasm
+$ data/build/branch_unpredictable.native
+$ wasmtime data/build/branch_unpredictable.wasm
+$ data/build/branch_unpredictable.native
+$ wasmtime data/build/branch_unpredictable.wasm
+$ data/build/branch_unpredictable.native
+$ wasmtime data/build/branch_unpredictable.wasm
+$ data/build/branch_unpredictable.native
+$ wasmtime data/build/branch_unpredictable.wasm
+$ data/build/branch_unpredictable.native
+$ wasmtime data/build/branch_unpredictable.wasm
+$ data/build/branch_unpredictable.native
+$ wasmtime data/build/branch_unpredictable.wasm
+$ data/build/branch_unpredictable.native
+$ wasmtime data/build/branch_unpredictable.wasm
+$ data/build/branch_unpredictable.native
+$ wasmtime data/build/branch_unpredictable.wasm
+$ data/build/branch_unpredictable.native
+$ wasmtime data/build/branch_unpredictable.wasm
+$ data/build/branch_unpredictable.native
+$ wasmtime data/build/branch_unpredictable.wasm
+$ data/build/branch_unpredictable.native
+$ wasmtime data/build/branch_unpredictable.wasm
+$ data/build/branch_unpredictable.native
+$ wasmtime data/build/branch_unpredictable.wasm
+$ data/build/branch_unpredictable.native
+$ wasmtime data/build/branch_unpredictable.wasm
+$ data/build/branch_unpredictable.native
+$ wasmtime data/build/branch_unpredictable.wasm
+$ data/build/branch_unpredictable.native
+$ wasmtime data/build/branch_unpredictable.wasm
+$ data/build/branch_unpredictable.native
+$ wasmtime data/build/branch_unpredictable.wasm
+$ data/build/branch_unpredictable.native
+$ wasmtime data/build/branch_unpredictable.wasm
+$ data/build/branch_unpredictable.native
+$ wasmtime data/build/branch_unpredictable.wasm
+$ data/build/branch_unpredictable.native
+$ wasmtime data/build/branch_unpredictable.wasm
+$ data/build/branch_unpredictable.native
+$ wasmtime data/build/branch_unpredictable.wasm
+
+=== Running call_chain ===
+$ data/build/call_chain.native
+$ wasmtime data/build/call_chain.wasm
+$ data/build/call_chain.native
+$ wasmtime data/build/call_chain.wasm
+$ data/build/call_chain.native
+$ wasmtime data/build/call_chain.wasm
+$ data/build/call_chain.native
+$ wasmtime data/build/call_chain.wasm
+$ data/build/call_chain.native
+$ wasmtime data/build/call_chain.wasm
+$ data/build/call_chain.native
+$ wasmtime data/build/call_chain.wasm
+$ data/build/call_chain.native
+$ wasmtime data/build/call_chain.wasm
+$ data/build/call_chain.native
+$ wasmtime data/build/call_chain.wasm
+$ data/build/call_chain.native
+$ wasmtime data/build/call_chain.wasm
+$ data/build/call_chain.native
+$ wasmtime data/build/call_chain.wasm
+$ data/build/call_chain.native
+$ wasmtime data/build/call_chain.wasm
+$ data/build/call_chain.native
+$ wasmtime data/build/call_chain.wasm
+$ data/build/call_chain.native
+$ wasmtime data/build/call_chain.wasm
+$ data/build/call_chain.native
+$ wasmtime data/build/call_chain.wasm
+$ data/build/call_chain.native
+$ wasmtime data/build/call_chain.wasm
+$ data/build/call_chain.native
+$ wasmtime data/build/call_chain.wasm
+$ data/build/call_chain.native
+$ wasmtime data/build/call_chain.wasm
+$ data/build/call_chain.native
+$ wasmtime data/build/call_chain.wasm
+$ data/build/call_chain.native
+$ wasmtime data/build/call_chain.wasm
+$ data/build/call_chain.native
+$ wasmtime data/build/call_chain.wasm
+$ data/build/call_chain.native
+$ wasmtime data/build/call_chain.wasm
+$ data/build/call_chain.native
+$ wasmtime data/build/call_chain.wasm
+$ data/build/call_chain.native
+$ wasmtime data/build/call_chain.wasm
+$ data/build/call_chain.native
+$ wasmtime data/build/call_chain.wasm
+$ data/build/call_chain.native
+$ wasmtime data/build/call_chain.wasm
+$ data/build/call_chain.native
+$ wasmtime data/build/call_chain.wasm
+$ data/build/call_chain.native
+$ wasmtime data/build/call_chain.wasm
+$ data/build/call_chain.native
+$ wasmtime data/build/call_chain.wasm
+$ data/build/call_chain.native
+$ wasmtime data/build/call_chain.wasm
+$ data/build/call_chain.native
+$ wasmtime data/build/call_chain.wasm
+
+=== Running call_indirect ===
+$ data/build/call_indirect.native
+$ wasmtime data/build/call_indirect.wasm
+$ data/build/call_indirect.native
+$ wasmtime data/build/call_indirect.wasm
+$ data/build/call_indirect.native
+$ wasmtime data/build/call_indirect.wasm
+$ data/build/call_indirect.native
+$ wasmtime data/build/call_indirect.wasm
+$ data/build/call_indirect.native
+$ wasmtime data/build/call_indirect.wasm
+$ data/build/call_indirect.native
+$ wasmtime data/build/call_indirect.wasm
+$ data/build/call_indirect.native
+$ wasmtime data/build/call_indirect.wasm
+$ data/build/call_indirect.native
+$ wasmtime data/build/call_indirect.wasm
+$ data/build/call_indirect.native
+$ wasmtime data/build/call_indirect.wasm
+$ data/build/call_indirect.native
+$ wasmtime data/build/call_indirect.wasm
+$ data/build/call_indirect.native
+$ wasmtime data/build/call_indirect.wasm
+$ data/build/call_indirect.native
+$ wasmtime data/build/call_indirect.wasm
+$ data/build/call_indirect.native
+$ wasmtime data/build/call_indirect.wasm
+$ data/build/call_indirect.native
+$ wasmtime data/build/call_indirect.wasm
+$ data/build/call_indirect.native
+$ wasmtime data/build/call_indirect.wasm
+$ data/build/call_indirect.native
+$ wasmtime data/build/call_indirect.wasm
+$ data/build/call_indirect.native
+$ wasmtime data/build/call_indirect.wasm
+$ data/build/call_indirect.native
+$ wasmtime data/build/call_indirect.wasm
+$ data/build/call_indirect.native
+$ wasmtime data/build/call_indirect.wasm
+$ data/build/call_indirect.native
+$ wasmtime data/build/call_indirect.wasm
+$ data/build/call_indirect.native
+$ wasmtime data/build/call_indirect.wasm
+$ data/build/call_indirect.native
+$ wasmtime data/build/call_indirect.wasm
+$ data/build/call_indirect.native
+$ wasmtime data/build/call_indirect.wasm
+$ data/build/call_indirect.native
+$ wasmtime data/build/call_indirect.wasm
+$ data/build/call_indirect.native
+$ wasmtime data/build/call_indirect.wasm
+$ data/build/call_indirect.native
+$ wasmtime data/build/call_indirect.wasm
+$ data/build/call_indirect.native
+$ wasmtime data/build/call_indirect.wasm
+$ data/build/call_indirect.native
+$ wasmtime data/build/call_indirect.wasm
+$ data/build/call_indirect.native
+$ wasmtime data/build/call_indirect.wasm
+$ data/build/call_indirect.native
+$ wasmtime data/build/call_indirect.wasm
+
+=== Running call_many_small_funcs ===
+$ data/build/call_many_small_funcs.native
+$ wasmtime data/build/call_many_small_funcs.wasm
+$ data/build/call_many_small_funcs.native
+$ wasmtime data/build/call_many_small_funcs.wasm
+$ data/build/call_many_small_funcs.native
+$ wasmtime data/build/call_many_small_funcs.wasm
+$ data/build/call_many_small_funcs.native
+$ wasmtime data/build/call_many_small_funcs.wasm
+$ data/build/call_many_small_funcs.native
+$ wasmtime data/build/call_many_small_funcs.wasm
+$ data/build/call_many_small_funcs.native
+$ wasmtime data/build/call_many_small_funcs.wasm
+$ data/build/call_many_small_funcs.native
+$ wasmtime data/build/call_many_small_funcs.wasm
+$ data/build/call_many_small_funcs.native
+$ wasmtime data/build/call_many_small_funcs.wasm
+$ data/build/call_many_small_funcs.native
+$ wasmtime data/build/call_many_small_funcs.wasm
+$ data/build/call_many_small_funcs.native
+$ wasmtime data/build/call_many_small_funcs.wasm
+$ data/build/call_many_small_funcs.native
+$ wasmtime data/build/call_many_small_funcs.wasm
+$ data/build/call_many_small_funcs.native
+$ wasmtime data/build/call_many_small_funcs.wasm
+$ data/build/call_many_small_funcs.native
+$ wasmtime data/build/call_many_small_funcs.wasm
+$ data/build/call_many_small_funcs.native
+$ wasmtime data/build/call_many_small_funcs.wasm
+$ data/build/call_many_small_funcs.native
+$ wasmtime data/build/call_many_small_funcs.wasm
+$ data/build/call_many_small_funcs.native
+$ wasmtime data/build/call_many_small_funcs.wasm
+$ data/build/call_many_small_funcs.native
+$ wasmtime data/build/call_many_small_funcs.wasm
+$ data/build/call_many_small_funcs.native
+$ wasmtime data/build/call_many_small_funcs.wasm
+$ data/build/call_many_small_funcs.native
+$ wasmtime data/build/call_many_small_funcs.wasm
+$ data/build/call_many_small_funcs.native
+$ wasmtime data/build/call_many_small_funcs.wasm
+$ data/build/call_many_small_funcs.native
+$ wasmtime data/build/call_many_small_funcs.wasm
+$ data/build/call_many_small_funcs.native
+$ wasmtime data/build/call_many_small_funcs.wasm
+$ data/build/call_many_small_funcs.native
+$ wasmtime data/build/call_many_small_funcs.wasm
+$ data/build/call_many_small_funcs.native
+$ wasmtime data/build/call_many_small_funcs.wasm
+$ data/build/call_many_small_funcs.native
+$ wasmtime data/build/call_many_small_funcs.wasm
+$ data/build/call_many_small_funcs.native
+$ wasmtime data/build/call_many_small_funcs.wasm
+$ data/build/call_many_small_funcs.native
+$ wasmtime data/build/call_many_small_funcs.wasm
+$ data/build/call_many_small_funcs.native
+$ wasmtime data/build/call_many_small_funcs.wasm
+$ data/build/call_many_small_funcs.native
+$ wasmtime data/build/call_many_small_funcs.wasm
+$ data/build/call_many_small_funcs.native
+$ wasmtime data/build/call_many_small_funcs.wasm
+
+=== Running call_recursive ===
+$ data/build/call_recursive.native
+$ wasmtime data/build/call_recursive.wasm
+$ data/build/call_recursive.native
+$ wasmtime data/build/call_recursive.wasm
+$ data/build/call_recursive.native
+$ wasmtime data/build/call_recursive.wasm
+$ data/build/call_recursive.native
+$ wasmtime data/build/call_recursive.wasm
+$ data/build/call_recursive.native
+$ wasmtime data/build/call_recursive.wasm
+$ data/build/call_recursive.native
+$ wasmtime data/build/call_recursive.wasm
+$ data/build/call_recursive.native
+$ wasmtime data/build/call_recursive.wasm
+$ data/build/call_recursive.native
+$ wasmtime data/build/call_recursive.wasm
+$ data/build/call_recursive.native
+$ wasmtime data/build/call_recursive.wasm
+$ data/build/call_recursive.native
+$ wasmtime data/build/call_recursive.wasm
+$ data/build/call_recursive.native
+$ wasmtime data/build/call_recursive.wasm
+$ data/build/call_recursive.native
+$ wasmtime data/build/call_recursive.wasm
+$ data/build/call_recursive.native
+$ wasmtime data/build/call_recursive.wasm
+$ data/build/call_recursive.native
+$ wasmtime data/build/call_recursive.wasm
+$ data/build/call_recursive.native
+$ wasmtime data/build/call_recursive.wasm
+$ data/build/call_recursive.native
+$ wasmtime data/build/call_recursive.wasm
+$ data/build/call_recursive.native
+$ wasmtime data/build/call_recursive.wasm
+$ data/build/call_recursive.native
+$ wasmtime data/build/call_recursive.wasm
+$ data/build/call_recursive.native
+$ wasmtime data/build/call_recursive.wasm
+$ data/build/call_recursive.native
+$ wasmtime data/build/call_recursive.wasm
+$ data/build/call_recursive.native
+$ wasmtime data/build/call_recursive.wasm
+$ data/build/call_recursive.native
+$ wasmtime data/build/call_recursive.wasm
+$ data/build/call_recursive.native
+$ wasmtime data/build/call_recursive.wasm
+$ data/build/call_recursive.native
+$ wasmtime data/build/call_recursive.wasm
+$ data/build/call_recursive.native
+$ wasmtime data/build/call_recursive.wasm
+$ data/build/call_recursive.native
+$ wasmtime data/build/call_recursive.wasm
+$ data/build/call_recursive.native
+$ wasmtime data/build/call_recursive.wasm
+$ data/build/call_recursive.native
+$ wasmtime data/build/call_recursive.wasm
+$ data/build/call_recursive.native
+$ wasmtime data/build/call_recursive.wasm
+$ data/build/call_recursive.native
+$ wasmtime data/build/call_recursive.wasm
+
+=== Running compute_fp_mix ===
+$ data/build/compute_fp_mix.native
+$ wasmtime data/build/compute_fp_mix.wasm
+$ data/build/compute_fp_mix.native
+$ wasmtime data/build/compute_fp_mix.wasm
+$ data/build/compute_fp_mix.native
+$ wasmtime data/build/compute_fp_mix.wasm
+$ data/build/compute_fp_mix.native
+$ wasmtime data/build/compute_fp_mix.wasm
+$ data/build/compute_fp_mix.native
+$ wasmtime data/build/compute_fp_mix.wasm
+$ data/build/compute_fp_mix.native
+$ wasmtime data/build/compute_fp_mix.wasm
+$ data/build/compute_fp_mix.native
+$ wasmtime data/build/compute_fp_mix.wasm
+$ data/build/compute_fp_mix.native
+$ wasmtime data/build/compute_fp_mix.wasm
+$ data/build/compute_fp_mix.native
+$ wasmtime data/build/compute_fp_mix.wasm
+$ data/build/compute_fp_mix.native
+$ wasmtime data/build/compute_fp_mix.wasm
+$ data/build/compute_fp_mix.native
+$ wasmtime data/build/compute_fp_mix.wasm
+$ data/build/compute_fp_mix.native
+$ wasmtime data/build/compute_fp_mix.wasm
+$ data/build/compute_fp_mix.native
+$ wasmtime data/build/compute_fp_mix.wasm
+$ data/build/compute_fp_mix.native
+$ wasmtime data/build/compute_fp_mix.wasm
+$ data/build/compute_fp_mix.native
+$ wasmtime data/build/compute_fp_mix.wasm
+$ data/build/compute_fp_mix.native
+$ wasmtime data/build/compute_fp_mix.wasm
+$ data/build/compute_fp_mix.native
+$ wasmtime data/build/compute_fp_mix.wasm
+$ data/build/compute_fp_mix.native
+$ wasmtime data/build/compute_fp_mix.wasm
+$ data/build/compute_fp_mix.native
+$ wasmtime data/build/compute_fp_mix.wasm
+$ data/build/compute_fp_mix.native
+$ wasmtime data/build/compute_fp_mix.wasm
+$ data/build/compute_fp_mix.native
+$ wasmtime data/build/compute_fp_mix.wasm
+$ data/build/compute_fp_mix.native
+$ wasmtime data/build/compute_fp_mix.wasm
+$ data/build/compute_fp_mix.native
+$ wasmtime data/build/compute_fp_mix.wasm
+$ data/build/compute_fp_mix.native
+$ wasmtime data/build/compute_fp_mix.wasm
+$ data/build/compute_fp_mix.native
+$ wasmtime data/build/compute_fp_mix.wasm
+$ data/build/compute_fp_mix.native
+$ wasmtime data/build/compute_fp_mix.wasm
+$ data/build/compute_fp_mix.native
+$ wasmtime data/build/compute_fp_mix.wasm
+$ data/build/compute_fp_mix.native
+$ wasmtime data/build/compute_fp_mix.wasm
+$ data/build/compute_fp_mix.native
+$ wasmtime data/build/compute_fp_mix.wasm
+$ data/build/compute_fp_mix.native
+$ wasmtime data/build/compute_fp_mix.wasm
+
+=== Running compute_fp_muladd ===
+$ data/build/compute_fp_muladd.native
+$ wasmtime data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime data/build/compute_fp_muladd.wasm
+$ data/build/compute_fp_muladd.native
+$ wasmtime data/build/compute_fp_muladd.wasm
+
+=== Running compute_int_add ===
+$ data/build/compute_int_add.native
+$ wasmtime data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime data/build/compute_int_add.wasm
+$ data/build/compute_int_add.native
+$ wasmtime data/build/compute_int_add.wasm
+
+=== Running compute_int_divmod ===
+$ data/build/compute_int_divmod.native
+$ wasmtime data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime data/build/compute_int_divmod.wasm
+$ data/build/compute_int_divmod.native
+$ wasmtime data/build/compute_int_divmod.wasm
+
+=== Running compute_int_mul ===
+$ data/build/compute_int_mul.native
+$ wasmtime data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime data/build/compute_int_mul.wasm
+$ data/build/compute_int_mul.native
+$ wasmtime data/build/compute_int_mul.wasm
+
+=== Running host_env_query ===
+$ data/build/host_env_query.native
+$ wasmtime data/build/host_env_query.wasm
+$ data/build/host_env_query.native
+$ wasmtime data/build/host_env_query.wasm
+$ data/build/host_env_query.native
+$ wasmtime data/build/host_env_query.wasm
+$ data/build/host_env_query.native
+$ wasmtime data/build/host_env_query.wasm
+$ data/build/host_env_query.native
+$ wasmtime data/build/host_env_query.wasm
+$ data/build/host_env_query.native
+$ wasmtime data/build/host_env_query.wasm
+$ data/build/host_env_query.native
+$ wasmtime data/build/host_env_query.wasm
+$ data/build/host_env_query.native
+$ wasmtime data/build/host_env_query.wasm
+$ data/build/host_env_query.native
+$ wasmtime data/build/host_env_query.wasm
+$ data/build/host_env_query.native
+$ wasmtime data/build/host_env_query.wasm
+$ data/build/host_env_query.native
+$ wasmtime data/build/host_env_query.wasm
+$ data/build/host_env_query.native
+$ wasmtime data/build/host_env_query.wasm
+$ data/build/host_env_query.native
+$ wasmtime data/build/host_env_query.wasm
+$ data/build/host_env_query.native
+$ wasmtime data/build/host_env_query.wasm
+$ data/build/host_env_query.native
+$ wasmtime data/build/host_env_query.wasm
+$ data/build/host_env_query.native
+$ wasmtime data/build/host_env_query.wasm
+$ data/build/host_env_query.native
+$ wasmtime data/build/host_env_query.wasm
+$ data/build/host_env_query.native
+$ wasmtime data/build/host_env_query.wasm
+$ data/build/host_env_query.native
+$ wasmtime data/build/host_env_query.wasm
+$ data/build/host_env_query.native
+$ wasmtime data/build/host_env_query.wasm
+$ data/build/host_env_query.native
+$ wasmtime data/build/host_env_query.wasm
+$ data/build/host_env_query.native
+$ wasmtime data/build/host_env_query.wasm
+$ data/build/host_env_query.native
+$ wasmtime data/build/host_env_query.wasm
+$ data/build/host_env_query.native
+$ wasmtime data/build/host_env_query.wasm
+$ data/build/host_env_query.native
+$ wasmtime data/build/host_env_query.wasm
+$ data/build/host_env_query.native
+$ wasmtime data/build/host_env_query.wasm
+$ data/build/host_env_query.native
+$ wasmtime data/build/host_env_query.wasm
+$ data/build/host_env_query.native
+$ wasmtime data/build/host_env_query.wasm
+$ data/build/host_env_query.native
+$ wasmtime data/build/host_env_query.wasm
+$ data/build/host_env_query.native
+$ wasmtime data/build/host_env_query.wasm
+
+=== Running host_getcwd_loop ===
+$ data/build/host_getcwd_loop.native
+$ wasmtime data/build/host_getcwd_loop.wasm
+$ data/build/host_getcwd_loop.native
+$ wasmtime data/build/host_getcwd_loop.wasm
+$ data/build/host_getcwd_loop.native
+$ wasmtime data/build/host_getcwd_loop.wasm
+$ data/build/host_getcwd_loop.native
+$ wasmtime data/build/host_getcwd_loop.wasm
+$ data/build/host_getcwd_loop.native
+$ wasmtime data/build/host_getcwd_loop.wasm
+$ data/build/host_getcwd_loop.native
+$ wasmtime data/build/host_getcwd_loop.wasm
+$ data/build/host_getcwd_loop.native
+$ wasmtime data/build/host_getcwd_loop.wasm
+$ data/build/host_getcwd_loop.native
+$ wasmtime data/build/host_getcwd_loop.wasm
+$ data/build/host_getcwd_loop.native
+$ wasmtime data/build/host_getcwd_loop.wasm
+$ data/build/host_getcwd_loop.native
+$ wasmtime data/build/host_getcwd_loop.wasm
+$ data/build/host_getcwd_loop.native
+$ wasmtime data/build/host_getcwd_loop.wasm
+$ data/build/host_getcwd_loop.native
+$ wasmtime data/build/host_getcwd_loop.wasm
+$ data/build/host_getcwd_loop.native
+$ wasmtime data/build/host_getcwd_loop.wasm
+$ data/build/host_getcwd_loop.native
+$ wasmtime data/build/host_getcwd_loop.wasm
+$ data/build/host_getcwd_loop.native
+$ wasmtime data/build/host_getcwd_loop.wasm
+$ data/build/host_getcwd_loop.native
+$ wasmtime data/build/host_getcwd_loop.wasm
+$ data/build/host_getcwd_loop.native
+$ wasmtime data/build/host_getcwd_loop.wasm
+$ data/build/host_getcwd_loop.native
+$ wasmtime data/build/host_getcwd_loop.wasm
+$ data/build/host_getcwd_loop.native
+$ wasmtime data/build/host_getcwd_loop.wasm
+$ data/build/host_getcwd_loop.native
+$ wasmtime data/build/host_getcwd_loop.wasm
+$ data/build/host_getcwd_loop.native
+$ wasmtime data/build/host_getcwd_loop.wasm
+$ data/build/host_getcwd_loop.native
+$ wasmtime data/build/host_getcwd_loop.wasm
+$ data/build/host_getcwd_loop.native
+$ wasmtime data/build/host_getcwd_loop.wasm
+$ data/build/host_getcwd_loop.native
+$ wasmtime data/build/host_getcwd_loop.wasm
+$ data/build/host_getcwd_loop.native
+$ wasmtime data/build/host_getcwd_loop.wasm
+$ data/build/host_getcwd_loop.native
+$ wasmtime data/build/host_getcwd_loop.wasm
+$ data/build/host_getcwd_loop.native
+$ wasmtime data/build/host_getcwd_loop.wasm
+$ data/build/host_getcwd_loop.native
+$ wasmtime data/build/host_getcwd_loop.wasm
+$ data/build/host_getcwd_loop.native
+$ wasmtime data/build/host_getcwd_loop.wasm
+$ data/build/host_getcwd_loop.native
+$ wasmtime data/build/host_getcwd_loop.wasm
+
+=== Running host_open_close_loop ===
+$ data/build/host_open_close_loop.native
+$ wasmtime data/build/host_open_close_loop.wasm
+
+=== Running host_read_small ===
+$ data/build/host_read_small.native
+$ wasmtime data/build/host_read_small.wasm
+
+=== Running host_stat_loop ===
+$ data/build/host_stat_loop.native
+$ wasmtime data/build/host_stat_loop.wasm
+
+=== Running host_time_loop ===
+$ data/build/host_time_loop.native
+$ wasmtime data/build/host_time_loop.wasm
+$ data/build/host_time_loop.native
+$ wasmtime data/build/host_time_loop.wasm
+$ data/build/host_time_loop.native
+$ wasmtime data/build/host_time_loop.wasm
+$ data/build/host_time_loop.native
+$ wasmtime data/build/host_time_loop.wasm
+$ data/build/host_time_loop.native
+$ wasmtime data/build/host_time_loop.wasm
+$ data/build/host_time_loop.native
+$ wasmtime data/build/host_time_loop.wasm
+$ data/build/host_time_loop.native
+$ wasmtime data/build/host_time_loop.wasm
+$ data/build/host_time_loop.native
+$ wasmtime data/build/host_time_loop.wasm
+$ data/build/host_time_loop.native
+$ wasmtime data/build/host_time_loop.wasm
+$ data/build/host_time_loop.native
+$ wasmtime data/build/host_time_loop.wasm
+$ data/build/host_time_loop.native
+$ wasmtime data/build/host_time_loop.wasm
+$ data/build/host_time_loop.native
+$ wasmtime data/build/host_time_loop.wasm
+$ data/build/host_time_loop.native
+$ wasmtime data/build/host_time_loop.wasm
+$ data/build/host_time_loop.native
+$ wasmtime data/build/host_time_loop.wasm
+$ data/build/host_time_loop.native
+$ wasmtime data/build/host_time_loop.wasm
+$ data/build/host_time_loop.native
+$ wasmtime data/build/host_time_loop.wasm
+$ data/build/host_time_loop.native
+$ wasmtime data/build/host_time_loop.wasm
+$ data/build/host_time_loop.native
+$ wasmtime data/build/host_time_loop.wasm
+$ data/build/host_time_loop.native
+$ wasmtime data/build/host_time_loop.wasm
+$ data/build/host_time_loop.native
+$ wasmtime data/build/host_time_loop.wasm
+$ data/build/host_time_loop.native
+$ wasmtime data/build/host_time_loop.wasm
+$ data/build/host_time_loop.native
+$ wasmtime data/build/host_time_loop.wasm
+$ data/build/host_time_loop.native
+$ wasmtime data/build/host_time_loop.wasm
+$ data/build/host_time_loop.native
+$ wasmtime data/build/host_time_loop.wasm
+$ data/build/host_time_loop.native
+$ wasmtime data/build/host_time_loop.wasm
+$ data/build/host_time_loop.native
+$ wasmtime data/build/host_time_loop.wasm
+$ data/build/host_time_loop.native
+$ wasmtime data/build/host_time_loop.wasm
+$ data/build/host_time_loop.native
+$ wasmtime data/build/host_time_loop.wasm
+$ data/build/host_time_loop.native
+$ wasmtime data/build/host_time_loop.wasm
+$ data/build/host_time_loop.native
+$ wasmtime data/build/host_time_loop.wasm
+
+=== Running host_write_small ===
+$ data/build/host_write_small.native
+
+=== Running memory_copy_loop ===
+$ data/build/memory_copy_loop.native
+$ wasmtime data/build/memory_copy_loop.wasm
+$ data/build/memory_copy_loop.native
+$ wasmtime data/build/memory_copy_loop.wasm
+$ data/build/memory_copy_loop.native
+$ wasmtime data/build/memory_copy_loop.wasm
+$ data/build/memory_copy_loop.native
+$ wasmtime data/build/memory_copy_loop.wasm
+$ data/build/memory_copy_loop.native
+$ wasmtime data/build/memory_copy_loop.wasm
+$ data/build/memory_copy_loop.native
+$ wasmtime data/build/memory_copy_loop.wasm
+$ data/build/memory_copy_loop.native
+$ wasmtime data/build/memory_copy_loop.wasm
+$ data/build/memory_copy_loop.native
+$ wasmtime data/build/memory_copy_loop.wasm
+$ data/build/memory_copy_loop.native
+$ wasmtime data/build/memory_copy_loop.wasm
+$ data/build/memory_copy_loop.native
+$ wasmtime data/build/memory_copy_loop.wasm
+$ data/build/memory_copy_loop.native
+$ wasmtime data/build/memory_copy_loop.wasm
+$ data/build/memory_copy_loop.native
+$ wasmtime data/build/memory_copy_loop.wasm
+$ data/build/memory_copy_loop.native
+$ wasmtime data/build/memory_copy_loop.wasm
+$ data/build/memory_copy_loop.native
+$ wasmtime data/build/memory_copy_loop.wasm
+$ data/build/memory_copy_loop.native
+$ wasmtime data/build/memory_copy_loop.wasm
+$ data/build/memory_copy_loop.native
+$ wasmtime data/build/memory_copy_loop.wasm
+$ data/build/memory_copy_loop.native
+$ wasmtime data/build/memory_copy_loop.wasm
+$ data/build/memory_copy_loop.native
+$ wasmtime data/build/memory_copy_loop.wasm
+$ data/build/memory_copy_loop.native
+$ wasmtime data/build/memory_copy_loop.wasm
+$ data/build/memory_copy_loop.native
+$ wasmtime data/build/memory_copy_loop.wasm
+$ data/build/memory_copy_loop.native
+$ wasmtime data/build/memory_copy_loop.wasm
+$ data/build/memory_copy_loop.native
+$ wasmtime data/build/memory_copy_loop.wasm
+$ data/build/memory_copy_loop.native
+$ wasmtime data/build/memory_copy_loop.wasm
+$ data/build/memory_copy_loop.native
+$ wasmtime data/build/memory_copy_loop.wasm
+$ data/build/memory_copy_loop.native
+$ wasmtime data/build/memory_copy_loop.wasm
+$ data/build/memory_copy_loop.native
+$ wasmtime data/build/memory_copy_loop.wasm
+$ data/build/memory_copy_loop.native
+$ wasmtime data/build/memory_copy_loop.wasm
+$ data/build/memory_copy_loop.native
+$ wasmtime data/build/memory_copy_loop.wasm
+$ data/build/memory_copy_loop.native
+$ wasmtime data/build/memory_copy_loop.wasm
+$ data/build/memory_copy_loop.native
+$ wasmtime data/build/memory_copy_loop.wasm
+
+=== Running memory_random_read ===
+$ data/build/memory_random_read.native
+$ wasmtime data/build/memory_random_read.wasm
+$ data/build/memory_random_read.native
+$ wasmtime data/build/memory_random_read.wasm
+$ data/build/memory_random_read.native
+$ wasmtime data/build/memory_random_read.wasm
+$ data/build/memory_random_read.native
+$ wasmtime data/build/memory_random_read.wasm
+$ data/build/memory_random_read.native
+$ wasmtime data/build/memory_random_read.wasm
+$ data/build/memory_random_read.native
+$ wasmtime data/build/memory_random_read.wasm
+$ data/build/memory_random_read.native
+$ wasmtime data/build/memory_random_read.wasm
+$ data/build/memory_random_read.native
+$ wasmtime data/build/memory_random_read.wasm
+$ data/build/memory_random_read.native
+$ wasmtime data/build/memory_random_read.wasm
+$ data/build/memory_random_read.native
+$ wasmtime data/build/memory_random_read.wasm
+$ data/build/memory_random_read.native
+$ wasmtime data/build/memory_random_read.wasm
+$ data/build/memory_random_read.native
+$ wasmtime data/build/memory_random_read.wasm
+$ data/build/memory_random_read.native
+$ wasmtime data/build/memory_random_read.wasm
+$ data/build/memory_random_read.native
+$ wasmtime data/build/memory_random_read.wasm
+$ data/build/memory_random_read.native
+$ wasmtime data/build/memory_random_read.wasm
+$ data/build/memory_random_read.native
+$ wasmtime data/build/memory_random_read.wasm
+$ data/build/memory_random_read.native
+$ wasmtime data/build/memory_random_read.wasm
+$ data/build/memory_random_read.native
+$ wasmtime data/build/memory_random_read.wasm
+$ data/build/memory_random_read.native
+$ wasmtime data/build/memory_random_read.wasm
+$ data/build/memory_random_read.native
+$ wasmtime data/build/memory_random_read.wasm
+$ data/build/memory_random_read.native
+$ wasmtime data/build/memory_random_read.wasm
+$ data/build/memory_random_read.native
+$ wasmtime data/build/memory_random_read.wasm
+$ data/build/memory_random_read.native
+$ wasmtime data/build/memory_random_read.wasm
+$ data/build/memory_random_read.native
+$ wasmtime data/build/memory_random_read.wasm
+$ data/build/memory_random_read.native
+$ wasmtime data/build/memory_random_read.wasm
+$ data/build/memory_random_read.native
+$ wasmtime data/build/memory_random_read.wasm
+$ data/build/memory_random_read.native
+$ wasmtime data/build/memory_random_read.wasm
+$ data/build/memory_random_read.native
+$ wasmtime data/build/memory_random_read.wasm
+$ data/build/memory_random_read.native
+$ wasmtime data/build/memory_random_read.wasm
+$ data/build/memory_random_read.native
+$ wasmtime data/build/memory_random_read.wasm
+
+=== Running memory_random_write ===
+$ data/build/memory_random_write.native
+$ wasmtime data/build/memory_random_write.wasm
+$ data/build/memory_random_write.native
+$ wasmtime data/build/memory_random_write.wasm
+$ data/build/memory_random_write.native
+$ wasmtime data/build/memory_random_write.wasm
+$ data/build/memory_random_write.native
+$ wasmtime data/build/memory_random_write.wasm
+$ data/build/memory_random_write.native
+$ wasmtime data/build/memory_random_write.wasm
+$ data/build/memory_random_write.native
+$ wasmtime data/build/memory_random_write.wasm
+$ data/build/memory_random_write.native
+$ wasmtime data/build/memory_random_write.wasm
+$ data/build/memory_random_write.native
+$ wasmtime data/build/memory_random_write.wasm
+$ data/build/memory_random_write.native
+$ wasmtime data/build/memory_random_write.wasm
+$ data/build/memory_random_write.native
+$ wasmtime data/build/memory_random_write.wasm
+$ data/build/memory_random_write.native
+$ wasmtime data/build/memory_random_write.wasm
+$ data/build/memory_random_write.native
+$ wasmtime data/build/memory_random_write.wasm
+$ data/build/memory_random_write.native
+$ wasmtime data/build/memory_random_write.wasm
+$ data/build/memory_random_write.native
+$ wasmtime data/build/memory_random_write.wasm
+$ data/build/memory_random_write.native
+$ wasmtime data/build/memory_random_write.wasm
+$ data/build/memory_random_write.native
+$ wasmtime data/build/memory_random_write.wasm
+$ data/build/memory_random_write.native
+$ wasmtime data/build/memory_random_write.wasm
+$ data/build/memory_random_write.native
+$ wasmtime data/build/memory_random_write.wasm
+$ data/build/memory_random_write.native
+$ wasmtime data/build/memory_random_write.wasm
+$ data/build/memory_random_write.native
+$ wasmtime data/build/memory_random_write.wasm
+$ data/build/memory_random_write.native
+$ wasmtime data/build/memory_random_write.wasm
+$ data/build/memory_random_write.native
+$ wasmtime data/build/memory_random_write.wasm
+$ data/build/memory_random_write.native
+$ wasmtime data/build/memory_random_write.wasm
+$ data/build/memory_random_write.native
+$ wasmtime data/build/memory_random_write.wasm
+$ data/build/memory_random_write.native
+$ wasmtime data/build/memory_random_write.wasm
+$ data/build/memory_random_write.native
+$ wasmtime data/build/memory_random_write.wasm
+$ data/build/memory_random_write.native
+$ wasmtime data/build/memory_random_write.wasm
+$ data/build/memory_random_write.native
+$ wasmtime data/build/memory_random_write.wasm
+$ data/build/memory_random_write.native
+$ wasmtime data/build/memory_random_write.wasm
+$ data/build/memory_random_write.native
+$ wasmtime data/build/memory_random_write.wasm
+
+=== Running memory_seq_read ===
+$ data/build/memory_seq_read.native
+$ wasmtime data/build/memory_seq_read.wasm
+$ data/build/memory_seq_read.native
+$ wasmtime data/build/memory_seq_read.wasm
+$ data/build/memory_seq_read.native
+$ wasmtime data/build/memory_seq_read.wasm
+$ data/build/memory_seq_read.native
+$ wasmtime data/build/memory_seq_read.wasm
+$ data/build/memory_seq_read.native
+$ wasmtime data/build/memory_seq_read.wasm
+$ data/build/memory_seq_read.native
+$ wasmtime data/build/memory_seq_read.wasm
+$ data/build/memory_seq_read.native
+$ wasmtime data/build/memory_seq_read.wasm
+$ data/build/memory_seq_read.native
+$ wasmtime data/build/memory_seq_read.wasm
+$ data/build/memory_seq_read.native
+$ wasmtime data/build/memory_seq_read.wasm
+$ data/build/memory_seq_read.native
+$ wasmtime data/build/memory_seq_read.wasm
+$ data/build/memory_seq_read.native
+$ wasmtime data/build/memory_seq_read.wasm
+$ data/build/memory_seq_read.native
+$ wasmtime data/build/memory_seq_read.wasm
+$ data/build/memory_seq_read.native
+$ wasmtime data/build/memory_seq_read.wasm
+$ data/build/memory_seq_read.native
+$ wasmtime data/build/memory_seq_read.wasm
+$ data/build/memory_seq_read.native
+$ wasmtime data/build/memory_seq_read.wasm
+$ data/build/memory_seq_read.native
+$ wasmtime data/build/memory_seq_read.wasm
+$ data/build/memory_seq_read.native
+$ wasmtime data/build/memory_seq_read.wasm
+$ data/build/memory_seq_read.native
+$ wasmtime data/build/memory_seq_read.wasm
+$ data/build/memory_seq_read.native
+$ wasmtime data/build/memory_seq_read.wasm
+$ data/build/memory_seq_read.native
+$ wasmtime data/build/memory_seq_read.wasm
+$ data/build/memory_seq_read.native
+$ wasmtime data/build/memory_seq_read.wasm
+$ data/build/memory_seq_read.native
+$ wasmtime data/build/memory_seq_read.wasm
+$ data/build/memory_seq_read.native
+$ wasmtime data/build/memory_seq_read.wasm
+$ data/build/memory_seq_read.native
+$ wasmtime data/build/memory_seq_read.wasm
+$ data/build/memory_seq_read.native
+$ wasmtime data/build/memory_seq_read.wasm
+$ data/build/memory_seq_read.native
+$ wasmtime data/build/memory_seq_read.wasm
+$ data/build/memory_seq_read.native
+$ wasmtime data/build/memory_seq_read.wasm
+$ data/build/memory_seq_read.native
+$ wasmtime data/build/memory_seq_read.wasm
+$ data/build/memory_seq_read.native
+$ wasmtime data/build/memory_seq_read.wasm
+$ data/build/memory_seq_read.native
+$ wasmtime data/build/memory_seq_read.wasm
+
+=== Running memory_seq_write ===
+$ data/build/memory_seq_write.native
+$ wasmtime data/build/memory_seq_write.wasm
+$ data/build/memory_seq_write.native
+$ wasmtime data/build/memory_seq_write.wasm
+$ data/build/memory_seq_write.native
+$ wasmtime data/build/memory_seq_write.wasm
+$ data/build/memory_seq_write.native
+$ wasmtime data/build/memory_seq_write.wasm
+$ data/build/memory_seq_write.native
+$ wasmtime data/build/memory_seq_write.wasm
+$ data/build/memory_seq_write.native
+$ wasmtime data/build/memory_seq_write.wasm
+$ data/build/memory_seq_write.native
+$ wasmtime data/build/memory_seq_write.wasm
+$ data/build/memory_seq_write.native
+$ wasmtime data/build/memory_seq_write.wasm
+$ data/build/memory_seq_write.native
+$ wasmtime data/build/memory_seq_write.wasm
+$ data/build/memory_seq_write.native
+$ wasmtime data/build/memory_seq_write.wasm
+$ data/build/memory_seq_write.native
+$ wasmtime data/build/memory_seq_write.wasm
+$ data/build/memory_seq_write.native
+$ wasmtime data/build/memory_seq_write.wasm
+$ data/build/memory_seq_write.native
+$ wasmtime data/build/memory_seq_write.wasm
+$ data/build/memory_seq_write.native
+$ wasmtime data/build/memory_seq_write.wasm
+$ data/build/memory_seq_write.native
+$ wasmtime data/build/memory_seq_write.wasm
+$ data/build/memory_seq_write.native
+$ wasmtime data/build/memory_seq_write.wasm
+$ data/build/memory_seq_write.native
+$ wasmtime data/build/memory_seq_write.wasm
+$ data/build/memory_seq_write.native
+$ wasmtime data/build/memory_seq_write.wasm
+$ data/build/memory_seq_write.native
+$ wasmtime data/build/memory_seq_write.wasm
+$ data/build/memory_seq_write.native
+$ wasmtime data/build/memory_seq_write.wasm
+$ data/build/memory_seq_write.native
+$ wasmtime data/build/memory_seq_write.wasm
+$ data/build/memory_seq_write.native
+$ wasmtime data/build/memory_seq_write.wasm
+$ data/build/memory_seq_write.native
+$ wasmtime data/build/memory_seq_write.wasm
+$ data/build/memory_seq_write.native
+$ wasmtime data/build/memory_seq_write.wasm
+$ data/build/memory_seq_write.native
+$ wasmtime data/build/memory_seq_write.wasm
+$ data/build/memory_seq_write.native
+$ wasmtime data/build/memory_seq_write.wasm
+$ data/build/memory_seq_write.native
+$ wasmtime data/build/memory_seq_write.wasm
+$ data/build/memory_seq_write.native
+$ wasmtime data/build/memory_seq_write.wasm
+$ data/build/memory_seq_write.native
+$ wasmtime data/build/memory_seq_write.wasm
+$ data/build/memory_seq_write.native
+$ wasmtime data/build/memory_seq_write.wasm
+
+=== Running memory_stride_read ===
+$ data/build/memory_stride_read.native
+$ wasmtime data/build/memory_stride_read.wasm
+$ data/build/memory_stride_read.native
+$ wasmtime data/build/memory_stride_read.wasm
+$ data/build/memory_stride_read.native
+$ wasmtime data/build/memory_stride_read.wasm
+$ data/build/memory_stride_read.native
+$ wasmtime data/build/memory_stride_read.wasm
+$ data/build/memory_stride_read.native
+$ wasmtime data/build/memory_stride_read.wasm
+$ data/build/memory_stride_read.native
+$ wasmtime data/build/memory_stride_read.wasm
+$ data/build/memory_stride_read.native
+$ wasmtime data/build/memory_stride_read.wasm
+$ data/build/memory_stride_read.native
+$ wasmtime data/build/memory_stride_read.wasm
+$ data/build/memory_stride_read.native
+$ wasmtime data/build/memory_stride_read.wasm
+$ data/build/memory_stride_read.native
+$ wasmtime data/build/memory_stride_read.wasm
+$ data/build/memory_stride_read.native
+$ wasmtime data/build/memory_stride_read.wasm
+$ data/build/memory_stride_read.native
+$ wasmtime data/build/memory_stride_read.wasm
+$ data/build/memory_stride_read.native
+$ wasmtime data/build/memory_stride_read.wasm
+$ data/build/memory_stride_read.native
+$ wasmtime data/build/memory_stride_read.wasm
+$ data/build/memory_stride_read.native
+$ wasmtime data/build/memory_stride_read.wasm
+$ data/build/memory_stride_read.native
+$ wasmtime data/build/memory_stride_read.wasm
+$ data/build/memory_stride_read.native
+$ wasmtime data/build/memory_stride_read.wasm
+$ data/build/memory_stride_read.native
+$ wasmtime data/build/memory_stride_read.wasm
+$ data/build/memory_stride_read.native
+$ wasmtime data/build/memory_stride_read.wasm
+$ data/build/memory_stride_read.native
+$ wasmtime data/build/memory_stride_read.wasm
+$ data/build/memory_stride_read.native
+$ wasmtime data/build/memory_stride_read.wasm
+$ data/build/memory_stride_read.native
+$ wasmtime data/build/memory_stride_read.wasm
+$ data/build/memory_stride_read.native
+$ wasmtime data/build/memory_stride_read.wasm
+$ data/build/memory_stride_read.native
+$ wasmtime data/build/memory_stride_read.wasm
+$ data/build/memory_stride_read.native
+$ wasmtime data/build/memory_stride_read.wasm
+$ data/build/memory_stride_read.native
+$ wasmtime data/build/memory_stride_read.wasm
+$ data/build/memory_stride_read.native
+$ wasmtime data/build/memory_stride_read.wasm
+$ data/build/memory_stride_read.native
+$ wasmtime data/build/memory_stride_read.wasm
+$ data/build/memory_stride_read.native
+$ wasmtime data/build/memory_stride_read.wasm
+$ data/build/memory_stride_read.native
+$ wasmtime data/build/memory_stride_read.wasm
+
+=== Running memory_stride_write ===
+$ data/build/memory_stride_write.native
+$ wasmtime data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime data/build/memory_stride_write.wasm
+$ data/build/memory_stride_write.native
+$ wasmtime data/build/memory_stride_write.wasm
+
+=== Label Summary ===
+native-better: 22
+run-failed: 4
+similar: 5
+wasm-better: 3
+summary output: data/results/labels_34_30.csv
+raw output:     data/results/labels_raw_34_30.csv
