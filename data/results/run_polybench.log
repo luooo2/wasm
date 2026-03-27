@@ -1,0 +1,501 @@
+
+=== Running poly_2mm ===
+$ data/build/poly_2mm.native
+$ wasmtime --dir=. data/build/poly_2mm.wasm
+$ data/build/poly_2mm.native
+$ wasmtime --dir=. data/build/poly_2mm.wasm
+$ data/build/poly_2mm.native
+$ wasmtime --dir=. data/build/poly_2mm.wasm
+$ data/build/poly_2mm.native
+$ wasmtime --dir=. data/build/poly_2mm.wasm
+$ data/build/poly_2mm.native
+$ wasmtime --dir=. data/build/poly_2mm.wasm
+$ data/build/poly_2mm.native
+$ wasmtime --dir=. data/build/poly_2mm.wasm
+$ data/build/poly_2mm.native
+$ wasmtime --dir=. data/build/poly_2mm.wasm
+$ data/build/poly_2mm.native
+$ wasmtime --dir=. data/build/poly_2mm.wasm
+$ data/build/poly_2mm.native
+$ wasmtime --dir=. data/build/poly_2mm.wasm
+$ data/build/poly_2mm.native
+$ wasmtime --dir=. data/build/poly_2mm.wasm
+$ data/build/poly_2mm.native
+$ wasmtime --dir=. data/build/poly_2mm.wasm
+$ data/build/poly_2mm.native
+$ wasmtime --dir=. data/build/poly_2mm.wasm
+$ data/build/poly_2mm.native
+$ wasmtime --dir=. data/build/poly_2mm.wasm
+$ data/build/poly_2mm.native
+$ wasmtime --dir=. data/build/poly_2mm.wasm
+$ data/build/poly_2mm.native
+$ wasmtime --dir=. data/build/poly_2mm.wasm
+$ data/build/poly_2mm.native
+$ wasmtime --dir=. data/build/poly_2mm.wasm
+$ data/build/poly_2mm.native
+$ wasmtime --dir=. data/build/poly_2mm.wasm
+$ data/build/poly_2mm.native
+$ wasmtime --dir=. data/build/poly_2mm.wasm
+$ data/build/poly_2mm.native
+$ wasmtime --dir=. data/build/poly_2mm.wasm
+$ data/build/poly_2mm.native
+$ wasmtime --dir=. data/build/poly_2mm.wasm
+$ data/build/poly_2mm.native
+$ wasmtime --dir=. data/build/poly_2mm.wasm
+$ data/build/poly_2mm.native
+$ wasmtime --dir=. data/build/poly_2mm.wasm
+$ data/build/poly_2mm.native
+$ wasmtime --dir=. data/build/poly_2mm.wasm
+$ data/build/poly_2mm.native
+$ wasmtime --dir=. data/build/poly_2mm.wasm
+$ data/build/poly_2mm.native
+$ wasmtime --dir=. data/build/poly_2mm.wasm
+$ data/build/poly_2mm.native
+$ wasmtime --dir=. data/build/poly_2mm.wasm
+$ data/build/poly_2mm.native
+$ wasmtime --dir=. data/build/poly_2mm.wasm
+$ data/build/poly_2mm.native
+$ wasmtime --dir=. data/build/poly_2mm.wasm
+$ data/build/poly_2mm.native
+$ wasmtime --dir=. data/build/poly_2mm.wasm
+$ data/build/poly_2mm.native
+$ wasmtime --dir=. data/build/poly_2mm.wasm
+
+=== Running poly_atax ===
+$ data/build/poly_atax.native
+$ wasmtime --dir=. data/build/poly_atax.wasm
+$ data/build/poly_atax.native
+$ wasmtime --dir=. data/build/poly_atax.wasm
+$ data/build/poly_atax.native
+$ wasmtime --dir=. data/build/poly_atax.wasm
+$ data/build/poly_atax.native
+$ wasmtime --dir=. data/build/poly_atax.wasm
+$ data/build/poly_atax.native
+$ wasmtime --dir=. data/build/poly_atax.wasm
+$ data/build/poly_atax.native
+$ wasmtime --dir=. data/build/poly_atax.wasm
+$ data/build/poly_atax.native
+$ wasmtime --dir=. data/build/poly_atax.wasm
+$ data/build/poly_atax.native
+$ wasmtime --dir=. data/build/poly_atax.wasm
+$ data/build/poly_atax.native
+$ wasmtime --dir=. data/build/poly_atax.wasm
+$ data/build/poly_atax.native
+$ wasmtime --dir=. data/build/poly_atax.wasm
+$ data/build/poly_atax.native
+$ wasmtime --dir=. data/build/poly_atax.wasm
+$ data/build/poly_atax.native
+$ wasmtime --dir=. data/build/poly_atax.wasm
+$ data/build/poly_atax.native
+$ wasmtime --dir=. data/build/poly_atax.wasm
+$ data/build/poly_atax.native
+$ wasmtime --dir=. data/build/poly_atax.wasm
+$ data/build/poly_atax.native
+$ wasmtime --dir=. data/build/poly_atax.wasm
+$ data/build/poly_atax.native
+$ wasmtime --dir=. data/build/poly_atax.wasm
+$ data/build/poly_atax.native
+$ wasmtime --dir=. data/build/poly_atax.wasm
+$ data/build/poly_atax.native
+$ wasmtime --dir=. data/build/poly_atax.wasm
+$ data/build/poly_atax.native
+$ wasmtime --dir=. data/build/poly_atax.wasm
+$ data/build/poly_atax.native
+$ wasmtime --dir=. data/build/poly_atax.wasm
+$ data/build/poly_atax.native
+$ wasmtime --dir=. data/build/poly_atax.wasm
+$ data/build/poly_atax.native
+$ wasmtime --dir=. data/build/poly_atax.wasm
+$ data/build/poly_atax.native
+$ wasmtime --dir=. data/build/poly_atax.wasm
+$ data/build/poly_atax.native
+$ wasmtime --dir=. data/build/poly_atax.wasm
+$ data/build/poly_atax.native
+$ wasmtime --dir=. data/build/poly_atax.wasm
+$ data/build/poly_atax.native
+$ wasmtime --dir=. data/build/poly_atax.wasm
+$ data/build/poly_atax.native
+$ wasmtime --dir=. data/build/poly_atax.wasm
+$ data/build/poly_atax.native
+$ wasmtime --dir=. data/build/poly_atax.wasm
+$ data/build/poly_atax.native
+$ wasmtime --dir=. data/build/poly_atax.wasm
+$ data/build/poly_atax.native
+$ wasmtime --dir=. data/build/poly_atax.wasm
+
+=== Running poly_floyd_warshall ===
+$ data/build/poly_floyd_warshall.native
+$ wasmtime --dir=. data/build/poly_floyd_warshall.wasm
+$ data/build/poly_floyd_warshall.native
+$ wasmtime --dir=. data/build/poly_floyd_warshall.wasm
+$ data/build/poly_floyd_warshall.native
+$ wasmtime --dir=. data/build/poly_floyd_warshall.wasm
+$ data/build/poly_floyd_warshall.native
+$ wasmtime --dir=. data/build/poly_floyd_warshall.wasm
+$ data/build/poly_floyd_warshall.native
+$ wasmtime --dir=. data/build/poly_floyd_warshall.wasm
+$ data/build/poly_floyd_warshall.native
+$ wasmtime --dir=. data/build/poly_floyd_warshall.wasm
+$ data/build/poly_floyd_warshall.native
+$ wasmtime --dir=. data/build/poly_floyd_warshall.wasm
+$ data/build/poly_floyd_warshall.native
+$ wasmtime --dir=. data/build/poly_floyd_warshall.wasm
+$ data/build/poly_floyd_warshall.native
+$ wasmtime --dir=. data/build/poly_floyd_warshall.wasm
+$ data/build/poly_floyd_warshall.native
+$ wasmtime --dir=. data/build/poly_floyd_warshall.wasm
+$ data/build/poly_floyd_warshall.native
+$ wasmtime --dir=. data/build/poly_floyd_warshall.wasm
+$ data/build/poly_floyd_warshall.native
+$ wasmtime --dir=. data/build/poly_floyd_warshall.wasm
+$ data/build/poly_floyd_warshall.native
+$ wasmtime --dir=. data/build/poly_floyd_warshall.wasm
+$ data/build/poly_floyd_warshall.native
+$ wasmtime --dir=. data/build/poly_floyd_warshall.wasm
+$ data/build/poly_floyd_warshall.native
+$ wasmtime --dir=. data/build/poly_floyd_warshall.wasm
+$ data/build/poly_floyd_warshall.native
+$ wasmtime --dir=. data/build/poly_floyd_warshall.wasm
+$ data/build/poly_floyd_warshall.native
+$ wasmtime --dir=. data/build/poly_floyd_warshall.wasm
+$ data/build/poly_floyd_warshall.native
+$ wasmtime --dir=. data/build/poly_floyd_warshall.wasm
+$ data/build/poly_floyd_warshall.native
+$ wasmtime --dir=. data/build/poly_floyd_warshall.wasm
+$ data/build/poly_floyd_warshall.native
+$ wasmtime --dir=. data/build/poly_floyd_warshall.wasm
+$ data/build/poly_floyd_warshall.native
+$ wasmtime --dir=. data/build/poly_floyd_warshall.wasm
+$ data/build/poly_floyd_warshall.native
+$ wasmtime --dir=. data/build/poly_floyd_warshall.wasm
+$ data/build/poly_floyd_warshall.native
+$ wasmtime --dir=. data/build/poly_floyd_warshall.wasm
+$ data/build/poly_floyd_warshall.native
+$ wasmtime --dir=. data/build/poly_floyd_warshall.wasm
+$ data/build/poly_floyd_warshall.native
+$ wasmtime --dir=. data/build/poly_floyd_warshall.wasm
+$ data/build/poly_floyd_warshall.native
+$ wasmtime --dir=. data/build/poly_floyd_warshall.wasm
+$ data/build/poly_floyd_warshall.native
+$ wasmtime --dir=. data/build/poly_floyd_warshall.wasm
+$ data/build/poly_floyd_warshall.native
+$ wasmtime --dir=. data/build/poly_floyd_warshall.wasm
+$ data/build/poly_floyd_warshall.native
+$ wasmtime --dir=. data/build/poly_floyd_warshall.wasm
+$ data/build/poly_floyd_warshall.native
+$ wasmtime --dir=. data/build/poly_floyd_warshall.wasm
+
+=== Running poly_gemm ===
+$ data/build/poly_gemm.native
+$ wasmtime --dir=. data/build/poly_gemm.wasm
+$ data/build/poly_gemm.native
+$ wasmtime --dir=. data/build/poly_gemm.wasm
+$ data/build/poly_gemm.native
+$ wasmtime --dir=. data/build/poly_gemm.wasm
+$ data/build/poly_gemm.native
+$ wasmtime --dir=. data/build/poly_gemm.wasm
+$ data/build/poly_gemm.native
+$ wasmtime --dir=. data/build/poly_gemm.wasm
+$ data/build/poly_gemm.native
+$ wasmtime --dir=. data/build/poly_gemm.wasm
+$ data/build/poly_gemm.native
+$ wasmtime --dir=. data/build/poly_gemm.wasm
+$ data/build/poly_gemm.native
+$ wasmtime --dir=. data/build/poly_gemm.wasm
+$ data/build/poly_gemm.native
+$ wasmtime --dir=. data/build/poly_gemm.wasm
+$ data/build/poly_gemm.native
+$ wasmtime --dir=. data/build/poly_gemm.wasm
+$ data/build/poly_gemm.native
+$ wasmtime --dir=. data/build/poly_gemm.wasm
+$ data/build/poly_gemm.native
+$ wasmtime --dir=. data/build/poly_gemm.wasm
+$ data/build/poly_gemm.native
+$ wasmtime --dir=. data/build/poly_gemm.wasm
+$ data/build/poly_gemm.native
+$ wasmtime --dir=. data/build/poly_gemm.wasm
+$ data/build/poly_gemm.native
+$ wasmtime --dir=. data/build/poly_gemm.wasm
+$ data/build/poly_gemm.native
+$ wasmtime --dir=. data/build/poly_gemm.wasm
+$ data/build/poly_gemm.native
+$ wasmtime --dir=. data/build/poly_gemm.wasm
+$ data/build/poly_gemm.native
+$ wasmtime --dir=. data/build/poly_gemm.wasm
+$ data/build/poly_gemm.native
+$ wasmtime --dir=. data/build/poly_gemm.wasm
+$ data/build/poly_gemm.native
+$ wasmtime --dir=. data/build/poly_gemm.wasm
+$ data/build/poly_gemm.native
+$ wasmtime --dir=. data/build/poly_gemm.wasm
+$ data/build/poly_gemm.native
+$ wasmtime --dir=. data/build/poly_gemm.wasm
+$ data/build/poly_gemm.native
+$ wasmtime --dir=. data/build/poly_gemm.wasm
+$ data/build/poly_gemm.native
+$ wasmtime --dir=. data/build/poly_gemm.wasm
+$ data/build/poly_gemm.native
+$ wasmtime --dir=. data/build/poly_gemm.wasm
+$ data/build/poly_gemm.native
+$ wasmtime --dir=. data/build/poly_gemm.wasm
+$ data/build/poly_gemm.native
+$ wasmtime --dir=. data/build/poly_gemm.wasm
+$ data/build/poly_gemm.native
+$ wasmtime --dir=. data/build/poly_gemm.wasm
+$ data/build/poly_gemm.native
+$ wasmtime --dir=. data/build/poly_gemm.wasm
+$ data/build/poly_gemm.native
+$ wasmtime --dir=. data/build/poly_gemm.wasm
+
+=== Running poly_gemver ===
+$ data/build/poly_gemver.native
+$ wasmtime --dir=. data/build/poly_gemver.wasm
+$ data/build/poly_gemver.native
+$ wasmtime --dir=. data/build/poly_gemver.wasm
+$ data/build/poly_gemver.native
+$ wasmtime --dir=. data/build/poly_gemver.wasm
+$ data/build/poly_gemver.native
+$ wasmtime --dir=. data/build/poly_gemver.wasm
+$ data/build/poly_gemver.native
+$ wasmtime --dir=. data/build/poly_gemver.wasm
+$ data/build/poly_gemver.native
+$ wasmtime --dir=. data/build/poly_gemver.wasm
+$ data/build/poly_gemver.native
+$ wasmtime --dir=. data/build/poly_gemver.wasm
+$ data/build/poly_gemver.native
+$ wasmtime --dir=. data/build/poly_gemver.wasm
+$ data/build/poly_gemver.native
+$ wasmtime --dir=. data/build/poly_gemver.wasm
+$ data/build/poly_gemver.native
+$ wasmtime --dir=. data/build/poly_gemver.wasm
+$ data/build/poly_gemver.native
+$ wasmtime --dir=. data/build/poly_gemver.wasm
+$ data/build/poly_gemver.native
+$ wasmtime --dir=. data/build/poly_gemver.wasm
+$ data/build/poly_gemver.native
+$ wasmtime --dir=. data/build/poly_gemver.wasm
+$ data/build/poly_gemver.native
+$ wasmtime --dir=. data/build/poly_gemver.wasm
+$ data/build/poly_gemver.native
+$ wasmtime --dir=. data/build/poly_gemver.wasm
+$ data/build/poly_gemver.native
+$ wasmtime --dir=. data/build/poly_gemver.wasm
+$ data/build/poly_gemver.native
+$ wasmtime --dir=. data/build/poly_gemver.wasm
+$ data/build/poly_gemver.native
+$ wasmtime --dir=. data/build/poly_gemver.wasm
+$ data/build/poly_gemver.native
+$ wasmtime --dir=. data/build/poly_gemver.wasm
+$ data/build/poly_gemver.native
+$ wasmtime --dir=. data/build/poly_gemver.wasm
+$ data/build/poly_gemver.native
+$ wasmtime --dir=. data/build/poly_gemver.wasm
+$ data/build/poly_gemver.native
+$ wasmtime --dir=. data/build/poly_gemver.wasm
+$ data/build/poly_gemver.native
+$ wasmtime --dir=. data/build/poly_gemver.wasm
+$ data/build/poly_gemver.native
+$ wasmtime --dir=. data/build/poly_gemver.wasm
+$ data/build/poly_gemver.native
+$ wasmtime --dir=. data/build/poly_gemver.wasm
+$ data/build/poly_gemver.native
+$ wasmtime --dir=. data/build/poly_gemver.wasm
+$ data/build/poly_gemver.native
+$ wasmtime --dir=. data/build/poly_gemver.wasm
+$ data/build/poly_gemver.native
+$ wasmtime --dir=. data/build/poly_gemver.wasm
+$ data/build/poly_gemver.native
+$ wasmtime --dir=. data/build/poly_gemver.wasm
+$ data/build/poly_gemver.native
+$ wasmtime --dir=. data/build/poly_gemver.wasm
+
+=== Running poly_gesummv ===
+$ data/build/poly_gesummv.native
+$ wasmtime --dir=. data/build/poly_gesummv.wasm
+$ data/build/poly_gesummv.native
+$ wasmtime --dir=. data/build/poly_gesummv.wasm
+$ data/build/poly_gesummv.native
+$ wasmtime --dir=. data/build/poly_gesummv.wasm
+$ data/build/poly_gesummv.native
+$ wasmtime --dir=. data/build/poly_gesummv.wasm
+$ data/build/poly_gesummv.native
+$ wasmtime --dir=. data/build/poly_gesummv.wasm
+$ data/build/poly_gesummv.native
+$ wasmtime --dir=. data/build/poly_gesummv.wasm
+$ data/build/poly_gesummv.native
+$ wasmtime --dir=. data/build/poly_gesummv.wasm
+$ data/build/poly_gesummv.native
+$ wasmtime --dir=. data/build/poly_gesummv.wasm
+$ data/build/poly_gesummv.native
+$ wasmtime --dir=. data/build/poly_gesummv.wasm
+$ data/build/poly_gesummv.native
+$ wasmtime --dir=. data/build/poly_gesummv.wasm
+$ data/build/poly_gesummv.native
+$ wasmtime --dir=. data/build/poly_gesummv.wasm
+$ data/build/poly_gesummv.native
+$ wasmtime --dir=. data/build/poly_gesummv.wasm
+$ data/build/poly_gesummv.native
+$ wasmtime --dir=. data/build/poly_gesummv.wasm
+$ data/build/poly_gesummv.native
+$ wasmtime --dir=. data/build/poly_gesummv.wasm
+$ data/build/poly_gesummv.native
+$ wasmtime --dir=. data/build/poly_gesummv.wasm
+$ data/build/poly_gesummv.native
+$ wasmtime --dir=. data/build/poly_gesummv.wasm
+$ data/build/poly_gesummv.native
+$ wasmtime --dir=. data/build/poly_gesummv.wasm
+$ data/build/poly_gesummv.native
+$ wasmtime --dir=. data/build/poly_gesummv.wasm
+$ data/build/poly_gesummv.native
+$ wasmtime --dir=. data/build/poly_gesummv.wasm
+$ data/build/poly_gesummv.native
+$ wasmtime --dir=. data/build/poly_gesummv.wasm
+$ data/build/poly_gesummv.native
+$ wasmtime --dir=. data/build/poly_gesummv.wasm
+$ data/build/poly_gesummv.native
+$ wasmtime --dir=. data/build/poly_gesummv.wasm
+$ data/build/poly_gesummv.native
+$ wasmtime --dir=. data/build/poly_gesummv.wasm
+$ data/build/poly_gesummv.native
+$ wasmtime --dir=. data/build/poly_gesummv.wasm
+$ data/build/poly_gesummv.native
+$ wasmtime --dir=. data/build/poly_gesummv.wasm
+$ data/build/poly_gesummv.native
+$ wasmtime --dir=. data/build/poly_gesummv.wasm
+$ data/build/poly_gesummv.native
+$ wasmtime --dir=. data/build/poly_gesummv.wasm
+$ data/build/poly_gesummv.native
+$ wasmtime --dir=. data/build/poly_gesummv.wasm
+$ data/build/poly_gesummv.native
+$ wasmtime --dir=. data/build/poly_gesummv.wasm
+$ data/build/poly_gesummv.native
+$ wasmtime --dir=. data/build/poly_gesummv.wasm
+
+=== Running poly_jacobi_1d ===
+$ data/build/poly_jacobi_1d.native
+$ wasmtime --dir=. data/build/poly_jacobi_1d.wasm
+$ data/build/poly_jacobi_1d.native
+$ wasmtime --dir=. data/build/poly_jacobi_1d.wasm
+$ data/build/poly_jacobi_1d.native
+$ wasmtime --dir=. data/build/poly_jacobi_1d.wasm
+$ data/build/poly_jacobi_1d.native
+$ wasmtime --dir=. data/build/poly_jacobi_1d.wasm
+$ data/build/poly_jacobi_1d.native
+$ wasmtime --dir=. data/build/poly_jacobi_1d.wasm
+$ data/build/poly_jacobi_1d.native
+$ wasmtime --dir=. data/build/poly_jacobi_1d.wasm
+$ data/build/poly_jacobi_1d.native
+$ wasmtime --dir=. data/build/poly_jacobi_1d.wasm
+$ data/build/poly_jacobi_1d.native
+$ wasmtime --dir=. data/build/poly_jacobi_1d.wasm
+$ data/build/poly_jacobi_1d.native
+$ wasmtime --dir=. data/build/poly_jacobi_1d.wasm
+$ data/build/poly_jacobi_1d.native
+$ wasmtime --dir=. data/build/poly_jacobi_1d.wasm
+$ data/build/poly_jacobi_1d.native
+$ wasmtime --dir=. data/build/poly_jacobi_1d.wasm
+$ data/build/poly_jacobi_1d.native
+$ wasmtime --dir=. data/build/poly_jacobi_1d.wasm
+$ data/build/poly_jacobi_1d.native
+$ wasmtime --dir=. data/build/poly_jacobi_1d.wasm
+$ data/build/poly_jacobi_1d.native
+$ wasmtime --dir=. data/build/poly_jacobi_1d.wasm
+$ data/build/poly_jacobi_1d.native
+$ wasmtime --dir=. data/build/poly_jacobi_1d.wasm
+$ data/build/poly_jacobi_1d.native
+$ wasmtime --dir=. data/build/poly_jacobi_1d.wasm
+$ data/build/poly_jacobi_1d.native
+$ wasmtime --dir=. data/build/poly_jacobi_1d.wasm
+$ data/build/poly_jacobi_1d.native
+$ wasmtime --dir=. data/build/poly_jacobi_1d.wasm
+$ data/build/poly_jacobi_1d.native
+$ wasmtime --dir=. data/build/poly_jacobi_1d.wasm
+$ data/build/poly_jacobi_1d.native
+$ wasmtime --dir=. data/build/poly_jacobi_1d.wasm
+$ data/build/poly_jacobi_1d.native
+$ wasmtime --dir=. data/build/poly_jacobi_1d.wasm
+$ data/build/poly_jacobi_1d.native
+$ wasmtime --dir=. data/build/poly_jacobi_1d.wasm
+$ data/build/poly_jacobi_1d.native
+$ wasmtime --dir=. data/build/poly_jacobi_1d.wasm
+$ data/build/poly_jacobi_1d.native
+$ wasmtime --dir=. data/build/poly_jacobi_1d.wasm
+$ data/build/poly_jacobi_1d.native
+$ wasmtime --dir=. data/build/poly_jacobi_1d.wasm
+$ data/build/poly_jacobi_1d.native
+$ wasmtime --dir=. data/build/poly_jacobi_1d.wasm
+$ data/build/poly_jacobi_1d.native
+$ wasmtime --dir=. data/build/poly_jacobi_1d.wasm
+$ data/build/poly_jacobi_1d.native
+$ wasmtime --dir=. data/build/poly_jacobi_1d.wasm
+$ data/build/poly_jacobi_1d.native
+$ wasmtime --dir=. data/build/poly_jacobi_1d.wasm
+$ data/build/poly_jacobi_1d.native
+$ wasmtime --dir=. data/build/poly_jacobi_1d.wasm
+
+=== Running poly_jacobi_2d ===
+$ data/build/poly_jacobi_2d.native
+$ wasmtime --dir=. data/build/poly_jacobi_2d.wasm
+$ data/build/poly_jacobi_2d.native
+$ wasmtime --dir=. data/build/poly_jacobi_2d.wasm
+$ data/build/poly_jacobi_2d.native
+$ wasmtime --dir=. data/build/poly_jacobi_2d.wasm
+$ data/build/poly_jacobi_2d.native
+$ wasmtime --dir=. data/build/poly_jacobi_2d.wasm
+$ data/build/poly_jacobi_2d.native
+$ wasmtime --dir=. data/build/poly_jacobi_2d.wasm
+$ data/build/poly_jacobi_2d.native
+$ wasmtime --dir=. data/build/poly_jacobi_2d.wasm
+$ data/build/poly_jacobi_2d.native
+$ wasmtime --dir=. data/build/poly_jacobi_2d.wasm
+$ data/build/poly_jacobi_2d.native
+$ wasmtime --dir=. data/build/poly_jacobi_2d.wasm
+$ data/build/poly_jacobi_2d.native
+$ wasmtime --dir=. data/build/poly_jacobi_2d.wasm
+$ data/build/poly_jacobi_2d.native
+$ wasmtime --dir=. data/build/poly_jacobi_2d.wasm
+$ data/build/poly_jacobi_2d.native
+$ wasmtime --dir=. data/build/poly_jacobi_2d.wasm
+$ data/build/poly_jacobi_2d.native
+$ wasmtime --dir=. data/build/poly_jacobi_2d.wasm
+$ data/build/poly_jacobi_2d.native
+$ wasmtime --dir=. data/build/poly_jacobi_2d.wasm
+$ data/build/poly_jacobi_2d.native
+$ wasmtime --dir=. data/build/poly_jacobi_2d.wasm
+$ data/build/poly_jacobi_2d.native
+$ wasmtime --dir=. data/build/poly_jacobi_2d.wasm
+$ data/build/poly_jacobi_2d.native
+$ wasmtime --dir=. data/build/poly_jacobi_2d.wasm
+$ data/build/poly_jacobi_2d.native
+$ wasmtime --dir=. data/build/poly_jacobi_2d.wasm
+$ data/build/poly_jacobi_2d.native
+$ wasmtime --dir=. data/build/poly_jacobi_2d.wasm
+$ data/build/poly_jacobi_2d.native
+$ wasmtime --dir=. data/build/poly_jacobi_2d.wasm
+$ data/build/poly_jacobi_2d.native
+$ wasmtime --dir=. data/build/poly_jacobi_2d.wasm
+$ data/build/poly_jacobi_2d.native
+$ wasmtime --dir=. data/build/poly_jacobi_2d.wasm
+$ data/build/poly_jacobi_2d.native
+$ wasmtime --dir=. data/build/poly_jacobi_2d.wasm
+$ data/build/poly_jacobi_2d.native
+$ wasmtime --dir=. data/build/poly_jacobi_2d.wasm
+$ data/build/poly_jacobi_2d.native
+$ wasmtime --dir=. data/build/poly_jacobi_2d.wasm
+$ data/build/poly_jacobi_2d.native
+$ wasmtime --dir=. data/build/poly_jacobi_2d.wasm
+$ data/build/poly_jacobi_2d.native
+$ wasmtime --dir=. data/build/poly_jacobi_2d.wasm
+$ data/build/poly_jacobi_2d.native
+$ wasmtime --dir=. data/build/poly_jacobi_2d.wasm
+$ data/build/poly_jacobi_2d.native
+$ wasmtime --dir=. data/build/poly_jacobi_2d.wasm
+$ data/build/poly_jacobi_2d.native
+$ wasmtime --dir=. data/build/poly_jacobi_2d.wasm
+$ data/build/poly_jacobi_2d.native
+$ wasmtime --dir=. data/build/poly_jacobi_2d.wasm
+
+=== Label Summary ===
+native-better: 8
+summary output: data/results/labels_polybench.csv
+raw output:     data/results/labels_raw_polybench.csv

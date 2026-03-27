@@ -1,0 +1,9 @@
+program,native_ok,ir_ok,wasm_ok,native_bin,ir_file,wasm_file,native_error,ir_error,wasm_error
+poly_gemm,1,1,1,data/build/poly_gemm.native,data/build/poly_gemm.ll,data/build/poly_gemm.wasm,,,
+poly_gemver,1,1,1,data/build/poly_gemver.native,data/build/poly_gemver.ll,data/build/poly_gemver.wasm,,,
+poly_gesummv,1,1,1,data/build/poly_gesummv.native,data/build/poly_gesummv.ll,data/build/poly_gesummv.wasm,,,
+poly_2mm,1,1,1,data/build/poly_2mm.native,data/build/poly_2mm.ll,data/build/poly_2mm.wasm,,,
+poly_atax,1,1,1,data/build/poly_atax.native,data/build/poly_atax.ll,data/build/poly_atax.wasm,,,
+poly_jacobi_1d,1,1,1,data/build/poly_jacobi_1d.native,data/build/poly_jacobi_1d.ll,data/build/poly_jacobi_1d.wasm,,,
+poly_jacobi_2d,1,1,1,data/build/poly_jacobi_2d.native,data/build/poly_jacobi_2d.ll,data/build/poly_jacobi_2d.wasm,,,
+poly_floyd_warshall,1,1,1,data/build/poly_floyd_warshall.native,data/build/poly_floyd_warshall.ll,data/build/poly_floyd_warshall.wasm,,,

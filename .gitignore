@@ -1,3 +1,4 @@
 .env
 /assets/git使用.md
 /example
+/src/__pycache__

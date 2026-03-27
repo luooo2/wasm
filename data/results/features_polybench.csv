@@ -1,0 +1,9 @@
+program,ir_instruction_count,function_count,basic_block_count,compute_instr_count,compute_density,memory_instr_count,memory_access_density,load_count,store_count,branch_instr_count,branch_density,call_instr_count,call_density,indirect_call_count,loop_count,max_loop_depth,hostcall_count,hostcall_density,io_call_count,time_call_count,filesystem_call_count,alloc_call_count
+poly_gemm,229,1,30,46,0.200873,35,0.152838,24,11,30,0.131004,0,0.0,0,0,3,2,2.0,2,0,0,0
+poly_gemver,323,1,27,44,0.136223,78,0.241486,53,25,27,0.083591,0,0.0,0,0,2,2,2.0,2,0,0,0
+poly_gesummv,152,1,16,25,0.164474,26,0.171053,16,10,16,0.105263,0,0.0,0,0,3,2,2.0,2,0,0,0
+poly_2mm,223,1,32,45,0.201794,28,0.125561,18,10,32,0.143498,0,0.0,0,0,2,2,2.0,2,0,0,0
+poly_atax,197,1,23,30,0.152284,35,0.177665,24,11,23,0.116751,0,0.0,0,0,2,2,2.0,2,0,0,0
+poly_jacobi_1d,247,1,20,62,0.251012,49,0.198381,33,16,20,0.080972,0,0.0,0,0,2,2,2.0,2,0,0,0
+poly_jacobi_2d,275,1,26,63,0.229091,49,0.178182,39,10,26,0.094545,0,0.0,0,0,2,2,2.0,2,0,0,0
+poly_floyd_warshall,170,1,22,31,0.182353,25,0.147059,20,5,23,0.135294,0,0.0,0,0,2,2,2.0,2,0,0,0
