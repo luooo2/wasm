@@ -1,11 +1,26 @@
 #!/usr/bin/env python3
 """
-Extract static features based on assets/feature_design_table.md.
-Input directory should contain:
-- source: *.c
-- LLVM IR: same stem *.ll (optional but recommended)
+Extract V2 feature set from C source + LLVM IR.
 
-Output CSV contains exactly the current agreed feature set.
+Output columns (exactly 18 features + program):
+- ir_instruction_count
+- basic_block_count
+- compute_density
+- memory_access_density
+- load_count
+- store_count
+- branch_instr_count
+- call_instr_count
+- max_loop_depth
+- hostcall_count
+- hostcall_density
+- time_call_count
+- alloc_call_count
+- avg_bb_size
+- compute_to_memory_ratio
+- load_store_ratio
+- call_to_bb_ratio
+- hostcall_per_bb
 """
 
 import argparse
@@ -31,25 +46,23 @@ HOST_TIME = {"time", "gettimeofday", "clock_gettime", "clock"}
 HOST_FS = {"getcwd", "chdir", "stat", "lstat", "fstat", "opendir", "readdir"}
 ALLOC_API = {"malloc", "calloc", "realloc", "free", "aligned_alloc"}
 
-RE_FUNC = re.compile(r"^define\s+")
 RE_LABEL = re.compile(r"^[A-Za-z0-9_.-]+:\s*(;.*)?$")
 RE_INST = re.compile(r"^\s*(?:[%@][A-Za-z0-9_.-]+\s*=\s*)?([A-Za-z_][A-Za-z0-9_.]*)\b")
 RE_CALL_SYMBOL = re.compile(r"\b([A-Za-z_][A-Za-z0-9_]*)\s*\(")
-RE_LOOP_HINT = re.compile(r"(llvm\.loop|\.lr\.ph|\.preheader|\.backedge)", re.IGNORECASE)
 
 
 def safe_div(a: float, b: float) -> float:
     return a / b if b else 0.0
 
 
-def source_features(c_text: str) -> Dict[str, int]:
+def source_features(c_text: str) -> Dict[str, float]:
     syms = RE_CALL_SYMBOL.findall(c_text)
     io_cnt = sum(1 for s in syms if s in HOST_IO)
     time_cnt = sum(1 for s in syms if s in HOST_TIME)
     fs_cnt = sum(1 for s in syms if s in HOST_FS)
     alloc_cnt = sum(1 for s in syms if s in ALLOC_API)
 
-    # naive max loop depth from source text
+    # approximate max loop depth from source
     max_depth = 0
     depth = 0
     pending_loop = 0
@@ -61,48 +74,36 @@ def source_features(c_text: str) -> Dict[str, int]:
             if pending_loop > 0:
                 depth += 1
                 pending_loop -= 1
-                if depth > max_depth:
-                    max_depth = depth
-        elif tk == "}":
-            if depth > 0:
-                depth -= 1
+                max_depth = max(max_depth, depth)
+        elif tk == "}" and depth > 0:
+            depth -= 1
 
+    hostcall_count = io_cnt + time_cnt + fs_cnt
     return {
-        "hostcall_count": io_cnt + time_cnt + fs_cnt,
-        "io_call_count": io_cnt,
+        "hostcall_count": hostcall_count,
         "time_call_count": time_cnt,
-        "filesystem_call_count": fs_cnt,
         "alloc_call_count": alloc_cnt,
         "max_loop_depth": max_depth,
     }
 
 
 def ir_features(ll_text: str) -> Dict[str, float]:
-    func_cnt = 0
-    bb_cnt = 0
     inst_cnt = 0
+    bb_cnt = 0
     compute_cnt = 0
     mem_cnt = 0
     load_cnt = 0
     store_cnt = 0
     br_cnt = 0
     call_cnt = 0
-    indirect_call_cnt = 0
-    loop_cnt = 0
 
     for raw in ll_text.splitlines():
         line = raw.strip()
         if not line or line.startswith(";"):
             continue
 
-        if RE_FUNC.match(line):
-            func_cnt += 1
-            continue
-
         if RE_LABEL.match(line):
             bb_cnt += 1
-            if RE_LOOP_HINT.search(line):
-                loop_cnt += 1
             continue
 
         m = RE_INST.match(line)
@@ -124,26 +125,36 @@ def ir_features(ll_text: str) -> Dict[str, float]:
             br_cnt += 1
         if op in CALL_OPS:
             call_cnt += 1
-            if ("call" in line and "@" not in line) or "call " in line and "*" in line:
-                indirect_call_cnt += 1
+
+    compute_density = safe_div(compute_cnt, inst_cnt)
+    memory_access_density = safe_div(mem_cnt, inst_cnt)
 
     return {
         "ir_instruction_count": inst_cnt,
-        "function_count": func_cnt,
         "basic_block_count": bb_cnt,
-        "compute_instr_count": compute_cnt,
-        "compute_density": round(safe_div(compute_cnt, inst_cnt), 6),
-        "memory_instr_count": mem_cnt,
-        "memory_access_density": round(safe_div(mem_cnt, inst_cnt), 6),
+        "compute_density": round(compute_density, 6),
+        "memory_access_density": round(memory_access_density, 6),
         "load_count": load_cnt,
         "store_count": store_cnt,
         "branch_instr_count": br_cnt,
-        "branch_density": round(safe_div(br_cnt, inst_cnt), 6),
         "call_instr_count": call_cnt,
-        "call_density": round(safe_div(call_cnt, inst_cnt), 6),
-        "indirect_call_count": indirect_call_cnt,
-        "loop_count": loop_cnt,
     }
+
+
+def derive_v2_features(row: Dict[str, float]) -> Dict[str, float]:
+    ir_inst = row["ir_instruction_count"]
+    bb = row["basic_block_count"]
+    call_cnt = row["call_instr_count"]
+    hostcall_cnt = row["hostcall_count"]
+    mem_density = row["memory_access_density"]
+
+    row["hostcall_density"] = round(safe_div(hostcall_cnt, max(ir_inst, 1)), 6)
+    row["avg_bb_size"] = round(safe_div(ir_inst, max(bb, 1)), 6)
+    row["compute_to_memory_ratio"] = round(safe_div(row["compute_density"], max(mem_density, 1e-6)), 6)
+    row["load_store_ratio"] = round(safe_div(row["load_count"], max(row["store_count"], 1)), 6)
+    row["call_to_bb_ratio"] = round(safe_div(call_cnt, max(bb, 1)), 6)
+    row["hostcall_per_bb"] = round(safe_div(hostcall_cnt, max(bb, 1)), 6)
+    return row
 
 
 def extract_one(c_path: Path, ll_path: Path) -> Dict[str, float]:
@@ -156,30 +167,20 @@ def extract_one(c_path: Path, ll_path: Path) -> Dict[str, float]:
         ll_text = ll_path.read_text(encoding="utf-8", errors="ignore")
         row.update(ir_features(ll_text))
     else:
-        # fill required IR features with 0 when missing
         row.update(
             {
                 "ir_instruction_count": 0,
-                "function_count": 0,
                 "basic_block_count": 0,
-                "compute_instr_count": 0,
-                "compute_density": 0,
-                "memory_instr_count": 0,
-                "memory_access_density": 0,
+                "compute_density": 0.0,
+                "memory_access_density": 0.0,
                 "load_count": 0,
                 "store_count": 0,
                 "branch_instr_count": 0,
-                "branch_density": 0,
                 "call_instr_count": 0,
-                "call_density": 0,
-                "indirect_call_count": 0,
-                "loop_count": 0,
             }
         )
 
-    row["hostcall_density"] = round(safe_div(row["hostcall_count"], max(row["call_instr_count"], 1)), 6)
-
-    return row
+    return derive_v2_features(row)
 
 
 def main() -> None:
@@ -195,42 +196,34 @@ def main() -> None:
     out_csv.parent.mkdir(parents=True, exist_ok=True)
 
     c_files = sorted(src_dir.glob("*.c"))
-    rows = []
-    for c_file in c_files:
-        ll_file = ir_dir / f"{c_file.stem}.ll"
-        rows.append(extract_one(c_file, ll_file))
+    rows = [extract_one(c_file, ir_dir / f"{c_file.stem}.ll") for c_file in c_files]
 
-    fieldnames = [
+    fieldnames: List[str] = [
         "program",
         "ir_instruction_count",
-        "function_count",
         "basic_block_count",
-        "compute_instr_count",
         "compute_density",
-        "memory_instr_count",
         "memory_access_density",
         "load_count",
         "store_count",
         "branch_instr_count",
-        "branch_density",
         "call_instr_count",
-        "call_density",
-        "indirect_call_count",
-        "loop_count",
         "max_loop_depth",
         "hostcall_count",
         "hostcall_density",
-        "io_call_count",
         "time_call_count",
-        "filesystem_call_count",
         "alloc_call_count",
+        "avg_bb_size",
+        "compute_to_memory_ratio",
+        "load_store_ratio",
+        "call_to_bb_ratio",
+        "hostcall_per_bb",
     ]
 
     with out_csv.open("w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()
-        for r in rows:
-            writer.writerow(r)
+        writer.writerows(rows)
 
     print(f"extracted {len(rows)} programs -> {out_csv}")
 

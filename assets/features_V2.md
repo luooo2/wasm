@@ -5,13 +5,15 @@
 基于 V1（22 个特征）在 42 个样本上的实验分析（Cohen's d、Pearson r、箱线图、散点矩阵），
 对特征集进行以下四类操作：
 
-| 操作 | 数量 | 说明 |
-|------|------|------|
-| 删除 | 3 | 区分力接近 0 或严重冗余 |
-| 保留 | 13 | 经验证有效 |
-| 修改 | 2 | 调整计算方式或语义 |
-| 新增 | 5 | 针对已知盲点引入 |
+
+| 操作     | 数量     | 说明               |
+| ------ | ------ | ---------------- |
+| 删除     | 3      | 区分力接近 0 或严重冗余    |
+| 保留     | 13     | 经验证有效            |
+| 修改     | 2      | 调整计算方式或语义        |
+| 新增     | 5      | 针对已知盲点引入         |
 | **合计** | **18** | 从 22 → 18，精简且更有效 |
+
 
 ---
 
@@ -41,9 +43,11 @@
 
 ### `hostcall_density` — 修改分母
 
-| | V1 | V2 |
-|--|-------|------|
-| 定义 | `hostcall_count / max(call_instr_count, 1)` | `hostcall_count / max(ir_instruction_count, 1)` |
+
+|     | V1                                          | V2                                              |
+| --- | ------------------------------------------- | ----------------------------------------------- |
+| 定义  | `hostcall_count / max(call_instr_count, 1)` | `hostcall_count / max(ir_instruction_count, 1)` |
+
 
 **改进原因**：V1 分母为 `call_instr_count`，当程序无任何 call 指令时分母强制为 1，
 导致即使只有 1 次 hostcall，density 也为 1.0，语义失真。
@@ -112,29 +116,33 @@ wasm 的 WASI 调用是跨越 wasm/host 边界，每次有固定开销。
 
 > 提取来源：IR = 从 LLVM IR 提取；SRC = 从 C 源代码提取；DERIVED = 由其他特征派生计算
 
-| Feature | 定义 | 来源 | 类型 | 设计动机 |
-|---------|------|------|------|----------|
-| `ir_instruction_count` | LLVM IR 总指令数 | IR | 规模 | 程序整体规模与静态复杂度；Cohen d=+0.77 |
-| `basic_block_count` | 基本块数量 | IR | CFG规模 | 控制流切分程度；Cohen d=+0.64 |
-| `avg_bb_size` | `ir_instruction_count / basic_block_count` | DERIVED | CFG密度 | 平均基本块大小；大→长直线段→JIT易优化；小→控制流碎片化 |
-| `compute_instr_count` | 算术/逻辑相关指令总数 | IR | 指令统计 | 计算工作量绝对值 |
-| `compute_density` | `compute_instr_count / ir_instruction_count` | IR | 密度 | 计算密集程度；Cohen d=-0.65，non-native组更高，是similar核心信号 |
-| `memory_instr_count` | `load+store+atomicrmw+cmpxchg` 数量 | IR | 指令统计 | 内存访问规模；Cohen d=+0.62 |
-| `memory_access_density` | `memory_instr_count / ir_instruction_count` | IR | 密度 | 内存访问压力；wasm线性内存边界检查开销来源；Cohen d=+0.66 |
-| `compute_to_memory_ratio` | `compute_density / max(memory_access_density, 1e-6)` | DERIVED | 比值 | ⭐ similar判别核心；编码"高计算、低访存"组合；值越大越接近similar |
-| `load_store_ratio` | `load_count / max(store_count, 1)` | DERIVED | 比值 | 访存方向偏好；store多→wasm写边界检查代价高→更倾向native-better |
-| `branch_instr_count` | 条件/无条件跳转、switch、select 统计 | IR | 指令统计 | 控制流密度；Cohen d=+0.66 |
-| `branch_density` | `branch_instr_count / ir_instruction_count` | IR | 密度 | 控制流复杂度；间接对应分支处理代价 |
-| `call_instr_count` | `call` / `invoke` 指令数 | IR | 指令统计 | 函数调用频度 |
-| `call_to_bb_ratio` | `call_instr_count / max(basic_block_count, 1)` | DERIVED | 比值 | 每基本块平均调用次数；比call_density更直接刻画wasm函数表查找开销 |
-| `max_loop_depth` | 最大循环嵌套深度（源码扫描估算） | SRC | CFG复杂度 | 区分浅层循环与深层嵌套数值核 |
-| `hostcall_count` | host-related API 调用总数（IO+时间+文件系统） | SRC | host交互 | 宿主交互强度绝对值；WASI调用次数 |
-| `hostcall_density` | `hostcall_count / max(ir_instruction_count, 1)` | DERIVED | host交互 | hostcall在整个程序中的比重；分母统一为ir_instruction_count（V2修改）|
-| `hostcall_per_bb` | `hostcall_count / max(basic_block_count, 1)` | DERIVED | host交互 | 每控制流单元的WASI边界切换频率；衡量host交互密度 |
-| `alloc_call_count` | `malloc/calloc/realloc/free` 等调用数 | SRC | 内存管理 | 动态分配密集程序；wasm堆内存管理有额外开销 |
-| `time_call_count` ⚠️ | 时间相关API调用数（time、gettimeofday等） | SRC | host交互 | Pearson r=0.70但异常值敏感（host_time_loop拉动）；建模时用RobustScaler |
+
+| Feature                   | 定义                                                   | 来源      | 类型     | 设计动机                                                    |
+| ------------------------- | ---------------------------------------------------- | ------- | ------ | ------------------------------------------------------- |
+| `ir_instruction_count`    | LLVM IR 总指令数                                         | IR      | 规模     | 程序整体规模与静态复杂度；Cohen d=+0.77                              |
+| `basic_block_count`       | 基本块数量                                                | IR      | CFG规模  | 控制流切分程度；Cohen d=+0.64                                   |
+| `avg_bb_size`             | `ir_instruction_count / basic_block_count`           | DERIVED | CFG密度  | 平均基本块大小；大→长直线段→JIT易优化；小→控制流碎片化                          |
+| `compute_instr_count`     | 算术/逻辑相关指令总数                                          | IR      | 指令统计   | 计算工作量绝对值                                                |
+| `compute_density`         | `compute_instr_count / ir_instruction_count`         | IR      | 密度     | 计算密集程度；Cohen d=-0.65，non-native组更高，是similar核心信号         |
+| `memory_instr_count`      | `load+store+atomicrmw+cmpxchg` 数量                    | IR      | 指令统计   | 内存访问规模；Cohen d=+0.62                                    |
+| `memory_access_density`   | `memory_instr_count / ir_instruction_count`          | IR      | 密度     | 内存访问压力；wasm线性内存边界检查开销来源；Cohen d=+0.66                   |
+| `compute_to_memory_ratio` | `compute_density / max(memory_access_density, 1e-6)` | DERIVED | 比值     | ⭐ similar判别核心；编码"高计算、低访存"组合；值越大越接近similar               |
+| `load_store_ratio`        | `load_count / max(store_count, 1)`                   | DERIVED | 比值     | 访存方向偏好；store多→wasm写边界检查代价高→更倾向native-better             |
+| `branch_instr_count`      | 条件/无条件跳转、switch、select 统计                            | IR      | 指令统计   | 控制流密度；Cohen d=+0.66                                     |
+| `branch_density`          | `branch_instr_count / ir_instruction_count`          | IR      | 密度     | 控制流复杂度；间接对应分支处理代价                                       |
+| `call_instr_count`        | `call` / `invoke` 指令数                                | IR      | 指令统计   | 函数调用频度                                                  |
+| `call_to_bb_ratio`        | `call_instr_count / max(basic_block_count, 1)`       | DERIVED | 比值     | 每基本块平均调用次数；比call_density更直接刻画wasm函数表查找开销                |
+| `max_loop_depth`          | 最大循环嵌套深度（源码扫描估算）                                     | SRC     | CFG复杂度 | 区分浅层循环与深层嵌套数值核                                          |
+| `hostcall_count`          | host-related API 调用总数（IO+时间+文件系统）                    | SRC     | host交互 | 宿主交互强度绝对值；WASI调用次数                                      |
+| `hostcall_density`        | `hostcall_count / max(ir_instruction_count, 1)`      | DERIVED | host交互 | hostcall在整个程序中的比重；分母统一为ir_instruction_count（V2修改）       |
+| `hostcall_per_bb`         | `hostcall_count / max(basic_block_count, 1)`         | DERIVED | host交互 | 每控制流单元的WASI边界切换频率；衡量host交互密度                            |
+| `alloc_call_count`        | `malloc/calloc/realloc/free` 等调用数                    | SRC     | 内存管理   | 动态分配密集程序；wasm堆内存管理有额外开销                                 |
+| `time_call_count` ⚠️      | 时间相关API调用数（time、gettimeofday等）                       | SRC     | host交互 | Pearson r=0.70但异常值敏感（host_time_loop拉动）；建模时用RobustScaler |
+
 
 > **说明**：
+>
 > - `load_count` 和 `store_count` 仍在 IR 提取阶段计算（用于派生 `load_store_ratio`），但不直接输入模型
 > - `io_call_count`、`filesystem_call_count` 信息已包含在 `hostcall_count` 中，单独输入产生冗余，V2 不再独立使用
 > - ⚠️ 标记表示该特征异常值敏感，建模时需特殊处理
+
