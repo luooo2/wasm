@@ -30,7 +30,7 @@ define dso_local noundef i32 @main() local_unnamed_addr #0 {
   %11 = zext nneg i32 %10 to i64
   %12 = add i64 %5, %11
   %13 = add nuw nsw i32 %4, 1
-  %14 = icmp eq i32 %13, 300000
+  %14 = icmp eq i32 %13, 500
   br i1 %14, label %15, label %3, !llvm.loop !12
 
 15:                                               ; preds = %8

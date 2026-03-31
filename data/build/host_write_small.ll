@@ -36,7 +36,7 @@ define dso_local noundef i32 @main() local_unnamed_addr #0 {
   %14 = add i64 %11, %6
   %15 = tail call i32 @close(i32 noundef %8) #5
   %16 = add nuw nsw i32 %7, 1
-  %17 = icmp eq i32 %16, 5000
+  %17 = icmp eq i32 %16, 500
   br i1 %17, label %18, label %5, !llvm.loop !8
 
 18:                                               ; preds = %13

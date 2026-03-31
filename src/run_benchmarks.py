@@ -66,12 +66,48 @@ def parse_programs_arg(programs_arg: str) -> Optional[set]:
     return set(vals) if vals else None
 
 
+def ensure_aot_artifact(
+    wasmtime_cmd: str, wasm_path: Path, aot_cache_dir: Path
+) -> tuple[bool, Optional[Path], str]:
+    """
+    Build (or reuse) a wasmtime precompiled artifact for AOT timing.
+
+    We intentionally keep compile time out of the benchmark timing loop.
+    """
+    aot_cache_dir.mkdir(parents=True, exist_ok=True)
+    out_path = aot_cache_dir / f"{wasm_path.stem}.cwasm"
+    if out_path.exists():
+        return True, out_path, ""
+
+    cmd = [wasmtime_cmd, "compile", str(wasm_path), "-o", str(out_path)]
+    try:
+        p = subprocess.run(cmd, capture_output=True, text=True, timeout=180)
+    except subprocess.TimeoutExpired:
+        return False, None, "wasmtime compile timeout after 180s"
+
+    if p.returncode != 0:
+        msg = (p.stderr or p.stdout or "").strip()
+        return False, None, msg or f"wasmtime compile failed: {p.returncode}"
+    return True, out_path, ""
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--build-dir", default="data/build", help="Directory containing *.native/*.wasm")
     parser.add_argument("--out-csv", default="data/results/labels.csv", help="Summary CSV path")
     parser.add_argument("--raw-csv", default="data/results/labels_raw.csv", help="Raw per-run CSV path")
     parser.add_argument("--wasmtime", default="wasmtime", help="wasmtime command")
+    parser.add_argument(
+        "--wasm-mode",
+        choices=["jit", "aot"],
+        default="jit",
+        help="Wasm execution mode: jit (default) or aot (precompile with wasmtime compile)",
+    )
+    parser.add_argument(
+        "--aot-cache-dir",
+        default="data/build/aot_cache",
+        help="Directory to store *.cwasm artifacts when --wasm-mode=aot",
+    )
     parser.add_argument("--repeats", type=int, default=30, help="Run repeats (default 30)")
     parser.add_argument("--warmup", type=int, default=2, help="Warmup runs for native and wasm before measuring")
     parser.add_argument("--timeout", type=int, default=180, help="Per-run timeout seconds")
@@ -86,6 +122,7 @@ def main() -> None:
     raw_csv.parent.mkdir(parents=True, exist_ok=True)
 
     selected = parse_programs_arg(args.programs)
+    aot_cache_dir = Path(args.aot_cache_dir)
 
     native_bins = sorted(build_dir.glob("*.native"))
     summary_rows = []
@@ -132,7 +169,34 @@ def main() -> None:
         wasm_err = ""
 
         n_cmd = [str(nb)]
-        w_cmd = [args.wasmtime, "--dir=.", str(wb)]
+        if args.wasm_mode == "jit":
+            w_cmd = [args.wasmtime, "--dir=.", str(wb)]
+        else:
+            ok_aot, aot_path, aot_err = ensure_aot_artifact(args.wasmtime, wb, aot_cache_dir)
+            if not ok_aot or aot_path is None:
+                summary_rows.append(
+                    {
+                        "program": prog,
+                        "native_ok": 0,
+                        "wasm_ok": 0,
+                        "native_mean_ms": 0,
+                        "native_median_ms": 0,
+                        "native_std_ms": 0,
+                        "native_min_ms": 0,
+                        "native_max_ms": 0,
+                        "wasm_mean_ms": 0,
+                        "wasm_median_ms": 0,
+                        "wasm_std_ms": 0,
+                        "wasm_min_ms": 0,
+                        "wasm_max_ms": 0,
+                        "ratio_wasm_over_native": 0,
+                        "label": "aot-compile-failed",
+                        "native_error": "",
+                        "wasm_error": aot_err,
+                    }
+                )
+                continue
+            w_cmd = [args.wasmtime, "run", "--allow-precompiled", "--dir=.", str(aot_path)]
 
         # warmup phase (not recorded)
         for _ in range(max(args.warmup, 0)):

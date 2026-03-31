@@ -17,16 +17,8 @@ from extract_features import extract_one
 
 ROOT = Path(__file__).parent.parent
 
-KERNEL_MAP = {
-    "poly_gemm": "data/polybench-c-4.2.1-beta/linear-algebra/blas/gemm/gemm.c",
-    "poly_gemver": "data/polybench-c-4.2.1-beta/linear-algebra/blas/gemver/gemver.c",
-    "poly_gesummv": "data/polybench-c-4.2.1-beta/linear-algebra/blas/gesummv/gesummv.c",
-    "poly_2mm": "data/polybench-c-4.2.1-beta/linear-algebra/kernels/2mm/2mm.c",
-    "poly_atax": "data/polybench-c-4.2.1-beta/linear-algebra/kernels/atax/atax.c",
-    "poly_jacobi_1d": "data/polybench-c-4.2.1-beta/stencils/jacobi-1d/jacobi-1d.c",
-    "poly_jacobi_2d": "data/polybench-c-4.2.1-beta/stencils/jacobi-2d/jacobi-2d.c",
-    "poly_floyd_warshall": "data/polybench-c-4.2.1-beta/medley/floyd-warshall/floyd-warshall.c",
-}
+def poly_name_from_cstem(cstem: str) -> str:
+    return f"poly_{cstem.replace('-', '_')}"
 
 FIELDNAMES = [
     "program",
@@ -56,9 +48,23 @@ def main() -> None:
     out_csv = ROOT / "data" / "results" / "features_polybench.csv"
     out_csv.parent.mkdir(parents=True, exist_ok=True)
 
+    poly_root = ROOT / "data" / "polybench-c-4.2.1-beta"
+    c_files = [
+        p
+        for p in sorted(poly_root.rglob("*.c"))
+        if "utilities" not in p.parts and p.name != "polybench.c"
+    ]
+
     rows = []
-    for stem, rel_c in KERNEL_MAP.items():
-        c_path = ROOT / rel_c
+    for c_path in c_files:
+        src_dir = c_path.parent
+        cstem = c_path.stem
+
+        # Only accept the common PolyBench layout: <kernel>/<kernel>.c
+        if src_dir.name != cstem:
+            continue
+
+        stem = poly_name_from_cstem(cstem)
         ll_path = ir_dir / f"{stem}.ll"
 
         if not c_path.exists():
@@ -66,6 +72,7 @@ def main() -> None:
             continue
         if not ll_path.exists():
             print(f"WARNING: IR not found: {ll_path}")
+            continue
 
         row = extract_one(c_path, ll_path)
         row["program"] = stem

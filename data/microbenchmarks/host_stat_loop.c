@@ -3,7 +3,7 @@
 #include <sys/stat.h>
 
 #ifndef N
-#define N 300000
+#define N 500
 #endif
 
 volatile uint64_t sink_u64 = 0;

@@ -2,7 +2,7 @@
 #include <time.h>
 
 #ifndef N
-#define N 500000
+#define N 500
 #endif
 
 volatile long long sink_i64 = 0;

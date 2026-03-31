@@ -92,6 +92,40 @@ KERNEL_LIST: List[Dict] = [
     },
 ]
 
+def discover_kernels(poly_root: Path) -> List[Dict]:
+    """
+    Discover PolyBench kernels automatically.
+
+    Convention: each kernel lives in its own directory and has <dir>/<dir>.c.
+    We exclude utilities/ and any non-kernel .c files.
+    """
+    kernels: List[Dict] = []
+    for c_file in sorted(poly_root.rglob("*.c")):
+        if "utilities" in c_file.parts:
+            continue
+        if c_file.name == "polybench.c":
+            continue
+        src_dir = c_file.parent
+        cstem = c_file.stem
+
+        # Most PolyBench kernels follow: <kernel>/<kernel>.c
+        if src_dir.name != cstem:
+            continue
+
+        reldir = str(src_dir.relative_to(poly_root)).replace("\\", "/")
+        name = f"poly_{cstem.replace('-', '_')}"
+        kernels.append({"name": name, "reldir": reldir, "cstem": cstem})
+
+    # De-dup by output name (should be unique)
+    seen = set()
+    out = []
+    for k in kernels:
+        if k["name"] in seen:
+            continue
+        seen.add(k["name"])
+        out.append(k)
+    return out
+
 
 def run_cmd(cmd: List[str], cwd: Path = None) -> subprocess.CompletedProcess:
     print("$", " ".join(shlex.quote(c) for c in cmd))
@@ -112,6 +146,7 @@ def build_kernel(
     opt: str,
     wasi_target: str,
     dataset: str,
+    native_extra_ldflags: List[str],
 ) -> Dict:
     name    = kernel["name"]
     reldir  = kernel["reldir"]
@@ -142,6 +177,7 @@ def build_kernel(
         *common_flags,
         str(stub_c),
         str(c_file),
+        *native_extra_ldflags,
         "-o", str(native_bin),
     ])
     native_ok = p_native.returncode == 0
@@ -213,21 +249,33 @@ def main() -> None:
         default="",
         help="Comma-separated list of output stems to build (default: all). Example: poly_gemm,poly_jacobi_1d",
     )
+    parser.add_argument(
+        "--native-extra-ldflags",
+        default="-lm",
+        help="Extra linker flags for native builds, comma-separated. Example: -lm,-lpthread",
+    )
+    parser.add_argument(
+        "--discover",
+        action="store_true",
+        help="Auto-discover kernels under --poly-root (recommended for full PolyBench run).",
+    )
     args = parser.parse_args()
 
     poly_root = Path(args.poly_root)
     out_dir   = Path(args.out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
 
-    kernels_to_build = KERNEL_LIST
+    kernels_registry = discover_kernels(poly_root) if args.discover else KERNEL_LIST
+    kernels_to_build = kernels_registry
     if args.kernels:
         wanted = set(args.kernels.split(','))
-        kernels_to_build = [k for k in KERNEL_LIST if k['name'] in wanted]
+        kernels_to_build = [k for k in kernels_registry if k['name'] in wanted]
         if not kernels_to_build:
             print(f'No matching kernels found for: {args.kernels}')
             return
 
     rows = []
+    native_extra_ldflags = [x.strip() for x in args.native_extra_ldflags.split(",") if x.strip()]
     for kernel in kernels_to_build:
         row = build_kernel(
             kernel=kernel,
@@ -238,6 +286,7 @@ def main() -> None:
             opt=args.opt,
             wasi_target=args.wasi_target,
             dataset=args.dataset,
+            native_extra_ldflags=native_extra_ldflags,
         )
         rows.append(row)
 

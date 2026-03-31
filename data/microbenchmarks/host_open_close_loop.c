@@ -4,7 +4,7 @@
 #include <unistd.h>
 
 #ifndef N
-#define N 150000
+#define N 500
 #endif
 
 volatile uint64_t sink_u64 = 0;

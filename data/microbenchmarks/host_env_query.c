@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 #ifndef N
-#define N 600000
+#define N 600
 #endif
 
 volatile int sink_i32 = 0;
