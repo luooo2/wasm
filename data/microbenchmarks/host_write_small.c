@@ -1,6 +1,7 @@
 #include <fcntl.h>
 #include <stdint.h>
 #include <stdio.h>
+#include <time.h>
 #include <unistd.h>
 
 #ifndef N
@@ -10,6 +11,9 @@
 volatile uint64_t sink_u64 = 0;
 
 int main(void) {
+    struct timespec __ts_start, __ts_end;
+    unsigned long long __time_ns = 0;
+    clock_gettime(CLOCK_MONOTONIC, &__ts_start);
     const char *path = "bench_tmp_write.dat";
     uint64_t total = 0;
 
@@ -26,6 +30,14 @@ int main(void) {
     }
 
     sink_u64 = total;
-    printf("%llu\n", (unsigned long long)total);
+        clock_gettime(CLOCK_MONOTONIC, &__ts_end);
+    __time_ns = (unsigned long long)(__ts_end.tv_sec - __ts_start.tv_sec) * 1000000000ull;
+    if (__ts_end.tv_nsec >= __ts_start.tv_nsec) {
+        __time_ns += (unsigned long long)(__ts_end.tv_nsec - __ts_start.tv_nsec);
+    } else {
+        __time_ns -= 1000000000ull;
+        __time_ns += (unsigned long long)(__ts_end.tv_nsec + 1000000000L - __ts_start.tv_nsec);
+    }
+    printf("TIME_NS:%llu\n", __time_ns);
     return 0;
 }

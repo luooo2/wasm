@@ -1,12 +1,15 @@
 #!/usr/bin/env python3
 """
-Batch run native and wasm programs with reliability-focused metrics.
+Batch run native and wasm programs using benchmark-internal timing output.
+
+Each benchmark must print one timing line in stdout/stderr:
+- TIME_NS:<integer nanoseconds>
 
 Outputs:
-1) summary CSV: label + mean/median/std/min/max
-2) raw CSV: one row per run
+1) summary CSV: label + mean/median/std/min/max (internal ms)
+2) raw CSV: one row per run (internal ms)
 
-Label rule by ratio r = wasm_median / native_median:
+Label rule by ratio r = wasm_median_internal_ms / native_median_internal_ms:
 - r > 1 + threshold => native-better
 - r < 1 - threshold => wasm-better
 - else => similar
@@ -14,23 +17,64 @@ Label rule by ratio r = wasm_median / native_median:
 
 import argparse
 import csv
+import re
 import shlex
 import statistics
 import subprocess
-import time
 from pathlib import Path
-from typing import List, Optional
+from typing import List, Optional, Tuple
+
+RE_TIME_NS = re.compile(r"TIME_NS\s*:\s*([0-9]+)")
+RE_NUMERIC = re.compile(r"^\s*([0-9]+)\s*$")
 
 
-def run_once(cmd: List[str], timeout_sec: int) -> tuple[bool, float, str]:
-    t0 = time.perf_counter()
+def parse_internal_time_ms(output: str) -> Optional[float]:
+    m = RE_TIME_NS.search(output or "")
+    if m:
+        try:
+            return int(m.group(1)) / 1_000_000.0
+        except ValueError:
+            pass
+
+    nums: List[int] = []
+    for line in (output or "").splitlines():
+        mm = RE_NUMERIC.match(line)
+        if not mm:
+            continue
+        try:
+            nums.append(int(mm.group(1)))
+        except ValueError:
+            continue
+    return (nums[-1] / 1_000_000.0) if nums else None
+
+
+def run_once(cmd: List[str], timeout_sec: int) -> Tuple[bool, Optional[float], str]:
     try:
         p = subprocess.run(cmd, capture_output=True, text=True, timeout=timeout_sec)
-        t1 = time.perf_counter()
-        return p.returncode == 0, (t1 - t0) * 1000.0, (p.stderr or "").strip()
     except subprocess.TimeoutExpired:
-        t1 = time.perf_counter()
-        return False, (t1 - t0) * 1000.0, f"timeout after {timeout_sec}s"
+        return False, None, f"timeout after {timeout_sec}s"
+
+    out = f"{p.stdout or ''}\n{p.stderr or ''}"
+    if p.returncode != 0:
+        err = (p.stderr or p.stdout or "").strip() or f"exit code {p.returncode}"
+        return False, None, err
+
+    t_ms = parse_internal_time_ms(out)
+    if t_ms is None:
+        return False, None, "internal timing not found (expect TIME_NS:<ns>)"
+    return True, t_ms, ""
+
+
+def stats(values: List[float]) -> dict:
+    if not values:
+        return {"mean": 0.0, "median": 0.0, "std": 0.0, "min": 0.0, "max": 0.0}
+    return {
+        "mean": statistics.mean(values),
+        "median": statistics.median(values),
+        "std": statistics.stdev(values) if len(values) >= 2 else 0.0,
+        "min": min(values),
+        "max": max(values),
+    }
 
 
 def label_by_ratio(ratio: float, threshold: float) -> str:
@@ -41,39 +85,12 @@ def label_by_ratio(ratio: float, threshold: float) -> str:
     return "similar"
 
 
-def stats(values: List[float]) -> dict:
-    if not values:
-        return {
-            "mean": 0.0,
-            "median": 0.0,
-            "std": 0.0,
-            "min": 0.0,
-            "max": 0.0,
-        }
-    return {
-        "mean": statistics.mean(values),
-        "median": statistics.median(values),
-        "std": statistics.stdev(values) if len(values) >= 2 else 0.0,
-        "min": min(values),
-        "max": max(values),
-    }
-
-
 def parse_programs_arg(programs_arg: str) -> Optional[set]:
-    if not programs_arg:
-        return None
-    vals = [x.strip() for x in programs_arg.split(",") if x.strip()]
+    vals = [x.strip() for x in (programs_arg or "").split(",") if x.strip()]
     return set(vals) if vals else None
 
 
-def ensure_aot_artifact(
-    wasmtime_cmd: str, wasm_path: Path, aot_cache_dir: Path
-) -> tuple[bool, Optional[Path], str]:
-    """
-    Build (or reuse) a wasmtime precompiled artifact for AOT timing.
-
-    We intentionally keep compile time out of the benchmark timing loop.
-    """
+def ensure_aot_artifact(wasmtime_cmd: str, wasm_path: Path, aot_cache_dir: Path) -> tuple[bool, Optional[Path], str]:
     aot_cache_dir.mkdir(parents=True, exist_ok=True)
     out_path = aot_cache_dir / f"{wasm_path.stem}.cwasm"
     if out_path.exists():
@@ -92,28 +109,19 @@ def ensure_aot_artifact(
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--build-dir", default="data/build", help="Directory containing *.native/*.wasm")
-    parser.add_argument("--out-csv", default="data/results/labels.csv", help="Summary CSV path")
-    parser.add_argument("--raw-csv", default="data/results/labels_raw.csv", help="Raw per-run CSV path")
-    parser.add_argument("--wasmtime", default="wasmtime", help="wasmtime command")
-    parser.add_argument(
-        "--wasm-mode",
-        choices=["jit", "aot"],
-        default="jit",
-        help="Wasm execution mode: jit (default) or aot (precompile with wasmtime compile)",
-    )
-    parser.add_argument(
-        "--aot-cache-dir",
-        default="data/build/aot_cache",
-        help="Directory to store *.cwasm artifacts when --wasm-mode=aot",
-    )
-    parser.add_argument("--repeats", type=int, default=30, help="Run repeats (default 30)")
-    parser.add_argument("--warmup", type=int, default=2, help="Warmup runs for native and wasm before measuring")
-    parser.add_argument("--timeout", type=int, default=180, help="Per-run timeout seconds")
-    parser.add_argument("--threshold", type=float, default=0.10, help="Similarity threshold")
-    parser.add_argument("--programs", default="", help="Optional comma-separated program names for focused rerun")
-    args = parser.parse_args()
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--build-dir", default="data/build")
+    ap.add_argument("--out-csv", default="data/results/labels.csv")
+    ap.add_argument("--raw-csv", default="data/results/labels_raw.csv")
+    ap.add_argument("--wasmtime", default="wasmtime")
+    ap.add_argument("--wasm-mode", choices=["jit", "aot", "both"], default="jit")
+    ap.add_argument("--aot-cache-dir", default="data/build/microbench_internal/aot_cache")
+    ap.add_argument("--repeats", type=int, default=30)
+    ap.add_argument("--warmup", type=int, default=2)
+    ap.add_argument("--timeout", type=int, default=180)
+    ap.add_argument("--threshold", type=float, default=0.10)
+    ap.add_argument("--programs", default="")
+    args = ap.parse_args()
 
     build_dir = Path(args.build_dir)
     out_csv = Path(args.out_csv)
@@ -123,196 +131,195 @@ def main() -> None:
 
     selected = parse_programs_arg(args.programs)
     aot_cache_dir = Path(args.aot_cache_dir)
+    requested_modes = ["jit", "aot"] if args.wasm_mode == "both" else [args.wasm_mode]
 
-    native_bins = sorted(build_dir.glob("*.native"))
     summary_rows = []
     raw_rows = []
 
-    for nb in native_bins:
+    for nb in sorted(build_dir.glob("*.native")):
         prog = nb.name[:-7] if nb.name.endswith(".native") else nb.stem
         if selected is not None and prog not in selected:
             continue
 
         wb = build_dir / f"{prog}.wasm"
-
         print(f"\n=== Running {prog} ===")
 
-        if not wb.exists():
-            summary_rows.append(
-                {
-                    "program": prog,
-                    "native_ok": 0,
-                    "wasm_ok": 0,
-                    "native_mean_ms": 0,
-                    "native_median_ms": 0,
-                    "native_std_ms": 0,
-                    "native_min_ms": 0,
-                    "native_max_ms": 0,
-                    "wasm_mean_ms": 0,
-                    "wasm_median_ms": 0,
-                    "wasm_std_ms": 0,
-                    "wasm_min_ms": 0,
-                    "wasm_max_ms": 0,
-                    "ratio_wasm_over_native": 0,
-                    "label": "missing-artifact",
-                    "native_error": "",
-                    "wasm_error": f"missing {wb}",
-                }
-            )
-            continue
-
-        native_times: List[float] = []
-        wasm_times: List[float] = []
-        native_ok = True
-        wasm_ok = True
-        native_err = ""
-        wasm_err = ""
-
         n_cmd = [str(nb)]
-        if args.wasm_mode == "jit":
-            w_cmd = [args.wasmtime, "--dir=.", str(wb)]
+        native_ok = True
+        native_err = ""
+        native_times: List[float] = []
+
+        jit_ok = "jit" in requested_modes
+        jit_err = "" if jit_ok else "not requested"
+        jit_cmd: List[str] = [args.wasmtime, "--dir=.", str(wb)] if jit_ok else []
+        jit_times: List[float] = []
+
+        aot_ok = "aot" in requested_modes
+        aot_err = "" if aot_ok else "not requested"
+        aot_cmd: List[str] = []
+        aot_times: List[float] = []
+
+        if not wb.exists():
+            native_ok = False
+            native_err = f"missing {nb}"
+            if "jit" in requested_modes:
+                jit_ok = False
+                jit_err = f"missing {wb}"
+            if "aot" in requested_modes:
+                aot_ok = False
+                aot_err = f"missing {wb}"
         else:
-            ok_aot, aot_path, aot_err = ensure_aot_artifact(args.wasmtime, wb, aot_cache_dir)
-            if not ok_aot or aot_path is None:
-                summary_rows.append(
-                    {
-                        "program": prog,
-                        "native_ok": 0,
-                        "wasm_ok": 0,
-                        "native_mean_ms": 0,
-                        "native_median_ms": 0,
-                        "native_std_ms": 0,
-                        "native_min_ms": 0,
-                        "native_max_ms": 0,
-                        "wasm_mean_ms": 0,
-                        "wasm_median_ms": 0,
-                        "wasm_std_ms": 0,
-                        "wasm_min_ms": 0,
-                        "wasm_max_ms": 0,
-                        "ratio_wasm_over_native": 0,
-                        "label": "aot-compile-failed",
-                        "native_error": "",
-                        "wasm_error": aot_err,
-                    }
-                )
-                continue
-            w_cmd = [args.wasmtime, "run", "--allow-precompiled", "--dir=.", str(aot_path)]
+            if "aot" in requested_modes:
+                ok_aot, aot_path, build_err = ensure_aot_artifact(args.wasmtime, wb, aot_cache_dir)
+                if ok_aot and aot_path is not None:
+                    aot_cmd = [args.wasmtime, "run", "--allow-precompiled", "--dir=.", str(aot_path)]
+                else:
+                    aot_ok = False
+                    aot_err = build_err or "aot-compile-failed"
 
-        # warmup phase (not recorded)
-        for _ in range(max(args.warmup, 0)):
-            ok_n, _, _ = run_once(n_cmd, args.timeout)
-            ok_w, _, _ = run_once(w_cmd, args.timeout)
-            if not ok_n or not ok_w:
-                break
+            for _ in range(max(args.warmup, 0)):
+                ok_n, _, err_nw = run_once(n_cmd, args.timeout)
+                if not ok_n:
+                    native_ok = False
+                    native_err = f"warmup failed: {err_nw or 'unknown'}"
+                    break
 
-        # measured phase
-        for i in range(1, args.repeats + 1):
-            print("$", " ".join(shlex.quote(c) for c in n_cmd))
-            ok_n, t_n, err_n = run_once(n_cmd, args.timeout)
-            raw_rows.append(
-                {
-                    "program": prog,
-                    "runtime": "native",
-                    "run_index": i,
-                    "elapsed_ms": round(t_n, 6),
-                    "ok": int(ok_n),
-                    "error": err_n,
-                }
-            )
-            if not ok_n:
-                native_ok = False
-                native_err = err_n
-                break
-            native_times.append(t_n)
+                if jit_ok:
+                    ok_j, _, err_jw = run_once(jit_cmd, args.timeout)
+                    if not ok_j:
+                        jit_ok = False
+                        jit_err = f"warmup failed: {err_jw or 'unknown'}"
 
-            print("$", " ".join(shlex.quote(c) for c in w_cmd))
-            ok_w, t_w, err_w = run_once(w_cmd, args.timeout)
-            raw_rows.append(
-                {
-                    "program": prog,
-                    "runtime": "wasm",
-                    "run_index": i,
-                    "elapsed_ms": round(t_w, 6),
-                    "ok": int(ok_w),
-                    "error": err_w,
-                }
-            )
-            if not ok_w:
-                wasm_ok = False
-                wasm_err = err_w
-                break
-            wasm_times.append(t_w)
+                if aot_ok:
+                    ok_a, _, err_aw = run_once(aot_cmd, args.timeout)
+                    if not ok_a:
+                        aot_ok = False
+                        aot_err = f"warmup failed: {err_aw or 'unknown'}"
 
-        n_stats = stats(native_times)
-        w_stats = stats(wasm_times)
+            if native_ok:
+                for i in range(1, args.repeats + 1):
+                    print("$", " ".join(shlex.quote(c) for c in n_cmd))
+                    ok_n, t_n, err_n = run_once(n_cmd, args.timeout)
+                    raw_rows.append({"program": prog, "runtime": "native", "run_index": i, "internal_ms": round(t_n, 6) if t_n is not None else 0.0, "ok": int(ok_n), "error": err_n})
+                    if not ok_n or t_n is None:
+                        native_ok = False
+                        native_err = err_n
+                        break
+                    native_times.append(t_n)
 
-        ratio = (w_stats["median"] / n_stats["median"]) if n_stats["median"] > 0 else 0.0
-        label = "run-failed"
-        if native_ok and wasm_ok:
-            label = label_by_ratio(ratio, args.threshold)
+                    if jit_ok:
+                        print("$", " ".join(shlex.quote(c) for c in jit_cmd))
+                        ok_j, t_j, err_j = run_once(jit_cmd, args.timeout)
+                        raw_rows.append({"program": prog, "runtime": "wasm-jit", "run_index": i, "internal_ms": round(t_j, 6) if t_j is not None else 0.0, "ok": int(ok_j), "error": err_j})
+                        if not ok_j or t_j is None:
+                            jit_ok = False
+                            jit_err = err_j
+                        else:
+                            jit_times.append(t_j)
 
-        summary_rows.append(
-            {
-                "program": prog,
-                "native_ok": int(native_ok),
-                "wasm_ok": int(wasm_ok),
-                "native_mean_ms": round(n_stats["mean"], 6),
-                "native_median_ms": round(n_stats["median"], 6),
-                "native_std_ms": round(n_stats["std"], 6),
-                "native_min_ms": round(n_stats["min"], 6),
-                "native_max_ms": round(n_stats["max"], 6),
-                "wasm_mean_ms": round(w_stats["mean"], 6),
-                "wasm_median_ms": round(w_stats["median"], 6),
-                "wasm_std_ms": round(w_stats["std"], 6),
-                "wasm_min_ms": round(w_stats["min"], 6),
-                "wasm_max_ms": round(w_stats["max"], 6),
-                "ratio_wasm_over_native": round(ratio, 6),
-                "label": label,
-                "native_error": native_err,
-                "wasm_error": wasm_err,
-            }
-        )
+                    if aot_ok:
+                        print("$", " ".join(shlex.quote(c) for c in aot_cmd))
+                        ok_a, t_a, err_a = run_once(aot_cmd, args.timeout)
+                        raw_rows.append({"program": prog, "runtime": "wasm-aot", "run_index": i, "internal_ms": round(t_a, 6) if t_a is not None else 0.0, "ok": int(ok_a), "error": err_a})
+                        if not ok_a or t_a is None:
+                            aot_ok = False
+                            aot_err = err_a
+                        else:
+                            aot_times.append(t_a)
+
+        ns = stats(native_times)
+        js = stats(jit_times)
+        a_s = stats(aot_times)
+
+        ratio_jit = (js["median"] / ns["median"]) if ns["median"] > 0 else 0.0
+        ratio_aot = (a_s["median"] / ns["median"]) if ns["median"] > 0 else 0.0
+
+        label_jit = label_by_ratio(ratio_jit, args.threshold) if (native_ok and jit_ok) else "run-failed"
+        label_aot = label_by_ratio(ratio_aot, args.threshold) if (native_ok and aot_ok) else "run-failed"
+
+        if args.wasm_mode == "jit":
+            wasm_ok, wasm_stats, wasm_ratio, wasm_label, wasm_error = jit_ok, js, ratio_jit, label_jit, jit_err
+        elif args.wasm_mode == "aot":
+            wasm_ok, wasm_stats, wasm_ratio, wasm_label, wasm_error = aot_ok, a_s, ratio_aot, label_aot, aot_err
+        else:
+            if jit_ok:
+                wasm_ok, wasm_stats, wasm_ratio, wasm_label, wasm_error = jit_ok, js, ratio_jit, label_jit, jit_err
+            else:
+                wasm_ok, wasm_stats, wasm_ratio, wasm_label, wasm_error = aot_ok, a_s, ratio_aot, label_aot, aot_err
+
+        summary_rows.append({
+            "program": prog,
+            "native_ok": int(native_ok),
+            "native_mean_internal_ms": round(ns["mean"], 6),
+            "native_median_internal_ms": round(ns["median"], 6),
+            "native_std_internal_ms": round(ns["std"], 6),
+            "native_min_internal_ms": round(ns["min"], 6),
+            "native_max_internal_ms": round(ns["max"], 6),
+            "native_error": native_err,
+
+            "jit_ok": int(jit_ok),
+            "jit_mean_internal_ms": round(js["mean"], 6),
+            "jit_median_internal_ms": round(js["median"], 6),
+            "jit_std_internal_ms": round(js["std"], 6),
+            "jit_min_internal_ms": round(js["min"], 6),
+            "jit_max_internal_ms": round(js["max"], 6),
+            "ratio_jit_over_native": round(ratio_jit, 6),
+            "label_jit": label_jit,
+            "jit_error": jit_err,
+
+            "aot_ok": int(aot_ok),
+            "aot_mean_internal_ms": round(a_s["mean"], 6),
+            "aot_median_internal_ms": round(a_s["median"], 6),
+            "aot_std_internal_ms": round(a_s["std"], 6),
+            "aot_min_internal_ms": round(a_s["min"], 6),
+            "aot_max_internal_ms": round(a_s["max"], 6),
+            "ratio_aot_over_native": round(ratio_aot, 6),
+            "label_aot": label_aot,
+            "aot_error": aot_err,
+
+            "wasm_ok": int(wasm_ok),
+            "wasm_mean_internal_ms": round(wasm_stats["mean"], 6),
+            "wasm_median_internal_ms": round(wasm_stats["median"], 6),
+            "wasm_std_internal_ms": round(wasm_stats["std"], 6),
+            "wasm_min_internal_ms": round(wasm_stats["min"], 6),
+            "wasm_max_internal_ms": round(wasm_stats["max"], 6),
+            "ratio_wasm_over_native": round(wasm_ratio, 6),
+            "label": wasm_label,
+            "wasm_error": wasm_error,
+        })
 
     with out_csv.open("w", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(
-            f,
-            fieldnames=[
-                "program",
-                "native_ok",
-                "wasm_ok",
-                "native_mean_ms",
-                "native_median_ms",
-                "native_std_ms",
-                "native_min_ms",
-                "native_max_ms",
-                "wasm_mean_ms",
-                "wasm_median_ms",
-                "wasm_std_ms",
-                "wasm_min_ms",
-                "wasm_max_ms",
-                "ratio_wasm_over_native",
-                "label",
-                "native_error",
-                "wasm_error",
-            ],
-        )
+        writer = csv.DictWriter(f, fieldnames=[
+            "program",
+            "native_ok", "native_mean_internal_ms", "native_median_internal_ms", "native_std_internal_ms", "native_min_internal_ms", "native_max_internal_ms", "native_error",
+            "jit_ok", "jit_mean_internal_ms", "jit_median_internal_ms", "jit_std_internal_ms", "jit_min_internal_ms", "jit_max_internal_ms", "ratio_jit_over_native", "label_jit", "jit_error",
+            "aot_ok", "aot_mean_internal_ms", "aot_median_internal_ms", "aot_std_internal_ms", "aot_min_internal_ms", "aot_max_internal_ms", "ratio_aot_over_native", "label_aot", "aot_error",
+            "wasm_ok", "wasm_mean_internal_ms", "wasm_median_internal_ms", "wasm_std_internal_ms", "wasm_min_internal_ms", "wasm_max_internal_ms", "ratio_wasm_over_native", "label", "wasm_error",
+        ])
         writer.writeheader()
         writer.writerows(summary_rows)
 
     with raw_csv.open("w", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(
-            f,
-            fieldnames=["program", "runtime", "run_index", "elapsed_ms", "ok", "error"],
-        )
+        writer = csv.DictWriter(f, fieldnames=["program", "runtime", "run_index", "internal_ms", "ok", "error"])
         writer.writeheader()
         writer.writerows(raw_rows)
 
-    print("\n=== Label Summary ===")
-    summary = {}
+    print("\n=== Microbench Label Summary (JIT) ===")
+    label_count_jit = {}
     for r in summary_rows:
-        summary[r["label"]] = summary.get(r["label"], 0) + 1
-    for k in sorted(summary):
-        print(f"{k}: {summary[k]}")
+        k = r.get("label_jit", "")
+        label_count_jit[k] = label_count_jit.get(k, 0) + 1
+    for k in sorted(label_count_jit):
+        print(f"{k}: {label_count_jit[k]}")
+
+    print("\n=== Microbench Label Summary (AOT) ===")
+    label_count_aot = {}
+    for r in summary_rows:
+        k = r.get("label_aot", "")
+        label_count_aot[k] = label_count_aot.get(k, 0) + 1
+    for k in sorted(label_count_aot):
+        print(f"{k}: {label_count_aot[k]}")
+
     print(f"summary output: {out_csv}")
     print(f"raw output:     {raw_csv}")
 
