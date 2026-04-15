@@ -1,0 +1,23 @@
+\cabstract{
+WebAssembly（Wasm）是一种安全、紧凑且具有良好可移植性的二进制执行格式，最初主要面向 Web 场景设计，近年来在 WebAssembly System Interface（WASI）的支持下逐步扩展至非 Web 环境。随着 Wasm 应用范围的不断拓展，其相对于原生代码（native）的性能差异及其形成机制成为值得关注的问题。然而，现有研究多侧重运行时测量与结果比较，对于性能差异与程序静态结构之间关系的系统分析仍相对不足。
+
+本文在统一的 Docker 容器环境中，以 34 个自建微基准程序（MicroBenchmark）和 30 个 PolyBench 数值计算 kernel 为实验对象，在 native、Wasm JIT 和 Wasm AOT 三种执行模式下开展内部计时实验。基于 LLVM IR，本文从程序规模、控制流结构、计算密度、访存模式、函数调用及系统交互等维度提取可解释的静态特征，以 Wasm/native 时间比为核心性能指标，分析程序静态结构与相对性能差异之间的关联，并进一步构建用于粗粒度性能判别的分类模型。
+
+实验结果表明，宿主接口调用密集型程序的 Wasm 相对性能劣势最为显著，在 MicroBenchmark 中该类别有 6/7 个程序被标记为 \path{native-better}；大规模计算密集型 kernel（如 \texttt{gemm}，ratio $\approx$ 3.39）同样表现出较大的性能差距。统计分析进一步表明，访存指令占比（$ls\_ratio$）与性能比值之间存在显著负相关关系（Spearman $\rho \approx -0.47$，$p = 0.009$），说明访存密集型程序的 Wasm/native 性能差距整体较小，这一现象与 Roofline 模型所揭示的内存受限特征相一致。基于上述特征构建的二分类模型在 MicroBenchmark 与 PolyBench 上的留一法（LOO）准确率分别达到 70.6\% 和 60.0\%，表明静态特征在程序相对性能的粗粒度判别中具有一定可行性。
+
+本文从程序静态结构出发，为理解 WebAssembly 的性能边界提供了新的分析视角。所构建的特征体系与分类模型可作为部署前的辅助筛查工具，为 Wasm 的技术选型与性能评估提供参考，但最终判断仍需结合目标环境下的实测结果。
+}
+% 中文关键词
+\ckeywords{WebAssembly，WASI，性能分析，LLVM IR，静态特征，原生代码}
+
+\eabstract{
+WebAssembly (Wasm) is a secure, compact, and portable binary execution format originally designed for the Web, and it has increasingly expanded into non-Web environments with the support of the WebAssembly System Interface (WASI). As Wasm adoption grows, understanding its performance gap relative to native code and the structural factors behind that gap becomes increasingly important. However, existing studies have mainly focused on runtime measurement and result comparison, while systematic analysis from the perspective of static program features remains limited.
+
+This thesis investigates the relationship between static program features and the Wasm-to-native performance ratio in a unified WASI-based environment. The experimental subjects include 34 self-designed microbenchmarks and 30 numerical kernels from the PolyBench suite. All programs are evaluated under three execution modes---native, Wasm JIT, and Wasm AOT---within a Docker-based environment using internal timing, with the median of 30 measured runs used as the representative performance value. Based on LLVM IR, interpretable static features are extracted from multiple dimensions, including program size, control-flow structure, compute density, memory access patterns, function calls, and host interactions. These features are then used to analyze the relationship between program structure and relative performance, and to construct a coarse-grained classification model.
+
+The experimental results show that host-interaction-intensive programs exhibit the most pronounced Wasm disadvantage: in the microbenchmark set, 6 out of 7 such programs are classified as \texttt{native-better}. Large-scale compute-intensive kernels, such as \texttt{gemm} (ratio $\approx$ 3.39), also display substantial performance gaps. Further statistical analysis reveals a significant negative correlation between the memory-access instruction ratio ($ls\_ratio$) and the performance ratio on PolyBench (Spearman $\rho \approx -0.47$, $p = 0.009$), indicating that memory-bound programs generally exhibit smaller Wasm/native performance gaps; this observation is consistent with the intuition provided by the Roofline model. The binary classification model built on these static features achieves leave-one-out (LOO) accuracy of 70.6\% on MicroBenchmark and 60.0\% on PolyBench, demonstrating that static features can support coarse-grained performance screening without actual program execution.
+
+Overall, this work provides a structural perspective for understanding the performance boundaries of WebAssembly. The proposed feature set and classification model can serve as lightweight pre-deployment screening tools for Wasm-related performance evaluation and technology selection, although final decisions should still be validated through empirical measurements in the target environment.
+}
+% 英文关键词
+\ekeywords{WebAssembly, WASI, performance analysis, LLVM IR, static features, native code}

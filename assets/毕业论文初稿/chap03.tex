@@ -1,0 +1,276 @@
+\chapter{方法论}
+
+
+\label{cha:methodology}
+
+
+\section{特征空间构建}
+
+本文的研究目标并非基于静态信息直接预测程序的绝对执行时间，而是通过可解释的程序结构特征，分析同一程序在 native、Wasm JIT 与 Wasm AOT 三种执行模式下产生性能差异的内在原因。因此，特征空间的构建需要同时满足“可比较性”与“可解释性”两个目标。
+
+结合第 2 章相关工作可知，WebAssembly 与 native 之间的性能差异通常与计算密度、内存访问模式、控制流复杂度以及宿主交互开销等因素相关\cite{jangda2021not,mao2024ewapa,jiang2023revealing}。据此，本文围绕程序规模、控制流结构、计算行为、内存访问、函数调用以及系统交互等维度构建静态特征集合。
+
+在具体特征设计过程中，本文遵循如下原则：（1）\text{语义可解释性}：每一特征应能够对应具体的程序行为（如计算、分支、访存或系统调用），避免使用难以解释的黑盒表示；（2）\text{分析一致性}：特征应尽可能覆盖程序的核心执行路径，与实际计时区域保持一致，从而反映真实性能来源；（3）\text{可提取性}：所有特征均应能够从 LLVM IR、控制流图（CFG）及循环分析结果中稳定获取，以保证跨 benchmark 的一致性；（4）\text{规模归一化}：在保留绝对规模信息的同时，引入密度与比率特征，以削弱程序规模差异对跨程序比较的影响。
+
+基于上述原则，本文构建的特征集合如表 \ref{tab:features} 所示。
+
+
+\begin{table*}[htbp]
+\centering
+\caption{程序静态特征集定义}
+\setlength{\tabcolsep}{5pt}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|l|p{9cm}|l|}
+\hline
+\textbf{类别} & \textbf{特征名称} & \textbf{定义说明} & \textbf{类型} \\ \hline
+
+\textbf{程序规模} 
+& total\_instr\_count 
+& LLVM IR 指令总数 
+& 计数型 \\ \hline
+
+\textbf{控制流特征} 
+& basic\_block\_count 
+& 控制流图中基本块数量 
+& 计数型 \\
+& avg\_bb\_size 
+& 指令总数与基本块数量的比值 
+& 比率型 \\
+& avg\_bb\_out\_degree 
+& 单个基本块的平均出度 
+& 比率型 \\
+& max\_loop\_depth 
+& 循环嵌套的最大深度 
+& 结构型 \\
+& loop\_instr\_count 
+& 循环体内部包含的指令数量 
+& 计数型 \\
+& br\_instr\_count 
+& 分支指令与 switch 指令总数 
+& 计数型 \\
+& br\_density 
+& 分支指令数占总指令数的比例 
+& 比率型 \\ \hline
+
+\textbf{计算特征} 
+& compute\_instr\_count 
+& 算术、逻辑及位运算指令总数 
+& 计数型 \\
+& compute\_density 
+& 计算类指令占总指令数的比例 
+& 比率型 \\ \hline
+
+\textbf{访存特征} 
+& mem\_instr\_count 
+& 加载（load）与存储（store）指令总数 
+& 计数型 \\
+& ls\_ratio 
+& 访存指令数占总指令数的比例 
+& 比率型 \\ \hline
+
+\textbf{函数与系统调用} 
+& func\_count 
+& 函数定义数量 
+& 计数型 \\
+& call\_instr\_count 
+& 函数调用指令总数 
+& 计数型 \\
+& indirect\_call\_count 
+& 间接调用（函数指针调用）数量 
+& 复杂度型 \\
+& call\_density 
+& 函数调用指令占总指令数的比例 
+& 比率型 \\
+& syscall\_count 
+& 时间、文件、环境等系统相关调用次数 
+& 计数型 \\
+& syscall\_density 
+& 系统调用指令占总指令数的比例 
+& 比率型 \\ \hline
+
+\textbf{I/O 特征} 
+& io\_call\_count 
+& 读写、网络等 I/O 相关调用次数 
+& 计数型 \\
+& io\_density 
+& I/O 调用指令占总指令数的比例 
+& 比率型 \\ \hline
+
+\textbf{复合特征} 
+& compute\_mem\_ratio 
+& 计算指令数与访存指令数的比值 
+& 比率型 \\
+& call\_bb\_ratio 
+& 函数调用次数与基本块数量的比值 
+& 比率型 \\ \hline
+
+\end{tabular}
+}
+\label{tab:features}
+\end{table*}
+
+从特征表达形式上看，本文所构建的特征可以划分为两类。
+第一类是绝对规模特征，例如
+\texttt{total\_instr\_count}、\texttt{basic\_block\_count}、\texttt{loop\_instr\_count}、
+\texttt{compute\_instr\_count} 和 \texttt{mem\_instr\_count}，
+它们用于刻画程序的静态工作量和整体复杂度，反映“程序规模”及“热点区域强度”等信息。
+第二类是归一化后的结构特征，例如
+\texttt{br\_density}、\texttt{compute\_density}、\texttt{ls\_ratio}、\texttt{call\_density}、
+\texttt{syscall\_density} 和 \texttt{io\_density}，
+它们通过相对比例刻画程序“更偏向什么结构”，从而使不同规模的程序具有可比性。
+前者强调绝对复杂度，后者强调结构分布特征，二者结合可为后续相关性分析提供更全面的描述能力。
+
+其中，对于 $syscall\_count$ 和 $io\_call\_count$，本文并不试图在机器指令层面逐条恢复真实系统调用，而是通过识别 LLVM IR 中与时间、文件系统、环境变量及输入输出操作相关的库调用或导入接口，近似衡量程序与宿主环境交互的强弱。已有研究表明，在 WASI 和服务端 Wasm 场景中，运行时对系统接口的实现质量会显著影响实际性能\cite{mao2024ewapa}。因此，将系统调用和 IO 交互作为单独特征纳入分析，有助于识别 Wasm 在 Non-Web 场景下可能暴露的额外成本来源。
+
+总体而言，本文构建的特征空间以可解释性优先，而非追求复杂模型输入的表达能力。该特征体系为后续实验分析提供了统一、稳定且具有明确语义的描述框架，从而支持回答如下关键问题：哪些程序结构有利于 WebAssembly 接近 native 性能，哪些结构则更可能导致显著的性能差距。
+
+
+\section{Benchmark构建}
+
+为了兼顾性能机制分析的可解释性与实验结果的代表性，本文采用“自建微基准程序（microbenchmarks）与公开 benchmark 套件相结合”的方式构建实验对象。其中，微基准程序用于在受控环境下放大特定静态结构特征，从而隔离并观察单一因素对 Wasm 与 native 性能差异的影响；公开 benchmark 则用于验证这些结构性因素在更完整、更加真实的程序场景中是否仍然成立。该组合设计能够有效避免单一 benchmark 类型所带来的结论偏差，从而提高分析结果的可靠性与外部有效性。
+
+在 自建微基准程序 MicroBenchmarks 的设计与选择过程中，本文遵循以下三项原则：（1）\text{结构覆盖性（coverage）}：尽可能覆盖计算、内存访问、控制流、函数调用、宿主交互及内存分配等典型程序行为；（2）\text{结构可控性（controllability）}：在微基准程序中突出目标结构，使其成为主导因素，从而减少多因素耦合带来的分析困难；（3）\text{结果可比性（comparability）}：所有程序均采用统一的编译链路、执行模式与计时方法，确保 native、Wasm JIT 与 Wasm AOT 之间的实验结果具有一致的比较基础。
+
+基于上述原则，本文构建的微基准程序集合如表 \ref{tab:microbenchmarks} 所示。
+
+
+\begin{table}[htbp]
+\centering
+\caption{微基准程序类别与文件列表}
+\label{tab:microbenchmarks}
+\footnotesize % 缩小字体防止溢出
+\begin{tabular}{@{}l c l l@{}}
+\toprule
+    类别 & 数量 & \multicolumn{2}{l}{程序列表（文件名前缀）} \\
+\midrule
+
+B1. Compute-heavy & 5 &
+\makecell[tl]{\texttt{compute\_int\_add,} \\
+\texttt{compute\_int\_divmod,} \\
+\texttt{compute\_fp\_muladd,}} &
+\makecell[tl]{\texttt{compute\_int\_mul,} \\
+\texttt{compute\_fp\_mix,} \\
+\texttt{compute\_fp\_muladd,}} \\
+\addlinespace
+B2. Memory-heavy & 7 &
+\makecell[tl]{\texttt{memory\_seq\_read,} \\
+\texttt{memory\_stride\_read,} \\
+\texttt{memory\_random\_read,} \\
+\texttt{memory\_copy\_loop,}} &
+\makecell[tl]{\texttt{memory\_seq\_write,} \\
+\texttt{memory\_stride\_write,} \\
+\texttt{memory\_random\_write,} \\
+\texttt{memory\_random\_write,}} \\
+\addlinespace
+B3. Branch-heavy & 5 &
+\makecell[tl]{\texttt{branch\_predictable,} \\
+\texttt{branch\_nested,} \\
+\texttt{branch\_switch\_sparse,}} &
+\makecell[tl]{\texttt{branch\_unpredictable,} \\
+\texttt{branch\_switch\_dense,}} \\
+\addlinespace
+B4. Call-heavy & 4 &
+\makecell[tl]{\texttt{call\_chain,} \\
+\texttt{call\_recursive,}} &
+\makecell[tl]{\texttt{call\_indirect,} \\
+\texttt{call\_many\_small\_funcs,}} \\
+\addlinespace
+B5. Host-heavy & 7 &
+\makecell[tl]{\texttt{host\_time\_loop,} \\
+\texttt{host\_env\_query,} \\
+\texttt{host\_read\_small,} \\
+\texttt{host\_open\_loop,}} &
+\makecell[tl]{\texttt{host\_getcwd\_loop,} \\
+\texttt{host\_stat\_loop,} \\
+\texttt{host\_write\_small,}} \\
+\addlinespace
+B6. Allocation-heavy & 6 &
+\makecell[tl]{\texttt{alloc\_small\_objects,} \\
+\texttt{alloc\_medium\_objects,} \\
+\texttt{alloc\_pool\_style,}} &
+\makecell[tl]{\texttt{alloc\_bulk,} \\
+\texttt{alloc\_realloc\_loop,} \\
+\texttt{alloc\_fragmented,}} \\
+\midrule
+\textbf{合计} & \textbf{34} & & \\
+\bottomrule
+\end{tabular}
+\end{table}
+\label{tab:microbenchmarks}
+
+
+
+上述 34 个微基准程序的设计目标并非模拟完整应用，而是强调“结构可控”的实验环境。具体而言，\text{Compute-heavy} 组用于考察算术与浮点运算占主导时的执行特征；\text{Memory-heavy} 组通过顺序、跨步及随机访问模式区分不同访存行为；\text{Branch-heavy} 组通过可预测与不可预测分支、嵌套分支及 \texttt{switch} 结构分析控制流复杂度的影响；\text{Call-heavy} 组用于衡量函数调用链、间接调用及递归对运行时的开销；\text{Host-heavy} 组强调时间、文件系统及环境变量等宿主接口调用，以观察 Wasm 在跨执行边界时的额外成本；\text{Allocation-heavy} 组则关注动态分配、重分配及内存碎片化模式下的性能差异。通过上述分组，可以建立“特定结构特征”与“性能变化趋势”之间的对应关系，从而支持后续的机制解释。
+
+除微基准程序外，本文还引入 PolyBench 作为代表性的公开 benchmark 套件。PolyBench 提供了一组在编译优化与体系结构研究中广泛使用的数值计算 kernel，本文采用全部 30 个程序，涵盖矩阵运算、协方差与相关性分析、Jacobi/Seidel/Heat/FDTD 等 stencil 计算，以及 \texttt{floyd-warshall}、\texttt{nussinov} 等动态规划与图算法内核。相较于包含复杂系统调用或框架逻辑的真实应用，这些 kernel 具有循环结构规则、控制流清晰且 I/O 干扰较少的特点，更适合用于分析计算密度、访存模式及循环结构等静态特征与性能差异之间的关系。同时，PolyBench 也被广泛用于早期 WebAssembly 性能研究，因此具有良好的横向可比性\cite{jangda2021not}。
+
+总体而言，微基准程序与 PolyBench 在本文中承担互补角色。前者侧重局部机制分析与因果解释，有助于识别特定结构是否构成 Wasm 的性能敏感因素；后者侧重程序完整性与结果稳定性，用于验证这些结构性规律在更实际 workload 中的适用性。二者结合，有助于在提高分析可解释性的同时，增强实验结论的普适性与外部有效性。
+
+
+
+\section{性能测量方法}
+
+为了尽可能准确地刻画程序核心区域的执行差异，并避免将进程创建、模块加载、运行时初始化或一次性编译等非核心开销混入测量结果，本文在 MicroBenchmark 与 PolyBench 上均采用内部计时（internal timing）作为性能测量方法。相较于直接记录程序整体的 wall-clock 时间，内部计时能够更精确地对齐至目标代码区域，使测量结果与前文提取的静态特征保持一致。因此，本文关注的是 steady-state 下核心代码执行阶段的执行性能，而非端到端启动延迟。
+
+\subsection{MicroBenchmark 计时方法}
+
+对于 MicroBenchmark，本文在程序内部对核心计算区域进行显式插桩。计时逻辑基于单调时钟 \texttt{clock\_gettime(CLOCK\_MONOTONIC, ...)} 实现，其基本结构如下所示：
+
+\begin{cpp}
+int main(void) {
+    // timer starts
+    struct timespec __ts_start, __ts_end;
+    unsigned long long __time_ns = 0;
+    clock_gettime(CLOCK_MONOTONIC, &__ts_start);
+    
+    // core code
+    
+    // timer stops
+    clock_gettime(CLOCK_MONOTONIC, &__ts_end);
+    __time_ns = (unsigned long long)(__ts_end.tv_sec - __ts_start.tv_sec) * 1000000000ull;
+    if (__ts_end.tv_nsec >= __ts_start.tv_nsec) {
+        __time_ns += (unsigned long long)(__ts_end.tv_nsec - __ts_start.tv_nsec);
+    } else {
+        __time_ns -= 1000000000ull;
+        __time_ns += (unsigned long long)(__ts_end.tv_nsec + 1000000000L - __ts_start.tv_nsec);
+    }
+    printf("TIME_NS:%llu\n", __time_ns);
+    return 0;
+
+}
+\end{cpp}
+
+
+
+计时起点设置在进入核心代码区域之前，终点位于该区域执行结束之后，从而确保测量结果仅覆盖 benchmark 主体逻辑，不包含输出操作及外部调度开销。输出统一采用 \texttt{TIME\_NS:<integer>} 格式，便于脚本自动解析。
+
+为提高测量稳定性并增强信号强度，各微基准程序均将核心逻辑代码封装于循环结构中，并根据具体执行特性调整循环次数，使单次运行时间既能有效抵抗计时分辨率限制与瞬时扰动，又不会引入额外的超时风险。
+
+在统计策略上，对于每一种执行模式（native、Wasm JIT、Wasm AOT），本文首先执行 2 次 warmup 运行（不计入统计），随后进行 30 次正式测量。对每次运行解析得到的内部计时结果（统一换算为毫秒）进行统计分析，计算其均值、中位数、标准差、最小值及最大值。其中，中位数作为主要代表指标，以增强对系统噪声及离群值的鲁棒性。
+
+\subsection{性能指标定义}
+
+基于上述测量结果，本文定义如下连续性能比值指标：
+
+\begin{equation}
+ratio_{jit/native} = \frac{median_{jit}}{median_{native}}
+\end{equation}
+
+\begin{equation}
+ratio_{aot/native} = \frac{median_{aot}}{median_{native}}
+\end{equation}
+
+其中，$median_{native}$、$median_{jit}$ 与 $median_{aot}$ 分别表示三种执行模式在 30 次正式运行中的内部计时中位数。若比值大于 1，则表示对应 Wasm 模式慢于 native；反之则表示其性能优于 native。
+
+在此基础上，为便于后续分类分析，本文进一步采用 10\% 阈值将连续指标离散化为三类标签：当 $ratio > 1.10$ 时记为 \texttt{native-better}，当 $ratio < 0.90$ 时记为 \texttt{wasm-better}，其余情况记为 \texttt{similar}。需要强调的是，该标签仅作为辅助分析手段，后续研究仍以连续比值为主要分析对象。
+
+\subsection{PolyBench 计时方法}
+
+对于 PolyBench，本文复用其内置的 \texttt{POLYBENCH\_TIME} 计时机制。具体而言，各 kernel 在 \path{polybench_start_instruments}、\path{polybench_stop_instruments} 及 \path{polybench_print_instruments} 宏之间完成核心计算区域的测量，因此计时范围天然限定于 kernel 主体内部。
+
+考虑到原始 PolyBench 在 WASI 目标下对 \texttt{gettimeofday()} 的依赖可能带来兼容性问题，本文在 Wasm 环境中将其替换为基于 \path{clock_gettime(CLOCK_MONOTONIC, ...)} 的实现，从而保证 native 与 Wasm 在计时语义上的一致性。脚本侧对 PolyBench 输出进行统一解析，并转换为毫秒用于后续分析。
+
+PolyBench 的运行协议与 MicroBenchmark 保持一致，即三种执行模式均执行 2 次 warmup 及 30 次正式测量，并以内部计时中位数作为最终性能指标。对于 AOT 模式，其预编译过程在测量阶段之外完成，因此 AOT 结果仅反映预编译产物的执行时间，而不包含一次性编译开销。
+
+综上，本文在 MicroBenchmark 与 PolyBench 上采用统一的计时策略与统计方法，从而保证不同执行模式之间的测量结果具有一致的比较基础，可直接用于后续的性能比值计算、标签划分及相关性分析。
+

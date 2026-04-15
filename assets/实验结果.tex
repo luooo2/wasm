@@ -1,0 +1,130 @@
+\section{实验结果}
+
+本节展示 34 个 MicroBenchmark 与 30 个 PolyBench kernel 在三种执行模式（native、Wasm JIT、Wasm AOT）下的内部计时结果。性能指标采用第 3 章定义的连续比值 $ratio_{jit/native}$ 与 $ratio_{aot/native}$，并以 10\% 为阈值将其映射为 \path{native-better}、\path{similar} 与 \path{wasm-better} 三类标签。
+
+\subsection{总体分布}
+
+表 \ref{tab:overall_stats} 汇总了两类数据集在 JIT 与 AOT 模式下的标签分布及 ratio 描述性统计。
+
+
+\begin{table}[htbp]
+\centering
+\caption{两类数据集的标签分布与性能比值统计（阈值 10\%）}
+\small
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lccccccccc}
+\toprule
+数据集 & 模式 & Native & Similar & Wasm & 均值 & 中位数 & 标准差 & 最小值 & 最大值 \\
+\midrule
+MicroBenchmark (n=34) & JIT & 18 & 10 & 6 & 1.44 & 1.15 & 1.09 & 0.04 & 6.29 \\
+MicroBenchmark (n=34) & AOT & 18 & 10 & 6 & 1.45 & 1.15 & 1.12 & 0.04 & 6.33 \\
+PolyBench (n=30) & JIT & 12 & 16 & 2 & 1.30 & 1.01 & 0.62 & 0.81 & 3.39 \\
+PolyBench (n=30) & AOT & 12 & 16 & 2 & 1.30 & 1.01 & 0.62 & 0.81 & 3.40 \\
+\bottomrule
+\end{tabular}
+\label{tab:overall_stats}
+\end{table}
+
+由表 \ref{tab:overall_stats} 可见，两类数据集在标签分布上存在显著差异。MicroBenchmark 中 \path{native-better} 占比超过半数（52.9\%），而 PolyBench 中以 \path{similar} 为主（53.3\%）。这表明，在结构单一且特征可控的微基准中，执行模式差异更容易被放大；而在结构更完整的数值计算 kernel 中，Wasm 与 native 的执行时间整体更趋接近。
+
+从分布离散程度来看，MicroBenchmark 的标准差（约 1.09）显著高于 PolyBench（约 0.62），且存在明显离群值（如 $ratio \approx 6.29$ 与 $ratio \approx 0.04$），说明该数据集对程序结构差异更为敏感。图 \ref{fig:ratio_boxplot} 给出了四组 ratio 的箱线图分布。
+
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.75\linewidth]{image/chap04/thesis_fig01_ratio_boxplot.png}
+\caption{MicroBenchmark 与 PolyBench 的 Wasm/native 时间比分布（对数坐标）}
+\label{fig:ratio_boxplot}
+\end{figure}
+
+此外，JIT 与 AOT 在两类数据集上的标签分布完全一致，未观察到类别翻转现象。这表明，在本实验设置下，是否采用预编译执行路径并非决定性能类别的主要因素，程序结构特征本身（控制流复杂度、计算与访存比例、宿主交互模式等）对结果的影响更为关键。
+
+\subsection{MicroBenchmark 分类分析}
+
+表 \ref{tab:micro_category} 按程序类别给出了 MicroBenchmark 的标签分布。
+
+\begin{table}[b]
+\centering
+\caption{MicroBenchmark 各类别程序的标签分布（JIT）}
+\begin{tabular}{lcccc}
+\toprule
+类别 & 数量 & Native & Similar & Wasm \\
+\midrule
+Compute-heavy & 5 & 0 & 4 & 1 \\
+Memory-heavy & 7 & 4 & 2 & 1 \\
+Branch-heavy & 5 & 1 & 1 & 3 \\
+Call-heavy & 4 & 3 & 1 & 0 \\
+Host-interaction-heavy & 7 & 6 & 0 & 1 \\
+Allocation-heavy & 6 & 4 & 2 & 0 \\
+\midrule
+合计 & 34 & 18 & 10 & 6 \\
+\bottomrule
+\end{tabular}
+\label{tab:micro_category}
+\end{table}
+
+从表 \ref{tab:micro_category} 中可以看到：宿主交互密集组（B5）的 7 个程序中有 6 个被标记为 \path{native-better}，内存分配密集组（B6）和调用密集组（B4）亦以 \path{native-better} 为主；而计算密集组（B1）全部落入 \path{similar} 或 \path{wasm-better}，分支密集组（B3）中有 3 个程序的 ratio 低于 0.90，属于 Wasm 占优的情形。这一结果表明，不同程序类别与性能表现之间存在明显关联。
+
+宿主交互密集型程序的 Wasm 相对劣势最为突出，其原因在于 Wasm 沙箱模型要求所有宿主接口调用经由固定的导入路径完成，无法绕过运行时调度层；当程序在计时区域内高频且反复穿越 Wasm/WASI 边界时，每次调用的固定跨边界开销在总时间中的占比急剧上升，从而放大了 Wasm 与 native 的差距。内存分配密集型程序的 Wasm 相对劣势，可能与线性内存模型对分配器路径及访存局部性的约束有关。而控制流不规则程序（如 \path{branch_unpredictable}，ratio ≈ 2.58）的 Wasm 劣势，可初步归因于难以预测的分支在 Wasm 代码生成路径上的优化机会受限，但需结合性能计数器进一步验证。
+
+相较而言，计算密集型程序主要分布于 \path{similar} 或 \path{wasm-better} 区间，分支密集型（Branch-heavy）中亦有较多样本表现为 Wasm 优势。这说明在控制流规整、宿主依赖较低的场景下，Wasm 生成代码的执行效率能够接近甚至略优于 native。
+
+值得注意的是，个别样本（\path{host_getcwd_loop} 的 ratio 约 0.04）表现为极端离群值，其原因可能涉及运行时实现细节或系统调用路径差异，将在后续章节进一步分析。
+
+\subsection{PolyBench 结果分析}
+
+表 \ref{tab:polybench} 列出了 PolyBench 各 kernel 的性能比值（按 JIT ratio 降序排列）。由于篇幅限制，表中仅展示部分代表性结果，完整数据见附录。
+
+\begin{table}[htbp]
+\centering
+\caption{PolyBench 各 kernel 的 Wasm JIT/AOT 性能比值（按 JIT 降序，部分展示）}
+\begin{tabular}{lccc}
+\toprule
+程序 & JIT & AOT & 标签 \\
+\midrule
+gemm & 3.39 & 3.40 & native-better \\
+jacobi-1d & 3.27 & 3.30 & native-better \\
+heat-3d & 2.04 & 2.07 & native-better \\
+jacobi-2d & 2.02 & 1.90 & native-better \\
+\ldots & \ldots & \ldots & \ldots \\
+gramschmidt & 0.89 & 0.86 & wasm-better \\
+syr2k & 0.81 & 0.80 & wasm-better \\
+\bottomrule
+\end{tabular}
+\label{tab:polybench}
+\end{table}
+
+整体来看，计算密集型 kernel（如 \path{gemm}、\path{jacobi-*}）更倾向于表现出显著的 native 优势，而访存占比较高的 kernel 则更多分布于 \path{similar} 或 \path{wasm-better} 区间。
+
+图 \ref{fig:ls_ratio_scatter} 展示了访存指令占比（$ls\_ratio$）与性能比值之间的关系。
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.75\linewidth]{image/chap04/thesis_fig02_ls_ratio_scatter.png}
+\caption{访存占比（$ls\_ratio$）与 Wasm/native 性能比的关系}
+\label{fig:ls_ratio_scatter}
+\end{figure}
+
+可以观察到，$ls\_ratio$ 与 $ratio_{jit/native}$ 之间存在显著负相关关系（Spearman $\rho \approx -0.47$，$p = 0.009$），即访存占比越高，Wasm 相对性能差距越小。相应地，计算密度与计算/访存比与 ratio 呈正相关趋势，说明计算强度越高，Wasm 的相对劣势越明显。
+
+该现象可从 roofline 模型角度进行解释：对于计算受限型（compute-bound）程序，执行性能高度依赖编译器对指令级并行性与向量化的优化能力，native 编译器在此方面通常具备更强能力；而对于内存受限型（memory-bound）程序，性能主要由内存带宽与缓存行为决定，计算侧优化空间受限，从而使两种执行模式的差距缩小。需要指出的是，上述解释属于机制层面的推断，尚未通过硬件性能计数器进行直接验证。
+
+\subsection{观察}
+
+综合 MicroBenchmark 与 PolyBench 的实验结果，在本文给定的编译配置与运行时前提下，可初步归纳出以下观察：
+
+\text{O1：宿主交互密集型程序中，Wasm 的相对劣势在本实验中最为突出。}  
+在 MicroBenchmark 中，宿主交互密集型程序（B5 类）中有 6/7 个样本被标记为 \path{native-better}，比例在各类别中最高。这一观察与 Wasm 沙箱模型下跨边界调用路径较重的机制推断相一致。
+
+\text{O2：在 PolyBench 中，计算强度较高的 kernel 倾向于对应更大的性能比值。}  
+算术强度较高的 kernel（如 \path{gemm}、\path{jacobi-*}）的 ratio 排名靠前，且计算密度相关特征与 ratio 呈同向统计趋势（$p < 0.05$）。该现象与 native 编译器在计算受限场景下可获得更大后端优化空间的假说相一致。
+
+\text{O3：访存占比与性能比值之间存在统计显著的负相关趋势。}  
+在 PolyBench 上，$ls\_ratio$ 与 $ratio_{jit/native}$ 之间的 Spearman 相关系数约为 $-0.47$（$p = 0.009$），表明访存指令占比较高的 kernel 对应的 Wasm/native 性能差距整体偏小。
+
+
+\subsection{小结}
+
+综上所述，Wasm 与 native 的相对性能受程序结构显著影响。在微基准中，宿主交互密集型程序表现出最明显的 Wasm 劣势，而计算与控制流简单的程序则更接近 native；在 PolyBench 中，计算密集型 kernel 往往对应更大的性能差距，而访存密集型 kernel 则表现出更好的收敛性。
+
+上述规律与静态特征（如 $ls\_ratio$、$compute\_density$、$compute\_mem\_ratio$）与性能指标之间的统计关联一致，为后续建模与案例分析提供了实证基础。需要注意的是，本文结论建立在特定工具链与运行环境配置之上，其外部适用性仍有待进一步验证。
