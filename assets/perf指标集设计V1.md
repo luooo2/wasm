@@ -1,9 +1,0 @@
-perf 指标集（V1）：
-- `cycles`
-- `instructions`
-- `branches`
-- `branch-misses`
-- `L1-dcache-loads`
-- `L1-dcache-load-misses`
-- `LLC-loads`
-- `LLC-load-misses`

@@ -2,5 +2,7 @@
 /assets/git使用.md
 /example
 /src/__pycache__
-/data/build/microbench_internal/aot_cache
 运行环境说明.md
+/data/polybench_build_perf
+/data/microbench_build_perf
+/data/build

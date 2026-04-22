@@ -1,0 +1,72 @@
+program,class,reason,source_path,relative_path
+llvmss_benchmarkgame_fannkuch,arg-run,argc/argv or getopt detected,data/llvm-test-suite/SingleSource/Benchmarks/BenchmarkGame/fannkuch.c,BenchmarkGame/fannkuch.c
+llvmss_benchmarkgame_large_fasta,file-run,file/io api detected,data/llvm-test-suite/SingleSource/Benchmarks/BenchmarkGame/Large/fasta.c,BenchmarkGame/Large/fasta.c
+llvmss_benchmarkgame_n-body,arg-run,argc/argv or getopt detected,data/llvm-test-suite/SingleSource/Benchmarks/BenchmarkGame/n-body.c,BenchmarkGame/n-body.c
+llvmss_benchmarkgame_nsieve-bits,arg-run,argc/argv or getopt detected,data/llvm-test-suite/SingleSource/Benchmarks/BenchmarkGame/nsieve-bits.c,BenchmarkGame/nsieve-bits.c
+llvmss_benchmarkgame_partialsums,arg-run,argc/argv or getopt detected,data/llvm-test-suite/SingleSource/Benchmarks/BenchmarkGame/partialsums.c,BenchmarkGame/partialsums.c
+llvmss_benchmarkgame_puzzle,direct-run,no arg/file io hint,data/llvm-test-suite/SingleSource/Benchmarks/BenchmarkGame/puzzle.c,BenchmarkGame/puzzle.c
+llvmss_benchmarkgame_recursive,arg-run,argc/argv or getopt detected,data/llvm-test-suite/SingleSource/Benchmarks/BenchmarkGame/recursive.c,BenchmarkGame/recursive.c
+llvmss_benchmarkgame_spectral-norm,arg-run,argc/argv or getopt detected,data/llvm-test-suite/SingleSource/Benchmarks/BenchmarkGame/spectral-norm.c,BenchmarkGame/spectral-norm.c
+llvmss_coyotebench_almabench,file-run,file/io api detected,data/llvm-test-suite/SingleSource/Benchmarks/CoyoteBench/almabench.c,CoyoteBench/almabench.c
+llvmss_coyotebench_huffbench,file-run,file/io api detected,data/llvm-test-suite/SingleSource/Benchmarks/CoyoteBench/huffbench.c,CoyoteBench/huffbench.c
+llvmss_coyotebench_lpbench,file-run,file/io api detected,data/llvm-test-suite/SingleSource/Benchmarks/CoyoteBench/lpbench.c,CoyoteBench/lpbench.c
+llvmss_dhrystone_dry,direct-run,no arg/file io hint,data/llvm-test-suite/SingleSource/Benchmarks/Dhrystone/dry.c,Dhrystone/dry.c
+llvmss_dhrystone_fldry,file-run,file/io api detected,data/llvm-test-suite/SingleSource/Benchmarks/Dhrystone/fldry.c,Dhrystone/fldry.c
+llvmss_linpack_linpack-pc,direct-run,no arg/file io hint,data/llvm-test-suite/SingleSource/Benchmarks/Linpack/linpack-pc.c,Linpack/linpack-pc.c
+llvmss_mcgill_chomp,file-run,file/io api detected,data/llvm-test-suite/SingleSource/Benchmarks/McGill/chomp.c,McGill/chomp.c
+llvmss_mcgill_exptree,file-run,file/io api detected,data/llvm-test-suite/SingleSource/Benchmarks/McGill/exptree.c,McGill/exptree.c
+llvmss_mcgill_misr,arg-run,argc/argv or getopt detected,data/llvm-test-suite/SingleSource/Benchmarks/McGill/misr.c,McGill/misr.c
+llvmss_mcgill_queens,file-run,file/io api detected,data/llvm-test-suite/SingleSource/Benchmarks/McGill/queens.c,McGill/queens.c
+llvmss_misc_aarch64-init-cpu-features,direct-run,no arg/file io hint,data/llvm-test-suite/SingleSource/Benchmarks/Misc/aarch64-init-cpu-features.c,Misc/aarch64-init-cpu-features.c
+llvmss_misc_dt,arg-run,argc/argv or getopt detected,data/llvm-test-suite/SingleSource/Benchmarks/Misc/dt.c,Misc/dt.c
+llvmss_misc_evalloop,direct-run,no arg/file io hint,data/llvm-test-suite/SingleSource/Benchmarks/Misc/evalloop.c,Misc/evalloop.c
+llvmss_misc_fbench,arg-run,argc/argv or getopt detected,data/llvm-test-suite/SingleSource/Benchmarks/Misc/fbench.c,Misc/fbench.c
+llvmss_misc_ffbench,file-run,file/io api detected,data/llvm-test-suite/SingleSource/Benchmarks/Misc/ffbench.c,Misc/ffbench.c
+llvmss_misc_flops-1,direct-run,no arg/file io hint,data/llvm-test-suite/SingleSource/Benchmarks/Misc/flops-1.c,Misc/flops-1.c
+llvmss_misc_flops-2,direct-run,no arg/file io hint,data/llvm-test-suite/SingleSource/Benchmarks/Misc/flops-2.c,Misc/flops-2.c
+llvmss_misc_flops-3,direct-run,no arg/file io hint,data/llvm-test-suite/SingleSource/Benchmarks/Misc/flops-3.c,Misc/flops-3.c
+llvmss_misc_flops-4,direct-run,no arg/file io hint,data/llvm-test-suite/SingleSource/Benchmarks/Misc/flops-4.c,Misc/flops-4.c
+llvmss_misc_flops-5,direct-run,no arg/file io hint,data/llvm-test-suite/SingleSource/Benchmarks/Misc/flops-5.c,Misc/flops-5.c
+llvmss_misc_flops-6,direct-run,no arg/file io hint,data/llvm-test-suite/SingleSource/Benchmarks/Misc/flops-6.c,Misc/flops-6.c
+llvmss_misc_flops-7,direct-run,no arg/file io hint,data/llvm-test-suite/SingleSource/Benchmarks/Misc/flops-7.c,Misc/flops-7.c
+llvmss_misc_flops-8,direct-run,no arg/file io hint,data/llvm-test-suite/SingleSource/Benchmarks/Misc/flops-8.c,Misc/flops-8.c
+llvmss_misc_flops,direct-run,no arg/file io hint,data/llvm-test-suite/SingleSource/Benchmarks/Misc/flops.c,Misc/flops.c
+llvmss_misc_fp-convert,arg-run,argc/argv or getopt detected,data/llvm-test-suite/SingleSource/Benchmarks/Misc/fp-convert.c,Misc/fp-convert.c
+llvmss_misc_himenobmtxpa,arg-run,argc/argv or getopt detected,data/llvm-test-suite/SingleSource/Benchmarks/Misc/himenobmtxpa.c,Misc/himenobmtxpa.c
+llvmss_misc_lowercase,arg-run,argc/argv or getopt detected,data/llvm-test-suite/SingleSource/Benchmarks/Misc/lowercase.c,Misc/lowercase.c
+llvmss_misc_mandel-2,direct-run,no arg/file io hint,data/llvm-test-suite/SingleSource/Benchmarks/Misc/mandel-2.c,Misc/mandel-2.c
+llvmss_misc_mandel,direct-run,no arg/file io hint,data/llvm-test-suite/SingleSource/Benchmarks/Misc/mandel.c,Misc/mandel.c
+llvmss_misc_matmul_f64_4x4,direct-run,no arg/file io hint,data/llvm-test-suite/SingleSource/Benchmarks/Misc/matmul_f64_4x4.c,Misc/matmul_f64_4x4.c
+llvmss_misc_oourafft,direct-run,no arg/file io hint,data/llvm-test-suite/SingleSource/Benchmarks/Misc/oourafft.c,Misc/oourafft.c
+llvmss_misc_perlin,direct-run,no arg/file io hint,data/llvm-test-suite/SingleSource/Benchmarks/Misc/perlin.c,Misc/perlin.c
+llvmss_misc_pi,arg-run,argc/argv or getopt detected,data/llvm-test-suite/SingleSource/Benchmarks/Misc/pi.c,Misc/pi.c
+llvmss_misc_reedsolomon,direct-run,no arg/file io hint,data/llvm-test-suite/SingleSource/Benchmarks/Misc/ReedSolomon.c,Misc/ReedSolomon.c
+llvmss_misc_revertbits,direct-run,no arg/file io hint,data/llvm-test-suite/SingleSource/Benchmarks/Misc/revertBits.c,Misc/revertBits.c
+llvmss_misc_richards_benchmark,direct-run,no arg/file io hint,data/llvm-test-suite/SingleSource/Benchmarks/Misc/richards_benchmark.c,Misc/richards_benchmark.c
+llvmss_misc_salsa20,direct-run,no arg/file io hint,data/llvm-test-suite/SingleSource/Benchmarks/Misc/salsa20.c,Misc/salsa20.c
+llvmss_misc_whetstone,arg-run,argc/argv or getopt detected,data/llvm-test-suite/SingleSource/Benchmarks/Misc/whetstone.c,Misc/whetstone.c
+llvmss_shootout_ackermann,arg-run,argc/argv or getopt detected,data/llvm-test-suite/SingleSource/Benchmarks/Shootout/ackermann.c,Shootout/ackermann.c
+llvmss_shootout_ary3,arg-run,argc/argv or getopt detected,data/llvm-test-suite/SingleSource/Benchmarks/Shootout/ary3.c,Shootout/ary3.c
+llvmss_shootout_fib2,arg-run,argc/argv or getopt detected,data/llvm-test-suite/SingleSource/Benchmarks/Shootout/fib2.c,Shootout/fib2.c
+llvmss_shootout_hash,arg-run,argc/argv or getopt detected,data/llvm-test-suite/SingleSource/Benchmarks/Shootout/hash.c,Shootout/hash.c
+llvmss_shootout_heapsort,arg-run,argc/argv or getopt detected,data/llvm-test-suite/SingleSource/Benchmarks/Shootout/heapsort.c,Shootout/heapsort.c
+llvmss_shootout_hello,direct-run,no arg/file io hint,data/llvm-test-suite/SingleSource/Benchmarks/Shootout/hello.c,Shootout/hello.c
+llvmss_shootout_lists,arg-run,argc/argv or getopt detected,data/llvm-test-suite/SingleSource/Benchmarks/Shootout/lists.c,Shootout/lists.c
+llvmss_shootout_matrix,arg-run,argc/argv or getopt detected,data/llvm-test-suite/SingleSource/Benchmarks/Shootout/matrix.c,Shootout/matrix.c
+llvmss_shootout_methcall,arg-run,argc/argv or getopt detected,data/llvm-test-suite/SingleSource/Benchmarks/Shootout/methcall.c,Shootout/methcall.c
+llvmss_shootout_nestedloop,arg-run,argc/argv or getopt detected,data/llvm-test-suite/SingleSource/Benchmarks/Shootout/nestedloop.c,Shootout/nestedloop.c
+llvmss_shootout_objinst,arg-run,argc/argv or getopt detected,data/llvm-test-suite/SingleSource/Benchmarks/Shootout/objinst.c,Shootout/objinst.c
+llvmss_shootout_random,arg-run,argc/argv or getopt detected,data/llvm-test-suite/SingleSource/Benchmarks/Shootout/random.c,Shootout/random.c
+llvmss_shootout_sieve,arg-run,argc/argv or getopt detected,data/llvm-test-suite/SingleSource/Benchmarks/Shootout/sieve.c,Shootout/sieve.c
+llvmss_shootout_strcat,arg-run,argc/argv or getopt detected,data/llvm-test-suite/SingleSource/Benchmarks/Shootout/strcat.c,Shootout/strcat.c
+llvmss_stanford_bubblesort,direct-run,no arg/file io hint,data/llvm-test-suite/SingleSource/Benchmarks/Stanford/Bubblesort.c,Stanford/Bubblesort.c
+llvmss_stanford_floatmm,direct-run,no arg/file io hint,data/llvm-test-suite/SingleSource/Benchmarks/Stanford/FloatMM.c,Stanford/FloatMM.c
+llvmss_stanford_intmm,direct-run,no arg/file io hint,data/llvm-test-suite/SingleSource/Benchmarks/Stanford/IntMM.c,Stanford/IntMM.c
+llvmss_stanford_oscar,direct-run,no arg/file io hint,data/llvm-test-suite/SingleSource/Benchmarks/Stanford/Oscar.c,Stanford/Oscar.c
+llvmss_stanford_perm,direct-run,no arg/file io hint,data/llvm-test-suite/SingleSource/Benchmarks/Stanford/Perm.c,Stanford/Perm.c
+llvmss_stanford_puzzle,direct-run,no arg/file io hint,data/llvm-test-suite/SingleSource/Benchmarks/Stanford/Puzzle.c,Stanford/Puzzle.c
+llvmss_stanford_queens,direct-run,no arg/file io hint,data/llvm-test-suite/SingleSource/Benchmarks/Stanford/Queens.c,Stanford/Queens.c
+llvmss_stanford_quicksort,direct-run,no arg/file io hint,data/llvm-test-suite/SingleSource/Benchmarks/Stanford/Quicksort.c,Stanford/Quicksort.c
+llvmss_stanford_realmm,direct-run,no arg/file io hint,data/llvm-test-suite/SingleSource/Benchmarks/Stanford/RealMM.c,Stanford/RealMM.c
+llvmss_stanford_towers,direct-run,no arg/file io hint,data/llvm-test-suite/SingleSource/Benchmarks/Stanford/Towers.c,Stanford/Towers.c
+llvmss_stanford_treesort,direct-run,no arg/file io hint,data/llvm-test-suite/SingleSource/Benchmarks/Stanford/Treesort.c,Stanford/Treesort.c

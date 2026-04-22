@@ -1,0 +1,93 @@
+program,class,relative_path,runnable_now,needs_build_tweak,needs_source_patch,exclude_platform_specific,native_ok,wasm_ok,native_error,wasm_error,run_args_template,input_profile,notes
+llvmss_benchmarkgame_puzzle,direct-run,BenchmarkGame/puzzle.c,1,0,0,0,1,1,,,,none,
+llvmss_dhrystone_dry,direct-run,Dhrystone/dry.c,1,0,0,0,1,1,,,,none,
+llvmss_linpack_linpack-pc,direct-run,Linpack/linpack-pc.c,1,0,0,0,1,1,,,,none,
+llvmss_misc_aarch64-init-cpu-features,direct-run,Misc/aarch64-init-cpu-features.c,0,0,0,1,0,0,"/usr/bin/ld: data/build/llvm_direct/llvmss_misc_aarch64-init-cpu-features.bench.native.o: in function `llvm_bench_main':
+aarch64-init-cpu-features.c:(.text+0x5): undefined reference to `RUNTIME_INIT'
+/usr/bin/ld: aarch64-init-cpu-features.c:(.text+0xc): undefined reference to `__aarch64_cpu_features'
+/usr/bin/ld: aarch64-init-cpu-features.c:(.text+0x1b): undefined reference to `RUNTIME_INIT'
+/usr/bin/ld: aarch64-init-cpu-features.c:(.text+0x38): undefined reference to `RUNTIME_INIT'
+clang: error: linker command failed with exit code 1 (use -v to see invocation)","wasm-ld: error: data/build/llvm_direct/llvmss_misc_aarch64-init-cpu-features.bench.wasm.o: undefined symbol: RUNTIME_INIT
+wasm-ld: error: data/build/llvm_direct/llvmss_misc_aarch64-init-cpu-features.bench.wasm.o: undefined symbol: __aarch64_cpu_features
+wasm-ld: error: data/build/llvm_direct/llvmss_misc_aarch64-init-cpu-features.bench.wasm.o: undefined symbol: __aarch64_cpu_features
+wasm-ld: error: data/build/llvm_direct/llvmss_misc_aarch64-init-cpu-features.bench.wasm.o: undefined symbol: RUNTIME_INIT
+wasm-ld: error: data/build/llvm_direct/llvmss_misc_aarch64-init-cpu-features.bench.wasm.o: undefined symbol: __aarch64_cpu_features
+wasm-ld: error: data/build/llvm_direct/llvmss_misc_aarch64-init-cpu-features.bench.wasm.o: undefined symbol: __aarch64_cpu_features
+wasm-ld: error: data/build/llvm_direct/llvmss_misc_aarch64-init-cpu-features.bench.wasm.o: undefined symbol: RUNTIME_INIT
+clang: error: linker command failed with exit code 1 (use -v to see invocation)",,none,
+llvmss_misc_evalloop,direct-run,Misc/evalloop.c,1,0,0,0,1,1,,,,none,
+llvmss_misc_flops-1,direct-run,Misc/flops-1.c,1,0,0,0,1,1,,,,none,
+llvmss_misc_flops-2,direct-run,Misc/flops-2.c,1,0,0,0,1,1,,,,none,
+llvmss_misc_flops-3,direct-run,Misc/flops-3.c,1,0,0,0,1,1,,,,none,
+llvmss_misc_flops-4,direct-run,Misc/flops-4.c,1,0,0,0,1,1,,,,none,
+llvmss_misc_flops-5,direct-run,Misc/flops-5.c,1,0,0,0,1,1,,,,none,
+llvmss_misc_flops-6,direct-run,Misc/flops-6.c,1,0,0,0,1,1,,,,none,
+llvmss_misc_flops-7,direct-run,Misc/flops-7.c,1,0,0,0,1,1,,,,none,
+llvmss_misc_flops-8,direct-run,Misc/flops-8.c,1,0,0,0,1,1,,,,none,
+llvmss_misc_flops,direct-run,Misc/flops.c,1,0,0,0,1,1,,,,none,
+llvmss_misc_mandel-2,direct-run,Misc/mandel-2.c,1,0,0,0,1,1,,,,none,
+llvmss_misc_mandel,direct-run,Misc/mandel.c,0,1,0,0,0,1,"/usr/bin/ld: data/build/llvm_direct/llvmss_misc_mandel.bench.native.o: in function `mandel':
+mandel.c:(.text+0x14f): undefined reference to `hypot'
+clang: error: linker command failed with exit code 1 (use -v to see invocation)",,,none,
+llvmss_misc_matmul_f64_4x4,direct-run,Misc/matmul_f64_4x4.c,1,0,0,0,1,1,,,,none,
+llvmss_misc_oourafft,direct-run,Misc/oourafft.c,0,1,0,0,0,0,"/usr/bin/ld: data/build/llvm_direct/llvmss_misc_oourafft.bench.native.o: in function `llvm_bench_main':
+oourafft.c:(.text+0x97): undefined reference to `cos'
+/usr/bin/ld: oourafft.c:(.text+0xa8): undefined reference to `sin'
+/usr/bin/ld: data/build/llvm_direct/llvmss_misc_oourafft.bench.native.o: in function `makewt':
+oourafft.c:(.text+0x5db): undefined reference to `cos'
+/usr/bin/ld: oourafft.c:(.text+0x624): undefined reference to `cos'
+/usr/bin/ld: oourafft.c:(.text+0x635): undefined reference to `sin'
+clang: error: linker command failed with exit code 1 (use -v to see invocation)","wasm-ld: error: data/build/llvm_direct/llvmss_misc_oourafft.bench.wasm.o: undefined symbol: memalign
+wasm-ld: error: data/build/llvm_direct/llvmss_misc_oourafft.bench.wasm.o: undefined symbol: memalign
+wasm-ld: error: data/build/llvm_direct/llvmss_misc_oourafft.bench.wasm.o: undefined symbol: memalign
+wasm-ld: error: data/build/llvm_direct/llvmss_misc_oourafft.bench.wasm.o: undefined symbol: memalign
+wasm-ld: error: data/build/llvm_direct/llvmss_misc_oourafft.bench.wasm.o: undefined symbol: memalign
+clang: error: linker command failed with exit code 1 (use -v to see invocation)",,none,
+llvmss_misc_perlin,direct-run,Misc/perlin.c,0,1,0,0,0,1,"/usr/bin/ld: data/build/llvm_direct/llvmss_misc_perlin.bench.native.o: in function `llvm_bench_main':
+perlin.c:(.text+0x87): undefined reference to `floor'
+/usr/bin/ld: perlin.c:(.text+0x539): undefined reference to `floor'
+clang: error: linker command failed with exit code 1 (use -v to see invocation)",,,none,
+llvmss_misc_reedsolomon,direct-run,Misc/ReedSolomon.c,1,0,0,0,1,1,,,,none,
+llvmss_misc_revertbits,direct-run,Misc/revertBits.c,0,1,0,0,0,0,"data/llvm-test-suite/SingleSource/Benchmarks/Misc/revertBits.c:55:8: warning: GCC does not allow variable declarations in for loop initializers before C99 [-Wgcc-compat]
+   55 |   for (int i = 0; i < NUM; ++i) {
+      |        ^
+data/llvm-test-suite/SingleSource/Benchmarks/Misc/revertBits.c:59:8: warning: GCC does not allow variable declarations in for loop initializers before C99 [-Wgcc-compat]
+   59 |   for (int i = 0; i < NUM; ++i) {
+      |        ^
+data/llvm-test-suite/SingleSource/Benchmarks/Misc/revertBits.c:59:12: error: redefinition of 'i'
+   59 |   for (int i = 0; i < NUM; ++i) {
+      |            ^
+data/llvm-test-suite/SingleSource/Benchmarks/Misc/revertBits.c:55:12: note: previous definition is here
+   55 |   for (int i = 0; i < NUM; ++i) {
+      |            ^
+data/llvm-test-suite/SingleSource/Benchmarks/Misc/revertBits.c:64:39: warning: format specifies type 'unsigned long long' but the argument has type 'unsigned long' [-Wformat]
+   64 |   printf(""0x%llx -> 0x%llx\n"", rev64, __builtin_bitreverse64(rev64));
+      |                       ~~~~            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                       %lx
+3 warnings and 1 error generated.","data/llvm-test-suite/SingleSource/Benchmarks/Misc/revertBits.c:55:8: warning: GCC does not allow variable declarations in for loop initializers before C99 [-Wgcc-compat]
+   55 |   for (int i = 0; i < NUM; ++i) {
+      |        ^
+data/llvm-test-suite/SingleSource/Benchmarks/Misc/revertBits.c:59:8: warning: GCC does not allow variable declarations in for loop initializers before C99 [-Wgcc-compat]
+   59 |   for (int i = 0; i < NUM; ++i) {
+      |        ^
+data/llvm-test-suite/SingleSource/Benchmarks/Misc/revertBits.c:59:12: error: redefinition of 'i'
+   59 |   for (int i = 0; i < NUM; ++i) {
+      |            ^
+data/llvm-test-suite/SingleSource/Benchmarks/Misc/revertBits.c:55:12: note: previous definition is here
+   55 |   for (int i = 0; i < NUM; ++i) {
+      |            ^
+2 warnings and 1 error generated.",,none,
+llvmss_misc_richards_benchmark,direct-run,Misc/richards_benchmark.c,1,0,0,0,1,1,,,,none,
+llvmss_misc_salsa20,direct-run,Misc/salsa20.c,1,0,0,0,1,1,,,,none,
+llvmss_shootout_hello,direct-run,Shootout/hello.c,1,0,0,0,1,1,,,,none,
+llvmss_stanford_bubblesort,direct-run,Stanford/Bubblesort.c,1,0,0,0,1,1,,,,none,
+llvmss_stanford_floatmm,direct-run,Stanford/FloatMM.c,1,0,0,0,1,1,,,,none,
+llvmss_stanford_intmm,direct-run,Stanford/IntMM.c,1,0,0,0,1,1,,,,none,
+llvmss_stanford_oscar,direct-run,Stanford/Oscar.c,1,0,0,0,1,1,,,,none,
+llvmss_stanford_perm,direct-run,Stanford/Perm.c,1,0,0,0,1,1,,,,none,
+llvmss_stanford_puzzle,direct-run,Stanford/Puzzle.c,1,0,0,0,1,1,,,,none,
+llvmss_stanford_queens,direct-run,Stanford/Queens.c,1,0,0,0,1,1,,,,none,
+llvmss_stanford_quicksort,direct-run,Stanford/Quicksort.c,1,0,0,0,1,1,,,,none,
+llvmss_stanford_realmm,direct-run,Stanford/RealMM.c,1,0,0,0,1,1,,,,none,
+llvmss_stanford_towers,direct-run,Stanford/Towers.c,1,0,0,0,1,1,,,,none,
+llvmss_stanford_treesort,direct-run,Stanford/Treesort.c,1,0,0,0,1,1,,,,none,

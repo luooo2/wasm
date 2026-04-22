@@ -1,0 +1,9 @@
+llvmss_benchmarkgame_large_fasta
+llvmss_coyotebench_almabench
+llvmss_coyotebench_huffbench
+llvmss_coyotebench_lpbench
+llvmss_dhrystone_fldry
+llvmss_mcgill_chomp
+llvmss_mcgill_exptree
+llvmss_mcgill_queens
+llvmss_misc_ffbench

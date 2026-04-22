@@ -1,0 +1,5 @@
+program,native_std,wasm_std,native_extra_cflags,wasi_extra_cflags,native_link_flags,wasi_link_flags,notes
+llvmss_misc_evalloop,gnu11,gnu11,,,,,c99 loop variable declaration requires gnu11
+llvmss_misc_reedsolomon,gnu89,gnu89,-Wno-error=implicit-int;-Wno-implicit-int,-Wno-error=implicit-int;-Wno-implicit-int,,,allow legacy implicit int
+llvmss_linpack_linpack-pc,gnu89,gnu89,,-D_WASI_EMULATED_PROCESS_CLOCKS,,-lwasi-emulated-process-clocks,wasi clock emulation
+llvmss_dhrystone_dry,gnu89,gnu89,,-D_WASI_EMULATED_PROCESS_CLOCKS,,-lwasi-emulated-process-clocks,wasi clock emulation (source may still need patch)
