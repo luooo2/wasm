@@ -57,6 +57,7 @@ def compile_one(
     wasi_cc: str,
     opt_flag: str,
     wasi_target: str,
+    wasi_sysroot: str,
 ) -> Tuple[dict, list[str]]:
     """
     Compile a single PolyBench kernel to native and wasm.
@@ -129,6 +130,8 @@ def compile_one(
         "-o",
         str(wasm_file),
     ]
+    if wasi_sysroot:
+        wasm_cmd[4:4] = ["--sysroot", wasi_sysroot]
     p_wasm = run_cmd(wasm_cmd)
     wasm_ok = p_wasm.returncode == 0
     if not wasm_ok:
@@ -200,6 +203,11 @@ def main() -> None:
         help="WASI target triple (default: wasm32-wasip1)",
     )
     parser.add_argument(
+        "--wasi-sysroot",
+        default="",
+        help="Optional WASI sysroot passed as --sysroot",
+    )
+    parser.add_argument(
         "--report",
         default="data/results/build_report_polybench.csv",
         help="CSV path for build report",
@@ -225,6 +233,7 @@ def main() -> None:
             wasi_cc=args.wasi_cc,
             opt_flag=args.opt,
             wasi_target=args.wasi_target,
+            wasi_sysroot=args.wasi_sysroot,
         )
         for line in logs:
             print(line)

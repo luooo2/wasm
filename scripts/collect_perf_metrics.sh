@@ -32,12 +32,13 @@ OUT_DIR="${ROOT_DIR}/data/results/perf"
 OUT_CSV="${OUT_DIR}/perf_raw_events.csv"
 
 NATIVE_CC="${NATIVE_CC:-clang}"
-WASI_CC="${WASI_CC:-$HOME/wasi-sdk/bin/clang}"
+WASI_CC="${WASI_CC:-/opt/wasi-sdk/bin/clang}"
 WASMTIME_BIN="${WASMTIME_BIN:-wasmtime}"
 PYTHON_BIN="${PYTHON_BIN:-python3}"
 
 OPT_FLAG="${OPT_FLAG:--O2}"
-WASI_TARGET="${WASI_TARGET:-wasm32-wasip1}"
+WASI_TARGET="${WASI_TARGET:-}"
+WASI_SYSROOT="${WASI_SYSROOT:-}"
 
 REPEATS=5
 WARMUP=1
@@ -89,6 +90,33 @@ command -v "${PYTHON_BIN}" >/dev/null || { echo "python not found: ${PYTHON_BIN}
 if [[ ! -x "${WASI_CC}" ]]; then
   echo "WASI compiler not executable: ${WASI_CC}" >&2
   exit 1
+fi
+
+if [[ -z "${WASI_SYSROOT}" ]]; then
+  local_wasi_sdk_root="$(cd "$(dirname "${WASI_CC}")/.." && pwd)"
+  if [[ -d "${local_wasi_sdk_root}/share/wasi-sysroot" ]]; then
+    WASI_SYSROOT="${local_wasi_sdk_root}/share/wasi-sysroot"
+  fi
+fi
+
+if [[ -z "${WASI_TARGET}" ]]; then
+  if "${WASI_CC}" --print-resource-dir >/dev/null 2>&1; then
+    CLANG_RES_DIR="$("${WASI_CC}" --print-resource-dir)"
+    if [[ -f "${CLANG_RES_DIR}/lib/wasip1/libclang_rt.builtins-wasm32.a" ]]; then
+      WASI_TARGET="wasm32-wasip1"
+    elif [[ -f "${CLANG_RES_DIR}/lib/wasi/libclang_rt.builtins-wasm32.a" ]]; then
+      WASI_TARGET="wasm32-wasi"
+    fi
+  fi
+fi
+
+if [[ -z "${WASI_TARGET}" ]]; then
+  WASI_TARGET="wasm32-wasi"
+fi
+
+WASI_EXTRA_FLAGS=()
+if [[ -n "${WASI_SYSROOT}" ]]; then
+  WASI_EXTRA_FLAGS+=( "--sysroot=${WASI_SYSROOT}" )
 fi
 
 if [[ ! -d "${MICRO_SRC_DIR}" ]]; then
@@ -183,7 +211,7 @@ build_microbench() {
     local aot_file="${MICRO_BUILD_DIR}/${name}.cwasm"
 
     "${NATIVE_CC}" "${OPT_FLAG}" "${cfile}" -o "${native_bin}"
-    "${WASI_CC}" "${OPT_FLAG}" -target "${WASI_TARGET}" "${cfile}" -o "${wasm_file}"
+    "${WASI_CC}" "${OPT_FLAG}" -target "${WASI_TARGET}" "${WASI_EXTRA_FLAGS[@]}" "${cfile}" -o "${wasm_file}"
     "${WASMTIME_BIN}" compile "${wasm_file}" -o "${aot_file}"
   done
 }
@@ -225,8 +253,9 @@ build_polybench() {
     --out-dir "${POLY_BUILD_DIR}" \
     --native-cc "${NATIVE_CC}" \
     --wasi-cc "${WASI_CC}" \
-    --opt "${OPT_FLAG}" \
+    --opt="${OPT_FLAG}" \
     --wasi-target "${WASI_TARGET}" \
+    --wasi-sysroot "${WASI_SYSROOT}" \
     --report "${OUT_DIR}/build_report_polybench_perf.csv"
 
   shopt -s nullglob
@@ -272,6 +301,7 @@ collect_polybench() {
 echo "[info] ROOT_DIR=${ROOT_DIR}"
 echo "[info] PERF_EVENTS=${PERF_EVENTS}"
 echo "[info] REPEATS=${REPEATS}, WARMUP=${WARMUP}, SUITE=${SUITE}"
+echo "[info] WASI_CC=${WASI_CC}, WASI_TARGET=${WASI_TARGET}, WASI_SYSROOT=${WASI_SYSROOT:-<auto/none>}"
 echo "[info] output=${OUT_CSV}"
 
 case "${SUITE}" in
