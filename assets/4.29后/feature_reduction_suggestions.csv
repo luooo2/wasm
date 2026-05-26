@@ -1,0 +1,23 @@
+kind,feature_a,feature_b,pair_spearman_corr,mean_abs_corr_to_y_a,mean_abs_corr_to_y_b,suggest_keep,suggest_drop,reason,vif
+high_corr_pair,ir_instruction_count,basic_block_count,0.8797220253158654,0.322781921162,0.36542940997357176,basic_block_count,ir_instruction_count,|rho| >= 0.85,
+high_corr_pair,ir_instruction_count,branch_instr_count,0.8593681622040816,0.322781921162,0.34692480744014925,branch_instr_count,ir_instruction_count,|rho| >= 0.85,
+high_corr_pair,ir_instruction_count,compute_instr_count,0.9089976583956682,0.322781921162,0.2879686272198465,ir_instruction_count,compute_instr_count,|rho| >= 0.85,
+high_corr_pair,basic_block_count,branch_instr_count,0.9940571774262358,0.36542940997357176,0.34692480744014925,basic_block_count,branch_instr_count,|rho| >= 0.85,
+high_corr_pair,basic_block_count,branch_density,0.8557527775836283,0.36542940997357176,0.2899458013259824,basic_block_count,branch_density,|rho| >= 0.85,
+high_corr_pair,branch_instr_count,branch_density,0.8744901242918334,0.34692480744014925,0.2899458013259824,branch_instr_count,branch_density,|rho| >= 0.85,
+high_corr_pair,compute_density,compute_to_memory_ratio,0.8575825052675982,0.20973394084278363,0.19291730491895076,compute_density,compute_to_memory_ratio,|rho| >= 0.85,
+vif,ir_instruction_count,,,0.322781921162,,,ir_instruction_count,VIF=1365.458 > 10.0,1365.4579979764244
+vif,basic_block_count,,,0.36542940997357176,,,basic_block_count,VIF=1341.890 > 10.0,1341.889653545703
+vif,branch_instr_count,,,0.34692480744014925,,,branch_instr_count,VIF=1039.203 > 10.0,1039.20309107996
+vif,compute_instr_count,,,0.2879686272198465,,,compute_instr_count,VIF=646.364 > 10.0,646.3638184749545
+vif,memory_instr_count,,,0.18811216833871755,,,memory_instr_count,VIF=170.667 > 10.0,170.66673286525292
+vif,hostcall_density,,,0.26741858476364744,,,hostcall_density,VIF=86.490 > 10.0,86.48996693425589
+vif,avg_bb_out_degree,,,0.21884363496912612,,,avg_bb_out_degree,VIF=49.644 > 10.0,49.644490556971256
+vif,avg_bb_size,,,0.3559561476394988,,,avg_bb_size,VIF=48.634 > 10.0,48.63405692435315
+vif,memory_access_density,,,0.3582810975100177,,,memory_access_density,VIF=44.247 > 10.0,44.24716175386566
+vif,branch_density,,,0.2899458013259824,,,branch_density,VIF=44.183 > 10.0,44.18301114911643
+vif,compute_density,,,0.20973394084278363,,,compute_density,VIF=42.265 > 10.0,42.26489097712873
+vif,load_store_ratio,,,0.180908998883213,,,load_store_ratio,VIF=31.257 > 10.0,31.257039944946854
+vif,compute_to_memory_ratio,,,0.19291730491895076,,,compute_to_memory_ratio,VIF=24.095 > 10.0,24.095284623019847
+vif,max_loop_depth,,,0.19902792710568806,,,max_loop_depth,VIF=12.357 > 10.0,12.357324811222721
+vif,call_instr_count,,,0.14513971608181211,,call_instr_count,,VIF=7.407,7.406542023566078

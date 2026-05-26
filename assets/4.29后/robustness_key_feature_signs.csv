@@ -1,0 +1,5 @@
+feature,sign_ols,sign_rlm_huber,sign_ols_winsor_y,all_three_agree
+memory_access_density,-1,-1,-1,1
+hostcall_density,1,1,1,1
+ir_instruction_count,1,1,1,1
+max_loop_depth,1,1,1,1

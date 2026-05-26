@@ -1,0 +1,67 @@
+{
+  "meta": [
+    "program",
+    "mode",
+    "source_path",
+    "ir_path"
+  ],
+  "y_main": [
+    "y_time_internal_ratio"
+  ],
+  "x_static_all_numeric": [
+    "ir_instruction_count",
+    "basic_block_count",
+    "avg_bb_size",
+    "cfg_edge_count",
+    "avg_bb_out_degree",
+    "loop_count",
+    "max_loop_depth",
+    "branch_instr_count",
+    "branch_density",
+    "compute_instr_count",
+    "compute_density",
+    "load_count",
+    "store_count",
+    "memory_instr_count",
+    "memory_access_density",
+    "compute_to_memory_ratio",
+    "load_store_ratio",
+    "call_instr_count",
+    "call_to_bb_ratio",
+    "hostcall_count",
+    "hostcall_density",
+    "alloc_call_count",
+    "function_count",
+    "opt_loop_ok"
+  ],
+  "y_perf_ratios": [
+    "ratio_L1_icache_load_misses_over_native",
+    "ratio_all_loads_retired_over_native",
+    "ratio_all_stores_retired_over_native",
+    "ratio_branch_misses_over_native",
+    "ratio_branches_retired_over_native",
+    "ratio_conditional_branches_over_native",
+    "ratio_cpu_cycles_over_native",
+    "ratio_instructions_retired_over_native"
+  ],
+  "native_perf_medians": [
+    "native_perf_L1_icache_load_misses_median",
+    "native_perf_all_loads_retired_median",
+    "native_perf_all_stores_retired_median",
+    "native_perf_branch_misses_median",
+    "native_perf_branches_retired_median",
+    "native_perf_conditional_branches_median",
+    "native_perf_cpu_cycles_median",
+    "native_perf_instructions_retired_median"
+  ],
+  "wasm_perf_medians": [
+    "perf_L1_icache_load_misses_median",
+    "perf_all_loads_retired_median",
+    "perf_all_stores_retired_median",
+    "perf_branch_misses_median",
+    "perf_branches_retired_median",
+    "perf_conditional_branches_median",
+    "perf_cpu_cycles_median",
+    "perf_instructions_retired_median"
+  ]
+}

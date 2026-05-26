@@ -46,6 +46,39 @@ def list_flags(val: str) -> List[str]:
     return [x for x in vals if x]
 
 
+def detect_wasi_sysroot(wasi_cc: str, requested_sysroot: str) -> str:
+    if requested_sysroot:
+        return requested_sysroot
+    cc_path = Path(wasi_cc)
+    if cc_path.exists():
+        sdk_root = cc_path.parent.parent
+        cand = sdk_root / "share" / "wasi-sysroot"
+        if cand.is_dir():
+            return str(cand)
+    return ""
+
+
+def detect_wasi_target(wasi_cc: str, requested_target: str) -> str:
+    if requested_target:
+        return requested_target
+    try:
+        p = subprocess.run(
+            [wasi_cc, "--print-resource-dir"],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+    except FileNotFoundError:
+        return "wasm32-wasi"
+    if p.returncode == 0:
+        res = Path((p.stdout or "").strip())
+        if (res / "lib" / "wasip1" / "libclang_rt.builtins-wasm32.a").is_file():
+            return "wasm32-wasip1"
+        if (res / "lib" / "wasi" / "libclang_rt.builtins-wasm32.a").is_file():
+            return "wasm32-wasi"
+    return "wasm32-wasi"
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--bench-root", default="data/llvm-test-suite/SingleSource/Benchmarks")
@@ -55,7 +88,16 @@ def main() -> None:
     ap.add_argument("--native-cc", default="clang")
     ap.add_argument("--wasi-cc", default="/opt/wasi-sdk/bin/clang")
     ap.add_argument("--opt", default="-O2")
-    ap.add_argument("--wasi-target", default="wasm32-wasip1")
+    ap.add_argument(
+        "--wasi-target",
+        default="",
+        help="WASI target triple (auto-detect if empty)",
+    )
+    ap.add_argument(
+        "--wasi-sysroot",
+        default="",
+        help="WASI sysroot path (auto-detect from wasi-cc if empty)",
+    )
     ap.add_argument("--limit", type=int, default=0, help="Build first N direct-run programs (0=all)")
     ap.add_argument(
         "--strategy-csv",
@@ -70,6 +112,16 @@ def main() -> None:
     wrapper = Path(args.wrapper)
     out_dir.mkdir(parents=True, exist_ok=True)
     strategy = read_strategy(Path(args.strategy_csv))
+    wasi_target = detect_wasi_target(args.wasi_cc, args.wasi_target)
+    wasi_sysroot = detect_wasi_sysroot(args.wasi_cc, args.wasi_sysroot)
+    wasi_extra_flags: List[str] = []
+    if wasi_sysroot:
+        wasi_extra_flags.append(f"--sysroot={wasi_sysroot}")
+    print(f"[info] wasi_target={wasi_target}")
+    if wasi_sysroot:
+        print(f"[info] wasi_sysroot={wasi_sysroot}")
+    else:
+        print("[info] wasi_sysroot=<not-set>")
 
     wanted = read_program_list(direct_list)
     if not wanted:
@@ -173,8 +225,9 @@ def main() -> None:
                 *common_inc,
                 *main_rename,
                 *wasi_extra_cflags,
+                *wasi_extra_flags,
                 "-target",
-                args.wasi_target,
+                wasi_target,
                 "-c",
                 str(c),
                 "-o",
@@ -186,8 +239,9 @@ def main() -> None:
                 args.wasi_cc,
                 args.opt,
                 "-std=gnu11",
+                *wasi_extra_flags,
                 "-target",
-                args.wasi_target,
+                wasi_target,
                 "-c",
                 str(wrapper),
                 "-o",
@@ -198,8 +252,9 @@ def main() -> None:
             p_wasm = run_cmd(
                 [
                     args.wasi_cc,
+                    *wasi_extra_flags,
                     "-target",
-                    args.wasi_target,
+                    wasi_target,
                     str(bench_wasm_o),
                     str(wrapper_wasm_o),
                     *wasi_link_flags,

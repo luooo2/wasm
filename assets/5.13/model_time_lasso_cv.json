@@ -1,0 +1,13 @@
+{
+  "model": "lasso_cv_std_y",
+  "n_samples": 52,
+  "n_features": 24,
+  "alpha": 0.01,
+  "r2_in_sample_std_y": 0.8038498570122146,
+  "r2_in_sample_original_y": 0.8038498570122146,
+  "lasso_internal_cv_mse_mean": 4.977143798877824,
+  "lasso_internal_cv_mse_std": 3.3405120247259954,
+  "n_nonzero_coef": 10,
+  "y_standardized_for_penalized_regression": true,
+  "cv_note": "Generalization reported via LassoCV mse_path_ at chosen alpha; sklearn KFold on fixed alpha omitted (numerically unstable here)."
+}

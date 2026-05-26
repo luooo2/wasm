@@ -1,0 +1,32 @@
+[info] runnable count: 30
+[info] wasmer=wasmer compiler=cranelift
+[info] output: /home/luomz/wasm/data/results/wasmer/perf_llvm/perf_raw_events_llvm_wasmer_cranelift.csv
+[perf] llvmss_benchmarkgame_puzzle
+[perf] llvmss_misc_evalloop
+[perf] llvmss_misc_flops-1
+[perf] llvmss_misc_flops-2
+[perf] llvmss_misc_flops-3
+[perf] llvmss_misc_flops-4
+[perf] llvmss_misc_flops-5
+[perf] llvmss_misc_flops-6
+[perf] llvmss_misc_flops-7
+[perf] llvmss_misc_flops-8
+[perf] llvmss_misc_flops
+[perf] llvmss_misc_mandel-2
+[perf] llvmss_misc_matmul_f64_4x4
+[perf] llvmss_misc_reedsolomon
+[perf] llvmss_misc_richards_benchmark
+[perf] llvmss_misc_salsa20
+[perf] llvmss_shootout_hello
+[perf] llvmss_stanford_bubblesort
+[perf] llvmss_stanford_floatmm
+[perf] llvmss_stanford_intmm
+[perf] llvmss_stanford_oscar
+[perf] llvmss_stanford_perm
+[perf] llvmss_stanford_puzzle
+[perf] llvmss_stanford_queens
+[perf] llvmss_stanford_quicksort
+[perf] llvmss_stanford_realmm
+[perf] llvmss_stanford_towers
+[perf] llvmss_stanford_treesort
+[done] /home/luomz/wasm/data/results/wasmer/perf_llvm/perf_raw_events_llvm_wasmer_cranelift.csv

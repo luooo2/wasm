@@ -1,0 +1,4 @@
+model,r2_in_sample_std_y,r2_in_sample_original_y,lasso_internal_cv_mse_mean,lasso_internal_cv_mse_std,n_nonzero_coef
+lasso_cv_std_y,0.8038498570122146,0.8038498570122146,4.977143798877824,3.3405120247259954,10
+ols_full_stdX,,0.9573131731795882,,,25
+rlm_huber_stdX,,0.9554412283417862,,,25

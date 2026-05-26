@@ -1,0 +1,1184 @@
+[info] wasmer=wasmer compiler=cranelift
+[info] programs=30 modes=['jit', 'aot']
+[info] out_csv=data/results/wasmer/labels_llvm_direct_from_runnable_wasmer_cranelift.csv
+[info] raw_csv=data/results/wasmer/labels_raw_llvm_direct_from_runnable_wasmer_cranelift.csv
+[info] aot_cache=data/build/llvm_direct/aot_cache_wasmer/cranelift
+
+=== Running llvmss_benchmarkgame_puzzle (both) ===
+$ data/build/llvm_direct/llvmss_benchmarkgame_puzzle.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_benchmarkgame_puzzle.wasm
+$ data/build/llvm_direct/llvmss_benchmarkgame_puzzle.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_benchmarkgame_puzzle.wasm
+$ data/build/llvm_direct/llvmss_benchmarkgame_puzzle.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_benchmarkgame_puzzle.wasm
+$ data/build/llvm_direct/llvmss_benchmarkgame_puzzle.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_benchmarkgame_puzzle.wasm
+$ data/build/llvm_direct/llvmss_benchmarkgame_puzzle.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_benchmarkgame_puzzle.wasm
+$ data/build/llvm_direct/llvmss_benchmarkgame_puzzle.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_benchmarkgame_puzzle.wasm
+$ data/build/llvm_direct/llvmss_benchmarkgame_puzzle.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_benchmarkgame_puzzle.wasm
+$ data/build/llvm_direct/llvmss_benchmarkgame_puzzle.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_benchmarkgame_puzzle.wasm
+$ data/build/llvm_direct/llvmss_benchmarkgame_puzzle.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_benchmarkgame_puzzle.wasm
+$ data/build/llvm_direct/llvmss_benchmarkgame_puzzle.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_benchmarkgame_puzzle.wasm
+$ data/build/llvm_direct/llvmss_benchmarkgame_puzzle.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_benchmarkgame_puzzle.wasmu
+$ data/build/llvm_direct/llvmss_benchmarkgame_puzzle.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_benchmarkgame_puzzle.wasmu
+$ data/build/llvm_direct/llvmss_benchmarkgame_puzzle.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_benchmarkgame_puzzle.wasmu
+$ data/build/llvm_direct/llvmss_benchmarkgame_puzzle.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_benchmarkgame_puzzle.wasmu
+$ data/build/llvm_direct/llvmss_benchmarkgame_puzzle.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_benchmarkgame_puzzle.wasmu
+$ data/build/llvm_direct/llvmss_benchmarkgame_puzzle.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_benchmarkgame_puzzle.wasmu
+$ data/build/llvm_direct/llvmss_benchmarkgame_puzzle.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_benchmarkgame_puzzle.wasmu
+$ data/build/llvm_direct/llvmss_benchmarkgame_puzzle.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_benchmarkgame_puzzle.wasmu
+$ data/build/llvm_direct/llvmss_benchmarkgame_puzzle.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_benchmarkgame_puzzle.wasmu
+$ data/build/llvm_direct/llvmss_benchmarkgame_puzzle.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_benchmarkgame_puzzle.wasmu
+
+=== Running llvmss_misc_evalloop (both) ===
+$ data/build/llvm_direct/llvmss_misc_evalloop.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_evalloop.wasm
+$ data/build/llvm_direct/llvmss_misc_evalloop.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_evalloop.wasm
+$ data/build/llvm_direct/llvmss_misc_evalloop.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_evalloop.wasm
+$ data/build/llvm_direct/llvmss_misc_evalloop.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_evalloop.wasm
+$ data/build/llvm_direct/llvmss_misc_evalloop.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_evalloop.wasm
+$ data/build/llvm_direct/llvmss_misc_evalloop.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_evalloop.wasm
+$ data/build/llvm_direct/llvmss_misc_evalloop.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_evalloop.wasm
+$ data/build/llvm_direct/llvmss_misc_evalloop.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_evalloop.wasm
+$ data/build/llvm_direct/llvmss_misc_evalloop.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_evalloop.wasm
+$ data/build/llvm_direct/llvmss_misc_evalloop.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_evalloop.wasm
+$ data/build/llvm_direct/llvmss_misc_evalloop.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_evalloop.wasmu
+$ data/build/llvm_direct/llvmss_misc_evalloop.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_evalloop.wasmu
+$ data/build/llvm_direct/llvmss_misc_evalloop.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_evalloop.wasmu
+$ data/build/llvm_direct/llvmss_misc_evalloop.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_evalloop.wasmu
+$ data/build/llvm_direct/llvmss_misc_evalloop.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_evalloop.wasmu
+$ data/build/llvm_direct/llvmss_misc_evalloop.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_evalloop.wasmu
+$ data/build/llvm_direct/llvmss_misc_evalloop.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_evalloop.wasmu
+$ data/build/llvm_direct/llvmss_misc_evalloop.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_evalloop.wasmu
+$ data/build/llvm_direct/llvmss_misc_evalloop.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_evalloop.wasmu
+$ data/build/llvm_direct/llvmss_misc_evalloop.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_evalloop.wasmu
+
+=== Running llvmss_misc_flops-1 (both) ===
+$ data/build/llvm_direct/llvmss_misc_flops-1.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops-1.wasm
+$ data/build/llvm_direct/llvmss_misc_flops-1.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops-1.wasm
+$ data/build/llvm_direct/llvmss_misc_flops-1.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops-1.wasm
+$ data/build/llvm_direct/llvmss_misc_flops-1.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops-1.wasm
+$ data/build/llvm_direct/llvmss_misc_flops-1.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops-1.wasm
+$ data/build/llvm_direct/llvmss_misc_flops-1.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops-1.wasm
+$ data/build/llvm_direct/llvmss_misc_flops-1.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops-1.wasm
+$ data/build/llvm_direct/llvmss_misc_flops-1.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops-1.wasm
+$ data/build/llvm_direct/llvmss_misc_flops-1.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops-1.wasm
+$ data/build/llvm_direct/llvmss_misc_flops-1.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops-1.wasm
+$ data/build/llvm_direct/llvmss_misc_flops-1.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops-1.wasmu
+$ data/build/llvm_direct/llvmss_misc_flops-1.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops-1.wasmu
+$ data/build/llvm_direct/llvmss_misc_flops-1.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops-1.wasmu
+$ data/build/llvm_direct/llvmss_misc_flops-1.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops-1.wasmu
+$ data/build/llvm_direct/llvmss_misc_flops-1.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops-1.wasmu
+$ data/build/llvm_direct/llvmss_misc_flops-1.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops-1.wasmu
+$ data/build/llvm_direct/llvmss_misc_flops-1.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops-1.wasmu
+$ data/build/llvm_direct/llvmss_misc_flops-1.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops-1.wasmu
+$ data/build/llvm_direct/llvmss_misc_flops-1.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops-1.wasmu
+$ data/build/llvm_direct/llvmss_misc_flops-1.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops-1.wasmu
+
+=== Running llvmss_misc_flops-2 (both) ===
+$ data/build/llvm_direct/llvmss_misc_flops-2.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops-2.wasm
+$ data/build/llvm_direct/llvmss_misc_flops-2.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops-2.wasm
+$ data/build/llvm_direct/llvmss_misc_flops-2.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops-2.wasm
+$ data/build/llvm_direct/llvmss_misc_flops-2.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops-2.wasm
+$ data/build/llvm_direct/llvmss_misc_flops-2.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops-2.wasm
+$ data/build/llvm_direct/llvmss_misc_flops-2.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops-2.wasm
+$ data/build/llvm_direct/llvmss_misc_flops-2.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops-2.wasm
+$ data/build/llvm_direct/llvmss_misc_flops-2.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops-2.wasm
+$ data/build/llvm_direct/llvmss_misc_flops-2.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops-2.wasm
+$ data/build/llvm_direct/llvmss_misc_flops-2.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops-2.wasm
+$ data/build/llvm_direct/llvmss_misc_flops-2.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops-2.wasmu
+$ data/build/llvm_direct/llvmss_misc_flops-2.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops-2.wasmu
+$ data/build/llvm_direct/llvmss_misc_flops-2.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops-2.wasmu
+$ data/build/llvm_direct/llvmss_misc_flops-2.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops-2.wasmu
+$ data/build/llvm_direct/llvmss_misc_flops-2.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops-2.wasmu
+$ data/build/llvm_direct/llvmss_misc_flops-2.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops-2.wasmu
+$ data/build/llvm_direct/llvmss_misc_flops-2.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops-2.wasmu
+$ data/build/llvm_direct/llvmss_misc_flops-2.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops-2.wasmu
+$ data/build/llvm_direct/llvmss_misc_flops-2.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops-2.wasmu
+$ data/build/llvm_direct/llvmss_misc_flops-2.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops-2.wasmu
+
+=== Running llvmss_misc_flops-3 (both) ===
+$ data/build/llvm_direct/llvmss_misc_flops-3.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops-3.wasm
+$ data/build/llvm_direct/llvmss_misc_flops-3.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops-3.wasm
+$ data/build/llvm_direct/llvmss_misc_flops-3.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops-3.wasm
+$ data/build/llvm_direct/llvmss_misc_flops-3.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops-3.wasm
+$ data/build/llvm_direct/llvmss_misc_flops-3.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops-3.wasm
+$ data/build/llvm_direct/llvmss_misc_flops-3.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops-3.wasm
+$ data/build/llvm_direct/llvmss_misc_flops-3.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops-3.wasm
+$ data/build/llvm_direct/llvmss_misc_flops-3.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops-3.wasm
+$ data/build/llvm_direct/llvmss_misc_flops-3.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops-3.wasm
+$ data/build/llvm_direct/llvmss_misc_flops-3.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops-3.wasm
+$ data/build/llvm_direct/llvmss_misc_flops-3.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops-3.wasmu
+$ data/build/llvm_direct/llvmss_misc_flops-3.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops-3.wasmu
+$ data/build/llvm_direct/llvmss_misc_flops-3.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops-3.wasmu
+$ data/build/llvm_direct/llvmss_misc_flops-3.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops-3.wasmu
+$ data/build/llvm_direct/llvmss_misc_flops-3.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops-3.wasmu
+$ data/build/llvm_direct/llvmss_misc_flops-3.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops-3.wasmu
+$ data/build/llvm_direct/llvmss_misc_flops-3.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops-3.wasmu
+$ data/build/llvm_direct/llvmss_misc_flops-3.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops-3.wasmu
+$ data/build/llvm_direct/llvmss_misc_flops-3.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops-3.wasmu
+$ data/build/llvm_direct/llvmss_misc_flops-3.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops-3.wasmu
+
+=== Running llvmss_misc_flops-4 (both) ===
+$ data/build/llvm_direct/llvmss_misc_flops-4.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops-4.wasm
+$ data/build/llvm_direct/llvmss_misc_flops-4.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops-4.wasm
+$ data/build/llvm_direct/llvmss_misc_flops-4.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops-4.wasm
+$ data/build/llvm_direct/llvmss_misc_flops-4.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops-4.wasm
+$ data/build/llvm_direct/llvmss_misc_flops-4.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops-4.wasm
+$ data/build/llvm_direct/llvmss_misc_flops-4.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops-4.wasm
+$ data/build/llvm_direct/llvmss_misc_flops-4.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops-4.wasm
+$ data/build/llvm_direct/llvmss_misc_flops-4.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops-4.wasm
+$ data/build/llvm_direct/llvmss_misc_flops-4.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops-4.wasm
+$ data/build/llvm_direct/llvmss_misc_flops-4.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops-4.wasm
+$ data/build/llvm_direct/llvmss_misc_flops-4.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops-4.wasmu
+$ data/build/llvm_direct/llvmss_misc_flops-4.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops-4.wasmu
+$ data/build/llvm_direct/llvmss_misc_flops-4.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops-4.wasmu
+$ data/build/llvm_direct/llvmss_misc_flops-4.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops-4.wasmu
+$ data/build/llvm_direct/llvmss_misc_flops-4.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops-4.wasmu
+$ data/build/llvm_direct/llvmss_misc_flops-4.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops-4.wasmu
+$ data/build/llvm_direct/llvmss_misc_flops-4.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops-4.wasmu
+$ data/build/llvm_direct/llvmss_misc_flops-4.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops-4.wasmu
+$ data/build/llvm_direct/llvmss_misc_flops-4.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops-4.wasmu
+$ data/build/llvm_direct/llvmss_misc_flops-4.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops-4.wasmu
+
+=== Running llvmss_misc_flops-5 (both) ===
+$ data/build/llvm_direct/llvmss_misc_flops-5.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops-5.wasm
+$ data/build/llvm_direct/llvmss_misc_flops-5.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops-5.wasm
+$ data/build/llvm_direct/llvmss_misc_flops-5.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops-5.wasm
+$ data/build/llvm_direct/llvmss_misc_flops-5.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops-5.wasm
+$ data/build/llvm_direct/llvmss_misc_flops-5.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops-5.wasm
+$ data/build/llvm_direct/llvmss_misc_flops-5.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops-5.wasm
+$ data/build/llvm_direct/llvmss_misc_flops-5.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops-5.wasm
+$ data/build/llvm_direct/llvmss_misc_flops-5.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops-5.wasm
+$ data/build/llvm_direct/llvmss_misc_flops-5.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops-5.wasm
+$ data/build/llvm_direct/llvmss_misc_flops-5.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops-5.wasm
+$ data/build/llvm_direct/llvmss_misc_flops-5.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops-5.wasmu
+$ data/build/llvm_direct/llvmss_misc_flops-5.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops-5.wasmu
+$ data/build/llvm_direct/llvmss_misc_flops-5.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops-5.wasmu
+$ data/build/llvm_direct/llvmss_misc_flops-5.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops-5.wasmu
+$ data/build/llvm_direct/llvmss_misc_flops-5.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops-5.wasmu
+$ data/build/llvm_direct/llvmss_misc_flops-5.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops-5.wasmu
+$ data/build/llvm_direct/llvmss_misc_flops-5.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops-5.wasmu
+$ data/build/llvm_direct/llvmss_misc_flops-5.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops-5.wasmu
+$ data/build/llvm_direct/llvmss_misc_flops-5.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops-5.wasmu
+$ data/build/llvm_direct/llvmss_misc_flops-5.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops-5.wasmu
+
+=== Running llvmss_misc_flops-6 (both) ===
+$ data/build/llvm_direct/llvmss_misc_flops-6.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops-6.wasm
+$ data/build/llvm_direct/llvmss_misc_flops-6.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops-6.wasm
+$ data/build/llvm_direct/llvmss_misc_flops-6.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops-6.wasm
+$ data/build/llvm_direct/llvmss_misc_flops-6.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops-6.wasm
+$ data/build/llvm_direct/llvmss_misc_flops-6.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops-6.wasm
+$ data/build/llvm_direct/llvmss_misc_flops-6.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops-6.wasm
+$ data/build/llvm_direct/llvmss_misc_flops-6.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops-6.wasm
+$ data/build/llvm_direct/llvmss_misc_flops-6.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops-6.wasm
+$ data/build/llvm_direct/llvmss_misc_flops-6.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops-6.wasm
+$ data/build/llvm_direct/llvmss_misc_flops-6.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops-6.wasm
+$ data/build/llvm_direct/llvmss_misc_flops-6.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops-6.wasmu
+$ data/build/llvm_direct/llvmss_misc_flops-6.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops-6.wasmu
+$ data/build/llvm_direct/llvmss_misc_flops-6.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops-6.wasmu
+$ data/build/llvm_direct/llvmss_misc_flops-6.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops-6.wasmu
+$ data/build/llvm_direct/llvmss_misc_flops-6.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops-6.wasmu
+$ data/build/llvm_direct/llvmss_misc_flops-6.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops-6.wasmu
+$ data/build/llvm_direct/llvmss_misc_flops-6.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops-6.wasmu
+$ data/build/llvm_direct/llvmss_misc_flops-6.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops-6.wasmu
+$ data/build/llvm_direct/llvmss_misc_flops-6.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops-6.wasmu
+$ data/build/llvm_direct/llvmss_misc_flops-6.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops-6.wasmu
+
+=== Running llvmss_misc_flops-7 (both) ===
+$ data/build/llvm_direct/llvmss_misc_flops-7.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops-7.wasm
+$ data/build/llvm_direct/llvmss_misc_flops-7.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops-7.wasm
+$ data/build/llvm_direct/llvmss_misc_flops-7.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops-7.wasm
+$ data/build/llvm_direct/llvmss_misc_flops-7.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops-7.wasm
+$ data/build/llvm_direct/llvmss_misc_flops-7.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops-7.wasm
+$ data/build/llvm_direct/llvmss_misc_flops-7.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops-7.wasm
+$ data/build/llvm_direct/llvmss_misc_flops-7.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops-7.wasm
+$ data/build/llvm_direct/llvmss_misc_flops-7.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops-7.wasm
+$ data/build/llvm_direct/llvmss_misc_flops-7.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops-7.wasm
+$ data/build/llvm_direct/llvmss_misc_flops-7.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops-7.wasm
+$ data/build/llvm_direct/llvmss_misc_flops-7.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops-7.wasmu
+$ data/build/llvm_direct/llvmss_misc_flops-7.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops-7.wasmu
+$ data/build/llvm_direct/llvmss_misc_flops-7.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops-7.wasmu
+$ data/build/llvm_direct/llvmss_misc_flops-7.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops-7.wasmu
+$ data/build/llvm_direct/llvmss_misc_flops-7.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops-7.wasmu
+$ data/build/llvm_direct/llvmss_misc_flops-7.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops-7.wasmu
+$ data/build/llvm_direct/llvmss_misc_flops-7.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops-7.wasmu
+$ data/build/llvm_direct/llvmss_misc_flops-7.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops-7.wasmu
+$ data/build/llvm_direct/llvmss_misc_flops-7.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops-7.wasmu
+$ data/build/llvm_direct/llvmss_misc_flops-7.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops-7.wasmu
+
+=== Running llvmss_misc_flops-8 (both) ===
+$ data/build/llvm_direct/llvmss_misc_flops-8.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops-8.wasm
+$ data/build/llvm_direct/llvmss_misc_flops-8.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops-8.wasm
+$ data/build/llvm_direct/llvmss_misc_flops-8.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops-8.wasm
+$ data/build/llvm_direct/llvmss_misc_flops-8.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops-8.wasm
+$ data/build/llvm_direct/llvmss_misc_flops-8.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops-8.wasm
+$ data/build/llvm_direct/llvmss_misc_flops-8.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops-8.wasm
+$ data/build/llvm_direct/llvmss_misc_flops-8.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops-8.wasm
+$ data/build/llvm_direct/llvmss_misc_flops-8.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops-8.wasm
+$ data/build/llvm_direct/llvmss_misc_flops-8.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops-8.wasm
+$ data/build/llvm_direct/llvmss_misc_flops-8.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops-8.wasm
+$ data/build/llvm_direct/llvmss_misc_flops-8.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops-8.wasmu
+$ data/build/llvm_direct/llvmss_misc_flops-8.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops-8.wasmu
+$ data/build/llvm_direct/llvmss_misc_flops-8.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops-8.wasmu
+$ data/build/llvm_direct/llvmss_misc_flops-8.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops-8.wasmu
+$ data/build/llvm_direct/llvmss_misc_flops-8.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops-8.wasmu
+$ data/build/llvm_direct/llvmss_misc_flops-8.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops-8.wasmu
+$ data/build/llvm_direct/llvmss_misc_flops-8.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops-8.wasmu
+$ data/build/llvm_direct/llvmss_misc_flops-8.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops-8.wasmu
+$ data/build/llvm_direct/llvmss_misc_flops-8.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops-8.wasmu
+$ data/build/llvm_direct/llvmss_misc_flops-8.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops-8.wasmu
+
+=== Running llvmss_misc_flops (both) ===
+$ data/build/llvm_direct/llvmss_misc_flops.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops.wasm
+$ data/build/llvm_direct/llvmss_misc_flops.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops.wasm
+$ data/build/llvm_direct/llvmss_misc_flops.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops.wasm
+$ data/build/llvm_direct/llvmss_misc_flops.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops.wasm
+$ data/build/llvm_direct/llvmss_misc_flops.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops.wasm
+$ data/build/llvm_direct/llvmss_misc_flops.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops.wasm
+$ data/build/llvm_direct/llvmss_misc_flops.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops.wasm
+$ data/build/llvm_direct/llvmss_misc_flops.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops.wasm
+$ data/build/llvm_direct/llvmss_misc_flops.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops.wasm
+$ data/build/llvm_direct/llvmss_misc_flops.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_flops.wasm
+$ data/build/llvm_direct/llvmss_misc_flops.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops.wasmu
+$ data/build/llvm_direct/llvmss_misc_flops.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops.wasmu
+$ data/build/llvm_direct/llvmss_misc_flops.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops.wasmu
+$ data/build/llvm_direct/llvmss_misc_flops.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops.wasmu
+$ data/build/llvm_direct/llvmss_misc_flops.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops.wasmu
+$ data/build/llvm_direct/llvmss_misc_flops.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops.wasmu
+$ data/build/llvm_direct/llvmss_misc_flops.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops.wasmu
+$ data/build/llvm_direct/llvmss_misc_flops.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops.wasmu
+$ data/build/llvm_direct/llvmss_misc_flops.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops.wasmu
+$ data/build/llvm_direct/llvmss_misc_flops.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_flops.wasmu
+
+=== Running llvmss_misc_mandel-2 (both) ===
+$ data/build/llvm_direct/llvmss_misc_mandel-2.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_mandel-2.wasm
+$ data/build/llvm_direct/llvmss_misc_mandel-2.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_mandel-2.wasm
+$ data/build/llvm_direct/llvmss_misc_mandel-2.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_mandel-2.wasm
+$ data/build/llvm_direct/llvmss_misc_mandel-2.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_mandel-2.wasm
+$ data/build/llvm_direct/llvmss_misc_mandel-2.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_mandel-2.wasm
+$ data/build/llvm_direct/llvmss_misc_mandel-2.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_mandel-2.wasm
+$ data/build/llvm_direct/llvmss_misc_mandel-2.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_mandel-2.wasm
+$ data/build/llvm_direct/llvmss_misc_mandel-2.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_mandel-2.wasm
+$ data/build/llvm_direct/llvmss_misc_mandel-2.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_mandel-2.wasm
+$ data/build/llvm_direct/llvmss_misc_mandel-2.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_mandel-2.wasm
+$ data/build/llvm_direct/llvmss_misc_mandel-2.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_mandel-2.wasmu
+$ data/build/llvm_direct/llvmss_misc_mandel-2.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_mandel-2.wasmu
+$ data/build/llvm_direct/llvmss_misc_mandel-2.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_mandel-2.wasmu
+$ data/build/llvm_direct/llvmss_misc_mandel-2.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_mandel-2.wasmu
+$ data/build/llvm_direct/llvmss_misc_mandel-2.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_mandel-2.wasmu
+$ data/build/llvm_direct/llvmss_misc_mandel-2.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_mandel-2.wasmu
+$ data/build/llvm_direct/llvmss_misc_mandel-2.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_mandel-2.wasmu
+$ data/build/llvm_direct/llvmss_misc_mandel-2.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_mandel-2.wasmu
+$ data/build/llvm_direct/llvmss_misc_mandel-2.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_mandel-2.wasmu
+$ data/build/llvm_direct/llvmss_misc_mandel-2.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_mandel-2.wasmu
+
+=== Running llvmss_misc_matmul_f64_4x4 (both) ===
+$ data/build/llvm_direct/llvmss_misc_matmul_f64_4x4.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_matmul_f64_4x4.wasm
+$ data/build/llvm_direct/llvmss_misc_matmul_f64_4x4.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_matmul_f64_4x4.wasm
+$ data/build/llvm_direct/llvmss_misc_matmul_f64_4x4.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_matmul_f64_4x4.wasm
+$ data/build/llvm_direct/llvmss_misc_matmul_f64_4x4.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_matmul_f64_4x4.wasm
+$ data/build/llvm_direct/llvmss_misc_matmul_f64_4x4.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_matmul_f64_4x4.wasm
+$ data/build/llvm_direct/llvmss_misc_matmul_f64_4x4.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_matmul_f64_4x4.wasm
+$ data/build/llvm_direct/llvmss_misc_matmul_f64_4x4.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_matmul_f64_4x4.wasm
+$ data/build/llvm_direct/llvmss_misc_matmul_f64_4x4.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_matmul_f64_4x4.wasm
+$ data/build/llvm_direct/llvmss_misc_matmul_f64_4x4.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_matmul_f64_4x4.wasm
+$ data/build/llvm_direct/llvmss_misc_matmul_f64_4x4.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_matmul_f64_4x4.wasm
+$ data/build/llvm_direct/llvmss_misc_matmul_f64_4x4.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_matmul_f64_4x4.wasmu
+$ data/build/llvm_direct/llvmss_misc_matmul_f64_4x4.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_matmul_f64_4x4.wasmu
+$ data/build/llvm_direct/llvmss_misc_matmul_f64_4x4.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_matmul_f64_4x4.wasmu
+$ data/build/llvm_direct/llvmss_misc_matmul_f64_4x4.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_matmul_f64_4x4.wasmu
+$ data/build/llvm_direct/llvmss_misc_matmul_f64_4x4.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_matmul_f64_4x4.wasmu
+$ data/build/llvm_direct/llvmss_misc_matmul_f64_4x4.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_matmul_f64_4x4.wasmu
+$ data/build/llvm_direct/llvmss_misc_matmul_f64_4x4.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_matmul_f64_4x4.wasmu
+$ data/build/llvm_direct/llvmss_misc_matmul_f64_4x4.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_matmul_f64_4x4.wasmu
+$ data/build/llvm_direct/llvmss_misc_matmul_f64_4x4.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_matmul_f64_4x4.wasmu
+$ data/build/llvm_direct/llvmss_misc_matmul_f64_4x4.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_matmul_f64_4x4.wasmu
+
+=== Running llvmss_misc_reedsolomon (both) ===
+$ data/build/llvm_direct/llvmss_misc_reedsolomon.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_reedsolomon.wasm
+$ data/build/llvm_direct/llvmss_misc_reedsolomon.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_reedsolomon.wasm
+$ data/build/llvm_direct/llvmss_misc_reedsolomon.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_reedsolomon.wasm
+$ data/build/llvm_direct/llvmss_misc_reedsolomon.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_reedsolomon.wasm
+$ data/build/llvm_direct/llvmss_misc_reedsolomon.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_reedsolomon.wasm
+$ data/build/llvm_direct/llvmss_misc_reedsolomon.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_reedsolomon.wasm
+$ data/build/llvm_direct/llvmss_misc_reedsolomon.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_reedsolomon.wasm
+$ data/build/llvm_direct/llvmss_misc_reedsolomon.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_reedsolomon.wasm
+$ data/build/llvm_direct/llvmss_misc_reedsolomon.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_reedsolomon.wasm
+$ data/build/llvm_direct/llvmss_misc_reedsolomon.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_reedsolomon.wasm
+$ data/build/llvm_direct/llvmss_misc_reedsolomon.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_reedsolomon.wasmu
+$ data/build/llvm_direct/llvmss_misc_reedsolomon.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_reedsolomon.wasmu
+$ data/build/llvm_direct/llvmss_misc_reedsolomon.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_reedsolomon.wasmu
+$ data/build/llvm_direct/llvmss_misc_reedsolomon.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_reedsolomon.wasmu
+$ data/build/llvm_direct/llvmss_misc_reedsolomon.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_reedsolomon.wasmu
+$ data/build/llvm_direct/llvmss_misc_reedsolomon.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_reedsolomon.wasmu
+$ data/build/llvm_direct/llvmss_misc_reedsolomon.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_reedsolomon.wasmu
+$ data/build/llvm_direct/llvmss_misc_reedsolomon.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_reedsolomon.wasmu
+$ data/build/llvm_direct/llvmss_misc_reedsolomon.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_reedsolomon.wasmu
+$ data/build/llvm_direct/llvmss_misc_reedsolomon.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_reedsolomon.wasmu
+
+=== Running llvmss_misc_richards_benchmark (both) ===
+$ data/build/llvm_direct/llvmss_misc_richards_benchmark.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_richards_benchmark.wasm
+$ data/build/llvm_direct/llvmss_misc_richards_benchmark.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_richards_benchmark.wasm
+$ data/build/llvm_direct/llvmss_misc_richards_benchmark.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_richards_benchmark.wasm
+$ data/build/llvm_direct/llvmss_misc_richards_benchmark.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_richards_benchmark.wasm
+$ data/build/llvm_direct/llvmss_misc_richards_benchmark.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_richards_benchmark.wasm
+$ data/build/llvm_direct/llvmss_misc_richards_benchmark.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_richards_benchmark.wasm
+$ data/build/llvm_direct/llvmss_misc_richards_benchmark.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_richards_benchmark.wasm
+$ data/build/llvm_direct/llvmss_misc_richards_benchmark.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_richards_benchmark.wasm
+$ data/build/llvm_direct/llvmss_misc_richards_benchmark.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_richards_benchmark.wasm
+$ data/build/llvm_direct/llvmss_misc_richards_benchmark.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_richards_benchmark.wasm
+$ data/build/llvm_direct/llvmss_misc_richards_benchmark.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_richards_benchmark.wasmu
+$ data/build/llvm_direct/llvmss_misc_richards_benchmark.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_richards_benchmark.wasmu
+$ data/build/llvm_direct/llvmss_misc_richards_benchmark.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_richards_benchmark.wasmu
+$ data/build/llvm_direct/llvmss_misc_richards_benchmark.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_richards_benchmark.wasmu
+$ data/build/llvm_direct/llvmss_misc_richards_benchmark.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_richards_benchmark.wasmu
+$ data/build/llvm_direct/llvmss_misc_richards_benchmark.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_richards_benchmark.wasmu
+$ data/build/llvm_direct/llvmss_misc_richards_benchmark.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_richards_benchmark.wasmu
+$ data/build/llvm_direct/llvmss_misc_richards_benchmark.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_richards_benchmark.wasmu
+$ data/build/llvm_direct/llvmss_misc_richards_benchmark.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_richards_benchmark.wasmu
+$ data/build/llvm_direct/llvmss_misc_richards_benchmark.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_richards_benchmark.wasmu
+
+=== Running llvmss_misc_salsa20 (both) ===
+$ data/build/llvm_direct/llvmss_misc_salsa20.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_salsa20.wasm
+$ data/build/llvm_direct/llvmss_misc_salsa20.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_salsa20.wasm
+$ data/build/llvm_direct/llvmss_misc_salsa20.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_salsa20.wasm
+$ data/build/llvm_direct/llvmss_misc_salsa20.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_salsa20.wasm
+$ data/build/llvm_direct/llvmss_misc_salsa20.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_salsa20.wasm
+$ data/build/llvm_direct/llvmss_misc_salsa20.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_salsa20.wasm
+$ data/build/llvm_direct/llvmss_misc_salsa20.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_salsa20.wasm
+$ data/build/llvm_direct/llvmss_misc_salsa20.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_salsa20.wasm
+$ data/build/llvm_direct/llvmss_misc_salsa20.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_salsa20.wasm
+$ data/build/llvm_direct/llvmss_misc_salsa20.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_misc_salsa20.wasm
+$ data/build/llvm_direct/llvmss_misc_salsa20.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_salsa20.wasmu
+$ data/build/llvm_direct/llvmss_misc_salsa20.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_salsa20.wasmu
+$ data/build/llvm_direct/llvmss_misc_salsa20.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_salsa20.wasmu
+$ data/build/llvm_direct/llvmss_misc_salsa20.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_salsa20.wasmu
+$ data/build/llvm_direct/llvmss_misc_salsa20.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_salsa20.wasmu
+$ data/build/llvm_direct/llvmss_misc_salsa20.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_salsa20.wasmu
+$ data/build/llvm_direct/llvmss_misc_salsa20.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_salsa20.wasmu
+$ data/build/llvm_direct/llvmss_misc_salsa20.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_salsa20.wasmu
+$ data/build/llvm_direct/llvmss_misc_salsa20.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_salsa20.wasmu
+$ data/build/llvm_direct/llvmss_misc_salsa20.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_misc_salsa20.wasmu
+
+=== Running llvmss_shootout_hello (both) ===
+$ data/build/llvm_direct/llvmss_shootout_hello.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_shootout_hello.wasm
+$ data/build/llvm_direct/llvmss_shootout_hello.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_shootout_hello.wasm
+$ data/build/llvm_direct/llvmss_shootout_hello.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_shootout_hello.wasm
+$ data/build/llvm_direct/llvmss_shootout_hello.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_shootout_hello.wasm
+$ data/build/llvm_direct/llvmss_shootout_hello.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_shootout_hello.wasm
+$ data/build/llvm_direct/llvmss_shootout_hello.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_shootout_hello.wasm
+$ data/build/llvm_direct/llvmss_shootout_hello.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_shootout_hello.wasm
+$ data/build/llvm_direct/llvmss_shootout_hello.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_shootout_hello.wasm
+$ data/build/llvm_direct/llvmss_shootout_hello.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_shootout_hello.wasm
+$ data/build/llvm_direct/llvmss_shootout_hello.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_shootout_hello.wasm
+$ data/build/llvm_direct/llvmss_shootout_hello.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_shootout_hello.wasmu
+$ data/build/llvm_direct/llvmss_shootout_hello.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_shootout_hello.wasmu
+$ data/build/llvm_direct/llvmss_shootout_hello.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_shootout_hello.wasmu
+$ data/build/llvm_direct/llvmss_shootout_hello.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_shootout_hello.wasmu
+$ data/build/llvm_direct/llvmss_shootout_hello.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_shootout_hello.wasmu
+$ data/build/llvm_direct/llvmss_shootout_hello.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_shootout_hello.wasmu
+$ data/build/llvm_direct/llvmss_shootout_hello.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_shootout_hello.wasmu
+$ data/build/llvm_direct/llvmss_shootout_hello.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_shootout_hello.wasmu
+$ data/build/llvm_direct/llvmss_shootout_hello.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_shootout_hello.wasmu
+$ data/build/llvm_direct/llvmss_shootout_hello.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_shootout_hello.wasmu
+
+=== Running llvmss_stanford_bubblesort (both) ===
+$ data/build/llvm_direct/llvmss_stanford_bubblesort.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_bubblesort.wasm
+$ data/build/llvm_direct/llvmss_stanford_bubblesort.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_bubblesort.wasm
+$ data/build/llvm_direct/llvmss_stanford_bubblesort.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_bubblesort.wasm
+$ data/build/llvm_direct/llvmss_stanford_bubblesort.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_bubblesort.wasm
+$ data/build/llvm_direct/llvmss_stanford_bubblesort.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_bubblesort.wasm
+$ data/build/llvm_direct/llvmss_stanford_bubblesort.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_bubblesort.wasm
+$ data/build/llvm_direct/llvmss_stanford_bubblesort.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_bubblesort.wasm
+$ data/build/llvm_direct/llvmss_stanford_bubblesort.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_bubblesort.wasm
+$ data/build/llvm_direct/llvmss_stanford_bubblesort.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_bubblesort.wasm
+$ data/build/llvm_direct/llvmss_stanford_bubblesort.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_bubblesort.wasm
+$ data/build/llvm_direct/llvmss_stanford_bubblesort.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_bubblesort.wasmu
+$ data/build/llvm_direct/llvmss_stanford_bubblesort.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_bubblesort.wasmu
+$ data/build/llvm_direct/llvmss_stanford_bubblesort.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_bubblesort.wasmu
+$ data/build/llvm_direct/llvmss_stanford_bubblesort.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_bubblesort.wasmu
+$ data/build/llvm_direct/llvmss_stanford_bubblesort.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_bubblesort.wasmu
+$ data/build/llvm_direct/llvmss_stanford_bubblesort.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_bubblesort.wasmu
+$ data/build/llvm_direct/llvmss_stanford_bubblesort.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_bubblesort.wasmu
+$ data/build/llvm_direct/llvmss_stanford_bubblesort.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_bubblesort.wasmu
+$ data/build/llvm_direct/llvmss_stanford_bubblesort.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_bubblesort.wasmu
+$ data/build/llvm_direct/llvmss_stanford_bubblesort.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_bubblesort.wasmu
+
+=== Running llvmss_stanford_floatmm (both) ===
+$ data/build/llvm_direct/llvmss_stanford_floatmm.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_floatmm.wasm
+$ data/build/llvm_direct/llvmss_stanford_floatmm.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_floatmm.wasm
+$ data/build/llvm_direct/llvmss_stanford_floatmm.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_floatmm.wasm
+$ data/build/llvm_direct/llvmss_stanford_floatmm.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_floatmm.wasm
+$ data/build/llvm_direct/llvmss_stanford_floatmm.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_floatmm.wasm
+$ data/build/llvm_direct/llvmss_stanford_floatmm.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_floatmm.wasm
+$ data/build/llvm_direct/llvmss_stanford_floatmm.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_floatmm.wasm
+$ data/build/llvm_direct/llvmss_stanford_floatmm.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_floatmm.wasm
+$ data/build/llvm_direct/llvmss_stanford_floatmm.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_floatmm.wasm
+$ data/build/llvm_direct/llvmss_stanford_floatmm.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_floatmm.wasm
+$ data/build/llvm_direct/llvmss_stanford_floatmm.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_floatmm.wasmu
+$ data/build/llvm_direct/llvmss_stanford_floatmm.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_floatmm.wasmu
+$ data/build/llvm_direct/llvmss_stanford_floatmm.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_floatmm.wasmu
+$ data/build/llvm_direct/llvmss_stanford_floatmm.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_floatmm.wasmu
+$ data/build/llvm_direct/llvmss_stanford_floatmm.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_floatmm.wasmu
+$ data/build/llvm_direct/llvmss_stanford_floatmm.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_floatmm.wasmu
+$ data/build/llvm_direct/llvmss_stanford_floatmm.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_floatmm.wasmu
+$ data/build/llvm_direct/llvmss_stanford_floatmm.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_floatmm.wasmu
+$ data/build/llvm_direct/llvmss_stanford_floatmm.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_floatmm.wasmu
+$ data/build/llvm_direct/llvmss_stanford_floatmm.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_floatmm.wasmu
+
+=== Running llvmss_stanford_intmm (both) ===
+$ data/build/llvm_direct/llvmss_stanford_intmm.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_intmm.wasm
+$ data/build/llvm_direct/llvmss_stanford_intmm.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_intmm.wasm
+$ data/build/llvm_direct/llvmss_stanford_intmm.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_intmm.wasm
+$ data/build/llvm_direct/llvmss_stanford_intmm.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_intmm.wasm
+$ data/build/llvm_direct/llvmss_stanford_intmm.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_intmm.wasm
+$ data/build/llvm_direct/llvmss_stanford_intmm.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_intmm.wasm
+$ data/build/llvm_direct/llvmss_stanford_intmm.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_intmm.wasm
+$ data/build/llvm_direct/llvmss_stanford_intmm.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_intmm.wasm
+$ data/build/llvm_direct/llvmss_stanford_intmm.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_intmm.wasm
+$ data/build/llvm_direct/llvmss_stanford_intmm.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_intmm.wasm
+$ data/build/llvm_direct/llvmss_stanford_intmm.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_intmm.wasmu
+$ data/build/llvm_direct/llvmss_stanford_intmm.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_intmm.wasmu
+$ data/build/llvm_direct/llvmss_stanford_intmm.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_intmm.wasmu
+$ data/build/llvm_direct/llvmss_stanford_intmm.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_intmm.wasmu
+$ data/build/llvm_direct/llvmss_stanford_intmm.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_intmm.wasmu
+$ data/build/llvm_direct/llvmss_stanford_intmm.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_intmm.wasmu
+$ data/build/llvm_direct/llvmss_stanford_intmm.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_intmm.wasmu
+$ data/build/llvm_direct/llvmss_stanford_intmm.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_intmm.wasmu
+$ data/build/llvm_direct/llvmss_stanford_intmm.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_intmm.wasmu
+$ data/build/llvm_direct/llvmss_stanford_intmm.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_intmm.wasmu
+
+=== Running llvmss_stanford_oscar (both) ===
+$ data/build/llvm_direct/llvmss_stanford_oscar.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_oscar.wasm
+$ data/build/llvm_direct/llvmss_stanford_oscar.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_oscar.wasm
+$ data/build/llvm_direct/llvmss_stanford_oscar.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_oscar.wasm
+$ data/build/llvm_direct/llvmss_stanford_oscar.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_oscar.wasm
+$ data/build/llvm_direct/llvmss_stanford_oscar.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_oscar.wasm
+$ data/build/llvm_direct/llvmss_stanford_oscar.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_oscar.wasm
+$ data/build/llvm_direct/llvmss_stanford_oscar.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_oscar.wasm
+$ data/build/llvm_direct/llvmss_stanford_oscar.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_oscar.wasm
+$ data/build/llvm_direct/llvmss_stanford_oscar.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_oscar.wasm
+$ data/build/llvm_direct/llvmss_stanford_oscar.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_oscar.wasm
+$ data/build/llvm_direct/llvmss_stanford_oscar.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_oscar.wasmu
+$ data/build/llvm_direct/llvmss_stanford_oscar.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_oscar.wasmu
+$ data/build/llvm_direct/llvmss_stanford_oscar.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_oscar.wasmu
+$ data/build/llvm_direct/llvmss_stanford_oscar.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_oscar.wasmu
+$ data/build/llvm_direct/llvmss_stanford_oscar.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_oscar.wasmu
+$ data/build/llvm_direct/llvmss_stanford_oscar.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_oscar.wasmu
+$ data/build/llvm_direct/llvmss_stanford_oscar.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_oscar.wasmu
+$ data/build/llvm_direct/llvmss_stanford_oscar.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_oscar.wasmu
+$ data/build/llvm_direct/llvmss_stanford_oscar.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_oscar.wasmu
+$ data/build/llvm_direct/llvmss_stanford_oscar.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_oscar.wasmu
+
+=== Running llvmss_stanford_perm (both) ===
+$ data/build/llvm_direct/llvmss_stanford_perm.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_perm.wasm
+$ data/build/llvm_direct/llvmss_stanford_perm.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_perm.wasm
+$ data/build/llvm_direct/llvmss_stanford_perm.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_perm.wasm
+$ data/build/llvm_direct/llvmss_stanford_perm.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_perm.wasm
+$ data/build/llvm_direct/llvmss_stanford_perm.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_perm.wasm
+$ data/build/llvm_direct/llvmss_stanford_perm.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_perm.wasm
+$ data/build/llvm_direct/llvmss_stanford_perm.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_perm.wasm
+$ data/build/llvm_direct/llvmss_stanford_perm.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_perm.wasm
+$ data/build/llvm_direct/llvmss_stanford_perm.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_perm.wasm
+$ data/build/llvm_direct/llvmss_stanford_perm.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_perm.wasm
+$ data/build/llvm_direct/llvmss_stanford_perm.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_perm.wasmu
+$ data/build/llvm_direct/llvmss_stanford_perm.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_perm.wasmu
+$ data/build/llvm_direct/llvmss_stanford_perm.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_perm.wasmu
+$ data/build/llvm_direct/llvmss_stanford_perm.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_perm.wasmu
+$ data/build/llvm_direct/llvmss_stanford_perm.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_perm.wasmu
+$ data/build/llvm_direct/llvmss_stanford_perm.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_perm.wasmu
+$ data/build/llvm_direct/llvmss_stanford_perm.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_perm.wasmu
+$ data/build/llvm_direct/llvmss_stanford_perm.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_perm.wasmu
+$ data/build/llvm_direct/llvmss_stanford_perm.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_perm.wasmu
+$ data/build/llvm_direct/llvmss_stanford_perm.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_perm.wasmu
+
+=== Running llvmss_stanford_puzzle (both) ===
+$ data/build/llvm_direct/llvmss_stanford_puzzle.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_puzzle.wasm
+$ data/build/llvm_direct/llvmss_stanford_puzzle.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_puzzle.wasm
+$ data/build/llvm_direct/llvmss_stanford_puzzle.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_puzzle.wasm
+$ data/build/llvm_direct/llvmss_stanford_puzzle.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_puzzle.wasm
+$ data/build/llvm_direct/llvmss_stanford_puzzle.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_puzzle.wasm
+$ data/build/llvm_direct/llvmss_stanford_puzzle.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_puzzle.wasm
+$ data/build/llvm_direct/llvmss_stanford_puzzle.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_puzzle.wasm
+$ data/build/llvm_direct/llvmss_stanford_puzzle.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_puzzle.wasm
+$ data/build/llvm_direct/llvmss_stanford_puzzle.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_puzzle.wasm
+$ data/build/llvm_direct/llvmss_stanford_puzzle.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_puzzle.wasm
+$ data/build/llvm_direct/llvmss_stanford_puzzle.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_puzzle.wasmu
+$ data/build/llvm_direct/llvmss_stanford_puzzle.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_puzzle.wasmu
+$ data/build/llvm_direct/llvmss_stanford_puzzle.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_puzzle.wasmu
+$ data/build/llvm_direct/llvmss_stanford_puzzle.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_puzzle.wasmu
+$ data/build/llvm_direct/llvmss_stanford_puzzle.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_puzzle.wasmu
+$ data/build/llvm_direct/llvmss_stanford_puzzle.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_puzzle.wasmu
+$ data/build/llvm_direct/llvmss_stanford_puzzle.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_puzzle.wasmu
+$ data/build/llvm_direct/llvmss_stanford_puzzle.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_puzzle.wasmu
+$ data/build/llvm_direct/llvmss_stanford_puzzle.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_puzzle.wasmu
+$ data/build/llvm_direct/llvmss_stanford_puzzle.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_puzzle.wasmu
+
+=== Running llvmss_stanford_queens (both) ===
+$ data/build/llvm_direct/llvmss_stanford_queens.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_queens.wasm
+$ data/build/llvm_direct/llvmss_stanford_queens.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_queens.wasm
+$ data/build/llvm_direct/llvmss_stanford_queens.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_queens.wasm
+$ data/build/llvm_direct/llvmss_stanford_queens.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_queens.wasm
+$ data/build/llvm_direct/llvmss_stanford_queens.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_queens.wasm
+$ data/build/llvm_direct/llvmss_stanford_queens.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_queens.wasm
+$ data/build/llvm_direct/llvmss_stanford_queens.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_queens.wasm
+$ data/build/llvm_direct/llvmss_stanford_queens.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_queens.wasm
+$ data/build/llvm_direct/llvmss_stanford_queens.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_queens.wasm
+$ data/build/llvm_direct/llvmss_stanford_queens.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_queens.wasm
+$ data/build/llvm_direct/llvmss_stanford_queens.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_queens.wasmu
+$ data/build/llvm_direct/llvmss_stanford_queens.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_queens.wasmu
+$ data/build/llvm_direct/llvmss_stanford_queens.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_queens.wasmu
+$ data/build/llvm_direct/llvmss_stanford_queens.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_queens.wasmu
+$ data/build/llvm_direct/llvmss_stanford_queens.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_queens.wasmu
+$ data/build/llvm_direct/llvmss_stanford_queens.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_queens.wasmu
+$ data/build/llvm_direct/llvmss_stanford_queens.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_queens.wasmu
+$ data/build/llvm_direct/llvmss_stanford_queens.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_queens.wasmu
+$ data/build/llvm_direct/llvmss_stanford_queens.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_queens.wasmu
+$ data/build/llvm_direct/llvmss_stanford_queens.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_queens.wasmu
+
+=== Running llvmss_stanford_quicksort (both) ===
+$ data/build/llvm_direct/llvmss_stanford_quicksort.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_quicksort.wasm
+$ data/build/llvm_direct/llvmss_stanford_quicksort.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_quicksort.wasm
+$ data/build/llvm_direct/llvmss_stanford_quicksort.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_quicksort.wasm
+$ data/build/llvm_direct/llvmss_stanford_quicksort.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_quicksort.wasm
+$ data/build/llvm_direct/llvmss_stanford_quicksort.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_quicksort.wasm
+$ data/build/llvm_direct/llvmss_stanford_quicksort.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_quicksort.wasm
+$ data/build/llvm_direct/llvmss_stanford_quicksort.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_quicksort.wasm
+$ data/build/llvm_direct/llvmss_stanford_quicksort.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_quicksort.wasm
+$ data/build/llvm_direct/llvmss_stanford_quicksort.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_quicksort.wasm
+$ data/build/llvm_direct/llvmss_stanford_quicksort.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_quicksort.wasm
+$ data/build/llvm_direct/llvmss_stanford_quicksort.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_quicksort.wasmu
+$ data/build/llvm_direct/llvmss_stanford_quicksort.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_quicksort.wasmu
+$ data/build/llvm_direct/llvmss_stanford_quicksort.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_quicksort.wasmu
+$ data/build/llvm_direct/llvmss_stanford_quicksort.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_quicksort.wasmu
+$ data/build/llvm_direct/llvmss_stanford_quicksort.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_quicksort.wasmu
+$ data/build/llvm_direct/llvmss_stanford_quicksort.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_quicksort.wasmu
+$ data/build/llvm_direct/llvmss_stanford_quicksort.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_quicksort.wasmu
+$ data/build/llvm_direct/llvmss_stanford_quicksort.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_quicksort.wasmu
+$ data/build/llvm_direct/llvmss_stanford_quicksort.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_quicksort.wasmu
+$ data/build/llvm_direct/llvmss_stanford_quicksort.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_quicksort.wasmu
+
+=== Running llvmss_stanford_realmm (both) ===
+$ data/build/llvm_direct/llvmss_stanford_realmm.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_realmm.wasm
+$ data/build/llvm_direct/llvmss_stanford_realmm.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_realmm.wasm
+$ data/build/llvm_direct/llvmss_stanford_realmm.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_realmm.wasm
+$ data/build/llvm_direct/llvmss_stanford_realmm.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_realmm.wasm
+$ data/build/llvm_direct/llvmss_stanford_realmm.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_realmm.wasm
+$ data/build/llvm_direct/llvmss_stanford_realmm.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_realmm.wasm
+$ data/build/llvm_direct/llvmss_stanford_realmm.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_realmm.wasm
+$ data/build/llvm_direct/llvmss_stanford_realmm.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_realmm.wasm
+$ data/build/llvm_direct/llvmss_stanford_realmm.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_realmm.wasm
+$ data/build/llvm_direct/llvmss_stanford_realmm.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_realmm.wasm
+$ data/build/llvm_direct/llvmss_stanford_realmm.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_realmm.wasmu
+$ data/build/llvm_direct/llvmss_stanford_realmm.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_realmm.wasmu
+$ data/build/llvm_direct/llvmss_stanford_realmm.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_realmm.wasmu
+$ data/build/llvm_direct/llvmss_stanford_realmm.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_realmm.wasmu
+$ data/build/llvm_direct/llvmss_stanford_realmm.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_realmm.wasmu
+$ data/build/llvm_direct/llvmss_stanford_realmm.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_realmm.wasmu
+$ data/build/llvm_direct/llvmss_stanford_realmm.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_realmm.wasmu
+$ data/build/llvm_direct/llvmss_stanford_realmm.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_realmm.wasmu
+$ data/build/llvm_direct/llvmss_stanford_realmm.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_realmm.wasmu
+$ data/build/llvm_direct/llvmss_stanford_realmm.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_realmm.wasmu
+
+=== Running llvmss_stanford_towers (both) ===
+$ data/build/llvm_direct/llvmss_stanford_towers.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_towers.wasm
+$ data/build/llvm_direct/llvmss_stanford_towers.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_towers.wasm
+$ data/build/llvm_direct/llvmss_stanford_towers.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_towers.wasm
+$ data/build/llvm_direct/llvmss_stanford_towers.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_towers.wasm
+$ data/build/llvm_direct/llvmss_stanford_towers.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_towers.wasm
+$ data/build/llvm_direct/llvmss_stanford_towers.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_towers.wasm
+$ data/build/llvm_direct/llvmss_stanford_towers.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_towers.wasm
+$ data/build/llvm_direct/llvmss_stanford_towers.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_towers.wasm
+$ data/build/llvm_direct/llvmss_stanford_towers.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_towers.wasm
+$ data/build/llvm_direct/llvmss_stanford_towers.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_towers.wasm
+$ data/build/llvm_direct/llvmss_stanford_towers.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_towers.wasmu
+$ data/build/llvm_direct/llvmss_stanford_towers.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_towers.wasmu
+$ data/build/llvm_direct/llvmss_stanford_towers.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_towers.wasmu
+$ data/build/llvm_direct/llvmss_stanford_towers.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_towers.wasmu
+$ data/build/llvm_direct/llvmss_stanford_towers.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_towers.wasmu
+$ data/build/llvm_direct/llvmss_stanford_towers.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_towers.wasmu
+$ data/build/llvm_direct/llvmss_stanford_towers.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_towers.wasmu
+$ data/build/llvm_direct/llvmss_stanford_towers.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_towers.wasmu
+$ data/build/llvm_direct/llvmss_stanford_towers.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_towers.wasmu
+$ data/build/llvm_direct/llvmss_stanford_towers.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_towers.wasmu
+
+=== Running llvmss_stanford_treesort (both) ===
+$ data/build/llvm_direct/llvmss_stanford_treesort.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_treesort.wasm
+$ data/build/llvm_direct/llvmss_stanford_treesort.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_treesort.wasm
+$ data/build/llvm_direct/llvmss_stanford_treesort.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_treesort.wasm
+$ data/build/llvm_direct/llvmss_stanford_treesort.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_treesort.wasm
+$ data/build/llvm_direct/llvmss_stanford_treesort.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_treesort.wasm
+$ data/build/llvm_direct/llvmss_stanford_treesort.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_treesort.wasm
+$ data/build/llvm_direct/llvmss_stanford_treesort.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_treesort.wasm
+$ data/build/llvm_direct/llvmss_stanford_treesort.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_treesort.wasm
+$ data/build/llvm_direct/llvmss_stanford_treesort.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_treesort.wasm
+$ data/build/llvm_direct/llvmss_stanford_treesort.native
+$ wasmer run --cranelift --mapdir=.:. data/build/llvm_direct/llvmss_stanford_treesort.wasm
+$ data/build/llvm_direct/llvmss_stanford_treesort.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_treesort.wasmu
+$ data/build/llvm_direct/llvmss_stanford_treesort.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_treesort.wasmu
+$ data/build/llvm_direct/llvmss_stanford_treesort.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_treesort.wasmu
+$ data/build/llvm_direct/llvmss_stanford_treesort.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_treesort.wasmu
+$ data/build/llvm_direct/llvmss_stanford_treesort.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_treesort.wasmu
+$ data/build/llvm_direct/llvmss_stanford_treesort.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_treesort.wasmu
+$ data/build/llvm_direct/llvmss_stanford_treesort.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_treesort.wasmu
+$ data/build/llvm_direct/llvmss_stanford_treesort.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_treesort.wasmu
+$ data/build/llvm_direct/llvmss_stanford_treesort.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_treesort.wasmu
+$ data/build/llvm_direct/llvmss_stanford_treesort.native
+$ wasmer run data/build/llvm_direct/aot_cache_wasmer/cranelift/llvmss_stanford_treesort.wasmu
+
+summary output: data/results/wasmer/labels_llvm_direct_from_runnable_wasmer_cranelift.csv
+raw output:     data/results/wasmer/labels_raw_llvm_direct_from_runnable_wasmer_cranelift.csv
