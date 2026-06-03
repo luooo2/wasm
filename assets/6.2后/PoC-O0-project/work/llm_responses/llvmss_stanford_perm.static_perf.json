@@ -1,0 +1,11 @@
+{
+  "diagnosis": "cpu_cycles 2.84x, instructions 1.72x, loads 1.82x and icache 24.9x \u2014 heavy call+spill overhead from O0 recursion.",
+  "passes": [
+    "--inlining-optimizing",
+    "--simplify-locals",
+    "--coalesce-locals",
+    "--dce",
+    "--vacuum"
+  ],
+  "expected_effect": "Inlining + local coalescing cut loads, instructions and call overhead."
+}

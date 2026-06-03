@@ -1,0 +1,11 @@
+{
+  "diagnosis": "icache misses 20.9x dominate; reduce code footprint with DCE after inlining rather than aggressive local expansion.",
+  "passes": [
+    "--inlining-optimizing",
+    "--dce",
+    "--simplify-locals",
+    "--optimize-instructions",
+    "--vacuum"
+  ],
+  "expected_effect": "Smaller hot working set lowers icache misses."
+}

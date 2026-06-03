@@ -1,0 +1,5 @@
+{
+  "diagnosis": "I-cache misses are an extreme 28x with instructions_retired 2.0x, so shrinking the resident hot code is the priority over arithmetic tweaks.",
+  "passes": ["--inlining-optimizing", "--dce", "--optimize-instructions", "--simplify-locals", "--vacuum"],
+  "expected_effect": "Inlining hot recursion-adjacent calls then dce/vacuum reduces code footprint to cut the dominant I-cache misses; peephole trims instructions_retired."
+}

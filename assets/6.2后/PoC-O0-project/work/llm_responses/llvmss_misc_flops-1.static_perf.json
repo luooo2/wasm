@@ -1,0 +1,11 @@
+{
+  "diagnosis": "conditional_branches 5.8x and branch_misses 10x with icache 4.9x \u2014 branch structure clearly dominates.",
+  "passes": [
+    "--remove-unused-brs",
+    "--merge-blocks",
+    "--optimize-instructions",
+    "--simplify-locals",
+    "--vacuum"
+  ],
+  "expected_effect": "Cut conditional branches and mispredicts via CFG simplification."
+}

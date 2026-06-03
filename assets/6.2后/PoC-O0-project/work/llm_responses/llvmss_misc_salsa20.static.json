@@ -1,0 +1,11 @@
+{
+  "diagnosis": "Stream cipher with the highest local_bloat (0.45); rounds reuse many temporaries that O0 spills.",
+  "passes": [
+    "--simplify-locals",
+    "--coalesce-locals",
+    "--local-cse",
+    "--optimize-instructions",
+    "--vacuum"
+  ],
+  "expected_effect": "Collapse redundant locals and CSE the rotate/xor expressions."
+}

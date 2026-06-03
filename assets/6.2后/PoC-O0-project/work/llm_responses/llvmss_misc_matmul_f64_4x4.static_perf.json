@@ -1,0 +1,11 @@
+{
+  "diagnosis": "Loads ratio is already <1 and cpu_cycles 0.85; the win is purely instruction-count via local cleanup and constant folding of the 4x4 indices.",
+  "passes": [
+    "--simplify-locals",
+    "--coalesce-locals",
+    "--precompute",
+    "--optimize-instructions",
+    "--vacuum"
+  ],
+  "expected_effect": "Lower instructions_retired through local elimination + precompute of constant strides."
+}

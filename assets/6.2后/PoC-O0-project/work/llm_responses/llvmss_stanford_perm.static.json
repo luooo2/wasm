@@ -1,0 +1,11 @@
+{
+  "diagnosis": "Recursive permutation generator, call-dense with high compute; O0 leaves all calls out-of-line.",
+  "passes": [
+    "--inlining-optimizing",
+    "--simplify-locals",
+    "--dce",
+    "--optimize-instructions",
+    "--vacuum"
+  ],
+  "expected_effect": "Inline recursion helpers and clean dead/local code."
+}

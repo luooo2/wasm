@@ -1,0 +1,11 @@
+{
+  "diagnosis": "icache 7.7x is the main anomaly; other ratios near 1, so favor inlining + branch cleanup to compact the hot loop.",
+  "passes": [
+    "--inlining-optimizing",
+    "--remove-unused-brs",
+    "--simplify-locals",
+    "--optimize-instructions",
+    "--vacuum"
+  ],
+  "expected_effect": "Tighter hot loop reduces icache misses and instructions."
+}

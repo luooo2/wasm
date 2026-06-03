@@ -1,0 +1,5 @@
+{
+  "diagnosis": "High call_density on a small FP kernel suggests un-inlined helper calls inside the hot loop.",
+  "passes": ["--inlining-optimizing", "--optimize-instructions", "--simplify-locals", "--precompute", "--vacuum"],
+  "expected_effect": "Inlining the helpers removes call overhead and exposes the body to peephole/constant folding, reducing instructions_retired and cycles."
+}

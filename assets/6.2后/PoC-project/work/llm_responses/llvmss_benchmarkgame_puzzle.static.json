@@ -1,0 +1,5 @@
+{
+  "diagnosis": "High loop_count, basic_block_count and compute_density with large average function size suggest a long, redundant hot path with many locals; the main waste is per-iteration instruction count rather than calls.",
+  "passes": ["--optimize-instructions", "--simplify-locals", "--coalesce-locals", "--merge-blocks", "--vacuum"],
+  "expected_effect": "Peephole + local coalescing should cut retired instructions per loop iteration; merge-blocks/vacuum trims the CFG, lowering cycles."
+}

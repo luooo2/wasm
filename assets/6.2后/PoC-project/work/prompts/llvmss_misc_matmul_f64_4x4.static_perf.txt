@@ -1,0 +1,67 @@
+You are a WebAssembly backend-optimization assistant. Your job is NOT to rewrite
+code; it is to choose a short list of Binaryen `wasm-opt` passes that are most
+likely to reduce the runtime of a wasm program executed on the wasmer
+(cranelift) runtime, WITHOUT changing its observable behaviour. A separate
+toolchain will apply the passes, validate the module, run differential tests,
+and benchmark the result; only correct and genuinely-faster candidates are kept.
+
+Prior analysis shows wasm/native slowdown on this benchmark family is dominated
+by execution-path expansion: retired instructions, CPU cycles, I-cache misses,
+and branch counts -- not raw load/store volume. Prefer passes that shrink the
+hot execution path (inlining of small hot calls, control-flow simplification,
+redundant-local / common-subexpression elimination, constant folding, dead-code
+removal, peephole instruction selection).
+
+Program: llvmss_misc_matmul_f64_4x4
+Category: loop_compute (dense 4x4 f64 matrix-multiply kernel)
+
+Baseline:
+- wasm/native runtime ratio (wasmer aot): 2.17x
+- baseline wasm median runtime: 879.1 ms
+
+Static features (qualitative bucket [raw value]):
+- function_count: low [41]
+- loop_count: low [73]
+- basic_block_count: low [426]
+- branch_density: low [0.077]
+- call_density: high [0.021]
+- memory_access_density: medium [0.082]
+- compute_density: low [0.353]
+- avg_func_size: medium [194.9 expr/func]
+
+Perf feedback (wasm/native ratio on wasmer-cranelift; >1 = wasm worse):
+- instructions_retired: 1.95x
+- cpu_cycles: 2.19x
+- L1_icache_load_misses: 9.30x
+- branches_retired: 1.05x
+- branch_misses: 12.78x
+- all_loads_retired: 2.52x
+- all_stores_retired: 2.54x
+
+You may ONLY choose from this allowed pass list (choose at most 5, ordered as they should be applied):
+  inlining
+  inlining-optimizing
+  remove-unused-brs
+  merge-blocks
+  rereloop
+  flatten
+  dce
+  vacuum
+  remove-unused-names
+  remove-unused-module-elements
+  local-cse
+  simplify-locals
+  coalesce-locals
+  code-folding
+  precompute
+  optimize-instructions
+
+Task:
+Choose up to 5 wasm-opt passes from the allowed list above.
+Goal: reduce wasm runtime on wasmer without changing program semantics.
+Return JSON ONLY, no prose outside the JSON, in exactly this schema:
+{
+  "diagnosis": "<one or two sentences: what structural trait likely drives the slowdown>",
+  "passes": ["--pass-a", "--pass-b", "..."],
+  "expected_effect": "<which perf signal you expect to drop and why>"
+}

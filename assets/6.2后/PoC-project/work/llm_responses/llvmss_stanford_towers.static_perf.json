@@ -1,0 +1,5 @@
+{
+  "diagnosis": "cpu_cycles (3.5x) and I-cache misses (27x) far exceed instructions_retired (2.1x), so locality of the recursive call code is the bottleneck.",
+  "passes": ["--inlining-optimizing", "--dce", "--optimize-instructions", "--simplify-locals", "--vacuum"],
+  "expected_effect": "Inlining + dce + vacuum reduce resident recursive code to cut I-cache misses and cycles; peephole/simplify-locals trim instructions_retired."
+}

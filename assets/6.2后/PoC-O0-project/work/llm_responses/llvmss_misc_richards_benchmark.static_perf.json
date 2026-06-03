@@ -1,0 +1,11 @@
+{
+  "diagnosis": "instructions_retired 1.52x, cpu_cycles 1.85x and loads 1.47x \u2014 call overhead and spill traffic dominate.",
+  "passes": [
+    "--inlining-optimizing",
+    "--simplify-locals",
+    "--coalesce-locals",
+    "--dce",
+    "--vacuum"
+  ],
+  "expected_effect": "Inlining + coalesce-locals reduce loads and retired instructions from O0 spills."
+}

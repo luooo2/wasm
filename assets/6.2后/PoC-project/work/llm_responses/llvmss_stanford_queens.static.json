@@ -1,0 +1,5 @@
+{
+  "diagnosis": "High branch_density for an N-queens backtracking search: the hot path is dominated by conditional placement/conflict branches.",
+  "passes": ["--remove-unused-brs", "--merge-blocks", "--optimize-instructions", "--simplify-locals", "--vacuum"],
+  "expected_effect": "Branch and block simplification collapse the backtracking CFG, reducing branches_retired and cycles."
+}

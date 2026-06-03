@@ -1,0 +1,5 @@
+{
+  "diagnosis": "instructions_retired (1.95x) and cpu_cycles (2.19x) are roughly doubled while I-cache misses are 9.3x, so the kernel pays for a longer code path and poor locality from un-inlined helpers.",
+  "passes": ["--inlining-optimizing", "--optimize-instructions", "--local-cse", "--simplify-locals", "--vacuum"],
+  "expected_effect": "Inlining tightens the loop body (fewer I-cache misses), while local-cse + peephole remove repeated address/index computation, lowering instructions_retired and cycles."
+}

@@ -1,0 +1,11 @@
+{
+  "diagnosis": "Recursive solver: high loops/blocks, high local_bloat (0.47) and large functions; both local cleanup and inlining apply.",
+  "passes": [
+    "--inlining-optimizing",
+    "--simplify-locals",
+    "--coalesce-locals",
+    "--optimize-instructions",
+    "--vacuum"
+  ],
+  "expected_effect": "Inline + collapse locals to shrink the recursive body."
+}

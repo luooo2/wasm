@@ -1,0 +1,31 @@
+# Allowed wasm-opt passes for the PoC (Binaryen / wasm-opt v108).
+# The LLM may only select passes from this list. One pass per line.
+# Comments (#) and blank lines are ignored.
+#
+# These cover the backend-optimization categories highlighted in the plan:
+#   - inlining / short-call reduction          : inlining, inlining-optimizing
+#   - control-flow simplification               : remove-unused-brs, merge-blocks,
+#                                                 rereloop, flatten
+#   - dead-code / unused element removal        : dce, vacuum,
+#                                                 remove-unused-names,
+#                                                 remove-unused-module-elements
+#   - redundancy elimination / local handling   : local-cse, simplify-locals,
+#                                                 coalesce-locals, code-folding
+#   - constant folding                          : precompute
+#   - peephole / instruction selection          : optimize-instructions
+inlining
+inlining-optimizing
+remove-unused-brs
+merge-blocks
+rereloop
+flatten
+dce
+vacuum
+remove-unused-names
+remove-unused-module-elements
+local-cse
+simplify-locals
+coalesce-locals
+code-folding
+precompute
+optimize-instructions

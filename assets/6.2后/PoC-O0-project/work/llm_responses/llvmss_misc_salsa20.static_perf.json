@@ -1,0 +1,11 @@
+{
+  "diagnosis": "Most perf ratios are <1 (wasm already faster); only modest local-level cleanup is warranted to avoid regressions.",
+  "passes": [
+    "--simplify-locals",
+    "--coalesce-locals",
+    "--optimize-instructions",
+    "--precompute",
+    "--vacuum"
+  ],
+  "expected_effect": "Small instruction-count reduction without disturbing the already-good codegen."
+}

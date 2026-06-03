@@ -1,0 +1,11 @@
+{
+  "diagnosis": "N-queens backtracking: medium branch density, high block density; CFG cleanup plus peephole.",
+  "passes": [
+    "--remove-unused-brs",
+    "--merge-blocks",
+    "--simplify-locals",
+    "--optimize-instructions",
+    "--vacuum"
+  ],
+  "expected_effect": "Simplify backtracking branches and trim locals."
+}

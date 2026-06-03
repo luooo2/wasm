@@ -1,0 +1,11 @@
+{
+  "diagnosis": "branch_misses 13.2x, icache 26.4x and instructions 1.57x; inline the placement check and simplify branches.",
+  "passes": [
+    "--remove-unused-brs",
+    "--merge-blocks",
+    "--inlining-optimizing",
+    "--simplify-locals",
+    "--optimize-instructions"
+  ],
+  "expected_effect": "Fewer mispredicted branches and a more compact hot path."
+}

@@ -1,0 +1,5 @@
+{
+  "diagnosis": "High compute_density and many loops over an FP-op mix; the cost is arithmetic-bound straight-line code rather than control flow.",
+  "passes": ["--precompute", "--optimize-instructions", "--local-cse", "--simplify-locals", "--vacuum"],
+  "expected_effect": "Constant folding + CSE + peephole reduce redundant FP/index instructions, lowering instructions_retired and cycles."
+}

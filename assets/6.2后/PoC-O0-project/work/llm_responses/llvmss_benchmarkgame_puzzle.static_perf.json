@@ -1,0 +1,11 @@
+{
+  "diagnosis": "Perf shows extreme branch_misses (10.8x) and conditional_branches (2.4x) plus icache pressure (7.1x); branch structure dominates the slowdown.",
+  "passes": [
+    "--remove-unused-brs",
+    "--merge-blocks",
+    "--optimize-instructions",
+    "--simplify-locals",
+    "--coalesce-locals"
+  ],
+  "expected_effect": "Reduce conditional branches and branch mispredicts; coalesce-locals trims local traffic."
+}

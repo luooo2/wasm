@@ -1,0 +1,5 @@
+{
+  "diagnosis": "instructions_retired (1.93x) and cpu_cycles (1.86x) are doubled and I-cache misses are 7.7x, the classic signature of call-heavy code with a bloated instruction footprint.",
+  "passes": ["--inlining-optimizing", "--optimize-instructions", "--simplify-locals", "--dce", "--vacuum"],
+  "expected_effect": "Inlining + dce shrink the resident code (cutting I-cache misses) and peephole/simplify-locals reduce instructions_retired and cycles on the scheduler loop."
+}

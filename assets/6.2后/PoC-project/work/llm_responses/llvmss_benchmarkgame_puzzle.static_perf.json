@@ -1,0 +1,5 @@
+{
+  "diagnosis": "branches_retired (29x) and instructions_retired (7.2x) are massively inflated and I-cache misses are 12x, so the dominant cost is an oversized branchy execution path.",
+  "passes": ["--remove-unused-brs", "--merge-blocks", "--optimize-instructions", "--simplify-locals", "--vacuum"],
+  "expected_effect": "Removing redundant breaks and merging blocks should directly reduce branches_retired and I-cache pressure; peephole + simplify-locals reduce instructions_retired and cycles."
+}

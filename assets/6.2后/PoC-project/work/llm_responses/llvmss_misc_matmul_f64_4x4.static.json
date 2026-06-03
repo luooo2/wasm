@@ -1,0 +1,5 @@
+{
+  "diagnosis": "call_density is high for a small dense kernel, indicating the hot 4x4 multiply path is fragmented across small calls that should be inlined.",
+  "passes": ["--inlining-optimizing", "--optimize-instructions", "--simplify-locals", "--precompute", "--vacuum"],
+  "expected_effect": "Inlining the small hot calls and folding constants should shrink the per-element instruction count and call overhead, reducing instructions_retired and cycles."
+}

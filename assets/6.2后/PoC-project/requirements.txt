@@ -1,0 +1,5 @@
+# Core PoC pipeline uses only the Python standard library.
+# Optional extras:
+matplotlib>=3.7   # results/figures/*.png in s08_summarize.py
+numpy>=1.24       # grouped bar charts in s08_summarize.py
+openai>=1.0       # only needed for s04_llm_select.py --provider openai

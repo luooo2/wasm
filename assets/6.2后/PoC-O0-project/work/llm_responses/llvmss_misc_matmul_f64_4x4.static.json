@@ -1,0 +1,11 @@
+{
+  "diagnosis": "Dense f64 kernel with very high local_bloat (0.44); O0 emits redundant local.get/set around the inner product.",
+  "passes": [
+    "--simplify-locals",
+    "--coalesce-locals",
+    "--local-cse",
+    "--optimize-instructions",
+    "--vacuum"
+  ],
+  "expected_effect": "Eliminate redundant locals and CSE the address arithmetic, cutting retired instructions."
+}

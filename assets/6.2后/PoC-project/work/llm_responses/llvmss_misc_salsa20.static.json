@@ -1,0 +1,5 @@
+{
+  "diagnosis": "Large average function size with medium compute density indicates a straight-line cipher round body where redundant local/index work dominates rather than control flow.",
+  "passes": ["--precompute", "--optimize-instructions", "--local-cse", "--simplify-locals", "--vacuum"],
+  "expected_effect": "Constant folding + common-subexpression elimination on the round function should cut repeated arithmetic, lowering instructions_retired per round."
+}

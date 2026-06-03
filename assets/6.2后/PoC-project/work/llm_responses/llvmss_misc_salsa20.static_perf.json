@@ -1,0 +1,5 @@
+{
+  "diagnosis": "Only modest instructions_retired (1.43x) and cpu_cycles (1.28x) inflation with low I-cache pressure, so the win is incremental peephole/CSE on the arithmetic-heavy round, not structural change.",
+  "passes": ["--optimize-instructions", "--local-cse", "--simplify-locals", "--coalesce-locals", "--vacuum"],
+  "expected_effect": "Peephole + CSE + local coalescing trims redundant ALU ops and local copies, shaving instructions_retired and cycles without touching control flow."
+}

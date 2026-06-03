@@ -1,0 +1,5 @@
+{
+  "diagnosis": "High branch_density and basic_block_count for a small interpreter loop point at a branch-dominated dispatch path.",
+  "passes": ["--remove-unused-brs", "--merge-blocks", "--optimize-instructions", "--simplify-locals", "--vacuum"],
+  "expected_effect": "Branch removal and block merging should collapse the dispatch CFG, reducing branches and cycles in the eval loop."
+}

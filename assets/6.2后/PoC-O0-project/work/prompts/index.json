@@ -1,0 +1,50 @@
+{
+  "llvmss_benchmarkgame_puzzle": {
+    "static": "work/prompts/llvmss_benchmarkgame_puzzle.static.txt",
+    "static_perf": "work/prompts/llvmss_benchmarkgame_puzzle.static_perf.txt"
+  },
+  "llvmss_misc_matmul_f64_4x4": {
+    "static": "work/prompts/llvmss_misc_matmul_f64_4x4.static.txt",
+    "static_perf": "work/prompts/llvmss_misc_matmul_f64_4x4.static_perf.txt"
+  },
+  "llvmss_misc_richards_benchmark": {
+    "static": "work/prompts/llvmss_misc_richards_benchmark.static.txt",
+    "static_perf": "work/prompts/llvmss_misc_richards_benchmark.static_perf.txt"
+  },
+  "llvmss_misc_salsa20": {
+    "static": "work/prompts/llvmss_misc_salsa20.static.txt",
+    "static_perf": "work/prompts/llvmss_misc_salsa20.static_perf.txt"
+  },
+  "llvmss_misc_evalloop": {
+    "static": "work/prompts/llvmss_misc_evalloop.static.txt",
+    "static_perf": "work/prompts/llvmss_misc_evalloop.static_perf.txt"
+  },
+  "llvmss_misc_flops": {
+    "static": "work/prompts/llvmss_misc_flops.static.txt",
+    "static_perf": "work/prompts/llvmss_misc_flops.static_perf.txt"
+  },
+  "llvmss_misc_flops-1": {
+    "static": "work/prompts/llvmss_misc_flops-1.static.txt",
+    "static_perf": "work/prompts/llvmss_misc_flops-1.static_perf.txt"
+  },
+  "llvmss_stanford_floatmm": {
+    "static": "work/prompts/llvmss_stanford_floatmm.static.txt",
+    "static_perf": "work/prompts/llvmss_stanford_floatmm.static_perf.txt"
+  },
+  "llvmss_stanford_puzzle": {
+    "static": "work/prompts/llvmss_stanford_puzzle.static.txt",
+    "static_perf": "work/prompts/llvmss_stanford_puzzle.static_perf.txt"
+  },
+  "llvmss_stanford_perm": {
+    "static": "work/prompts/llvmss_stanford_perm.static.txt",
+    "static_perf": "work/prompts/llvmss_stanford_perm.static_perf.txt"
+  },
+  "llvmss_stanford_towers": {
+    "static": "work/prompts/llvmss_stanford_towers.static.txt",
+    "static_perf": "work/prompts/llvmss_stanford_towers.static_perf.txt"
+  },
+  "llvmss_stanford_queens": {
+    "static": "work/prompts/llvmss_stanford_queens.static.txt",
+    "static_perf": "work/prompts/llvmss_stanford_queens.static_perf.txt"
+  }
+}

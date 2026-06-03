@@ -1,0 +1,11 @@
+{
+  "diagnosis": "FP matmul with high call_density and compute_density; small helpers plus index arithmetic to fold.",
+  "passes": [
+    "--inlining-optimizing",
+    "--simplify-locals",
+    "--optimize-instructions",
+    "--precompute",
+    "--vacuum"
+  ],
+  "expected_effect": "Inline helpers and precompute constant matrix strides."
+}

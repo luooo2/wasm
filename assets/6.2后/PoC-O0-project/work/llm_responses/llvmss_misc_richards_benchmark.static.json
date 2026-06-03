@@ -1,0 +1,11 @@
+{
+  "diagnosis": "Call-dense scheduler with many small functions; O0 never inlines them so every dispatch is a real call.",
+  "passes": [
+    "--inlining-optimizing",
+    "--simplify-locals",
+    "--dce",
+    "--optimize-instructions",
+    "--vacuum"
+  ],
+  "expected_effect": "Inline small hot callees, then clean locals/dead code to drop call overhead."
+}

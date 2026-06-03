@@ -1,0 +1,5 @@
+{
+  "diagnosis": "branches_retired (3.7x), instructions_retired (2.2x) and especially I-cache misses (13.5x) are all elevated, indicating a branchy, code-heavy matmul loop with poor locality.",
+  "passes": ["--remove-unused-brs", "--merge-blocks", "--optimize-instructions", "--simplify-locals", "--vacuum"],
+  "expected_effect": "Branch + block simplification reduce branches_retired and tighten the loop body to lower I-cache misses; peephole/simplify-locals cut instructions_retired."
+}

@@ -1,0 +1,11 @@
+{
+  "diagnosis": "cpu_cycles already 0.63x; branches 1.46x and stores 1.49x suggest local/store traffic from O0 \u2014 coalescing and precompute target it.",
+  "passes": [
+    "--simplify-locals",
+    "--coalesce-locals",
+    "--precompute",
+    "--optimize-instructions",
+    "--vacuum"
+  ],
+  "expected_effect": "Reduce stores and retired instructions from redundant locals."
+}

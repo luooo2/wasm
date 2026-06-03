@@ -1,0 +1,5 @@
+{
+  "diagnosis": "High function_count and call_density for towers-of-hanoi recursion: dominated by frequent small recursive calls.",
+  "passes": ["--inlining-optimizing", "--optimize-instructions", "--simplify-locals", "--coalesce-locals", "--vacuum"],
+  "expected_effect": "Inlining recursive moves cuts call overhead and instructions_retired; local coalescing reduces local traffic and cycles."
+}

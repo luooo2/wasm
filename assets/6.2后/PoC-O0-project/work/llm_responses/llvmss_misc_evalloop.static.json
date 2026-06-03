@@ -1,0 +1,11 @@
+{
+  "diagnosis": "Expression interpreter: high branch_density, call_density and block_density; O0 leaves a large dispatch with unmerged blocks.",
+  "passes": [
+    "--remove-unused-brs",
+    "--merge-blocks",
+    "--simplify-locals",
+    "--optimize-instructions",
+    "--vacuum"
+  ],
+  "expected_effect": "Simplify the dispatch CFG and trim locals."
+}

@@ -1,0 +1,11 @@
+{
+  "diagnosis": "FP kernel variant with high branch_density and compute_density but low local_bloat; peephole + branch cleanup matter most.",
+  "passes": [
+    "--optimize-instructions",
+    "--simplify-locals",
+    "--remove-unused-brs",
+    "--precompute",
+    "--vacuum"
+  ],
+  "expected_effect": "Fold constants and simplify branch structure."
+}

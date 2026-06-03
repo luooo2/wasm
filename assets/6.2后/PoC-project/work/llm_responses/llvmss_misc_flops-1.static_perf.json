@@ -1,0 +1,5 @@
+{
+  "diagnosis": "instructions_retired is already below native (0.90x) yet cpu_cycles is 1.28x and I-cache misses 6.9x, so the gap is code-footprint / locality driven rather than instruction count.",
+  "passes": ["--inlining-optimizing", "--dce", "--optimize-instructions", "--simplify-locals", "--vacuum"],
+  "expected_effect": "Inlining + dce + vacuum shrink the resident hot code to cut I-cache misses and cycles; peephole keeps instruction count from regrowing."
+}

@@ -1,0 +1,5 @@
+{
+  "diagnosis": "cpu_cycles (4.0x) and I-cache misses (26.8x) dominate over instructions_retired (2.3x), the signature of small-call recursion thrashing the code cache.",
+  "passes": ["--inlining-optimizing", "--optimize-instructions", "--simplify-locals", "--dce", "--vacuum"],
+  "expected_effect": "Inlining the hot recursive calls plus dce/vacuum compresses the working code set to cut I-cache misses and cycles; peephole reduces instructions_retired."
+}

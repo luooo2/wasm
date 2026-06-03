@@ -1,0 +1,5 @@
+{
+  "diagnosis": "High branch_density combined with FP matrix-multiply loops suggests loop/index branching overhead around the compute kernel.",
+  "passes": ["--remove-unused-brs", "--optimize-instructions", "--simplify-locals", "--local-cse", "--vacuum"],
+  "expected_effect": "Branch cleanup plus CSE/peephole on the index arithmetic reduce branches_retired and instructions_retired in the matmul loops."
+}

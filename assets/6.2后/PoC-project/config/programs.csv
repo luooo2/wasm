@@ -1,0 +1,13 @@
+program,category,note,wasmer_aot_ratio,wasmer_aot_wasm_ms
+llvmss_benchmarkgame_puzzle,control_flow,array search with hand-rolled rand + nested loops,5.543074,365.852045
+llvmss_misc_matmul_f64_4x4,loop_compute,dense 4x4 f64 matrix-multiply kernel,2.170499,879.119437
+llvmss_misc_richards_benchmark,call_dense,OS task-scheduler simulation with many small calls,1.903721,860.623896
+llvmss_misc_salsa20,loop_compute,salsa20 stream cipher rounds,1.282342,4768.55031
+llvmss_misc_evalloop,control_flow,small expression interpreter loop,1.280142,540.574796
+llvmss_misc_flops,loop_compute,floating-point operation mix benchmark,1.264195,4596.754931
+llvmss_misc_flops-1,loop_compute,floating-point kernel variant 1,1.190099,752.330486
+llvmss_stanford_floatmm,loop_compute,Stanford floating-point matrix multiply,1.445177,271.573571
+llvmss_stanford_puzzle,control_flow,Stanford recursive puzzle solver,1.47619,76.464808
+llvmss_stanford_perm,call_dense,recursive permutation generation,2.900319,23.838639
+llvmss_stanford_towers,call_dense,recursive towers of hanoi,2.01338,12.825508
+llvmss_stanford_queens,control_flow,N-queens backtracking search,3.188724,17.041341

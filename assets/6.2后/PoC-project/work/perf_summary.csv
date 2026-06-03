@@ -1,0 +1,13 @@
+program,ratio_all_loads_retired,ratio_all_stores_retired,ratio_branches_retired,ratio_conditional_branches,ratio_instructions_retired,ratio_cpu_cycles,ratio_l1_icache_load_misses,ratio_branch_misses
+llvmss_benchmarkgame_puzzle,7.796,2.136,29.213,0.1282,7.2249,5.6786,12.2492,15.2572
+llvmss_misc_matmul_f64_4x4,2.5202,2.5402,1.0497,1.0346,1.9538,2.1943,9.2959,12.7839
+llvmss_misc_richards_benchmark,2.0045,1.3455,1.2794,1.611,1.9349,1.855,7.7375,1.051
+llvmss_misc_salsa20,2.3313,2.0083,1.8692,0.0866,1.4324,1.2844,2.6747,949.7678
+llvmss_misc_evalloop,2.0018,1.5134,1.252,36.4179,3.2122,1.3045,8.7455,2.0848
+llvmss_misc_flops,12.4102,863.1592,2.1222,0.0019,1.2113,1.2668,2.8717,5.6762
+llvmss_misc_flops-1,7.831,7.7441,1.0227,1.0054,0.9012,1.2804,6.8596,12.2473
+llvmss_stanford_floatmm,1.0902,1.5797,3.7208,0.0594,2.188,1.4978,13.4609,1.626
+llvmss_stanford_puzzle,2.3796,3.3453,1.1848,1.9684,1.9881,1.62,28.2952,1.1053
+llvmss_stanford_perm,2.6682,2.0016,1.4703,1.5854,2.2594,3.9911,26.8172,4.8066
+llvmss_stanford_towers,2.1111,1.4891,1.5877,4.9771,2.1344,3.4512,27.4072,5.234
+llvmss_stanford_queens,4.2257,2.8005,1.899,0.7264,2.8495,4.8665,29.3305,19.2898

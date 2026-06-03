@@ -1,0 +1,11 @@
+{
+  "diagnosis": "Control-flow heavy with many loops/blocks and high compute density; O0 leaves unmerged blocks and redundant branches.",
+  "passes": [
+    "--remove-unused-brs",
+    "--merge-blocks",
+    "--optimize-instructions",
+    "--simplify-locals",
+    "--vacuum"
+  ],
+  "expected_effect": "Fewer retired branches and instructions via CFG merge + peephole."
+}

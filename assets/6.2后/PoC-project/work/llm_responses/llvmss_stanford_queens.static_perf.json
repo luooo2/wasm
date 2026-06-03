@@ -1,0 +1,5 @@
+{
+  "diagnosis": "branch_misses (19x), cpu_cycles (4.9x) and I-cache misses (29x) all spike with instructions_retired 2.8x: a branch-misprediction-bound backtracking loop with a large code footprint.",
+  "passes": ["--remove-unused-brs", "--merge-blocks", "--optimize-instructions", "--simplify-locals", "--dce"],
+  "expected_effect": "Branch removal + block merging reduce branches and mispredictions, dce shrinks code for fewer I-cache misses, and peephole/simplify-locals cut instructions_retired and cycles."
+}

@@ -1,0 +1,5 @@
+{
+  "diagnosis": "conditional_branches are 36x and instructions_retired 3.2x with I-cache misses 8.7x: the interpreter dispatch is overwhelmingly branch-bound.",
+  "passes": ["--remove-unused-brs", "--merge-blocks", "--optimize-instructions", "--simplify-locals", "--coalesce-locals"],
+  "expected_effect": "Directly attacks the dominant conditional_branches via brs removal + block merging, then peephole/local passes cut the residual instructions_retired and cycles."
+}

@@ -1,0 +1,5 @@
+{
+  "diagnosis": "instructions_retired (1.21x) and cpu_cycles (1.27x) are only mildly inflated, so only conservative arithmetic-level cleanup is justified; aggressive CFG passes risk no gain.",
+  "passes": ["--optimize-instructions", "--local-cse", "--simplify-locals", "--precompute", "--vacuum"],
+  "expected_effect": "Targeted peephole + CSE + constant folding shave the small instruction overhead on the FP kernels without restructuring."
+}

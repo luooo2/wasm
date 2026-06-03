@@ -1,0 +1,506 @@
+{
+  "llvmss_benchmarkgame_puzzle::static": {
+    "program": "llvmss_benchmarkgame_puzzle",
+    "variant": "static",
+    "provider": "manual",
+    "diagnosis": "High loop_count, basic_block_count and compute_density with large average function size suggest a long, redundant hot path with many locals; the main waste is per-iteration instruction count rather than calls.",
+    "expected_effect": "Peephole + local coalescing should cut retired instructions per loop iteration; merge-blocks/vacuum trims the CFG, lowering cycles.",
+    "passes_raw": [
+      "--optimize-instructions",
+      "--simplify-locals",
+      "--coalesce-locals",
+      "--merge-blocks",
+      "--vacuum"
+    ],
+    "passes": [
+      "--optimize-instructions",
+      "--simplify-locals",
+      "--coalesce-locals",
+      "--merge-blocks",
+      "--vacuum"
+    ]
+  },
+  "llvmss_benchmarkgame_puzzle::static_perf": {
+    "program": "llvmss_benchmarkgame_puzzle",
+    "variant": "static_perf",
+    "provider": "manual",
+    "diagnosis": "branches_retired (29x) and instructions_retired (7.2x) are massively inflated and I-cache misses are 12x, so the dominant cost is an oversized branchy execution path.",
+    "expected_effect": "Removing redundant breaks and merging blocks should directly reduce branches_retired and I-cache pressure; peephole + simplify-locals reduce instructions_retired and cycles.",
+    "passes_raw": [
+      "--remove-unused-brs",
+      "--merge-blocks",
+      "--optimize-instructions",
+      "--simplify-locals",
+      "--vacuum"
+    ],
+    "passes": [
+      "--remove-unused-brs",
+      "--merge-blocks",
+      "--optimize-instructions",
+      "--simplify-locals",
+      "--vacuum"
+    ]
+  },
+  "llvmss_misc_matmul_f64_4x4::static": {
+    "program": "llvmss_misc_matmul_f64_4x4",
+    "variant": "static",
+    "provider": "manual",
+    "diagnosis": "call_density is high for a small dense kernel, indicating the hot 4x4 multiply path is fragmented across small calls that should be inlined.",
+    "expected_effect": "Inlining the small hot calls and folding constants should shrink the per-element instruction count and call overhead, reducing instructions_retired and cycles.",
+    "passes_raw": [
+      "--inlining-optimizing",
+      "--optimize-instructions",
+      "--simplify-locals",
+      "--precompute",
+      "--vacuum"
+    ],
+    "passes": [
+      "--inlining-optimizing",
+      "--optimize-instructions",
+      "--simplify-locals",
+      "--precompute",
+      "--vacuum"
+    ]
+  },
+  "llvmss_misc_matmul_f64_4x4::static_perf": {
+    "program": "llvmss_misc_matmul_f64_4x4",
+    "variant": "static_perf",
+    "provider": "manual",
+    "diagnosis": "instructions_retired (1.95x) and cpu_cycles (2.19x) are roughly doubled while I-cache misses are 9.3x, so the kernel pays for a longer code path and poor locality from un-inlined helpers.",
+    "expected_effect": "Inlining tightens the loop body (fewer I-cache misses), while local-cse + peephole remove repeated address/index computation, lowering instructions_retired and cycles.",
+    "passes_raw": [
+      "--inlining-optimizing",
+      "--optimize-instructions",
+      "--local-cse",
+      "--simplify-locals",
+      "--vacuum"
+    ],
+    "passes": [
+      "--inlining-optimizing",
+      "--optimize-instructions",
+      "--local-cse",
+      "--simplify-locals",
+      "--vacuum"
+    ]
+  },
+  "llvmss_misc_richards_benchmark::static": {
+    "program": "llvmss_misc_richards_benchmark",
+    "variant": "static",
+    "provider": "manual",
+    "diagnosis": "Highest function_count in the set with a scheduler structure means many small dispatch functions; inlining and local cleanup should compress the hot path.",
+    "expected_effect": "Inlining small task functions cuts call overhead and instructions_retired; local coalescing reduces local traffic and cycles.",
+    "passes_raw": [
+      "--inlining-optimizing",
+      "--simplify-locals",
+      "--coalesce-locals",
+      "--optimize-instructions",
+      "--vacuum"
+    ],
+    "passes": [
+      "--inlining-optimizing",
+      "--simplify-locals",
+      "--coalesce-locals",
+      "--optimize-instructions",
+      "--vacuum"
+    ]
+  },
+  "llvmss_misc_richards_benchmark::static_perf": {
+    "program": "llvmss_misc_richards_benchmark",
+    "variant": "static_perf",
+    "provider": "manual",
+    "diagnosis": "instructions_retired (1.93x) and cpu_cycles (1.86x) are doubled and I-cache misses are 7.7x, the classic signature of call-heavy code with a bloated instruction footprint.",
+    "expected_effect": "Inlining + dce shrink the resident code (cutting I-cache misses) and peephole/simplify-locals reduce instructions_retired and cycles on the scheduler loop.",
+    "passes_raw": [
+      "--inlining-optimizing",
+      "--optimize-instructions",
+      "--simplify-locals",
+      "--dce",
+      "--vacuum"
+    ],
+    "passes": [
+      "--inlining-optimizing",
+      "--optimize-instructions",
+      "--simplify-locals",
+      "--dce",
+      "--vacuum"
+    ]
+  },
+  "llvmss_misc_salsa20::static": {
+    "program": "llvmss_misc_salsa20",
+    "variant": "static",
+    "provider": "manual",
+    "diagnosis": "Large average function size with medium compute density indicates a straight-line cipher round body where redundant local/index work dominates rather than control flow.",
+    "expected_effect": "Constant folding + common-subexpression elimination on the round function should cut repeated arithmetic, lowering instructions_retired per round.",
+    "passes_raw": [
+      "--precompute",
+      "--optimize-instructions",
+      "--local-cse",
+      "--simplify-locals",
+      "--vacuum"
+    ],
+    "passes": [
+      "--precompute",
+      "--optimize-instructions",
+      "--local-cse",
+      "--simplify-locals",
+      "--vacuum"
+    ]
+  },
+  "llvmss_misc_salsa20::static_perf": {
+    "program": "llvmss_misc_salsa20",
+    "variant": "static_perf",
+    "provider": "manual",
+    "diagnosis": "Only modest instructions_retired (1.43x) and cpu_cycles (1.28x) inflation with low I-cache pressure, so the win is incremental peephole/CSE on the arithmetic-heavy round, not structural change.",
+    "expected_effect": "Peephole + CSE + local coalescing trims redundant ALU ops and local copies, shaving instructions_retired and cycles without touching control flow.",
+    "passes_raw": [
+      "--optimize-instructions",
+      "--local-cse",
+      "--simplify-locals",
+      "--coalesce-locals",
+      "--vacuum"
+    ],
+    "passes": [
+      "--optimize-instructions",
+      "--local-cse",
+      "--simplify-locals",
+      "--coalesce-locals",
+      "--vacuum"
+    ]
+  },
+  "llvmss_misc_evalloop::static": {
+    "program": "llvmss_misc_evalloop",
+    "variant": "static",
+    "provider": "manual",
+    "diagnosis": "High branch_density and basic_block_count for a small interpreter loop point at a branch-dominated dispatch path.",
+    "expected_effect": "Branch removal and block merging should collapse the dispatch CFG, reducing branches and cycles in the eval loop.",
+    "passes_raw": [
+      "--remove-unused-brs",
+      "--merge-blocks",
+      "--optimize-instructions",
+      "--simplify-locals",
+      "--vacuum"
+    ],
+    "passes": [
+      "--remove-unused-brs",
+      "--merge-blocks",
+      "--optimize-instructions",
+      "--simplify-locals",
+      "--vacuum"
+    ]
+  },
+  "llvmss_misc_evalloop::static_perf": {
+    "program": "llvmss_misc_evalloop",
+    "variant": "static_perf",
+    "provider": "manual",
+    "diagnosis": "conditional_branches are 36x and instructions_retired 3.2x with I-cache misses 8.7x: the interpreter dispatch is overwhelmingly branch-bound.",
+    "expected_effect": "Directly attacks the dominant conditional_branches via brs removal + block merging, then peephole/local passes cut the residual instructions_retired and cycles.",
+    "passes_raw": [
+      "--remove-unused-brs",
+      "--merge-blocks",
+      "--optimize-instructions",
+      "--simplify-locals",
+      "--coalesce-locals"
+    ],
+    "passes": [
+      "--remove-unused-brs",
+      "--merge-blocks",
+      "--optimize-instructions",
+      "--simplify-locals",
+      "--coalesce-locals"
+    ]
+  },
+  "llvmss_misc_flops::static": {
+    "program": "llvmss_misc_flops",
+    "variant": "static",
+    "provider": "manual",
+    "diagnosis": "High compute_density and many loops over an FP-op mix; the cost is arithmetic-bound straight-line code rather than control flow.",
+    "expected_effect": "Constant folding + CSE + peephole reduce redundant FP/index instructions, lowering instructions_retired and cycles.",
+    "passes_raw": [
+      "--precompute",
+      "--optimize-instructions",
+      "--local-cse",
+      "--simplify-locals",
+      "--vacuum"
+    ],
+    "passes": [
+      "--precompute",
+      "--optimize-instructions",
+      "--local-cse",
+      "--simplify-locals",
+      "--vacuum"
+    ]
+  },
+  "llvmss_misc_flops::static_perf": {
+    "program": "llvmss_misc_flops",
+    "variant": "static_perf",
+    "provider": "manual",
+    "diagnosis": "instructions_retired (1.21x) and cpu_cycles (1.27x) are only mildly inflated, so only conservative arithmetic-level cleanup is justified; aggressive CFG passes risk no gain.",
+    "expected_effect": "Targeted peephole + CSE + constant folding shave the small instruction overhead on the FP kernels without restructuring.",
+    "passes_raw": [
+      "--optimize-instructions",
+      "--local-cse",
+      "--simplify-locals",
+      "--precompute",
+      "--vacuum"
+    ],
+    "passes": [
+      "--optimize-instructions",
+      "--local-cse",
+      "--simplify-locals",
+      "--precompute",
+      "--vacuum"
+    ]
+  },
+  "llvmss_misc_flops-1::static": {
+    "program": "llvmss_misc_flops-1",
+    "variant": "static",
+    "provider": "manual",
+    "diagnosis": "High call_density on a small FP kernel suggests un-inlined helper calls inside the hot loop.",
+    "expected_effect": "Inlining the helpers removes call overhead and exposes the body to peephole/constant folding, reducing instructions_retired and cycles.",
+    "passes_raw": [
+      "--inlining-optimizing",
+      "--optimize-instructions",
+      "--simplify-locals",
+      "--precompute",
+      "--vacuum"
+    ],
+    "passes": [
+      "--inlining-optimizing",
+      "--optimize-instructions",
+      "--simplify-locals",
+      "--precompute",
+      "--vacuum"
+    ]
+  },
+  "llvmss_misc_flops-1::static_perf": {
+    "program": "llvmss_misc_flops-1",
+    "variant": "static_perf",
+    "provider": "manual",
+    "diagnosis": "instructions_retired is already below native (0.90x) yet cpu_cycles is 1.28x and I-cache misses 6.9x, so the gap is code-footprint / locality driven rather than instruction count.",
+    "expected_effect": "Inlining + dce + vacuum shrink the resident hot code to cut I-cache misses and cycles; peephole keeps instruction count from regrowing.",
+    "passes_raw": [
+      "--inlining-optimizing",
+      "--dce",
+      "--optimize-instructions",
+      "--simplify-locals",
+      "--vacuum"
+    ],
+    "passes": [
+      "--inlining-optimizing",
+      "--dce",
+      "--optimize-instructions",
+      "--simplify-locals",
+      "--vacuum"
+    ]
+  },
+  "llvmss_stanford_floatmm::static": {
+    "program": "llvmss_stanford_floatmm",
+    "variant": "static",
+    "provider": "manual",
+    "diagnosis": "High branch_density combined with FP matrix-multiply loops suggests loop/index branching overhead around the compute kernel.",
+    "expected_effect": "Branch cleanup plus CSE/peephole on the index arithmetic reduce branches_retired and instructions_retired in the matmul loops.",
+    "passes_raw": [
+      "--remove-unused-brs",
+      "--optimize-instructions",
+      "--simplify-locals",
+      "--local-cse",
+      "--vacuum"
+    ],
+    "passes": [
+      "--remove-unused-brs",
+      "--optimize-instructions",
+      "--simplify-locals",
+      "--local-cse",
+      "--vacuum"
+    ]
+  },
+  "llvmss_stanford_floatmm::static_perf": {
+    "program": "llvmss_stanford_floatmm",
+    "variant": "static_perf",
+    "provider": "manual",
+    "diagnosis": "branches_retired (3.7x), instructions_retired (2.2x) and especially I-cache misses (13.5x) are all elevated, indicating a branchy, code-heavy matmul loop with poor locality.",
+    "expected_effect": "Branch + block simplification reduce branches_retired and tighten the loop body to lower I-cache misses; peephole/simplify-locals cut instructions_retired.",
+    "passes_raw": [
+      "--remove-unused-brs",
+      "--merge-blocks",
+      "--optimize-instructions",
+      "--simplify-locals",
+      "--vacuum"
+    ],
+    "passes": [
+      "--remove-unused-brs",
+      "--merge-blocks",
+      "--optimize-instructions",
+      "--simplify-locals",
+      "--vacuum"
+    ]
+  },
+  "llvmss_stanford_puzzle::static": {
+    "program": "llvmss_stanford_puzzle",
+    "variant": "static",
+    "provider": "manual",
+    "diagnosis": "High function_count, basic_block_count and compute_density for a recursive solver point at a large hot path with redundant locals.",
+    "expected_effect": "Peephole + local coalescing + block merging reduce per-call instruction count and CFG size, lowering instructions_retired and cycles.",
+    "passes_raw": [
+      "--optimize-instructions",
+      "--simplify-locals",
+      "--coalesce-locals",
+      "--merge-blocks",
+      "--vacuum"
+    ],
+    "passes": [
+      "--optimize-instructions",
+      "--simplify-locals",
+      "--coalesce-locals",
+      "--merge-blocks",
+      "--vacuum"
+    ]
+  },
+  "llvmss_stanford_puzzle::static_perf": {
+    "program": "llvmss_stanford_puzzle",
+    "variant": "static_perf",
+    "provider": "manual",
+    "diagnosis": "I-cache misses are an extreme 28x with instructions_retired 2.0x, so shrinking the resident hot code is the priority over arithmetic tweaks.",
+    "expected_effect": "Inlining hot recursion-adjacent calls then dce/vacuum reduces code footprint to cut the dominant I-cache misses; peephole trims instructions_retired.",
+    "passes_raw": [
+      "--inlining-optimizing",
+      "--dce",
+      "--optimize-instructions",
+      "--simplify-locals",
+      "--vacuum"
+    ],
+    "passes": [
+      "--inlining-optimizing",
+      "--dce",
+      "--optimize-instructions",
+      "--simplify-locals",
+      "--vacuum"
+    ]
+  },
+  "llvmss_stanford_perm::static": {
+    "program": "llvmss_stanford_perm",
+    "variant": "static",
+    "provider": "manual",
+    "diagnosis": "High function_count and call_density with high branch_density: recursive permutation with frequent small calls and branchy recursion guards.",
+    "expected_effect": "Inlining recursive helpers and trimming branches reduce call overhead and branches_retired, lowering cycles.",
+    "passes_raw": [
+      "--inlining-optimizing",
+      "--remove-unused-brs",
+      "--optimize-instructions",
+      "--simplify-locals",
+      "--vacuum"
+    ],
+    "passes": [
+      "--inlining-optimizing",
+      "--remove-unused-brs",
+      "--optimize-instructions",
+      "--simplify-locals",
+      "--vacuum"
+    ]
+  },
+  "llvmss_stanford_perm::static_perf": {
+    "program": "llvmss_stanford_perm",
+    "variant": "static_perf",
+    "provider": "manual",
+    "diagnosis": "cpu_cycles (4.0x) and I-cache misses (26.8x) dominate over instructions_retired (2.3x), the signature of small-call recursion thrashing the code cache.",
+    "expected_effect": "Inlining the hot recursive calls plus dce/vacuum compresses the working code set to cut I-cache misses and cycles; peephole reduces instructions_retired.",
+    "passes_raw": [
+      "--inlining-optimizing",
+      "--optimize-instructions",
+      "--simplify-locals",
+      "--dce",
+      "--vacuum"
+    ],
+    "passes": [
+      "--inlining-optimizing",
+      "--optimize-instructions",
+      "--simplify-locals",
+      "--dce",
+      "--vacuum"
+    ]
+  },
+  "llvmss_stanford_towers::static": {
+    "program": "llvmss_stanford_towers",
+    "variant": "static",
+    "provider": "manual",
+    "diagnosis": "High function_count and call_density for towers-of-hanoi recursion: dominated by frequent small recursive calls.",
+    "expected_effect": "Inlining recursive moves cuts call overhead and instructions_retired; local coalescing reduces local traffic and cycles.",
+    "passes_raw": [
+      "--inlining-optimizing",
+      "--optimize-instructions",
+      "--simplify-locals",
+      "--coalesce-locals",
+      "--vacuum"
+    ],
+    "passes": [
+      "--inlining-optimizing",
+      "--optimize-instructions",
+      "--simplify-locals",
+      "--coalesce-locals",
+      "--vacuum"
+    ]
+  },
+  "llvmss_stanford_towers::static_perf": {
+    "program": "llvmss_stanford_towers",
+    "variant": "static_perf",
+    "provider": "manual",
+    "diagnosis": "cpu_cycles (3.5x) and I-cache misses (27x) far exceed instructions_retired (2.1x), so locality of the recursive call code is the bottleneck.",
+    "expected_effect": "Inlining + dce + vacuum reduce resident recursive code to cut I-cache misses and cycles; peephole/simplify-locals trim instructions_retired.",
+    "passes_raw": [
+      "--inlining-optimizing",
+      "--dce",
+      "--optimize-instructions",
+      "--simplify-locals",
+      "--vacuum"
+    ],
+    "passes": [
+      "--inlining-optimizing",
+      "--dce",
+      "--optimize-instructions",
+      "--simplify-locals",
+      "--vacuum"
+    ]
+  },
+  "llvmss_stanford_queens::static": {
+    "program": "llvmss_stanford_queens",
+    "variant": "static",
+    "provider": "manual",
+    "diagnosis": "High branch_density for an N-queens backtracking search: the hot path is dominated by conditional placement/conflict branches.",
+    "expected_effect": "Branch and block simplification collapse the backtracking CFG, reducing branches_retired and cycles.",
+    "passes_raw": [
+      "--remove-unused-brs",
+      "--merge-blocks",
+      "--optimize-instructions",
+      "--simplify-locals",
+      "--vacuum"
+    ],
+    "passes": [
+      "--remove-unused-brs",
+      "--merge-blocks",
+      "--optimize-instructions",
+      "--simplify-locals",
+      "--vacuum"
+    ]
+  },
+  "llvmss_stanford_queens::static_perf": {
+    "program": "llvmss_stanford_queens",
+    "variant": "static_perf",
+    "provider": "manual",
+    "diagnosis": "branch_misses (19x), cpu_cycles (4.9x) and I-cache misses (29x) all spike with instructions_retired 2.8x: a branch-misprediction-bound backtracking loop with a large code footprint.",
+    "expected_effect": "Branch removal + block merging reduce branches and mispredictions, dce shrinks code for fewer I-cache misses, and peephole/simplify-locals cut instructions_retired and cycles.",
+    "passes_raw": [
+      "--remove-unused-brs",
+      "--merge-blocks",
+      "--optimize-instructions",
+      "--simplify-locals",
+      "--dce"
+    ],
+    "passes": [
+      "--remove-unused-brs",
+      "--merge-blocks",
+      "--optimize-instructions",
+      "--simplify-locals",
+      "--dce"
+    ]
+  }
+}

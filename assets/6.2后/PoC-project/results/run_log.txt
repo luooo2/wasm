@@ -1,0 +1,100 @@
+
+=== [1/12] llvmss_benchmarkgame_puzzle (control_flow) ===
+  raw              ratio=5.5623   vsRaw=0.0      vsO3=-0.0074  [OK] 
+  O2               ratio=5.5997   vsRaw=-0.0067  vsO3=-0.0142  [OK] 
+  O3               ratio=5.5216   vsRaw=0.0073   vsO3=0.0      [OK] 
+  random           ratio=5.6341   vsRaw=-0.0129  vsO3=-0.0204  [OK] 
+  llm_static       ratio=5.5262   vsRaw=0.0065   vsO3=-0.0008  [OK] 
+  llm_static_perf  ratio=5.5499   vsRaw=0.0022   vsO3=-0.0051  [OK] 
+
+=== [2/12] llvmss_misc_matmul_f64_4x4 (loop_compute) ===
+  raw              ratio=2.1708   vsRaw=0.0      vsO3=-0.024   [OK] 
+  O2               ratio=2.1157   vsRaw=0.0253   vsO3=0.002    [OK] 
+  O3               ratio=2.1199   vsRaw=0.0234   vsO3=0.0      [OK] 
+  random           ratio=2.17     vsRaw=0.0004   vsO3=-0.0236  [OK] 
+  llm_static       ratio=2.174    vsRaw=-0.0015  vsO3=-0.0255  [OK] 
+  llm_static_perf  ratio=2.2437   vsRaw=-0.0336  vsO3=-0.0584  [OK] 
+
+=== [3/12] llvmss_misc_richards_benchmark (call_dense) ===
+  raw              ratio=1.8285   vsRaw=0.0      vsO3=0.0094   [OK] 
+  O2               ratio=1.7635   vsRaw=0.0355   vsO3=0.0446   [ACCEPT] 
+  O3               ratio=1.8458   vsRaw=-0.0095  vsO3=0.0      [OK] 
+  random           ratio=         vsRaw=         vsO3=         [BAD] build failed: Fatal: IR must be flat: run --flatten beforehand (tees are not allowed, only sets, in scheduleFatal: Fatal: IR must be flat: run --flatten beforehand (instructions must only have constant expressions, local.get, or unreachable as children, in _start)
+Fatal:
+  llm_static       ratio=1.7314   vsRaw=0.0531   vsO3=0.062    [ACCEPT] 
+  llm_static_perf  ratio=1.7392   vsRaw=0.0488   vsO3=0.0578   [ACCEPT] 
+
+=== [4/12] llvmss_misc_salsa20 (loop_compute) ===
+  raw              ratio=1.2826   vsRaw=0.0      vsO3=-0.1297  [OK] 
+  O2               ratio=1.1978   vsRaw=0.0661   vsO3=-0.0551  [ACCEPT] 
+  O3               ratio=1.1353   vsRaw=0.1148   vsO3=0.0      [ACCEPT] 
+  random           ratio=1.1583   vsRaw=0.0969   vsO3=-0.0203  [ACCEPT] 
+  llm_static       ratio=1.2269   vsRaw=0.0434   vsO3=-0.0807  [ACCEPT] 
+  llm_static_perf  ratio=1.2195   vsRaw=0.0492   vsO3=-0.0741  [ACCEPT] 
+
+=== [5/12] llvmss_misc_evalloop (control_flow) ===
+  raw              ratio=1.2808   vsRaw=0.0      vsO3=-0.2045  [OK] 
+  O2               ratio=1.0631   vsRaw=0.17     vsO3=0.0002   [ACCEPT] 
+  O3               ratio=1.0633   vsRaw=0.1698   vsO3=0.0      [ACCEPT] 
+  random           ratio=1.4174   vsRaw=-0.1067  vsO3=-0.333   [OK] 
+  llm_static       ratio=1.2887   vsRaw=-0.0062  vsO3=-0.212   [OK] 
+  llm_static_perf  ratio=1.287    vsRaw=-0.0049  vsO3=-0.2104  [OK] 
+
+=== [6/12] llvmss_misc_flops (loop_compute) ===
+  raw              ratio=1.2635   vsRaw=0.0      vsO3=-0.0343  [OK] 
+  O2               ratio=1.2242   vsRaw=0.0311   vsO3=-0.0021  [ACCEPT] 
+  O3               ratio=1.2216   vsRaw=0.0332   vsO3=0.0      [ACCEPT] 
+  random           ratio=1.2232   vsRaw=0.0319   vsO3=-0.0013  [ACCEPT] 
+  llm_static       ratio=1.2618   vsRaw=0.0013   vsO3=-0.033   [OK] 
+  llm_static_perf  ratio=1.2613   vsRaw=0.0018   vsO3=-0.0325  [OK] 
+
+=== [7/12] llvmss_misc_flops-1 (loop_compute) ===
+  raw              ratio=1.1771   vsRaw=0.0      vsO3=0.0117   [OK] 
+  O2               ratio=1.1707   vsRaw=0.0055   vsO3=0.0171   [OK] 
+  O3               ratio=1.1911   vsRaw=-0.0119  vsO3=0.0      [OK] 
+  random           ratio=1.205    vsRaw=-0.0237  vsO3=-0.0117  [OK] 
+  llm_static       ratio=1.2066   vsRaw=-0.025   vsO3=-0.013   [OK] 
+  llm_static_perf  ratio=1.1665   vsRaw=0.009    vsO3=0.0207   [OK] 
+
+=== [8/12] llvmss_stanford_floatmm (loop_compute) ===
+  raw              ratio=1.4441   vsRaw=0.0      vsO3=0.1491   [OK] 
+  O2               ratio=1.6501   vsRaw=-0.1427  vsO3=0.0277   [OK] 
+  O3               ratio=1.6972   vsRaw=-0.1753  vsO3=0.0      [OK] 
+  random           ratio=         vsRaw=         vsO3=         [BAD] build failed: Fatal: IR must be flat: run --flatten beforehand (Fatal: Fatal: Fatal: IR must be flat: run --flatten beforehand (Fatal: instructions must only have constant expressions, local.get, or unreachable as childrenIR must be flat: run --flatten beforehand (instructions must only have constant expressions, local.get, or unreachable as children, in IR must be flat: run --flatten beforehand (instructions must only have constant expressions, local.get, or unreachable as childreninstructions must only have constant expressions, local.get, or unreachable as children, in __clock_gettime)Fatal: , in IR must be flat: run --flatten beforehand (tees are not allowed, only sets, in llvm_bench_main)
+Fatal: IR must be flat: run --flatten beforehand (instructions must only have constant expressions, local.get, or unreachable as children, in
+  llm_static       ratio=1.578    vsRaw=-0.0927  vsO3=0.0703   [OK] 
+  llm_static_perf  ratio=1.554    vsRaw=-0.0761  vsO3=0.0844   [OK] 
+
+=== [9/12] llvmss_stanford_puzzle (control_flow) ===
+  raw              ratio=1.4842   vsRaw=0.0      vsO3=-0.0007  [OK] 
+  O2               ratio=1.6689   vsRaw=-0.1245  vsO3=-0.1253  [OK] 
+  O3               ratio=1.4831   vsRaw=0.0007   vsO3=0.0      [OK] 
+  random           ratio=1.5141   vsRaw=-0.0202  vsO3=-0.0209  [OK] 
+  llm_static       ratio=1.4754   vsRaw=0.0059   vsO3=0.0052   [OK] 
+  llm_static_perf  ratio=1.5629   vsRaw=-0.0531  vsO3=-0.0538  [OK] 
+
+=== [10/12] llvmss_stanford_perm (call_dense) ===
+  raw              ratio=2.9108   vsRaw=0.0      vsO3=0.2229   [OK] 
+  O2               ratio=3.6935   vsRaw=-0.2689  vsO3=0.0139   [OK] 
+  O3               ratio=3.7457   vsRaw=-0.2868  vsO3=0.0      [OK] 
+  random           ratio=3.6867   vsRaw=-0.2666  vsO3=0.0157   [OK] 
+  llm_static       ratio=3.7063   vsRaw=-0.2733  vsO3=0.0105   [OK] 
+  llm_static_perf  ratio=3.6678   vsRaw=-0.2601  vsO3=0.0208   [OK] 
+
+=== [11/12] llvmss_stanford_towers (call_dense) ===
+  raw              ratio=2.0721   vsRaw=0.0      vsO3=-0.1034  [OK] 
+  O2               ratio=1.8823   vsRaw=0.0916   vsO3=-0.0023  [ACCEPT] 
+  O3               ratio=1.878    vsRaw=0.0937   vsO3=0.0      [ACCEPT] 
+  random           ratio=1.9256   vsRaw=0.0707   vsO3=-0.0254  [ACCEPT] 
+  llm_static       ratio=1.933    vsRaw=0.0671   vsO3=-0.0293  [ACCEPT] 
+  llm_static_perf  ratio=1.9413   vsRaw=0.0631   vsO3=-0.0337  [ACCEPT] 
+
+=== [12/12] llvmss_stanford_queens (control_flow) ===
+  raw              ratio=3.1988   vsRaw=0.0      vsO3=-0.0165  [OK] 
+  O2               ratio=3.167    vsRaw=0.0099   vsO3=-0.0063  [OK] 
+  O3               ratio=3.147    vsRaw=0.0162   vsO3=0.0      [OK] 
+  random           ratio=3.2226   vsRaw=-0.0074  vsO3=-0.024   [OK] 
+  llm_static       ratio=3.1342   vsRaw=0.0202   vsO3=0.0041   [OK] 
+  llm_static_perf  ratio=3.1581   vsRaw=0.0127   vsO3=-0.0035  [OK] 
+
+[ok] wrote 72 rows to /home/luomz/wasm/assets/6.2后/PoC-project/results/results.csv in 877.8s

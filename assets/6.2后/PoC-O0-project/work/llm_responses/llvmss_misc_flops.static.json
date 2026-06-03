@@ -1,0 +1,11 @@
+{
+  "diagnosis": "FP mix with extreme local_bloat (0.51) and large average function size; O0 spills heavily.",
+  "passes": [
+    "--simplify-locals",
+    "--coalesce-locals",
+    "--local-cse",
+    "--optimize-instructions",
+    "--vacuum"
+  ],
+  "expected_effect": "Major local elimination + CSE on the arithmetic-heavy body."
+}

@@ -1,0 +1,91 @@
+You are a WebAssembly backend-optimization expert. Your task is to select a
+short sequence of Binaryen `wasm-opt` passes that maximally reduce the runtime
+of a wasm module compiled with **-O0** (no optimizations) when executed via
+the wasmer/cranelift AOT runtime.
+
+CRITICAL CONTEXT — the baseline is -O0 compiled wasm:
+Unlike -O2 baselines, an -O0 wasm module is full of redundant structure that
+wasm-opt can eliminate cheaply and with high impact:
+  1. LOCAL BLOAT: the compiler emits one local per SSA value, giving thousands
+     of redundant local.get/local.set pairs. Passes: simplify-locals,
+     coalesce-locals, merge-locals, local-cse.
+  2. NO INLINING: every call is a true function call, even trivial 1-3 line
+     helpers. Inlining them eliminates call overhead and enables follow-on
+     peephole opts. Passes: inlining, inlining-optimizing.
+  3. DEAD CODE: no DCE was run; dead stores and unreachable blocks survive.
+     Passes: dce, vacuum, remove-unused-names.
+  4. UNMERGED CONTROL FLOW: trivial fall-through blocks are not merged; branch
+     chains are not simplified. Passes: remove-unused-brs, merge-blocks.
+  5. NO CONSTANT FOLDING / PEEPHOLE: arithmetic on constants, identity
+     operations, and strength-reduction opportunities are untouched.
+     Passes: precompute, optimize-instructions.
+  6. UNOPTIMIZED SSA FORM: the SSA structure is not normalised; ssa pass +
+     follow-on simplification can unlock further redundancy.
+     Passes: ssa (then simplify-locals / local-cse).
+
+Pass-ordering matters. Recommended ordering principles:
+  a. Inlining first (exposes more opportunities to later passes).
+  b. DCE / vacuum early (eliminates dead code before expensive analyses).
+  c. Local simplification (simplify-locals, coalesce-locals) after inlining.
+  d. Instruction-level peephole (optimize-instructions, precompute) near end.
+  e. Final vacuum to clean up any newly-created dead code.
+
+Prior analysis of this benchmark family shows wasm/native slowdown is dominated
+by instruction count expansion and I-cache pressure — both directly addressable
+by inlining + local cleanup + control-flow simplification on O0 code.
+
+Do NOT rewrite the program. Only choose from the allowed pass list.
+A toolchain will apply the passes, validate the module, run differential
+correctness tests, and benchmark the result; only correct and faster candidates
+are accepted.
+
+Program: llvmss_misc_matmul_f64_4x4
+Category: loop_compute (dense 4x4 f64 matrix-multiply kernel)
+
+O0 Baseline:
+- wasm/native runtime ratio (wasmer AOT, -O0 wasm): 0.85x
+- O0 raw wasm median runtime: 2826.0 ms
+
+Static features of the -O0 wasm (qualitative bucket [raw value]):
+- function_count: medium [43]
+- loop_count: low [76]
+- basic_block_count: low [436]
+- branch_density: low [0.068]
+- call_density: medium [0.016]
+- memory_access_density: high [0.098]
+- compute_density: low [0.305]
+- avg_func_size: medium [212.1 expr/func]
+- local_bloat (O0): high [0.438]    ← fraction of exprs that are local.get/set
+- block_density (O0): low [0.048]  ← unmerged basic block density
+
+You may ONLY choose from the allowed pass list below (choose at most 5, ordered as they should be applied):
+  inlining
+  inlining-optimizing
+  remove-unused-brs
+  merge-blocks
+  rereloop
+  flatten
+  dce
+  vacuum
+  remove-unused-names
+  remove-unused-module-elements
+  local-cse
+  simplify-locals
+  coalesce-locals
+  merge-locals
+  reorder-locals
+  code-folding
+  precompute
+  optimize-instructions
+  ssa
+
+Task:
+Select up to 5 wasm-opt passes from the allowed list above, ordered for
+maximum effect on this -O0 compiled module.
+Goal: reduce wasm runtime on wasmer/cranelift without changing program semantics.
+Return ONLY a JSON object in exactly this schema (no prose outside the JSON):
+{
+  "diagnosis": "<1-2 sentences: which O0-specific redundancy dominates this program>",
+  "passes": ["--pass-a", "--pass-b", "..."],
+  "expected_effect": "<which perf signal you expect to drop and why>"
+}

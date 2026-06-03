@@ -1,0 +1,11 @@
+{
+  "diagnosis": "conditional_branches blow up 13.4x and icache 9.5x \u2014 the interpreter dispatch is the bottleneck; inlining handlers plus CFG merge should help most.",
+  "passes": [
+    "--inlining-optimizing",
+    "--remove-unused-brs",
+    "--merge-blocks",
+    "--simplify-locals",
+    "--optimize-instructions"
+  ],
+  "expected_effect": "Inline small op handlers and merge branch chains to cut conditional branches."
+}

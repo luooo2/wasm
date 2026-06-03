@@ -1,0 +1,11 @@
+{
+  "diagnosis": "instructions 1.96x, cpu 2.46x, stores 1.86x and branch_misses 8.75x; recursion spill + call overhead dominate.",
+  "passes": [
+    "--inlining-optimizing",
+    "--simplify-locals",
+    "--coalesce-locals",
+    "--dce",
+    "--optimize-instructions"
+  ],
+  "expected_effect": "Inline + coalesce reduce stores/instructions from O0 recursion frames."
+}

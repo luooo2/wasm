@@ -1,0 +1,5 @@
+{
+  "diagnosis": "Highest function_count in the set with a scheduler structure means many small dispatch functions; inlining and local cleanup should compress the hot path.",
+  "passes": ["--inlining-optimizing", "--simplify-locals", "--coalesce-locals", "--optimize-instructions", "--vacuum"],
+  "expected_effect": "Inlining small task functions cuts call overhead and instructions_retired; local coalescing reduces local traffic and cycles."
+}

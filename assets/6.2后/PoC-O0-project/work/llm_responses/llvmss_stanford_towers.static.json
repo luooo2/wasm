@@ -1,0 +1,11 @@
+{
+  "diagnosis": "Towers of Hanoi recursion, call-dense; inline the move helper and clean up.",
+  "passes": [
+    "--inlining-optimizing",
+    "--simplify-locals",
+    "--dce",
+    "--optimize-instructions",
+    "--vacuum"
+  ],
+  "expected_effect": "Reduce call overhead and dead code."
+}

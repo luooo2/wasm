@@ -1,0 +1,36 @@
+# Allowed wasm-opt passes for the PoC-O0 experiment (Binaryen / wasm-opt v108).
+# Baseline is -O0 compiled wasm; the LLM selects passes from this list.
+# Comments (#) and blank lines are ignored.
+#
+# Categories:
+#   - inlining / call reduction          : inlining, inlining-optimizing
+#   - control-flow simplification        : remove-unused-brs, merge-blocks,
+#                                          rereloop, flatten
+#   - dead-code / unused element removal : dce, vacuum,
+#                                          remove-unused-names,
+#                                          remove-unused-module-elements
+#   - local redundancy elimination       : local-cse, simplify-locals,
+#                                          coalesce-locals, code-folding,
+#                                          merge-locals, reorder-locals
+#   - constant folding                   : precompute
+#   - peephole / instruction selection   : optimize-instructions
+#   - SSA / value-numbering              : ssa
+inlining
+inlining-optimizing
+remove-unused-brs
+merge-blocks
+rereloop
+flatten
+dce
+vacuum
+remove-unused-names
+remove-unused-module-elements
+local-cse
+simplify-locals
+coalesce-locals
+merge-locals
+reorder-locals
+code-folding
+precompute
+optimize-instructions
+ssa

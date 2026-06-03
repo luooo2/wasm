@@ -1,0 +1,5 @@
+{
+  "diagnosis": "High function_count and call_density with high branch_density: recursive permutation with frequent small calls and branchy recursion guards.",
+  "passes": ["--inlining-optimizing", "--remove-unused-brs", "--optimize-instructions", "--simplify-locals", "--vacuum"],
+  "expected_effect": "Inlining recursive helpers and trimming branches reduce call overhead and branches_retired, lowering cycles."
+}

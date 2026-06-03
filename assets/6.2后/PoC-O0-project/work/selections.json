@@ -1,0 +1,506 @@
+{
+  "llvmss_benchmarkgame_puzzle::static": {
+    "program": "llvmss_benchmarkgame_puzzle",
+    "variant": "static",
+    "provider": "manual",
+    "diagnosis": "Control-flow heavy with many loops/blocks and high compute density; O0 leaves unmerged blocks and redundant branches.",
+    "expected_effect": "Fewer retired branches and instructions via CFG merge + peephole.",
+    "passes_raw": [
+      "--remove-unused-brs",
+      "--merge-blocks",
+      "--optimize-instructions",
+      "--simplify-locals",
+      "--vacuum"
+    ],
+    "passes": [
+      "--remove-unused-brs",
+      "--merge-blocks",
+      "--optimize-instructions",
+      "--simplify-locals",
+      "--vacuum"
+    ]
+  },
+  "llvmss_benchmarkgame_puzzle::static_perf": {
+    "program": "llvmss_benchmarkgame_puzzle",
+    "variant": "static_perf",
+    "provider": "manual",
+    "diagnosis": "Perf shows extreme branch_misses (10.8x) and conditional_branches (2.4x) plus icache pressure (7.1x); branch structure dominates the slowdown.",
+    "expected_effect": "Reduce conditional branches and branch mispredicts; coalesce-locals trims local traffic.",
+    "passes_raw": [
+      "--remove-unused-brs",
+      "--merge-blocks",
+      "--optimize-instructions",
+      "--simplify-locals",
+      "--coalesce-locals"
+    ],
+    "passes": [
+      "--remove-unused-brs",
+      "--merge-blocks",
+      "--optimize-instructions",
+      "--simplify-locals",
+      "--coalesce-locals"
+    ]
+  },
+  "llvmss_misc_matmul_f64_4x4::static": {
+    "program": "llvmss_misc_matmul_f64_4x4",
+    "variant": "static",
+    "provider": "manual",
+    "diagnosis": "Dense f64 kernel with very high local_bloat (0.44); O0 emits redundant local.get/set around the inner product.",
+    "expected_effect": "Eliminate redundant locals and CSE the address arithmetic, cutting retired instructions.",
+    "passes_raw": [
+      "--simplify-locals",
+      "--coalesce-locals",
+      "--local-cse",
+      "--optimize-instructions",
+      "--vacuum"
+    ],
+    "passes": [
+      "--simplify-locals",
+      "--coalesce-locals",
+      "--local-cse",
+      "--optimize-instructions",
+      "--vacuum"
+    ]
+  },
+  "llvmss_misc_matmul_f64_4x4::static_perf": {
+    "program": "llvmss_misc_matmul_f64_4x4",
+    "variant": "static_perf",
+    "provider": "manual",
+    "diagnosis": "Loads ratio is already <1 and cpu_cycles 0.85; the win is purely instruction-count via local cleanup and constant folding of the 4x4 indices.",
+    "expected_effect": "Lower instructions_retired through local elimination + precompute of constant strides.",
+    "passes_raw": [
+      "--simplify-locals",
+      "--coalesce-locals",
+      "--precompute",
+      "--optimize-instructions",
+      "--vacuum"
+    ],
+    "passes": [
+      "--simplify-locals",
+      "--coalesce-locals",
+      "--precompute",
+      "--optimize-instructions",
+      "--vacuum"
+    ]
+  },
+  "llvmss_misc_richards_benchmark::static": {
+    "program": "llvmss_misc_richards_benchmark",
+    "variant": "static",
+    "provider": "manual",
+    "diagnosis": "Call-dense scheduler with many small functions; O0 never inlines them so every dispatch is a real call.",
+    "expected_effect": "Inline small hot callees, then clean locals/dead code to drop call overhead.",
+    "passes_raw": [
+      "--inlining-optimizing",
+      "--simplify-locals",
+      "--dce",
+      "--optimize-instructions",
+      "--vacuum"
+    ],
+    "passes": [
+      "--inlining-optimizing",
+      "--simplify-locals",
+      "--dce",
+      "--optimize-instructions",
+      "--vacuum"
+    ]
+  },
+  "llvmss_misc_richards_benchmark::static_perf": {
+    "program": "llvmss_misc_richards_benchmark",
+    "variant": "static_perf",
+    "provider": "manual",
+    "diagnosis": "instructions_retired 1.52x, cpu_cycles 1.85x and loads 1.47x \u2014 call overhead and spill traffic dominate.",
+    "expected_effect": "Inlining + coalesce-locals reduce loads and retired instructions from O0 spills.",
+    "passes_raw": [
+      "--inlining-optimizing",
+      "--simplify-locals",
+      "--coalesce-locals",
+      "--dce",
+      "--vacuum"
+    ],
+    "passes": [
+      "--inlining-optimizing",
+      "--simplify-locals",
+      "--coalesce-locals",
+      "--dce",
+      "--vacuum"
+    ]
+  },
+  "llvmss_misc_salsa20::static": {
+    "program": "llvmss_misc_salsa20",
+    "variant": "static",
+    "provider": "manual",
+    "diagnosis": "Stream cipher with the highest local_bloat (0.45); rounds reuse many temporaries that O0 spills.",
+    "expected_effect": "Collapse redundant locals and CSE the rotate/xor expressions.",
+    "passes_raw": [
+      "--simplify-locals",
+      "--coalesce-locals",
+      "--local-cse",
+      "--optimize-instructions",
+      "--vacuum"
+    ],
+    "passes": [
+      "--simplify-locals",
+      "--coalesce-locals",
+      "--local-cse",
+      "--optimize-instructions",
+      "--vacuum"
+    ]
+  },
+  "llvmss_misc_salsa20::static_perf": {
+    "program": "llvmss_misc_salsa20",
+    "variant": "static_perf",
+    "provider": "manual",
+    "diagnosis": "Most perf ratios are <1 (wasm already faster); only modest local-level cleanup is warranted to avoid regressions.",
+    "expected_effect": "Small instruction-count reduction without disturbing the already-good codegen.",
+    "passes_raw": [
+      "--simplify-locals",
+      "--coalesce-locals",
+      "--optimize-instructions",
+      "--precompute",
+      "--vacuum"
+    ],
+    "passes": [
+      "--simplify-locals",
+      "--coalesce-locals",
+      "--optimize-instructions",
+      "--precompute",
+      "--vacuum"
+    ]
+  },
+  "llvmss_misc_evalloop::static": {
+    "program": "llvmss_misc_evalloop",
+    "variant": "static",
+    "provider": "manual",
+    "diagnosis": "Expression interpreter: high branch_density, call_density and block_density; O0 leaves a large dispatch with unmerged blocks.",
+    "expected_effect": "Simplify the dispatch CFG and trim locals.",
+    "passes_raw": [
+      "--remove-unused-brs",
+      "--merge-blocks",
+      "--simplify-locals",
+      "--optimize-instructions",
+      "--vacuum"
+    ],
+    "passes": [
+      "--remove-unused-brs",
+      "--merge-blocks",
+      "--simplify-locals",
+      "--optimize-instructions",
+      "--vacuum"
+    ]
+  },
+  "llvmss_misc_evalloop::static_perf": {
+    "program": "llvmss_misc_evalloop",
+    "variant": "static_perf",
+    "provider": "manual",
+    "diagnosis": "conditional_branches blow up 13.4x and icache 9.5x \u2014 the interpreter dispatch is the bottleneck; inlining handlers plus CFG merge should help most.",
+    "expected_effect": "Inline small op handlers and merge branch chains to cut conditional branches.",
+    "passes_raw": [
+      "--inlining-optimizing",
+      "--remove-unused-brs",
+      "--merge-blocks",
+      "--simplify-locals",
+      "--optimize-instructions"
+    ],
+    "passes": [
+      "--inlining-optimizing",
+      "--remove-unused-brs",
+      "--merge-blocks",
+      "--simplify-locals",
+      "--optimize-instructions"
+    ]
+  },
+  "llvmss_misc_flops::static": {
+    "program": "llvmss_misc_flops",
+    "variant": "static",
+    "provider": "manual",
+    "diagnosis": "FP mix with extreme local_bloat (0.51) and large average function size; O0 spills heavily.",
+    "expected_effect": "Major local elimination + CSE on the arithmetic-heavy body.",
+    "passes_raw": [
+      "--simplify-locals",
+      "--coalesce-locals",
+      "--local-cse",
+      "--optimize-instructions",
+      "--vacuum"
+    ],
+    "passes": [
+      "--simplify-locals",
+      "--coalesce-locals",
+      "--local-cse",
+      "--optimize-instructions",
+      "--vacuum"
+    ]
+  },
+  "llvmss_misc_flops::static_perf": {
+    "program": "llvmss_misc_flops",
+    "variant": "static_perf",
+    "provider": "manual",
+    "diagnosis": "cpu_cycles already 0.63x; branches 1.46x and stores 1.49x suggest local/store traffic from O0 \u2014 coalescing and precompute target it.",
+    "expected_effect": "Reduce stores and retired instructions from redundant locals.",
+    "passes_raw": [
+      "--simplify-locals",
+      "--coalesce-locals",
+      "--precompute",
+      "--optimize-instructions",
+      "--vacuum"
+    ],
+    "passes": [
+      "--simplify-locals",
+      "--coalesce-locals",
+      "--precompute",
+      "--optimize-instructions",
+      "--vacuum"
+    ]
+  },
+  "llvmss_misc_flops-1::static": {
+    "program": "llvmss_misc_flops-1",
+    "variant": "static",
+    "provider": "manual",
+    "diagnosis": "FP kernel variant with high branch_density and compute_density but low local_bloat; peephole + branch cleanup matter most.",
+    "expected_effect": "Fold constants and simplify branch structure.",
+    "passes_raw": [
+      "--optimize-instructions",
+      "--simplify-locals",
+      "--remove-unused-brs",
+      "--precompute",
+      "--vacuum"
+    ],
+    "passes": [
+      "--optimize-instructions",
+      "--simplify-locals",
+      "--remove-unused-brs",
+      "--precompute",
+      "--vacuum"
+    ]
+  },
+  "llvmss_misc_flops-1::static_perf": {
+    "program": "llvmss_misc_flops-1",
+    "variant": "static_perf",
+    "provider": "manual",
+    "diagnosis": "conditional_branches 5.8x and branch_misses 10x with icache 4.9x \u2014 branch structure clearly dominates.",
+    "expected_effect": "Cut conditional branches and mispredicts via CFG simplification.",
+    "passes_raw": [
+      "--remove-unused-brs",
+      "--merge-blocks",
+      "--optimize-instructions",
+      "--simplify-locals",
+      "--vacuum"
+    ],
+    "passes": [
+      "--remove-unused-brs",
+      "--merge-blocks",
+      "--optimize-instructions",
+      "--simplify-locals",
+      "--vacuum"
+    ]
+  },
+  "llvmss_stanford_floatmm::static": {
+    "program": "llvmss_stanford_floatmm",
+    "variant": "static",
+    "provider": "manual",
+    "diagnosis": "FP matmul with high call_density and compute_density; small helpers plus index arithmetic to fold.",
+    "expected_effect": "Inline helpers and precompute constant matrix strides.",
+    "passes_raw": [
+      "--inlining-optimizing",
+      "--simplify-locals",
+      "--optimize-instructions",
+      "--precompute",
+      "--vacuum"
+    ],
+    "passes": [
+      "--inlining-optimizing",
+      "--simplify-locals",
+      "--optimize-instructions",
+      "--precompute",
+      "--vacuum"
+    ]
+  },
+  "llvmss_stanford_floatmm::static_perf": {
+    "program": "llvmss_stanford_floatmm",
+    "variant": "static_perf",
+    "provider": "manual",
+    "diagnosis": "icache 7.7x is the main anomaly; other ratios near 1, so favor inlining + branch cleanup to compact the hot loop.",
+    "expected_effect": "Tighter hot loop reduces icache misses and instructions.",
+    "passes_raw": [
+      "--inlining-optimizing",
+      "--remove-unused-brs",
+      "--simplify-locals",
+      "--optimize-instructions",
+      "--vacuum"
+    ],
+    "passes": [
+      "--inlining-optimizing",
+      "--remove-unused-brs",
+      "--simplify-locals",
+      "--optimize-instructions",
+      "--vacuum"
+    ]
+  },
+  "llvmss_stanford_puzzle::static": {
+    "program": "llvmss_stanford_puzzle",
+    "variant": "static",
+    "provider": "manual",
+    "diagnosis": "Recursive solver: high loops/blocks, high local_bloat (0.47) and large functions; both local cleanup and inlining apply.",
+    "expected_effect": "Inline + collapse locals to shrink the recursive body.",
+    "passes_raw": [
+      "--inlining-optimizing",
+      "--simplify-locals",
+      "--coalesce-locals",
+      "--optimize-instructions",
+      "--vacuum"
+    ],
+    "passes": [
+      "--inlining-optimizing",
+      "--simplify-locals",
+      "--coalesce-locals",
+      "--optimize-instructions",
+      "--vacuum"
+    ]
+  },
+  "llvmss_stanford_puzzle::static_perf": {
+    "program": "llvmss_stanford_puzzle",
+    "variant": "static_perf",
+    "provider": "manual",
+    "diagnosis": "icache misses 20.9x dominate; reduce code footprint with DCE after inlining rather than aggressive local expansion.",
+    "expected_effect": "Smaller hot working set lowers icache misses.",
+    "passes_raw": [
+      "--inlining-optimizing",
+      "--dce",
+      "--simplify-locals",
+      "--optimize-instructions",
+      "--vacuum"
+    ],
+    "passes": [
+      "--inlining-optimizing",
+      "--dce",
+      "--simplify-locals",
+      "--optimize-instructions",
+      "--vacuum"
+    ]
+  },
+  "llvmss_stanford_perm::static": {
+    "program": "llvmss_stanford_perm",
+    "variant": "static",
+    "provider": "manual",
+    "diagnosis": "Recursive permutation generator, call-dense with high compute; O0 leaves all calls out-of-line.",
+    "expected_effect": "Inline recursion helpers and clean dead/local code.",
+    "passes_raw": [
+      "--inlining-optimizing",
+      "--simplify-locals",
+      "--dce",
+      "--optimize-instructions",
+      "--vacuum"
+    ],
+    "passes": [
+      "--inlining-optimizing",
+      "--simplify-locals",
+      "--dce",
+      "--optimize-instructions",
+      "--vacuum"
+    ]
+  },
+  "llvmss_stanford_perm::static_perf": {
+    "program": "llvmss_stanford_perm",
+    "variant": "static_perf",
+    "provider": "manual",
+    "diagnosis": "cpu_cycles 2.84x, instructions 1.72x, loads 1.82x and icache 24.9x \u2014 heavy call+spill overhead from O0 recursion.",
+    "expected_effect": "Inlining + local coalescing cut loads, instructions and call overhead.",
+    "passes_raw": [
+      "--inlining-optimizing",
+      "--simplify-locals",
+      "--coalesce-locals",
+      "--dce",
+      "--vacuum"
+    ],
+    "passes": [
+      "--inlining-optimizing",
+      "--simplify-locals",
+      "--coalesce-locals",
+      "--dce",
+      "--vacuum"
+    ]
+  },
+  "llvmss_stanford_towers::static": {
+    "program": "llvmss_stanford_towers",
+    "variant": "static",
+    "provider": "manual",
+    "diagnosis": "Towers of Hanoi recursion, call-dense; inline the move helper and clean up.",
+    "expected_effect": "Reduce call overhead and dead code.",
+    "passes_raw": [
+      "--inlining-optimizing",
+      "--simplify-locals",
+      "--dce",
+      "--optimize-instructions",
+      "--vacuum"
+    ],
+    "passes": [
+      "--inlining-optimizing",
+      "--simplify-locals",
+      "--dce",
+      "--optimize-instructions",
+      "--vacuum"
+    ]
+  },
+  "llvmss_stanford_towers::static_perf": {
+    "program": "llvmss_stanford_towers",
+    "variant": "static_perf",
+    "provider": "manual",
+    "diagnosis": "instructions 1.96x, cpu 2.46x, stores 1.86x and branch_misses 8.75x; recursion spill + call overhead dominate.",
+    "expected_effect": "Inline + coalesce reduce stores/instructions from O0 recursion frames.",
+    "passes_raw": [
+      "--inlining-optimizing",
+      "--simplify-locals",
+      "--coalesce-locals",
+      "--dce",
+      "--optimize-instructions"
+    ],
+    "passes": [
+      "--inlining-optimizing",
+      "--simplify-locals",
+      "--coalesce-locals",
+      "--dce",
+      "--optimize-instructions"
+    ]
+  },
+  "llvmss_stanford_queens::static": {
+    "program": "llvmss_stanford_queens",
+    "variant": "static",
+    "provider": "manual",
+    "diagnosis": "N-queens backtracking: medium branch density, high block density; CFG cleanup plus peephole.",
+    "expected_effect": "Simplify backtracking branches and trim locals.",
+    "passes_raw": [
+      "--remove-unused-brs",
+      "--merge-blocks",
+      "--simplify-locals",
+      "--optimize-instructions",
+      "--vacuum"
+    ],
+    "passes": [
+      "--remove-unused-brs",
+      "--merge-blocks",
+      "--simplify-locals",
+      "--optimize-instructions",
+      "--vacuum"
+    ]
+  },
+  "llvmss_stanford_queens::static_perf": {
+    "program": "llvmss_stanford_queens",
+    "variant": "static_perf",
+    "provider": "manual",
+    "diagnosis": "branch_misses 13.2x, icache 26.4x and instructions 1.57x; inline the placement check and simplify branches.",
+    "expected_effect": "Fewer mispredicted branches and a more compact hot path.",
+    "passes_raw": [
+      "--remove-unused-brs",
+      "--merge-blocks",
+      "--inlining-optimizing",
+      "--simplify-locals",
+      "--optimize-instructions"
+    ],
+    "passes": [
+      "--remove-unused-brs",
+      "--merge-blocks",
+      "--inlining-optimizing",
+      "--simplify-locals",
+      "--optimize-instructions"
+    ]
+  }
+}

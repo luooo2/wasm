@@ -1,0 +1,78 @@
+[O0 PoC run] 2026-06-03T13:27:24  repeats=6  warmup=2  seed=42
+strategies: ['raw', 'O3', 'random', 'llm_static', 'llm_static_perf']
+
+=== [1/12] llvmss_benchmarkgame_puzzle (control_flow) ===
+  raw              ratio=1.6132   vsRaw=0.0      vsO3=-0.0425  [OK] 
+  O3               ratio=1.5475   vsRaw=0.0408   vsO3=0.0      [ACCEPT] 
+  random           ratio=1.6127   vsRaw=0.0004   vsO3=-0.0421  [OK] 
+  llm_static       ratio=1.6139   vsRaw=-0.0004  vsO3=-0.0429  [OK] 
+  llm_static_perf  ratio=1.6154   vsRaw=-0.0013  vsO3=-0.0439  [OK] 
+=== [2/12] llvmss_misc_matmul_f64_4x4 (loop_compute) ===
+  raw              ratio=0.851    vsRaw=0.0      vsO3=-0.072   [OK] 
+  O3               ratio=0.7938   vsRaw=0.0672   vsO3=0.0      [ACCEPT] 
+  random           ratio=0.8508   vsRaw=0.0002   vsO3=-0.0718  [OK] 
+  llm_static       ratio=0.8481   vsRaw=0.0033   vsO3=-0.0684  [OK] 
+  llm_static_perf  ratio=0.8581   vsRaw=-0.0084  vsO3=-0.081   [OK] 
+=== [3/12] llvmss_misc_richards_benchmark (call_dense) ===
+  raw              ratio=1.7608   vsRaw=0.0      vsO3=0.1335   [OK] 
+  O3               ratio=2.032    vsRaw=-0.154   vsO3=0.0      [OK] 
+  random           ratio=1.7041   vsRaw=0.0322   vsO3=0.1614   [ACCEPT] 
+  llm_static       ratio=1.9061   vsRaw=-0.0825  vsO3=0.062    [OK] 
+  llm_static_perf  ratio=1.8078   vsRaw=-0.0267  vsO3=0.1103   [OK] 
+=== [4/12] llvmss_misc_salsa20 (loop_compute) ===
+  raw              ratio=0.7017   vsRaw=0.0      vsO3=0.0151   [OK] 
+  O3               ratio=0.7124   vsRaw=-0.0153  vsO3=0.0      [OK] 
+  random           ratio=0.7138   vsRaw=-0.0174  vsO3=-0.002   [OK] 
+  llm_static       ratio=0.7081   vsRaw=-0.0091  vsO3=0.0061   [OK] 
+  llm_static_perf  ratio=0.7132   vsRaw=-0.0165  vsO3=-0.0012  [OK] 
+=== [5/12] llvmss_misc_evalloop (control_flow) ===
+  raw              ratio=2.1567   vsRaw=0.0      vsO3=-0.7193  [OK] 
+  O3               ratio=1.2544   vsRaw=0.4184   vsO3=0.0      [ACCEPT] 
+  random           ratio=1.7447   vsRaw=0.191    vsO3=-0.3909  [ACCEPT] 
+  llm_static       ratio=2.0278   vsRaw=0.0597   vsO3=-0.6166  [ACCEPT] 
+  llm_static_perf  ratio=1.7623   vsRaw=0.1829   vsO3=-0.4049  [ACCEPT] 
+=== [6/12] llvmss_misc_flops (loop_compute) ===
+  raw              ratio=0.6248   vsRaw=0.0      vsO3=         [BAD] output mismatch vs native reference
+  O3               ratio=0.6238   vsRaw=0.0016   vsO3=         [BAD] output mismatch vs native reference
+  random           ratio=0.6252   vsRaw=-0.0007  vsO3=         [BAD] output mismatch vs native reference
+  llm_static       ratio=0.6247   vsRaw=0.0001   vsO3=         [BAD] output mismatch vs native reference
+  llm_static_perf  ratio=0.6244   vsRaw=0.0006   vsO3=         [BAD] output mismatch vs native reference
+=== [7/12] llvmss_misc_flops-1 (loop_compute) ===
+  raw              ratio=0.6994   vsRaw=0.0      vsO3=-0.0005  [OK] 
+  O3               ratio=0.6991   vsRaw=0.0005   vsO3=0.0      [OK] 
+  random           ratio=0.6996   vsRaw=-0.0003  vsO3=-0.0008  [OK] 
+  llm_static       ratio=0.6993   vsRaw=0.0001   vsO3=-0.0004  [OK] 
+  llm_static_perf  ratio=0.6993   vsRaw=0.0001   vsO3=-0.0004  [OK] 
+=== [8/12] llvmss_stanford_floatmm (loop_compute) ===
+  raw              ratio=1.08     vsRaw=0.0      vsO3=-0.0975  [OK] 
+  O3               ratio=0.9841   vsRaw=0.0888   vsO3=0.0      [ACCEPT] 
+  random           ratio=         vsRaw=         vsO3=         [BAD] build failed: Fatal: Fatal: IR must be flat: run --flatten beforehand (Fatal: Fatal: IR must be flat: run --flatten beforehand (control flow structures must not flow valuesinstructions must only have constant expressions, local.get, or unreachable as childrenFatal: , in IR must be flat: run --flatten beforehand (instructions must only have constant expressions, local.get, or unreachable as children, in rInitmatrixIR must be flat: run --flatten beforehand (IR must be flat: run --flatten beforehand (instructions must only have constant expressions, local.get, or unreachable as children)Fatal: Fatal: , in Fatal: instructions must only have constant expressions, local.get, or unreachable as childrenIR must be flat: run --flatten beforehand (instructions must only have constant expressions, local.get, or unreachable as children, in nsec_now
+, in llvm_bench_mainIR must be flat: run --flatten beforehand (instructions must only have constant expressions, local.get, or unreachable as children
+  llm_static       ratio=1.0035   vsRaw=0.0708   vsO3=-0.0198  [ACCEPT] 
+  llm_static_perf  ratio=1.0048   vsRaw=0.0697   vsO3=-0.021   [ACCEPT] 
+=== [9/12] llvmss_stanford_puzzle (control_flow) ===
+  raw              ratio=1.1896   vsRaw=0.0      vsO3=-0.0115  [OK] 
+  O3               ratio=1.176    vsRaw=0.0114   vsO3=0.0      [OK] 
+  random           ratio=1.1876   vsRaw=0.0017   vsO3=-0.0098  [OK] 
+  llm_static       ratio=1.1916   vsRaw=-0.0017  vsO3=-0.0133  [OK] 
+  llm_static_perf  ratio=1.1831   vsRaw=0.0054   vsO3=-0.006   [OK] 
+=== [10/12] llvmss_stanford_perm (call_dense) ===
+  raw              ratio=2.2922   vsRaw=0.0      vsO3=0.0568   [OK] 
+  O3               ratio=2.4303   vsRaw=-0.0603  vsO3=0.0      [OK] 
+  random           ratio=2.2661   vsRaw=0.0114   vsO3=0.0676   [OK] 
+  llm_static       ratio=2.3938   vsRaw=-0.0443  vsO3=0.015    [OK] 
+  llm_static_perf  ratio=2.3441   vsRaw=-0.0226  vsO3=0.0355   [OK] 
+=== [11/12] llvmss_stanford_towers (call_dense) ===
+  raw              ratio=2.0556   vsRaw=0.0      vsO3=-0.0848  [OK] 
+  O3               ratio=1.8949   vsRaw=0.0782   vsO3=0.0      [ACCEPT] 
+  random           ratio=1.8179   vsRaw=0.1156   vsO3=0.0406   [ACCEPT] 
+  llm_static       ratio=1.8667   vsRaw=0.0919   vsO3=0.0148   [ACCEPT] 
+  llm_static_perf  ratio=1.8633   vsRaw=0.0936   vsO3=0.0167   [ACCEPT] 
+=== [12/12] llvmss_stanford_queens (control_flow) ===
+  raw              ratio=1.5207   vsRaw=0.0      vsO3=0.012    [OK] 
+  O3               ratio=1.5391   vsRaw=-0.0121  vsO3=0.0      [OK] 
+  random           ratio=1.5091   vsRaw=0.0076   vsO3=0.0195   [OK] 
+  llm_static       ratio=1.5318   vsRaw=-0.0073  vsO3=0.0048   [OK] 
+  llm_static_perf  ratio=1.5066   vsRaw=0.0092   vsO3=0.0211   [OK] 
+
+[done] 60 rows in 1217.4s
